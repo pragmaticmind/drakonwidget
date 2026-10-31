@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pragmaticmind.github.io/drakon-model/0.1/jgf-profile.schema.json",
+  "title": "DRAKON profile of JSON Graph Format v2.1 (prototype, option B)",
+  "description": "A document must be valid JGF v2.1 AND satisfy these DRAKON constraints. Icons and branches are JGF nodes; the DRAKON type and every DRAKON field live in node.metadata; exits are edges distinguished by `relation`.",
+  "allOf": [
+    { "$ref": "http://jsongraphformat.info/v2.1/json-graph-schema.json" },
+    {
+      "type": "object",
+      "required": ["graph"],
+      "properties": {
+        "graph": {
+          "type": "object",
+          "required": ["id", "label", "type", "directed", "metadata", "nodes", "edges"],
+          "properties": {
+            "type": { "const": "drakon" },
+            "directed": { "const": true },
+            "metadata": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["profile", "schemaVersion"],
+              "properties": {
+                "profile": { "const": "https://pragmaticmind.github.io/drakon-model/0.1/jgf-profile.schema.json" },
+                "schemaVersion": { "const": "0.1" },
+                "params": { "type": "string" },
+                "textFormat": { "enum": ["plain", "markdown", "html"] },
+                "meta": { "type": "object" },
+                "layout": { "type": "object" }
+              }
+            },
+            "nodes": {
+              "type": "object",
+              "propertyNames": { "pattern": "^[A-Za-z0-9_-]+$" },
+              "additionalProperties": { "$ref": "#/definitions/node" }
+            },
+            "edges": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/edge" }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "definitions": {
+    "node": {
+      "type": "object",
+      "required": ["metadata"],
+      "properties": { "metadata": { "$ref": "#/definitions/nodeMetadata" } },
+      "if": {
+        "required": ["metadata"],
+        "properties": {
+          "metadata": {
+            "required": ["drakonType"],
+            "properties": { "drakonType": { "enum": ["action", "question", "select", "loopbegin", "insertion", "shelf", "branch"] } }
+          }
+        }
+      },
+      "then": { "required": ["label"], "properties": { "label": { "minLength": 1 } } }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["relation"],
+      "properties": {
+        "relation": { "enum": ["first", "next", "yes", "no", "case", "loopEnd", "goto"] },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": { "order": { "type": "integer", "minimum": 1 } }
+        }
+      },
+      "if": { "properties": { "relation": { "const": "case" } } },
+      "then": { "required": ["metadata"], "properties": { "metadata": { "required": ["order"] } } }
+    },
+    "meta": { "type": "object" },
+    "duration": { "type": "string", "minLength": 1 },
+    "nodeMetadata": {
+      "type": "object",
+      "required": ["drakonType"],
+      "discriminator": { "propertyName": "drakonType" },
+      "oneOf": [
+        { "title": "branch", "additionalProperties": false, "required": ["drakonType", "order"],
+          "properties": { "drakonType": { "const": "branch" }, "order": { "type": "integer", "minimum": 1 } } },
+        { "title": "action", "additionalProperties": false, "required": ["drakonType"],
+          "properties": { "drakonType": { "const": "action" }, "duration": { "$ref": "#/definitions/duration" }, "meta": { "$ref": "#/definitions/meta" } } },
+        { "title": "question", "additionalProperties": false, "required": ["drakonType", "down"],
+          "properties": { "drakonType": { "const": "question" }, "down": { "enum": ["yes", "no"] }, "meta": { "$ref": "#/definitions/meta" } } },
+        { "title": "select", "additionalProperties": false, "required": ["drakonType"],
+          "properties": { "drakonType": { "const": "select" }, "meta": { "$ref": "#/definitions/meta" } } },
+        { "title": "case", "additionalProperties": false, "required": ["drakonType"],
+          "properties": { "drakonType": { "const": "case" }, "meta": { "$ref": "#/definitions/meta" } } },
+        { "title": "loopbegin", "additionalProperties": false, "required": ["drakonType"],
+          "properties": { "drakonType": { "const": "loopbegin" }, "meta": { "$ref": "#/definitions/meta" } } },
+        { "title": "loopend", "additionalProperties": false, "required": ["drakonType"],
+          "properties": { "drakonType": { "const": "loopend" }, "meta": { "$ref": "#/definitions/meta" } } },
+        { "title": "address", "additionalProperties": false, "required": ["drakonType"],
+          "properties": { "drakonType": { "const": "address" }, "meta": { "$ref": "#/definitions/meta" } } },
+        { "title": "insertion", "additionalProperties": false, "required": ["drakonType", "diagram"],
+          "properties": { "drakonType": { "const": "insertion" }, "diagram": { "type": "string", "pattern": "^[A-Za-z0-9_-]+$" }, "duration": { "$ref": "#/definitions/duration" }, "meta": { "$ref": "#/definitions/meta" } } },
+        { "title": "shelf", "additionalProperties": false, "required": ["drakonType", "secondaryText"],
+          "properties": { "drakonType": { "const": "shelf" }, "secondaryText": { "type": "string", "minLength": 1 }, "duration": { "$ref": "#/definitions/duration" }, "meta": { "$ref": "#/definitions/meta" } } },
+        { "title": "end", "additionalProperties": false, "required": ["drakonType"],
+          "properties": { "drakonType": { "const": "end" }, "meta": { "$ref": "#/definitions/meta" } } }
+      ]
+    }
+  }
+}

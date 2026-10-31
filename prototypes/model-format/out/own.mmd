@@ -1,0 +1,48 @@
+flowchart TD
+  b_check(["Check claim"])
+  b_check --> register
+  b_pay(["Pay out"])
+  b_pay --> each_line
+  b_close(["Close"])
+  b_close --> notify
+  register["Register the claim"]
+  register -->|next| has_receipt
+  has_receipt{"Receipt attached?"}
+  has_receipt -->|yes| amount
+  has_receipt -->|no| reject
+  reject["Mark the claim as rejected"]
+  reject -->|next| to_close
+  to_close["address"]
+  to_close -->|goto| b_close
+  amount{"Amount"}
+  amount -->|case| small
+  amount -->|case| medium
+  amount -->|case| large
+  small["< €100"]
+  small -->|next| auto_approve
+  auto_approve["Approve automatically"]
+  auto_approve -->|next| to_pay
+  medium["€100 – €1000"]
+  medium -->|next| manager
+  manager["Approve the claim"]
+  manager -->|next| to_pay
+  large["> €1000"]
+  large -->|next| finance
+  finance["Finance review"]
+  finance -->|next| to_pay
+  to_pay["address"]
+  to_pay -->|goto| b_pay
+  each_line["For each expense line"]
+  each_line -->|next| book
+  each_line -->|loopEnd| each_line_end
+  book["Book the line in the ledger"]
+  book -->|next| each_line_end
+  each_line_end["loopend"]
+  each_line_end -->|next| transfer
+  transfer["Transfer the total to the employee"]
+  transfer -->|next| to_close_2
+  to_close_2["address"]
+  to_close_2 -->|goto| b_close
+  notify["Notify the employee"]
+  notify -->|next| finish
+  finish["end"]
