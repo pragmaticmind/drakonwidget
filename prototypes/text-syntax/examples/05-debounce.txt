@@ -1,0 +1,14 @@
+drakon
+  silhouette debounce (action\ndelay)
+    branch Idle
+      input onInput(msg)
+      goto Waiting
+    branch Waiting
+      tobj = setTimeout(\n    function () {\n        me.onTimeout()\n    },\n    delay\n)
+      select receive
+        case onInput(msg)
+          clearTimeout(tobj)
+          goto Waiting
+        case onTimeout()
+          action(msg)
+          goto Idle

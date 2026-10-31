@@ -1,0 +1,10 @@
+drakon
+  primitive getEarRole (ears)
+    select ears.selected
+      case "up"
+        @vertical
+        return "vertical"
+      case "down"
+        join vertical
+      case
+        return "horizontal"
