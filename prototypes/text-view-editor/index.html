@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<!--
+  PROTOTYPE — throwaway. Ticket: .scratch/drakon-editor/issues/06-text-view-syntax-mock-ups.md
+  Question: does the Text view syntax (ticket 05 + the amendments proposed on
+  origin/prototype/text-syntax-mockups) parse into a sensible Model (ticket 03 shape)
+  and draw as the DRAKON Diagram the author meant?
+  Variant under test: one jump keyword. goto <branch> = address; goto @label = join (down)
+  or arrow loop (up, decided from the drawing). join and repeat … again are gone; loop stays.
+  Pipeline: text -> DrakonText.parse -> Model -> DrakonText.toDrakonwidget -> libs/drakonwidget.js
+  Open by double-clicking. No server, no build.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PROTOTYPE · Text view → DRAKON Diagram</title>
+<style>
+  :root { --accent: #2f5bd3; --ink: #1d2433; --muted: #6b7385; --line: #e3e6ee; --bad: #b42318; --bg: #f7f8fb; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+  header { padding: 14px 22px 10px; border-bottom: 1px solid var(--line); background: white; }
+  header h1 { margin: 0; font-size: 18px; }
+  header h1 .tag { font-size: 11px; font-weight: 600; letter-spacing: .06em; color: white; background: var(--bad); padding: 2px 7px; border-radius: 4px; vertical-align: middle; margin-right: 8px; }
+  header p { margin: 4px 0 0; color: var(--muted); max-width: 980px; }
+  main { padding: 14px 22px 40px; display: grid; gap: 14px; }
+  .card { background: white; border: 1px solid var(--line); border-radius: 8px; }
+  .card h2 { margin: 0; padding: 10px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); border-bottom: 1px solid var(--line); }
+  .split { display: grid; grid-template-columns: minmax(360px, 42%) 1fr; gap: 14px; height: 62vh; min-height: 420px; }
+  .split .card { display: flex; flex-direction: column; min-height: 0; }
+  .editor { flex: 1; display: flex; min-height: 0; font: 13px/20px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .gutter { padding: 8px 6px 8px 0; width: 42px; text-align: right; color: #a0a7b6; background: #fafbfc; border-right: 1px solid var(--line); overflow: hidden; user-select: none; white-space: pre; }
+  .gutter .err { color: var(--bad); font-weight: 700; }
+  textarea { flex: 1; border: 0; outline: 0; resize: none; padding: 8px 10px; font: inherit; color: var(--ink); white-space: pre; overflow: auto; tab-size: 2; }
+  .snippets { padding: 8px 10px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px; }
+  .snippets span { color: var(--muted); font-size: 12px; align-self: center; margin-right: 4px; }
+  button { font: inherit; font-size: 12px; padding: 4px 9px; border: 1px solid var(--line); background: white; border-radius: 5px; cursor: pointer; color: var(--ink); }
+  button:hover { border-color: var(--accent); color: var(--accent); }
+  #canvas-host { flex: 1; min-height: 0; position: relative; overflow: hidden; }
+  #render-error { position: absolute; left: 12px; right: 12px; top: 12px; padding: 10px 12px; background: #fff4f2; border: 1px solid #f3c1b9; color: var(--bad); border-radius: 6px; display: none; white-space: pre-wrap; font: 13px/1.5 system-ui, sans-serif; }
+  .state { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .pad { padding: 10px 14px; }
+  .facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; }
+  .facts dt { color: var(--muted); }
+  .facts dd { margin: 0; }
+  .changed { background: #fff6d6; border-radius: 3px; padding: 0 3px; }
+  .diag { list-style: none; margin: 0; padding: 0; }
+  .diag li { padding: 5px 0; border-bottom: 1px dashed var(--line); cursor: pointer; }
+  .diag li:last-child { border-bottom: 0; }
+  .diag .ln { display: inline-block; min-width: 54px; color: var(--bad); font-weight: 600; }
+  .ok { color: #157f3b; }
+  .diag pre.hint { margin: 6px 0 2px 54px; padding: 6px 10px; background: #f3f6ff; border-left: 3px solid var(--accent); font: 12px/1.45 ui-monospace, Menlo, Consolas, monospace; }
+  .tabs { display: flex; gap: 2px; padding: 8px 10px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .tabs button { border: 1px solid transparent; border-bottom: 0; border-radius: 6px 6px 0 0; background: transparent; padding: 6px 11px; }
+  .tabs button.on { background: white; border-color: var(--line); color: var(--accent); margin-bottom: -1px; }
+  pre.json { margin: 0; padding: 10px 14px; max-height: 340px; overflow: auto; font: 12px/1.45 ui-monospace, Menlo, Consolas, monospace; background: #fbfbfd; }
+  .steps { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 6px; }
+  .steps button { padding: 6px 12px; }
+  .steps button.on { background: var(--accent); border-color: var(--accent); color: white; }
+  .watch { margin-top: 8px; padding: 8px 12px; border-left: 3px solid var(--accent); background: #f3f6ff; display: none; }
+  .scenario-desc { margin: 4px 0 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="tag">PROTOTYPE</span>Text view → DRAKON Diagram</h1>
+  <p><b>The question:</b> can a process owner write a Diagram as an indented outline (the Text view syntax from ticket 05, plus the
+  amendments proposed in the ticket 06 mock-ups, with one jump keyword: <code>goto Branch</code> switches branch, <code>goto @label</code> joins
+  further down or loops back up) and get exactly the drawing they meant? Type on the left. The text is turned into the
+  Model (ticket 03 shape) and drawn with drakonwidget on the right. Anything the text cannot express, or expresses wrongly, shows up under
+  <i>Problems</i>.</p>
+</header>
+
+<main>
+  <section class="split">
+    <div class="card">
+      <h2>Text view</h2>
+      <div class="editor">
+        <div class="gutter" id="gutter"></div>
+        <textarea id="text" spellcheck="false" autocomplete="off"></textarea>
+      </div>
+      <div class="snippets" id="snippets"><span>Add below the cursor:</span></div>
+    </div>
+    <div class="card">
+      <h2>Canvas view (drawn by drakonwidget, read-only)</h2>
+      <div id="canvas-host"><div id="render-error"></div></div>
+    </div>
+  </section>
+
+  <section class="state">
+    <div class="card">
+      <h2>What the text says</h2>
+      <div class="pad">
+        <dl class="facts" id="facts"></dl>
+      </div>
+      <h2>Problems</h2>
+      <div class="pad"><ul class="diag" id="diags"></ul></div>
+    </div>
+    <div class="card">
+      <div class="tabs" id="data-tabs">
+        <button data-k="model" class="on">Model (ticket 03 shape)</button>
+        <button data-k="dw">drakonwidget items</button>
+      </div>
+      <pre class="json" id="data"></pre>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Guided walkthroughs</h2>
+    <div class="tabs" id="scenario-tabs"></div>
+    <div class="pad" id="scenario"></div>
+  </section>
+</main>
+
+<!-- ===================================================================
+     The logic under test. Pure: no DOM, no globals except DrakonText.
+     parse(text)            -> { model, diagnostics, info }
+     toDrakonwidget(model)  -> { name, params, items }
+     =================================================================== -->
+<script id="logic">
+var DrakonText = (function () {
+  "use strict";
+
+  var KEYWORDS = {
+    drakon: 1, primitive: 1, silhouette: 1, branch: 1, action: 1, question: 1, yes: 1, no: 1,
+    select: 1, "case": 1, loop: 1, "goto": 1, shelf: 1,
+    input: 1, output: 1, insert: 1
+  };
+  // Keywords from earlier drafts, now covered by goto @label. Flagged so they are not silently read as actions.
+  var RETIRED = { join: "Write goto @name instead of join name.", repeat: "repeat … again is gone: put @name above the first step and loop back with goto @name.", again: "again is gone: loop back with goto @name." };
+  var ICON_LINES = { action: 1, question: 1, select: 1, "case": 1, loop: 1, shelf: 1, input: 1, output: 1, insert: 1, note: 1, "goto": 1 };
+  var END = "__end__", FALL = "__fall__", JUMP = "__jump__";
+
+  // hint: optional lines of Text view the author can type instead (shown under the message).
+  function diag(line, message, hint) { var d = { line: line, message: message }; if (hint) d.hint = hint; return d; }
+
+  function unescapeText(s) {
+    return s.replace(/\\(\\|n)/g, function (m, c) { return c === "n" ? "\n" : "\\"; });
+  }
+
+  function slug(text, fallback) {
+    var s = String(text || "").toLowerCase().normalize("NFKD")
+      .replace(/[^\p{L}\p{N}]+/gu, "-").split("-").filter(Boolean).slice(0, 4).join("-");
+    return s || fallback;
+  }
+
+  // ---- 1. Lines -> indentation tree --------------------------------------
+
+  function lexLine(raw, lineNo, diags) {
+    var m = /^( *)(\t*)(.*?)\s*$/.exec(raw);
+    var spaces = m[1].length, body = m[3];
+    if (m[2].length) diags.push(diag(lineNo, "Indent with spaces, not tabs."));
+    if (!body) return null;
+    if (spaces % 2) diags.push(diag(lineNo, "Indent with two spaces per level (this line has " + spaces + ")."));
+    var node = { line: lineNo, depth: Math.floor(spaces / 2), children: [] };
+
+    var lab = /^@(\S+)$/.exec(body);
+    if (lab) { node.kw = "@"; node.text = lab[1].toLowerCase(); return node; }
+
+    var dur = /^(.*\S)\s+\[([^\]]+)\]$/.exec(body);
+    if (dur) { body = dur[1]; node.duration = dur[2].trim(); }
+
+    if (body.length >= 2 && body[0] === "\"" && body[body.length - 1] === "\"") {
+      node.kw = "action"; node.text = unescapeText(body.slice(1, -1)); return node;
+    }
+    var nm = /^note:\s*(.*)$/i.exec(body);
+    if (nm) { node.kw = "note"; node.text = unescapeText(nm[1]); return node; }
+
+    var km = /^(\S+)(?:\s+(.*))?$/.exec(body);
+    var word = km[1].toLowerCase();
+    if (KEYWORDS[word]) { node.kw = word; node.text = km[2] || ""; }
+    else { node.kw = "action"; node.text = body; if (RETIRED[word]) node.retired = RETIRED[word]; }
+    if (node.kw !== "primitive" && node.kw !== "silhouette") node.text = unescapeText(node.text);
+    return node;
+  }
+
+  function buildTree(text, diags) {
+    var root = { kw: "root", depth: -1, children: [], line: 0 };
+    var stack = [root];
+    text.split(/\r?\n/).forEach(function (raw, i) {
+      var node = lexLine(raw, i + 1, diags);
+      if (!node) return;
+      while (stack.length > 1 && stack[stack.length - 1].depth >= node.depth) stack.pop();
+      var parent = stack[stack.length - 1];
+      if (node.depth > parent.depth + 1) diags.push(diag(node.line, "This line is indented deeper than the line above allows."));
+      parent.children.push(node);
+      stack.push(node);
+    });
+    return root;
+  }
+
+  function parseHeader(text) {
+    var m = /^(.*?)\s*\((.*)\)\s*$/.exec(text);
+    var name = m ? m[1] : text, params = m ? m[2] : "";
+    name = name.trim();
+    if (name.length >= 2 && name[0] === "\"" && name[name.length - 1] === "\"") name = name.slice(1, -1);
+    return { name: unescapeText(name), params: unescapeText(params.trim()) };
+  }
+
+  // ---- 2. Tree -> Model ---------------------------------------------------
+
+  function stmtsOf(nodes) { return nodes.filter(function (n) { return n.kw !== "@"; }); }
+  function lastStmt(nodes) { var s = stmtsOf(nodes); return s[s.length - 1]; }
+  function jumpsAway(node) { return !!node && node.kw === "goto"; }
+  function labelOf(node) { var m = /^@(\S+)$/.exec(node.text.trim()); return m ? m[1].toLowerCase() : null; }
+
+  function parse(text) {
+    var diags = [];
+    var root = buildTree(text, diags);
+    var top = root.children;
+    var hdr;
+
+    if (!top.length) {
+      diags.push(diag(1, "The text is empty. Start with drakon, then primitive <name> or silhouette <name>."));
+      return { model: null, diagnostics: diags, info: {} };
+    }
+    if (top[0].kw === "drakon") {
+      top.slice(1).forEach(function (n) { diags.push(diag(n.line, "Everything must be indented under drakon.")); });
+      hdr = top[0].children[0];
+      top[0].children.slice(1).forEach(function (n) { diags.push(diag(n.line, "One Diagram per text: this line must be indented under the " + (hdr ? hdr.kw : "header") + " line.")); });
+    } else {
+      diags.push(diag(top[0].line, "The first line must be drakon."));
+      hdr = top[0];
+    }
+    if (!hdr || (hdr.kw !== "primitive" && hdr.kw !== "silhouette")) {
+      diags.push(diag(hdr ? hdr.line : top[0].line, "Expected primitive <name> (<params>) or silhouette <name> (<params>)."));
+      return { model: null, diagnostics: diags, info: {} };
+    }
+
+    var head = parseHeader(hdr.text);
+    var kind = hdr.kw;
+    var branchDefs = [];
+    if (kind === "primitive") {
+      hdr.children.forEach(function (n) {
+        if (n.kw === "branch") diags.push(diag(n.line, "A primitive has a single branch. Change primitive to silhouette to use branches."));
+      });
+      branchDefs.push({ name: "", nodes: hdr.children.filter(function (n) { return n.kw !== "branch"; }), line: hdr.line });
+    } else {
+      hdr.children.forEach(function (n) {
+        if (n.kw === "branch") branchDefs.push({ name: n.text.trim(), nodes: n.children, line: n.line });
+        else diags.push(diag(n.line, "Under silhouette, every line must sit inside a branch <name>."));
+      });
+      if (!branchDefs.length) diags.push(diag(hdr.line, "A silhouette needs at least one branch <name>."));
+    }
+
+    var ctx = {
+      icons: {}, lineOf: {}, used: {}, labels: {}, branchByName: {}, jumps: [],
+      diags: diags, kind: kind, exitRole: null
+    };
+
+    function newId(base) {
+      var id = base, n = 2;
+      while (ctx.used[id]) id = base + "-" + n++;
+      ctx.used[id] = true;
+      return id;
+    }
+
+    branchDefs.forEach(function (b) {
+      b.id = newId("b-" + slug(b.name, "main"));
+      var key = b.name.toLowerCase();
+      if (ctx.branchByName[key]) diags.push(diag(b.line, "Two branches are called “" + b.name + "”."));
+      else ctx.branchByName[key] = b.id;
+      if (kind === "silhouette" && !b.name) diags.push(diag(b.line, "A branch needs a name."));
+    });
+
+    // Pre-pass: ids for every Icon line, labels attached to the line below them.
+    function assign(nodes, bi) {
+      nodes.forEach(function (n, i) {
+        n.branch = bi;
+        if (n.kw === "@") {
+          var target = null;
+          for (var j = i + 1; j < nodes.length; j++) if (nodes[j].kw !== "@") { target = nodes[j]; break; }
+          if (!target) diags.push(diag(n.line, "The label @" + n.text + " must sit directly above an Icon line."));
+          else if (ctx.labels[n.text]) diags.push(diag(n.line, "The label @" + n.text + " is used twice."));
+          else ctx.labels[n.text] = target;
+          return;
+        }
+        if (ICON_LINES[n.kw] && !(n.kw === "goto" && labelOf(n))) n.id = newId(n.kw === "goto" ? "to-" + slug(n.text, "branch") : slug(n.text, n.kw));
+        if (n.kw === "loop") n.endId = newId(n.id + "-end");
+        assign(n.children, bi);
+      });
+    }
+    branchDefs.forEach(function (b, bi) { assign(b.nodes, bi); });
+
+    function entryOf(node, guard) {
+      guard = guard || 0;
+      if (guard > 50) return null;
+      var l = node.kw === "goto" && labelOf(node);
+      if (l) { var t = ctx.labels[l]; return t ? entryOf(t, guard + 1) : null; }
+      return node.id || null;
+    }
+
+    function put(node, icon) {
+      if (node.duration) icon.duration = node.duration;
+      ctx.icons[node.id] = icon;
+      ctx.lineOf[node.id] = node.line;
+      return node.id;
+    }
+
+    function sub(parent, changes) { var c = Object.create(parent); for (var k in changes) c[k] = changes[k]; return c; }
+
+    function buildSeq(nodes, next, c) {
+      var stmts = stmtsOf(nodes);
+      for (var i = 0; i < stmts.length - 1; i++) {
+        if (jumpsAway(stmts[i])) {
+          diags.push(diag(stmts[i + 1].line, "This line can never be reached: the line above jumps away."));
+          stmts = stmts.slice(0, i + 1);
+          break;
+        }
+      }
+      var cur = next;
+      for (var k = stmts.length - 1; k >= 0; k--) cur = buildStmt(stmts[k], cur, c);
+      return cur;
+    }
+
+    function noChildren(n) {
+      n.children.forEach(function (ch) { diags.push(diag(ch.line, "Only question, select, loop and branch lines can have indented lines under them.")); });
+    }
+
+    function buildStmt(n, next, c) {
+      switch (n.kw) {
+        case "action":
+          noChildren(n);
+          if (n.retired) diags.push(diag(n.line, n.retired + " (This line is read as an action.)"));
+          return put(n, { type: "action", text: n.text, next: next });
+        case "note":
+          noChildren(n);
+          return put(n, { type: "comment", text: n.text, next: next });
+        case "shelf":
+        case "input":
+        case "output": {
+          noChildren(n);
+          var ci = n.text.indexOf(":");
+          if (ci < 0) {
+            if (n.kw === "shelf") { diags.push(diag(n.line, "Write shelf <who>: <what>.")); return put(n, { type: "shelf", text: n.text, secondaryText: "", next: next }); }
+            return put(n, { type: "simple" + n.kw, text: n.text, next: next });
+          }
+          return put(n, { type: n.kw, secondaryText: n.text.slice(0, ci).trim(), text: n.text.slice(ci + 1).trim(), next: next });
+        }
+        case "insert": {
+          noChildren(n);
+          var parts = n.text.split("->");
+          if (parts.length < 2) diags.push(diag(n.line, "Write insert <text> -> <diagram-id>."));
+          var ins = { type: "insertion", text: parts[0].trim(), next: next };
+          if (parts.length >= 2) ins.diagram = parts.slice(1).join("->").trim();
+          return put(n, ins);
+        }
+        case "goto": {
+          noChildren(n);
+          var label = labelOf(n);
+          if (label) {
+            // goto @name: a join (target further down) or an arrow loop (target further up).
+            // Which one is decided from the drawing after the whole graph is built.
+            var lbl = ctx.labels[label];
+            if (!lbl) { diags.push(diag(n.line, "There is no label @" + label + ".")); return next; }
+            if (lbl.branch !== n.branch) {
+              var bn = branchDefs[lbl.branch].name;
+              diags.push(diag(n.line, "@" + label + " is in branch “" + bn + "”. goto @name stays within one branch; write goto " + bn + " to switch branch."));
+            }
+            ctx.jumps.push({ node: n, role: c.exitRole, target: entryOf(lbl) });
+            return JUMP + (ctx.jumps.length - 1);
+          }
+          var target = ctx.branchByName[n.text.trim().toLowerCase()];
+          if (ctx.kind !== "silhouette") diags.push(diag(n.line, "goto <branch> only works in a silhouette. To jump to a step, label it @name and write goto @name."));
+          else if (!target) diags.push(diag(n.line, "There is no branch called “" + n.text.trim() + "”."));
+          return put(n, { type: "address", branch: target || null });
+        }
+        case "question": {
+          var blocks = [];
+          n.children.forEach(function (ch) {
+            if (ch.kw === "yes" || ch.kw === "no") {
+              if (blocks.some(function (b) { return b.kw === ch.kw; })) diags.push(diag(ch.line, "This question already has a " + ch.kw + " block."));
+              else blocks.push(ch);
+              if (ch.text) diags.push(diag(ch.line, "Put the steps on their own lines, indented under " + ch.kw + "."));
+            } else diags.push(diag(ch.line, "Under a question, only yes and no blocks are allowed."));
+          });
+          var down;
+          if (blocks.length === 2) down = blocks[0].kw;
+          else if (blocks.length === 1) {
+            var only = blocks[0].kw, other = only === "yes" ? "no" : "yes";
+            // Guard shorthand (proposed amendment 2): a lone block that never falls through goes to the side.
+            down = jumpsAway(lastStmt(blocks[0].children)) ? other : only;
+          } else { diags.push(diag(n.line, "A question needs a yes block, a no block, or both.")); down = "yes"; }
+          var exits = {};
+          ["yes", "no"].forEach(function (k) {
+            var b = blocks.filter(function (x) { return x.kw === k; })[0];
+            exits[k] = b ? buildSeq(b.children, next, sub(c, { exitRole: k === down ? "down" : "side" })) : next;
+          });
+          return put(n, { type: "question", text: n.text, yes: exits.yes, no: exits.no, down: down });
+        }
+        case "select": {
+          var cases = [];
+          n.children.forEach(function (ch) {
+            if (ch.kw === "case") cases.push(ch);
+            else diags.push(diag(ch.line, "Under a select, only case blocks are allowed."));
+          });
+          if (!cases.length) diags.push(diag(n.line, "A select needs at least one case."));
+          var ids = cases.map(function (cs, i) {
+            if (!stmtsOf(cs.children).length && i < cases.length - 1) diags.push(diag(cs.line, "Only the rightmost case may be empty."));
+            var first = buildSeq(cs.children, next, sub(c, { exitRole: "case" }));
+            put(cs, { type: "case", text: cs.text, next: first });
+            return cs.id;
+          });
+          return put(n, { type: "select", text: n.text, cases: ids });
+        }
+        case "loop": {
+          var body = buildSeq(n.children, n.endId, sub(c, { exitRole: null }));
+          ctx.icons[n.endId] = { type: "loopend", next: next };
+          ctx.lineOf[n.endId] = n.line + 0.5;
+          return put(n, { type: "loopbegin", text: n.text, next: body, end: n.endId });
+        }
+        case "yes": case "no": diags.push(diag(n.line, n.kw + " only goes directly under a question.")); return next;
+        case "case": diags.push(diag(n.line, "case only goes directly under a select.")); return next;
+        case "branch": diags.push(diag(n.line, "branch only goes directly under silhouette.")); return next;
+        default: diags.push(diag(n.line, "“" + n.kw + "” is not allowed here.")); return next;
+      }
+    }
+
+    var branches = branchDefs.map(function (b, i) {
+      var last = i === branchDefs.length - 1;
+      var first = buildSeq(b.nodes, last ? END : FALL + i, sub(ctx, { exitRole: null }));
+      return { id: b.id, name: b.name, first: first, _line: b.line };
+    });
+
+    // Resolve the sentinels: fell off the bottom, reached End, or goto @name.
+    var endUsed = false, fellOff = {}, jumpEdge = {};
+    function fix(v, from, key) {
+      if (v === END) { endUsed = true; return "end"; }
+      if (typeof v === "string" && v.indexOf(FALL) === 0) { fellOff[v.slice(FALL.length)] = true; return null; }
+      if (typeof v === "string" && v.indexOf(JUMP) === 0) {
+        var j = ctx.jumps[+v.slice(JUMP.length)];
+        jumpEdge[from + "|" + key] = j;
+        return j.target;
+      }
+      return v;
+    }
+    Object.keys(ctx.icons).forEach(function (id) {
+      var ic = ctx.icons[id];
+      ["next", "yes", "no"].forEach(function (k) { if (k in ic) ic[k] = fix(ic[k], id, k); });
+    });
+    branches.forEach(function (b) { b.first = fix(b.first, null, "first"); });
+    Object.keys(fellOff).forEach(function (i) {
+      var b = branchDefs[i];
+      diags.push(diag(b.line, "Branch “" + b.name + "” can run off its bottom. Every branch except the last must end with goto."));
+    });
+    if (endUsed) { ctx.icons.end = { type: "end" }; ctx.lineOf.end = Infinity; }
+
+    // A goto @name that closes a cycle goes upward in the drawing: it is an arrow loop.
+    // DRAKON can only draw that from the side exit of a question (which also gives the loop a way out).
+    findBackEdges(ctx.icons, branches).forEach(function (e) {
+      var j = jumpEdge[e.from + "|" + e.key];
+      if (!j) return;
+      j.upward = true;
+      if (j.role === "down") diags.push(diag(j.node.line, "This goto loops back up from the exit drawn downwards. List this exit second so the loop-back is drawn to the side."));
+      else if (j.role !== "side") diags.push(loopWithoutQuestion(j, e.to));
+    });
+
+    function loopWithoutQuestion(j, to) {
+      var name = labelOf(j.node), t = ctx.icons[to];
+      var what = t && t.text ? "“" + t.text.split("\n")[0] + "” (line " + ctx.lineOf[to] + ")" : "line " + ctx.lineOf[to];
+      var where = j.role === "case"
+        ? "It sits directly in a case, and DRAKON can only draw a loop-back from the side of a question."
+        : "Nothing decides when to stop, so every step from there down to here would repeat forever.";
+      var pad = new Array(j.node.depth + 1).join("  ");
+      return diag(j.node.line,
+        "goto @" + name + " loops back to " + what + " without a question. " + where +
+        " Let a question decide whether to go round again, and put the goto in its yes or no block:",
+        [pad + "question Go round again?", pad + "  yes", pad + "    goto @" + name]);
+    }
+
+    // Anything no path reaches (e.g. lines after a question whose exits all jump away).
+    var seen = reachable(ctx.icons, branches);
+    Object.keys(ctx.icons).forEach(function (id) {
+      var t = ctx.icons[id].type;
+      if (!seen[id] && t !== "end" && t !== "loopend" && t !== "case") diags.push(diag(ctx.lineOf[id], "This line can never be reached: every path above it jumps away."));
+    });
+
+    // Order icons by text line so the Model reads top to bottom.
+    var icons = {};
+    Object.keys(ctx.icons).sort(function (a, b) { return ctx.lineOf[a] - ctx.lineOf[b]; })
+      .forEach(function (id) { icons[id] = ctx.icons[id]; });
+
+    var model = {
+      schemaVersion: "0.1",
+      id: slug(head.name, "diagram"),
+      name: head.name,
+      textFormat: "plain",
+      branches: branches.map(function (b) { return { id: b.id, name: b.name, first: b.first }; }),
+      icons: icons
+    };
+    if (head.params) model.params = head.params;
+
+    diags.sort(function (a, b) { return a.line - b.line; });
+    var loops = ctx.jumps.filter(function (j) { return j.upward; }).length;
+    return { model: model, diagnostics: diags, info: { kind: kind, hasEnd: endUsed, joins: ctx.jumps.length - loops, loops: loops } };
+  }
+
+  // Edges that point at an Icon still on the walk stack are loop-backs.
+  function successors(ic) {
+    if (!ic || ic.type === "address" || ic.type === "end") return [];
+    var out = [];
+    if (ic.next) out.push(["next", ic.next]);
+    if (ic.yes) out.push(["yes", ic.yes]);
+    if (ic.no) out.push(["no", ic.no]);
+    (ic.cases || []).forEach(function (c, i) { out.push(["cases." + i, c]); });
+    return out;
+  }
+
+  function reachable(icons, branches) {
+    var seen = {};
+    function walk(id) {
+      if (!id || seen[id] || !icons[id]) return;
+      seen[id] = true;
+      successors(icons[id]).forEach(function (s) { walk(s[1]); });
+    }
+    branches.forEach(function (b) { walk(b.first); });
+    return seen;
+  }
+
+  function findBackEdges(icons, branches) {
+    var state = {}, back = [];
+    function walk(id) {
+      state[id] = 1;
+      successors(icons[id]).forEach(function (s) {
+        var to = s[1];
+        if (!icons[to]) return;
+        if (state[to] === 1) back.push({ from: id, key: s[0], to: to });
+        else if (!state[to]) walk(to);
+      });
+      state[id] = 2;
+    }
+    branches.forEach(function (b) { if (b.first && icons[b.first] && !state[b.first]) walk(b.first); });
+    return back;
+  }
+
+  // ---- 3. Model -> drakonwidget items ------------------------------------
+
+  function toDrakonwidget(model) {
+    var items = {}, seq = 1, dw = {}, branchDw = {}, caseTwo = {};
+    function nid() { return String(seq++); }
+    var primitive = model.branches.length === 1 && !model.branches[0].name;
+
+    model.branches.forEach(function (b, i) {
+      var id = nid();
+      branchDw[b.id] = id;
+      items[id] = primitive ? { type: "branch", branchId: 0 } : { type: "branch", branchId: i + 1, content: b.name };
+    });
+    var seen = reachable(model.icons, model.branches);
+    Object.keys(model.icons).forEach(function (id) {
+      if (model.icons[id].type !== "address" && seen[id]) dw[id] = nid();
+    });
+
+    // drakonwidget puts the arrow-loop item at the TOP of the loop: the flow from above
+    // and the loop-back both point at it, and it points down to the first looped Icon.
+    var loopTop = {};
+    findBackEdges(model.icons, model.branches).forEach(function (e) {
+      if (!loopTop[e.to]) { var a = nid(); loopTop[e.to] = a; items[a] = { type: "arrow-loop", one: dw[e.to] }; }
+    });
+
+    function link(from, key, to) {
+      if (!to) return undefined;
+      var t = model.icons[to];
+      if (t && t.type === "address") return t.branch ? branchDw[t.branch] : undefined;
+      return loopTop[to] || dw[to];
+    }
+
+    model.branches.forEach(function (b) { items[branchDw[b.id]].one = link(null, "first", b.first); });
+
+    Object.keys(model.icons).forEach(function (id) {
+      var ic = model.icons[id];
+      if (ic.type === "address" || !seen[id]) return;
+      var it = { type: ic.type };
+      if (ic.text !== undefined) it.content = ic.text;
+      if (ic.secondaryText !== undefined) it.secondary = ic.secondaryText;
+      switch (ic.type) {
+        case "question": {
+          var downKey = ic.down === "no" ? "no" : "yes", sideKey = downKey === "yes" ? "no" : "yes";
+          it.flag1 = downKey === "yes" ? 1 : 0;
+          it.one = link(id, downKey, ic[downKey]);
+          it.two = link(id, sideKey, ic[sideKey]);
+          break;
+        }
+        case "select":
+          it.one = ic.cases.length ? dw[ic.cases[0]] : undefined;
+          ic.cases.forEach(function (c, i) { if (i + 1 < ic.cases.length) caseTwo[c] = dw[ic.cases[i + 1]]; });
+          break;
+        case "end":
+          break;
+        default:
+          it.one = link(id, "next", ic.next);
+      }
+      if (ic.duration) {
+        var d = nid();
+        items[d] = { type: "duration", content: ic.duration };
+        it.side = d;
+      }
+      items[dw[id]] = Object.assign(items[dw[id]] || {}, it);
+    });
+    Object.keys(caseTwo).forEach(function (c) { items[dw[c]].two = caseTwo[c]; });
+
+    var out = { name: model.name || "Untitled", access: "read", items: items };
+    if (model.params) out.params = model.params;
+    return out;
+  }
+  return { parse: parse, toDrakonwidget: toDrakonwidget };
+})();
+</script>
+
+<script src="../../libs/drakonwidget.js"></script>
+
+<!-- ===================================================================
+     The page: a thin shell over DrakonText. Throwaway.
+     =================================================================== -->
+<script>
+(function () {
+  "use strict";
+
+  var SCENARIOS = [
+    {
+      name: "Everything at once",
+      desc: "A realistic silhouette using most Icons: input, duration, a question with an empty yes, select with a shelf and an insertion, a loop, a multi-line action, a note, output and a quoted literal. It mirrors the expense-claim sample from the Model prototype (ticket 03).",
+      steps: [
+        { label: "Load it", note: "Compare the Model on the right with the expense-claim sample from ticket 03: same branches, addresses and loop pairing. The last line is in quotes so it is not read as a question.", text: [
+          "drakon",
+          "  silhouette \"Expense claim\" (claim)",
+          "    branch Check claim",
+          "      input Employee: Expense claim",
+          "      Register the claim [1 day]",
+          "      question Receipt attached?",
+          "        yes",
+          "        no",
+          "          Mark the claim as rejected",
+          "          goto Close",
+          "      select Amount",
+          "        case < €100",
+          "          Approve automatically",
+          "        case €100 – €1000",
+          "          shelf Line manager: Approve the claim",
+          "        case > €1000",
+          "          insert Finance review -> finance-review",
+          "      goto Pay out",
+          "    branch Pay out",
+          "      loop For each expense line",
+          "        Book the line in the ledger",
+          "      Transfer the total\\nto the employee",
+          "      goto Close",
+          "    branch Close",
+          "      note: Always tell the employee, even after a rejection",
+          "      output Employee: Notification e-mail",
+          "      \"question marks are fine in quoted text\""
+        ] }
+      ]
+    },
+    {
+      name: "Primitive and a question",
+      desc: "A one-branch Diagram. Watch how the order of the yes and no blocks decides which exit is drawn downwards.",
+      steps: [
+        { label: "1. Plain steps", note: "A line with no keyword is an action. End is added automatically.", text: [
+          "drakon",
+          "  primitive \"Go out\"",
+          "    Put on clothes",
+          "    Leave the house"
+        ] },
+        { label: "2. Add a question", note: "Only yes is listed and it falls through, so yes is drawn downwards and the empty no exit goes straight to the merge point.", text: [
+          "drakon",
+          "  primitive \"Go out\"",
+          "    Put on clothes",
+          "    question Is it raining?",
+          "      yes",
+          "        Take umbrella\\nTake rubber boots",
+          "    Leave the house"
+        ] },
+        { label: "3. List no first", note: "Now no is listed first, so no is drawn downwards and the umbrella moves to the side. This is how the original drakonwidget example is drawn.", text: [
+          "drakon",
+          "  primitive \"Go out\"",
+          "    Put on clothes",
+          "    question Is it raining?",
+          "      no",
+          "      yes",
+          "        Take umbrella\\nTake rubber boots",
+          "    Leave the house"
+        ] },
+        { label: "4. Duration and insertion", note: "A [..] suffix adds a duration Icon to the left. insert … -> id makes an insertion; the target id is kept in the Model, but drakonwidget cannot show it.", text: [
+          "drakon",
+          "  primitive \"Go out\"",
+          "    Put on clothes [5 min]",
+          "    question Is it raining?",
+          "      no",
+          "      yes",
+          "        Take umbrella\\nTake rubber boots",
+          "    insert Leave the house -> leave-the-house"
+        ] }
+      ]
+    },
+    {
+      name: "Silhouette and goto",
+      desc: "The example from ticket 05. Every branch except the last must end in goto; the last one ends in End.",
+      steps: [
+        { label: "1. The ticket 05 example", note: "Three branches. The empty case C falls through to goto Afsluiten.", text: [
+          "drakon",
+          "  silhouette \"Claim afhandeling\" (claim)",
+          "    branch Controle",
+          "      question Is een vraag?",
+          "        yes",
+          "          goto Keuze",
+          "        no",
+          "          goto Afsluiten",
+          "    branch Keuze",
+          "      select Welke van de drie",
+          "        case A",
+          "          Doe A",
+          "        case B",
+          "          Doe B",
+          "        case C",
+          "      goto Afsluiten",
+          "    branch Afsluiten",
+          "      Meld het resultaat\\nper e-mail"
+        ] },
+        { label: "2. Forget a goto", note: "Branch Keuze now runs off its bottom. That is a Problem, not a silent guess.", text: [
+          "drakon",
+          "  silhouette \"Claim afhandeling\" (claim)",
+          "    branch Controle",
+          "      question Is een vraag?",
+          "        yes",
+          "          goto Keuze",
+          "        no",
+          "          goto Afsluiten",
+          "    branch Keuze",
+          "      select Welke van de drie",
+          "        case A",
+          "          Doe A",
+          "        case B",
+          "          Doe B",
+          "        case C",
+          "    branch Afsluiten",
+          "      Meld het resultaat\\nper e-mail"
+        ] },
+        { label: "3. Typo in a branch name", note: "goto Afsluit points nowhere.", text: [
+          "drakon",
+          "  silhouette \"Claim afhandeling\" (claim)",
+          "    branch Controle",
+          "      question Is een vraag?",
+          "        yes",
+          "          goto Keuze",
+          "        no",
+          "          goto Afsluit",
+          "    branch Keuze",
+          "      Doe iets",
+          "      goto Afsluiten",
+          "    branch Afsluiten",
+          "      Meld het resultaat"
+        ] }
+      ]
+    },
+    {
+      name: "goto @label: join",
+      desc: "goto @name jumps to the line marked @name in the same branch. When that line is further down in the drawing, the paths merge there (a shared join).",
+      steps: [
+        { label: "1. The addendum example", note: "Order afwijzen appears once, reached from two places. The Model has no label: the exit just points at that Icon.", text: [
+          "drakon",
+          "  primitive \"Order intake\"",
+          "    question Klant bekend?",
+          "      yes",
+          "        question Krediet ok?",
+          "          yes",
+          "            Order bevestigen",
+          "          no",
+          "            goto @afwijzen",
+          "      no",
+          "        @afwijzen",
+          "        Order afwijzen",
+          "    Order archiveren"
+        ] },
+        { label: "2. Label on an earlier line", note: "The label sits on an earlier line, yet the drawing still goes down, so this is a join, not a loop. Up or down is decided by the drawing, not by line order. Taken from getEarRole in dtsrc.", text: [
+          "drakon",
+          "  primitive getEarRole (ears)",
+          "    select ears.selected",
+          "      case \"up\"",
+          "        @vertical",
+          "        return \"vertical\"",
+          "      case \"down\"",
+          "        goto @vertical",
+          "      case",
+          "        return \"horizontal\""
+        ] },
+        { label: "3. Branch or label?", note: "goto Afsluiten goes to a branch; goto @afsluiten goes to a label. The @ keeps them apart even when the names match.", text: [
+          "drakon",
+          "  silhouette \"Order intake\"",
+          "    branch Controle",
+          "      question Klant bekend?",
+          "        yes",
+          "          question Krediet ok?",
+          "            yes",
+          "            no",
+          "              goto @afsluiten",
+          "          Order bevestigen",
+          "        no",
+          "          Klant registreren",
+          "          goto Afsluiten",
+          "      @afsluiten",
+          "      Controle afsluiten",
+          "      goto Afsluiten",
+          "    branch Afsluiten",
+          "      Order archiveren"
+        ] }
+      ]
+    },
+    {
+      name: "goto @label: loop",
+      desc: "loop draws a FOR-style loop. Any other loop is a goto @name back up: drawn as DRAKON's arrow loop. It must end the side exit of a question, which is also the loop's way out.",
+      steps: [
+        { label: "1. loop block", note: "The loop end is placed where the indentation stops.", text: [
+          "drakon",
+          "  primitive \"Pay out claim\" (claim)",
+          "    loop For each expense line",
+          "      Book the line in the ledger",
+          "    Transfer the total to the employee"
+        ] },
+        { label: "2. goto @label back up", note: "no is listed second, so it is drawn to the side, and goto @call becomes the arrow loop back to Call the customer.", text: [
+          "drakon",
+          "  primitive \"Reach the customer\"",
+          "    @call",
+          "    Call the customer",
+          "    question Did they answer?",
+          "      yes",
+          "      no",
+          "        Wait one hour [1 h]",
+          "        goto @call",
+          "    Discuss the claim"
+        ] },
+        { label: "3. Guard form", note: "Only the no block is listed and it ends in goto, so the guard shorthand puts it on the side and yes carries on downwards. Same drawing as step 2.", text: [
+          "drakon",
+          "  primitive \"Reach the customer\"",
+          "    @call",
+          "    Call the customer",
+          "    question Did they answer?",
+          "      no",
+          "        Wait one hour [1 h]",
+          "        goto @call",
+          "    Discuss the claim"
+        ] },
+        { label: "4. Loop drawn down", note: "Listing no first would draw the loop-back downwards, which DRAKON cannot draw. The text says so.", text: [
+          "drakon",
+          "  primitive \"Reach the customer\"",
+          "    @call",
+          "    Call the customer",
+          "    question Did they answer?",
+          "      no",
+          "        Wait one hour [1 h]",
+          "        goto @call",
+          "      yes",
+          "    Discuss the claim"
+        ] },
+        { label: "5. Loop with no way out", note: "A goto back up on the main line loops forever. The Problem explains why and shows the lines to write instead; paste them over line 6 and the loop draws.", text: [
+          "drakon",
+          "  primitive \"Reach the customer\"",
+          "    @call",
+          "    Call the customer",
+          "    Wait one hour",
+          "    goto @call"
+        ] }
+      ]
+    },
+    {
+      name: "Guard chain",
+      desc: "hitBox from dtsrc: four checks that share one failure. Written in full it nests four levels; the proposed guard shorthand keeps it flat. Both should draw the same Diagram.",
+      steps: [
+        { label: "1. Full form", note: "Four levels of nesting for what DRAKON draws as a straight line.", text: [
+          "drakon",
+          "  primitive hitBox (box\\nx\\ny)",
+          "    question x >= box.left",
+          "      yes",
+          "        question y >= box.top",
+          "          yes",
+          "            question x <= box.left + box.width",
+          "              yes",
+          "                question y <= box.top + box.height",
+          "                  yes",
+          "                    return true",
+          "                  no",
+          "                    goto @false",
+          "              no",
+          "                goto @false",
+          "          no",
+          "            goto @false",
+          "      no",
+          "        @false",
+          "        return false"
+        ] },
+        { label: "2. Guard shorthand", note: "Each lone no block ends in goto @false, so it goes to the side and the next line continues downwards. Compare the drawing and the Model with step 1.", text: [
+          "drakon",
+          "  primitive hitBox (box\\nx\\ny)",
+          "    question x >= box.left",
+          "      no",
+          "        goto @false",
+          "    question y >= box.top",
+          "      no",
+          "        goto @false",
+          "    question x <= box.left + box.width",
+          "      no",
+          "        goto @false",
+          "    question y <= box.top + box.height",
+          "      yes",
+          "        return true",
+          "      no",
+          "        @false",
+          "        return false"
+        ] }
+      ]
+    },
+    {
+      name: "State machine",
+      desc: "debounce from dtsrc: every path ends in goto, so there is no End (proposed clarification 4).",
+      steps: [
+        { label: "1. No End", note: "No End Icon in the Model. Does drakonwidget cope?", text: [
+          "drakon",
+          "  silhouette debounce (action\\ndelay)",
+          "    branch Idle",
+          "      input onInput(msg)",
+          "      goto Waiting",
+          "    branch Waiting",
+          "      tobj = setTimeout(me.onTimeout, delay)",
+          "      select receive",
+          "        case onInput(msg)",
+          "          clearTimeout(tobj)",
+          "          goto Waiting",
+          "        case onTimeout()",
+          "          action(msg)",
+          "          goto Idle"
+        ] }
+      ]
+    },
+    {
+      name: "Mistakes",
+      desc: "Text that should not turn into a Diagram silently. Each step makes one mistake.",
+      steps: [
+        { label: "1. Bad indentation", note: "Three spaces instead of two, and a line indented too deep.", text: [
+          "drakon",
+          "  primitive Mistakes",
+          "     Odd indentation",
+          "    Fine",
+          "        Too deep"
+        ] },
+        { label: "2. Empty middle case", note: "Only the rightmost case may be empty.", text: [
+          "drakon",
+          "  primitive Mistakes",
+          "    select Which?",
+          "      case A",
+          "      case B",
+          "        Do B"
+        ] },
+        { label: "3. Unreachable line", note: "Nothing can reach a line after a goto.", text: [
+          "drakon",
+          "  silhouette Mistakes",
+          "    branch One",
+          "      goto Two",
+          "      Never happens",
+          "    branch Two",
+          "      Done"
+        ] },
+        { label: "4. Labels", note: "A label used twice, and a goto to a missing label.", text: [
+          "drakon",
+          "  primitive Mistakes",
+          "    question Ok?",
+          "      yes",
+          "        @x",
+          "        Do A",
+          "      no",
+          "        goto @y",
+          "    @x",
+          "    Do B"
+        ] },
+        { label: "5. Label in another branch", note: "goto @name stays within one branch. To switch branch, goto the branch itself.", text: [
+          "drakon",
+          "  silhouette Mistakes",
+          "    branch One",
+          "      goto @done",
+          "    branch Two",
+          "      @done",
+          "      Done"
+        ] },
+        { label: "6. Old keywords", note: "join, repeat and again are gone. They are flagged instead of being read silently as actions.", text: [
+          "drakon",
+          "  primitive Mistakes",
+          "    repeat",
+          "    Try it",
+          "    join done",
+          "    @done",
+          "    Done"
+        ] }
+      ]
+    }
+  ];
+
+  var SNIPPETS = [
+    ["Action", ["New step"]],
+    ["Question", ["question Is it OK?", "  yes", "    Do this", "  no", "    Do that"]],
+    ["Select", ["select Which one?", "  case A", "    Do A", "  case B", "    Do B", "  case"]],
+    ["Loop", ["loop For each item", "  Handle the item"]],
+    ["Loop back", ["@try", "Try it", "question Did it work?", "  yes", "  no", "    goto @try"]],
+    ["Branch", ["branch New branch", "  First step"]],
+    ["goto branch", ["goto <branch>"]],
+    ["@label", ["@label"]],
+    ["goto @label", ["goto @label"]],
+    ["Shelf", ["shelf Who: What to do"]],
+    ["Input", ["input Who: What arrives"]],
+    ["Output", ["output What leaves"]],
+    ["Insert", ["insert Other process -> other-process"]],
+    ["Note", ["note: Why this matters"]],
+    ["[duration]", null]
+  ];
+  var OPENS_BLOCK = /^(drakon|primitive|silhouette|branch|question|select|case|loop|yes|no)\b/i;
+
+  var textEl = document.getElementById("text");
+  var gutter = document.getElementById("gutter");
+  var host = document.getElementById("canvas-host");
+  var errBox = document.getElementById("render-error");
+  var factsEl = document.getElementById("facts");
+  var diagsEl = document.getElementById("diags");
+  var dataEl = document.getElementById("data");
+  var dataView = "model";
+  var last = { parsed: null, dw: null, facts: {} };
+  var drakon = createDrakonWidget();
+  var widgetEl = null;
+  var timer = null;
+
+  function noop() {}
+  function config() {
+    return {
+      startEditContent: noop, startEditSecondary: noop, startEditLink: noop, showContextMenu: noop,
+      canSelect: true, canvasIcons: false, textFormat: "plain", drawZones: false, maxWidth: 260,
+      theme: { background: "#f4f6fb", iconBack: "white", iconBorder: "#55607a", lines: "#55607a", shadowColor: "rgba(0,0,40,0.08)" }
+    };
+  }
+
+  function mountWidget() {
+    if (widgetEl) widgetEl.remove();
+    var r = host.getBoundingClientRect();
+    widgetEl = drakon.render(Math.max(200, r.width), Math.max(200, r.height), config());
+    host.insertBefore(widgetEl, errBox);
+  }
+
+  function showError(msg) {
+    errBox.style.display = msg ? "block" : "none";
+    errBox.title = msg || "";
+    if (!msg) { errBox.textContent = ""; return; }
+    mountWidget(); // drop whatever drakonwidget half-drew
+    var d = last.parsed && last.parsed.diagnostics[0];
+    if (!d) { errBox.textContent = "drakonwidget could not draw this Model: " + msg; return; }
+    errBox.textContent = "This can’t be drawn yet. Line " + Math.floor(d.line) + ": " + d.message +
+      (d.hint ? "\n\n" + d.hint.map(function (l) { return l.replace(/^ +/, function (s) { return s.slice(Math.min(s.length, d.hint[0].match(/^ */)[0].length)); }); }).join("\n") : "") +
+      (last.parsed.diagnostics.length > 1 ? "\n\n(" + (last.parsed.diagnostics.length - 1) + " more under Problems.)" : "");
+  }
+
+  function update() {
+    var text = textEl.value;
+    var parsed;
+    try { parsed = DrakonText.parse(text); }
+    catch (e) { parsed = { model: null, diagnostics: [{ line: 0, message: "Parser crashed: " + e.message }], info: {} }; }
+    last.parsed = parsed;
+    last.dw = parsed.model ? DrakonText.toDrakonwidget(parsed.model) : null;
+    renderGutter(text, parsed.diagnostics);
+    renderFacts(parsed);
+    renderDiags(parsed.diagnostics);
+    renderData();
+    if (last.dw) {
+      showError("");
+      try {
+        var p = drakon.setDiagram("prototype", JSON.parse(JSON.stringify(last.dw)), { stop: noop, pushEdit: noop }, false);
+        if (p && p.catch) p.catch(function (e) { showError(e && e.message || String(e)); });
+      } catch (e) { showError(e && e.message || String(e)); }
+    }
+  }
+
+  function renderGutter(text, diags) {
+    var bad = {};
+    diags.forEach(function (d) { bad[Math.floor(d.line)] = true; });
+    var n = text.split("\n").length, out = [];
+    for (var i = 1; i <= n; i++) out.push(bad[i] ? "<span class=err>" + i + "</span>" : String(i));
+    gutter.innerHTML = out.join("\n");
+    gutter.scrollTop = textEl.scrollTop;
+  }
+
+  function renderFacts(parsed) {
+    var m = parsed.model, f = {};
+    if (m) {
+      var counts = {};
+      Object.keys(m.icons).forEach(function (id) { var t = m.icons[id].type; counts[t] = (counts[t] || 0) + 1; });
+      f["Diagram"] = (parsed.info.kind === "primitive" ? "Primitive" : "Silhouette") + " “" + m.name + "”";
+      f["Parameters"] = m.params ? m.params.replace(/\n/g, ", ") : "none";
+      f["Branches"] = m.branches.map(function (b) { return b.name || "(single branch)"; }).join(" → ") || "none";
+      f["Icons"] = Object.keys(counts).sort().map(function (t) { return counts[t] + " " + t; }).join(", ") || "none";
+      f["goto @label"] = (parsed.info.joins || 0) + " join(s) down, " + (parsed.info.loops || 0) + " arrow loop(s) up";
+      f["End"] = parsed.info.hasEnd ? "yes, the last branch reaches End" : "no, no path reaches the bottom";
+    } else {
+      f["Diagram"] = "nothing yet, see Problems";
+    }
+    factsEl.innerHTML = "";
+    Object.keys(f).forEach(function (k) {
+      var dt = document.createElement("dt"), dd = document.createElement("dd"), span = document.createElement("span");
+      dt.textContent = k; span.textContent = f[k];
+      if (last.facts[k] !== undefined && last.facts[k] !== f[k]) span.className = "changed";
+      dd.appendChild(span); factsEl.appendChild(dt); factsEl.appendChild(dd);
+    });
+    last.facts = f;
+  }
+
+  function renderDiags(diags) {
+    diagsEl.innerHTML = "";
+    if (!diags.length) { diagsEl.innerHTML = "<li class=ok>No problems. The text is a valid Diagram.</li>"; return; }
+    diags.forEach(function (d) {
+      var li = document.createElement("li"), ln = document.createElement("span");
+      ln.className = "ln"; ln.textContent = d.line ? "Line " + Math.floor(d.line) : "";
+      li.appendChild(ln); li.appendChild(document.createTextNode(d.message));
+      if (d.hint) { var pre = document.createElement("pre"); pre.className = "hint"; pre.textContent = d.hint.join("\n"); li.appendChild(pre); }
+      li.onclick = function () { goToLine(Math.floor(d.line)); };
+      diagsEl.appendChild(li);
+    });
+  }
+
+  function renderData() {
+    var v = dataView === "model" ? (last.parsed && last.parsed.model) : last.dw;
+    dataEl.textContent = v ? JSON.stringify(v, null, 2) : "(nothing)";
+  }
+
+  function goToLine(n) {
+    var lines = textEl.value.split("\n"), start = 0;
+    for (var i = 0; i < n - 1 && i < lines.length; i++) start += lines[i].length + 1;
+    textEl.focus();
+    textEl.setSelectionRange(start, start + (lines[n - 1] || "").length);
+    textEl.scrollTop = Math.max(0, (n - 4) * 20);
+  }
+
+  function schedule() { clearTimeout(timer); timer = setTimeout(update, 200); }
+
+  function setText(lines) { textEl.value = lines.join("\n"); update(); }
+
+  function insertSnippet(lines) {
+    var v = textEl.value, pos = textEl.selectionStart;
+    var lineStart = v.lastIndexOf("\n", pos - 1) + 1;
+    var lineEnd = v.indexOf("\n", pos); if (lineEnd < 0) lineEnd = v.length;
+    var cur = v.slice(lineStart, lineEnd);
+    if (!lines) { // duration suffix on the current line
+      textEl.value = v.slice(0, lineEnd) + " [2 days]" + v.slice(lineEnd);
+      update(); return;
+    }
+    var indent = /^ */.exec(cur)[0];
+    if (OPENS_BLOCK.test(cur.trim())) indent += "  ";
+    var add = lines.map(function (l) { return indent + l; }).join("\n");
+    textEl.value = v.slice(0, lineEnd) + "\n" + add + v.slice(lineEnd);
+    var sel = lineEnd + 1 + indent.length;
+    textEl.focus(); textEl.setSelectionRange(sel, sel + lines[0].length);
+    update();
+  }
+
+  // Free play
+  var snip = document.getElementById("snippets");
+  SNIPPETS.forEach(function (s) {
+    var b = document.createElement("button");
+    b.textContent = s[0];
+    b.onclick = function () { insertSnippet(s[1]); };
+    snip.appendChild(b);
+  });
+
+  // Walkthroughs
+  var tabsEl = document.getElementById("scenario-tabs"), scenEl = document.getElementById("scenario");
+  function openScenario(i, k) {
+    Array.prototype.forEach.call(tabsEl.children, function (b, j) { b.className = i === j ? "on" : ""; });
+    var s = SCENARIOS[i];
+    scenEl.innerHTML = "";
+    var p = document.createElement("p"); p.className = "scenario-desc"; p.textContent = s.desc; scenEl.appendChild(p);
+    var steps = document.createElement("div"); steps.className = "steps"; scenEl.appendChild(steps);
+    var watch = document.createElement("div"); watch.className = "watch"; scenEl.appendChild(watch);
+    s.steps.forEach(function (st, k) {
+      var b = document.createElement("button");
+      b.textContent = st.label;
+      b.onclick = function () {
+        Array.prototype.forEach.call(steps.children, function (x, j) { x.className = j === k ? "on" : ""; });
+        watch.style.display = "block";
+        watch.textContent = "Watch for: " + st.note;
+        setText(st.text);
+        history.replaceState(null, "", "#s=" + i + "&k=" + k);
+      };
+      steps.appendChild(b);
+    });
+    (steps.children[k || 0] || steps.children[0]).click();
+  }
+  SCENARIOS.forEach(function (s, i) {
+    var b = document.createElement("button");
+    b.textContent = s.name;
+    b.onclick = function () { openScenario(i); };
+    tabsEl.appendChild(b);
+  });
+
+  document.getElementById("data-tabs").onclick = function (e) {
+    if (!e.target.dataset.k) return;
+    dataView = e.target.dataset.k;
+    Array.prototype.forEach.call(this.children, function (b) { b.className = b.dataset.k === dataView ? "on" : ""; });
+    renderData();
+  };
+
+  textEl.addEventListener("input", schedule);
+  textEl.addEventListener("scroll", function () { gutter.scrollTop = textEl.scrollTop; });
+  textEl.addEventListener("keydown", function (e) {
+    if (e.key === "Tab") { // two spaces, never a tab
+      e.preventDefault();
+      var s = textEl.selectionStart;
+      textEl.value = textEl.value.slice(0, s) + "  " + textEl.value.slice(textEl.selectionEnd);
+      textEl.setSelectionRange(s + 2, s + 2); schedule();
+    }
+  });
+  window.addEventListener("resize", function () { mountWidget(); update(); });
+
+  mountWidget();
+  var h = /s=(\d+)&k=(\d+)/.exec(location.hash);
+  openScenario(h ? Math.min(+h[1], SCENARIOS.length - 1) : 0, h ? +h[2] : 0);
+})();
+</script>
+</body>
+</html>
