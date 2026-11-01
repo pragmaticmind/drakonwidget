@@ -114,3 +114,13 @@ drakon
 ```
 
 `goto @call` goes up in the drawing, so it is an arrow loop. `goto @reject` goes down, so it is a shared join.
+
+### Addendum: mock-up findings (2026-11-01)
+
+Decided after the [Text view syntax mock-ups](06-text-view-syntax-mock-ups.md) prototype, which converted six real Diagrams from `dtsrc/` and ran them through the live Text view editor. Confirms the spellings that point 9 left open.
+
+28. **Guard shorthand.** A `question` that lists only one exit block, where that block ends in `goto` (so it never falls through), puts that block on the side. The following lines continue downwards as the other exit. A chain of guard questions stays flat instead of nesting one level per question. The flat form and the fully nested form give the same Model.
+29. **`input` and `output` Icons.** `input <text>` and `output <text>` are the simple forms. `input <who>: <what>` and `output <who>: <what>` are the two-part forms, like `shelf`. Import from drakon.tech maps `sinput` and `soutput` to these.
+30. **End is implicit only at the bottom of the last branch.** A last branch whose paths all end in `goto` has no End, so a state machine (`debounce`) is valid without one. Other branches still must end in `goto` (point 8).
+31. **Keywords are whole words.** A keyword counts only when it is followed by a space or the end of the line, so `action(msg)` is an action whose text is `action(msg)`. Text that is exactly a keyword or starts with `keyword ` is quoted with `"…"` (point 9).
+32. **Params stay `\n`-separated.** Several params are written in one line as `(dst\nsrc\nfields\ndefaultValue)`, the same escape as in Icon text (point 3). A comma-separated list form is not added. It is lossless but noisy, and the main audience, business analysts, rarely has multi-line params.

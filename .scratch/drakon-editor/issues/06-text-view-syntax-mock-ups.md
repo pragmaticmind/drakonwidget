@@ -1,12 +1,27 @@
 # Text view syntax mock-ups
 
 Type: prototype
-Status: claimed
+Status: resolved
 Blocked by: 05
 
 ## Question
 
 What does the chosen Text view syntax look like on realistic Diagrams (a primitive, a silhouette with several branches, nested questions, a loop, an insertion), and does it read well enough to author by hand?
+
+## Answer
+
+Resolved by prototype, 2026-11-01. Yes, the syntax reads well enough to author by hand, with the amendments below. Six real Diagrams from `dtsrc/` (`isUrl`, `getEarRole`, `copyFieldsOrDefault`, `unlinkArrow`, `debounce`, `hitBox`) were written by hand and then parsed by the live Text view editor. All parse without Problems. The flat and nested forms of `hitBox` give the same Model, and a mutation fuzz of 5000 edited texts never crashed the parser or produced a drawing without a Problem. Code-heavy Icon text gives long lines, which is acceptable because the audience writes short Icon text.
+
+Amendments, recorded in the [rejoins and one-jump addenda](05-text-view-syntax-direction.md):
+
+1. **One jump keyword**: `goto @name` replaces `join`, and `repeat … again` is not added (points 21 to 26).
+2. **Guard shorthand** for chains of guard questions (point 28).
+3. **`input` and `output` keywords** (point 29).
+4. **End is implicit only at the bottom of the last branch** (point 30).
+5. **Keywords are whole words**, and a quoted line is literal text (point 31).
+6. **Params stay `\n`-separated**, with no comma list (point 32).
+
+Prototypes: `prototypes/text-syntax/` on branch `prototype/text-syntax-mockups` (hand-converted examples) and `prototypes/text-view-editor/` on branch `prototype/text-view-syntax` (live editor).
 
 ## Comments
 
