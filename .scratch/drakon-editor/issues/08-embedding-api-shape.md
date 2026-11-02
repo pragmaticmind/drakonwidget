@@ -22,5 +22,6 @@ Resolved by grilling, 2026-10-31. All ten recommendations accepted.
 8. **Bad input**: `mount` and `setModel` reject a Model that doesn't match the Schema with a typed error listing what's wrong, and nothing partial loads. drakonwidget import is a separate pure function, `importDrakonwidget(json): Model`.
 9. **Lifecycle**: multiple instances per page, no global state. `editor.destroy()` removes all listeners and DOM.
 10. **Packaging**: an ESM npm package with TypeScript types, plus one self-contained IIFE bundle for `<script>`-tag Hosts.
+11. **Alignment guides**: `options.showAlignments` (default on in edit mode, off with `readOnly`), changeable at runtime with `editor.setShowAlignments()`. It controls only the guides and markers for alignment groups, never the Model (added 2026-11-02 by [Coordinates section semantics](04-coordinates-section-semantics.md)).
 
 Deferred to the fog: patch-style change events (until a Host needs them), and Host-facing commands on the handle (undo/redo, zoom, focus), which belong to the editing model.

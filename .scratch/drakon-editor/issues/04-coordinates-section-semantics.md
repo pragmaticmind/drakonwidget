@@ -1,7 +1,7 @@
 # Coordinates section semantics
 
 Type: grilling
-Status: claimed
+Status: resolved
 Blocked by:
 
 ## Question
@@ -15,6 +15,29 @@ How does the optional coordinates section coexist with automatic layout and the 
 - Ticket 05 point 12: the Text view hides layout but keeps it when the text is edited.
 - `group-duration` is the one free Icon in the baseline that is not part of the flow. Ticket 03 point 9 left it out until this ticket.
 - Not checked: whether drakonwidget stores positions for flow Icons on `type:"drakon"` Diagrams, or only for free-type Diagrams. The import mapping ticket (07) has to answer that.
+
+## Answer
+
+Resolved by grilling, 2026-11-02. All recommendations accepted, as revised by the user's two decisions (flow Icons carry layout information for two use cases, and a group with fewer than two Icons may exist). The Model stores relations and one setting, not pixel coordinates.
+
+Use cases:
+
+- **A. Alignment.** Icons on different branches are drawn at the same level when the alignment carries meaning (steps at the same time, a hand-over).
+- **B. Compact drawing.** A Diagram is drawn more compactly when branches overlap, for example a wide action beside a shorter neighbouring branch.
+
+1. **Representation of alignment.** Alignment groups: named sets of Icons that share one level. A group survives inserting and deleting Icons without renumbering, and its `label` can carry the meaning. Pixel coordinates and logical row numbers are not used.
+2. **What aligned means.** The vertical centres of the member Icons lie on one horizontal line. Shorter branches get white space above the member to make room. Alignment never reorders flow.
+3. **Validity.** A group has at most one Icon per branch. A group of one Icon is valid and **inert**: it forces no empty space in other branches. A group with Icons on two or more branches is **active**. Active groups must be consistent with each branch's flow order. If group G1 is before G2 in one branch and after it in another, that is a cycle and an `error` diagnostic naming both groups and the branches. Inert groups never take part in that check.
+4. **Compact drawing.** A Diagram-level `compact` flag, default off, because the regular column look is the DRAKON default. When on, the layout engine packs the drawing deterministically from the structure and the alignment groups. A wide Icon may extend over a neighbouring branch's empty rows and never over anything drawn. Branch order stays left to right. Alignment groups fix the rows first, packing decides the horizontal spacing after.
+5. **Schema.** `layout: {compact?: boolean, alignments?: [{id, label?, icons: [iconId, ...]}]}`, replacing the prototype's `layout.icons[id] = {x, y}`. No pixel numbers are stored. The section is optional and keyed by Icon id, and a viewer that ignores it still draws a correct Diagram.
+6. **When the structure changes.** Deleting an Icon removes it from its group. A group with no Icons left is removed, and a group left with one Icon stays, inert. An edit that would make a group invalid (moving a member into a branch that already has one) drops that Icon from the group and tells the author with a `hint`. Imported or hand-edited JSON that is invalid gets an `error`. Moving an Icon so that an inert group gets a second branch makes it active, and the layout changes accordingly.
+7. **Free Icons.** `group-duration` stays out of the first version, because A and B need no free Icons. The earlier idea of anchoring a free Icon to a flow Icon with an offset waits until a use case needs it.
+8. **Text view.** Alignments need a text form, because they carry meaning; hidden-but-kept (ticket 05 point 12) is not enough. The spelling is decided in a prototype ([Alignment text syntax mock-ups](10-alignment-text-syntax-mock-ups.md)), because Icon text may contain `{`, `[` and `~`. `compact` can be a header option on the `drakon` line.
+9. **Layout engine and import.** Alignment groups and `compact` are inputs to the automatic layout algorithm (fog item), which is not designed here. drakonwidget has neither feature as far as seen; the layout code was not checked, so [drakonwidget import mapping](07-drakonwidget-import-mapping.md) confirms it.
+10. **Visual indication** in the Canvas view. An active group is drawn as a thin dashed horizontal guide through its member Icons, with the group `label` at the end. An inert group shows a lighter marker on its Icon, with the tooltip "No Icon on another branch is aligned to this yet". Guides and markers are editing aids and are not drawn in an exported image unless an export plugin asks for them.
+11. **View toggle.** `options.showAlignments` (default on in edit mode, off with `readOnly`), changed at runtime with `editor.setShowAlignments()`. It controls only the guides and markers in 10. View state is never stored in the Model. A second toggle that draws without the alignment spacing is not added, because `compact` already gives a dense drawing; it can be added when someone asks.
+
+Follow-on changes: [Embedding API shape](08-embedding-api-shape.md) gains point 11, and [Model shape: tree or graph](03-model-shape-tree-or-graph.md) gets a layout addendum.
 
 ## Comments
 
