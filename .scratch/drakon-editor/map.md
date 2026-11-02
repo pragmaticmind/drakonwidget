@@ -28,13 +28,14 @@ An implementation-ready spec for a new standalone TypeScript DRAKON editor: one 
 - Addendum to [Text view syntax direction](issues/05-text-view-syntax-direction.md) (2026-11-01, from the [Text view syntax mock-ups](issues/06-text-view-syntax-mock-ups.md) prototype): one jump keyword. `goto <branch>` is an address; `goto @name` is a join when the target is lower in the drawing and an arrow loop when it is higher. `join` and `repeat … again` are dropped; `loop` stays. A loop-back must end a question's side exit. Diagnostics name the author's own label, text and line, and suggest a fix where possible.
 - [Text view syntax mock-ups](issues/06-text-view-syntax-mock-ups.md): six real Diagrams from `dtsrc/` parse without Problems in the live Text view editor. Addendum to [Text view syntax direction](issues/05-text-view-syntax-direction.md): guard shorthand for chains of guard questions, `input`/`output` keywords (`<who>: <what>` for the two-part forms), End implicit only at the bottom of the last branch, keywords are whole words, params stay `\n`-separated. Prototypes: `prototype/text-syntax-mockups`, `prototype/text-view-syntax`.
 - [User-friendly diagnostics](issues/09-user-friendly-diagnostics.md): suggestions only against known sets (branches, `@labels`, keywords), case and accent folded, distance at most `max(1, floor(length / 4))` and prefixes match, at most 3 and only when near. Keyword typos are a `hint`. One-click fix, shown only when there is exactly one. `onDiagnostics` item `{severity, code, message, range, fixes?}` with stable `code`s, severity `error` or `hint`. Messages name the author's own label, text and line.
+- [Coordinates section semantics](issues/04-coordinates-section-semantics.md): the Model stores relations, not pixels: `layout: {compact?, alignments?: [{id, label?, icons[]}]}`. Alignment groups put member Icons on different branches at one level (vertical centres). A group of one Icon is inert; groups on two or more branches are active, and conflicting orders are an `error`. `compact` (default off) lets the layout engine pack branches so a wide Icon can use a neighbour's empty rows. Guides and markers in the Canvas view, `options.showAlignments`. `group-duration` stays out of the first version. Text spelling is [ticket 10](issues/10-alignment-text-syntax-mock-ups.md).
 
 ## Not yet specified
 
 - Editing model: canvas interactions, selection, drag and drop, in-session undo/redo, and which of these the Editor handle exposes to the Host (undo/redo, zoom, focus).
 - Text view ↔ Model sync: invalid text mid-typing, preserving text formatting and comments when the Canvas view edits.
 - Grammar validation and error reporting.
-- Automatic layout algorithm.
+- Automatic layout algorithm, including how it honours alignment groups and `compact`.
 - Node metadata extension (owner, role, system, SLA).
 - Theming and styling.
 - Export plugins (SVG, PNG, Mermaid, BPMN), including a static Model→SVG renderer for viewer-only Hosts.
@@ -43,7 +44,7 @@ An implementation-ready spec for a new standalone TypeScript DRAKON editor: one 
 - Icons beyond drakonwidget parity.
 - Model validity as JSON Graph Format (parked; revisit if a consumer needs it).
 - Per-Icon text format overrides.
-- Free-floating Icons such as `group-duration` (after Coordinates section semantics).
+- Free-floating Icons such as `group-duration` (left out of the first version by Coordinates section semantics).
 - Localized keywords for the Text view.
 
 ## Out of scope

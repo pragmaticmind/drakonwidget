@@ -28,3 +28,7 @@ Evidence: a lossless round trip between option A and option B; option A's schema
 ### Addendum: shared joins (2026-10-31)
 
 The derived structure is a **tree plus downward join references**, not a pure tree. An exit may point at an Icon that other exits also reach (a shared join), so the Model needs no new field. The Grammar rule becomes: the derived tree, with its downward joins, must be drawable without crossing lines. This keeps every legal DRAKON Diagram expressible, and keeps drakonwidget import from rejecting Diagrams that contain such joins.
+
+### Addendum: layout (2026-11-02)
+
+[Coordinates section semantics](04-coordinates-section-semantics.md) replaces the prototype's `layout.icons[id] = {x, y}` with `layout: {compact?, alignments?: [{id, label?, icons[]}]}`. No pixel numbers are stored. Point 9 stands: `group-duration` stays out of the first version.
