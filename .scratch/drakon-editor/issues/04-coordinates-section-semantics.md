@@ -31,3 +31,26 @@ Questions in dependency order, each with the agent's recommendation. Status stay
 7. **Text view.** Free Icons need a text form, or they are invisible in the Text view. Recommend `duration` as a suffix on the line of its anchor (ticket 05 already has the `[duration]` suffix), so `group-duration` is the only free Icon left over.
 
 Question 1 decides the rest. If you want manual layout of flow Icons, say so and I will rework 2 to 6.
+
+### 2026-11-02: use cases from the user (answers question 1, reworks 2 to 7)
+
+Decided by the user: flow Icons **can** carry layout information, in a variation of coordinates, for two use cases:
+
+- **A. Align Icons across branches.** Icons on different branches are drawn at the same level because the alignment carries meaning (for example, steps that happen at the same time, or a hand-over).
+- **B. Draw compactly.** A Diagram can be drawn more compact when branches overlap, for example a wide action fits into the empty space beside a shorter neighbouring branch.
+
+This replaces the earlier recommendation (a) of question 1. The questions below are the reworked ones; the earlier questions 2 and 4 (flow Icons never have coordinates) are withdrawn.
+
+Observation that shapes the questions: branches are independent columns that touch only through `goto` addresses, and the drawing has no lines between columns. So neither use case can create a crossing line. A is a *meaning* (a relation between Icons). B is a *drawing choice* (spacing), which the structure does not need.
+
+1. **Representation of A.** Options: (a) alignment groups, named sets of Icons that share one level; (b) a logical row number per Icon; (c) pixel y. **Recommend (a).** A group survives inserting or deleting Icons without renumbering, and the group name can carry the meaning ("step 3", "hand-over"). Pixel coordinates (c) break whenever text wraps or an Icon is added.
+2. **What aligned means.** Recommend: the vertical centres of the member Icons are on one horizontal line. Shorter branches get white space above the member to make room. Alignment never reorders flow.
+3. **When an alignment group is valid.** Recommend: a group has at most one Icon per branch and spans at least two branches (alignment inside one branch says nothing the flow order does not). The groups must be consistent with each branch's flow order: if group G1 comes before G2 in one branch and after it in another, that is a cycle and an `error` diagnostic that names both groups and the branches.
+4. **Representation of B.** Options: (a) a stored per-branch x offset; (b) one Diagram-level switch, and the layout engine packs automatically; (c) per-Icon "may overlap" marks. **Recommend (b)**: a Diagram-level `compact` flag, default off, because the regular column look is the DRAKON default. When on, the engine packs deterministically from the structure and the alignment groups. A wide Icon may extend over a neighbour's empty rows and never over anything drawn. Branch order stays left to right. Alignment groups fix the rows first, packing decides the horizontal spacing after.
+5. **Schema.** Recommend replacing the prototype's `layout.icons[id] = {x, y}` with `layout: {compact?: boolean, alignments?: [{id, label?, icons: [iconId, ...]}]}`. No pixel numbers are stored. It stays optional, keyed by Icon id, and the Model stays valid without it (a viewer that ignores layout still draws a correct Diagram).
+6. **When the structure changes.** Deleting an Icon removes it from its group, and a group left with fewer than two Icons is removed. An edit that would make a group invalid (moving a member into a branch that already has one, or creating an order cycle) drops that Icon from the group and tells the author with a `hint`, instead of refusing the edit. Hand-edited or imported JSON that is invalid gets an `error`.
+7. **Free Icons.** `group-duration` still needs a decision. Recommend it stays out of the first version, since A and B no longer need free Icons, and that the earlier anchored-offset idea waits until a use case needs it. Confirm or reverse.
+8. **Text view.** Without a text form, alignments are invisible in the Text view (05 point 12 keeps them, hidden). Recommend a text form is needed, because the alignment carries meaning. Recommend deciding the spelling in a mock-up, like ticket 06, because Icon text may itself contain `{`, `[` and `~` (code-heavy Icons), so a suffix needs the same whole-word and quoting rules as the other suffixes. `compact` can be a header option on the `drakon` line.
+9. **Layout engine.** A and B constrain the automatic layout algorithm (fog item). Recommend recording both as inputs to that ticket rather than designing the algorithm here. drakonwidget has neither feature as far as I have seen, so there is nothing to import; I have not checked its layout code, so ticket 07 should confirm.
+
+If these are accepted, 04 resolves with questions 1 to 9 as written, and a follow-up prototype ticket covers the Text view spelling.
