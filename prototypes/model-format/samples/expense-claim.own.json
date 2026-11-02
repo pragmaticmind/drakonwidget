@@ -1,0 +1,46 @@
+{
+  "$schema": "https://pragmaticmind.github.io/drakon-model/0.1/schema.json",
+  "schemaVersion": "0.1",
+  "id": "expense-claim",
+  "name": "Handle expense claim",
+  "params": "claim",
+  "textFormat": "markdown",
+  "branches": [
+    { "id": "b-check", "name": "Check claim", "first": "register" },
+    { "id": "b-pay", "name": "Pay out", "first": "each-line" },
+    { "id": "b-close", "name": "Close", "first": "notify" }
+  ],
+  "icons": {
+    "register": { "type": "action", "text": "Register the claim", "duration": "1 day", "next": "has-receipt" },
+    "has-receipt": { "type": "question", "text": "Receipt attached?", "yes": "amount", "no": "reject", "down": "yes" },
+    "reject": { "type": "action", "text": "Mark the claim as rejected", "next": "to-close" },
+    "to-close": { "type": "address", "branch": "b-close" },
+    "amount": { "type": "select", "text": "Amount", "cases": ["small", "medium", "large"] },
+    "small": { "type": "case", "text": "< €100", "next": "auto-approve" },
+    "auto-approve": { "type": "action", "text": "Approve automatically", "next": "to-pay" },
+    "medium": { "type": "case", "text": "€100 – €1000", "next": "manager" },
+    "manager": {
+      "type": "shelf",
+      "text": "Approve the claim",
+      "secondaryText": "Line manager",
+      "meta": { "role": "Line manager", "sla": "P2D" },
+      "next": "to-pay"
+    },
+    "large": { "type": "case", "text": "> €1000", "next": "finance" },
+    "finance": { "type": "insertion", "text": "Finance review", "diagram": "finance-review", "next": "to-pay" },
+    "to-pay": { "type": "address", "branch": "b-pay" },
+    "each-line": { "type": "loopbegin", "text": "For each expense line", "next": "book", "end": "each-line-end" },
+    "book": { "type": "action", "text": "Book the line in the ledger", "next": "each-line-end" },
+    "each-line-end": { "type": "loopend", "next": "transfer" },
+    "transfer": { "type": "action", "text": "Transfer the total to the employee", "next": "to-close-2" },
+    "to-close-2": { "type": "address", "branch": "b-close" },
+    "notify": { "type": "action", "text": "Notify the employee", "next": "finish" },
+    "finish": { "type": "end" }
+  },
+  "layout": {
+    "icons": {
+      "register": { "x": 0, "y": 80 },
+      "has-receipt": { "x": 0, "y": 160 }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "drakon-model-format-prototype",
+  "private": true,
+  "type": "module",
+  "description": "Throwaway prototype: own Schema vs JSON Graph Format profile for the DRAKON Model.",
+  "scripts": {
+    "compare": "node compare.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1"
+  }
+}

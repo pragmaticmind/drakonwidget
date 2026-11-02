@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pragmaticmind.github.io/drakon-model/0.1/schema.json",
+  "title": "DRAKON Model 0.1 (prototype, option A: own Schema)",
+  "description": "drakonwidget concepts with cleaned-up naming. Exits are named fields on the Icon, typed per Icon type. Layout is an optional, separate, id-keyed section (BPMN DI pattern).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "name", "branches", "icons"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": "0.1" },
+    "id": { "$ref": "#/definitions/id" },
+    "name": { "type": "string" },
+    "params": { "type": "string" },
+    "textFormat": { "enum": ["plain", "markdown", "html"] },
+    "meta": { "type": "object" },
+    "branches": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "first"],
+        "properties": {
+          "id": { "$ref": "#/definitions/id" },
+          "name": { "type": "string" },
+          "first": { "$ref": "#/definitions/id" }
+        }
+      }
+    },
+    "icons": {
+      "type": "object",
+      "propertyNames": { "$ref": "#/definitions/id" },
+      "additionalProperties": { "$ref": "#/definitions/icon" }
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "icons": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["x", "y"],
+            "properties": { "x": { "type": "number" }, "y": { "type": "number" } }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "id": { "type": "string", "pattern": "^[A-Za-z0-9_-]+$" },
+    "text": { "type": "string", "minLength": 1 },
+    "meta": { "type": "object" },
+    "duration": { "type": "string", "minLength": 1 },
+    "icon": {
+      "type": "object",
+      "required": ["type"],
+      "discriminator": { "propertyName": "type" },
+      "oneOf": [
+        {
+          "title": "action",
+          "additionalProperties": false,
+          "required": ["type", "text", "next"],
+          "properties": {
+            "type": { "const": "action" },
+            "text": { "$ref": "#/definitions/text" },
+            "next": { "$ref": "#/definitions/id" },
+            "duration": { "$ref": "#/definitions/duration" },
+            "meta": { "$ref": "#/definitions/meta" }
+          }
+        },
+        {
+          "title": "question",
+          "additionalProperties": false,
+          "required": ["type", "text", "yes", "no", "down"],
+          "properties": {
+            "type": { "const": "question" },
+            "text": { "$ref": "#/definitions/text" },
+            "yes": { "$ref": "#/definitions/id" },
+            "no": { "$ref": "#/definitions/id" },
+            "down": { "enum": ["yes", "no"], "description": "Which exit is drawn downwards (drakonwidget flag1)." },
+            "meta": { "$ref": "#/definitions/meta" }
+          }
+        },
+        {
+          "title": "select",
+          "additionalProperties": false,
+          "required": ["type", "text", "cases"],
+          "properties": {
+            "type": { "const": "select" },
+            "text": { "$ref": "#/definitions/text" },
+            "cases": { "type": "array", "minItems": 2, "uniqueItems": true, "items": { "$ref": "#/definitions/id" } },
+            "meta": { "$ref": "#/definitions/meta" }
+          }
+        },
+        {
+          "title": "case",
+          "additionalProperties": false,
+          "required": ["type", "next"],
+          "properties": {
+            "type": { "const": "case" },
+            "text": { "type": "string" },
+            "next": { "$ref": "#/definitions/id" },
+            "meta": { "$ref": "#/definitions/meta" }
+          }
+        },
+        {
+          "title": "loopbegin",
+          "additionalProperties": false,
+          "required": ["type", "text", "next", "end"],
+          "properties": {
+            "type": { "const": "loopbegin" },
+            "text": { "$ref": "#/definitions/text" },
+            "next": { "$ref": "#/definitions/id" },
+            "end": { "$ref": "#/definitions/id", "description": "Explicit pairing with the loopend (implicit nesting in drakonwidget)." },
+            "meta": { "$ref": "#/definitions/meta" }
+          }
+        },
+        {
+          "title": "loopend",
+          "additionalProperties": false,
+          "required": ["type", "next"],
+          "properties": {
+            "type": { "const": "loopend" },
+            "next": { "$ref": "#/definitions/id" },
+            "meta": { "$ref": "#/definitions/meta" }
+          }
+        },
+        {
+          "title": "address",
+          "additionalProperties": false,
+          "required": ["type", "branch"],
+          "properties": {
+            "type": { "const": "address" },
+            "branch": { "$ref": "#/definitions/id" },
+            "meta": { "$ref": "#/definitions/meta" }
+          }
+        },
+        {
+          "title": "insertion",
+          "additionalProperties": false,
+          "required": ["type", "text", "diagram", "next"],
+          "properties": {
+            "type": { "const": "insertion" },
+            "text": { "$ref": "#/definitions/text" },
+            "diagram": { "$ref": "#/definitions/id", "description": "Id of the inserted Diagram." },
+            "next": { "$ref": "#/definitions/id" },
+            "duration": { "$ref": "#/definitions/duration" },
+            "meta": { "$ref": "#/definitions/meta" }
+          }
+        },
+        {
+          "title": "shelf",
+          "additionalProperties": false,
+          "required": ["type", "text", "secondaryText", "next"],
+          "properties": {
+            "type": { "const": "shelf" },
+            "text": { "$ref": "#/definitions/text" },
+            "secondaryText": { "$ref": "#/definitions/text" },
+            "next": { "$ref": "#/definitions/id" },
+            "duration": { "$ref": "#/definitions/duration" },
+            "meta": { "$ref": "#/definitions/meta" }
+          }
+        },
+        {
+          "title": "end",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {
+            "type": { "const": "end" },
+            "meta": { "$ref": "#/definitions/meta" }
+          }
+        }
+      ]
+    }
+  }
+}

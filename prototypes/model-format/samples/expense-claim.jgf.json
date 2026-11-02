@@ -1,0 +1,302 @@
+{
+  "graph": {
+    "id": "expense-claim",
+    "label": "Handle expense claim",
+    "type": "drakon",
+    "directed": true,
+    "metadata": {
+      "profile": "https://pragmaticmind.github.io/drakon-model/0.1/jgf-profile.schema.json",
+      "schemaVersion": "0.1",
+      "params": "claim",
+      "textFormat": "markdown",
+      "layout": {
+        "icons": {
+          "register": {
+            "x": 0,
+            "y": 80
+          },
+          "has-receipt": {
+            "x": 0,
+            "y": 160
+          }
+        }
+      }
+    },
+    "nodes": {
+      "b-check": {
+        "label": "Check claim",
+        "metadata": {
+          "drakonType": "branch",
+          "order": 1
+        }
+      },
+      "b-pay": {
+        "label": "Pay out",
+        "metadata": {
+          "drakonType": "branch",
+          "order": 2
+        }
+      },
+      "b-close": {
+        "label": "Close",
+        "metadata": {
+          "drakonType": "branch",
+          "order": 3
+        }
+      },
+      "register": {
+        "label": "Register the claim",
+        "metadata": {
+          "drakonType": "action",
+          "duration": "1 day"
+        }
+      },
+      "has-receipt": {
+        "label": "Receipt attached?",
+        "metadata": {
+          "drakonType": "question",
+          "down": "yes"
+        }
+      },
+      "reject": {
+        "label": "Mark the claim as rejected",
+        "metadata": {
+          "drakonType": "action"
+        }
+      },
+      "to-close": {
+        "metadata": {
+          "drakonType": "address"
+        }
+      },
+      "amount": {
+        "label": "Amount",
+        "metadata": {
+          "drakonType": "select"
+        }
+      },
+      "small": {
+        "label": "< €100",
+        "metadata": {
+          "drakonType": "case"
+        }
+      },
+      "auto-approve": {
+        "label": "Approve automatically",
+        "metadata": {
+          "drakonType": "action"
+        }
+      },
+      "medium": {
+        "label": "€100 – €1000",
+        "metadata": {
+          "drakonType": "case"
+        }
+      },
+      "manager": {
+        "label": "Approve the claim",
+        "metadata": {
+          "drakonType": "shelf",
+          "secondaryText": "Line manager",
+          "meta": {
+            "role": "Line manager",
+            "sla": "P2D"
+          }
+        }
+      },
+      "large": {
+        "label": "> €1000",
+        "metadata": {
+          "drakonType": "case"
+        }
+      },
+      "finance": {
+        "label": "Finance review",
+        "metadata": {
+          "drakonType": "insertion",
+          "diagram": "finance-review"
+        }
+      },
+      "to-pay": {
+        "metadata": {
+          "drakonType": "address"
+        }
+      },
+      "each-line": {
+        "label": "For each expense line",
+        "metadata": {
+          "drakonType": "loopbegin"
+        }
+      },
+      "book": {
+        "label": "Book the line in the ledger",
+        "metadata": {
+          "drakonType": "action"
+        }
+      },
+      "each-line-end": {
+        "metadata": {
+          "drakonType": "loopend"
+        }
+      },
+      "transfer": {
+        "label": "Transfer the total to the employee",
+        "metadata": {
+          "drakonType": "action"
+        }
+      },
+      "to-close-2": {
+        "metadata": {
+          "drakonType": "address"
+        }
+      },
+      "notify": {
+        "label": "Notify the employee",
+        "metadata": {
+          "drakonType": "action"
+        }
+      },
+      "finish": {
+        "metadata": {
+          "drakonType": "end"
+        }
+      }
+    },
+    "edges": [
+      {
+        "source": "b-check",
+        "target": "register",
+        "relation": "first"
+      },
+      {
+        "source": "b-pay",
+        "target": "each-line",
+        "relation": "first"
+      },
+      {
+        "source": "b-close",
+        "target": "notify",
+        "relation": "first"
+      },
+      {
+        "source": "register",
+        "target": "has-receipt",
+        "relation": "next"
+      },
+      {
+        "source": "has-receipt",
+        "target": "amount",
+        "relation": "yes"
+      },
+      {
+        "source": "has-receipt",
+        "target": "reject",
+        "relation": "no"
+      },
+      {
+        "source": "reject",
+        "target": "to-close",
+        "relation": "next"
+      },
+      {
+        "source": "to-close",
+        "target": "b-close",
+        "relation": "goto"
+      },
+      {
+        "source": "amount",
+        "target": "small",
+        "relation": "case",
+        "metadata": {
+          "order": 1
+        }
+      },
+      {
+        "source": "amount",
+        "target": "medium",
+        "relation": "case",
+        "metadata": {
+          "order": 2
+        }
+      },
+      {
+        "source": "amount",
+        "target": "large",
+        "relation": "case",
+        "metadata": {
+          "order": 3
+        }
+      },
+      {
+        "source": "small",
+        "target": "auto-approve",
+        "relation": "next"
+      },
+      {
+        "source": "auto-approve",
+        "target": "to-pay",
+        "relation": "next"
+      },
+      {
+        "source": "medium",
+        "target": "manager",
+        "relation": "next"
+      },
+      {
+        "source": "manager",
+        "target": "to-pay",
+        "relation": "next"
+      },
+      {
+        "source": "large",
+        "target": "finance",
+        "relation": "next"
+      },
+      {
+        "source": "finance",
+        "target": "to-pay",
+        "relation": "next"
+      },
+      {
+        "source": "to-pay",
+        "target": "b-pay",
+        "relation": "goto"
+      },
+      {
+        "source": "each-line",
+        "target": "book",
+        "relation": "next"
+      },
+      {
+        "source": "each-line",
+        "target": "each-line-end",
+        "relation": "loopEnd"
+      },
+      {
+        "source": "book",
+        "target": "each-line-end",
+        "relation": "next"
+      },
+      {
+        "source": "each-line-end",
+        "target": "transfer",
+        "relation": "next"
+      },
+      {
+        "source": "transfer",
+        "target": "to-close-2",
+        "relation": "next"
+      },
+      {
+        "source": "to-close-2",
+        "target": "b-close",
+        "relation": "goto"
+      },
+      {
+        "source": "notify",
+        "target": "finish",
+        "relation": "next"
+      }
+    ]
+  }
+}
