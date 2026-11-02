@@ -1,0 +1,9 @@
+drakon
+  primitive copyFieldsOrDefault (dst\nsrc\nfields\ndefaultValue)
+    loop field; fields
+      value = src[field]
+      question utils.hasValue(value)
+        yes
+        no
+          value = defaultValue
+      dst[field] = value

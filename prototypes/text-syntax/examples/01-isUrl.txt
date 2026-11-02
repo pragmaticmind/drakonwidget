@@ -1,0 +1,16 @@
+drakon
+  primitive isUrl (text)
+    question text
+      yes
+        question text.substring(0, 7) === "http://"
+          yes
+          no
+            question text.substring(0, 8) === "https://"
+              yes
+              no
+                join return-false
+        try {\n    url = new URL(text)\n} catch (_) {\n    return false\n}
+        return true
+      no
+        @return-false
+        return false

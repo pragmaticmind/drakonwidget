@@ -1,0 +1,20 @@
+drakon
+  primitive hitBox (box\nx\ny)
+    question x >= box.left
+      yes
+        question y >= box.top
+          yes
+            question x <= box.left + box.width
+              yes
+                question y <= box.top + box.height
+                  yes
+                    return true
+                  no
+                    join false
+              no
+                join false
+          no
+            join false
+      no
+        @false
+        return false

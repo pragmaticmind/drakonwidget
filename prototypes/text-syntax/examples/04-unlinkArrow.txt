@@ -1,0 +1,15 @@
+drakon
+  silhouette unlinkArrow (arrowNode\nvisited\nedits)
+    branch Find first not deleted
+      node = arrowNode
+      repeat
+        node = node.next[0]
+        question visited[node.itemId]
+          no
+          yes
+            again
+      goto Redirect links
+    branch Redirect links
+      redirectUpperItems(\n    edits,\n    arrowNode.up.links,\n    node.itemId\n)
+      goto Exit
+    branch Exit
