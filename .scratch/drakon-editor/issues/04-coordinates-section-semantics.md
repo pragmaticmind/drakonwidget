@@ -54,3 +54,25 @@ Observation that shapes the questions: branches are independent columns that tou
 9. **Layout engine.** A and B constrain the automatic layout algorithm (fog item). Recommend recording both as inputs to that ticket rather than designing the algorithm here. drakonwidget has neither feature as far as I have seen, so there is nothing to import; I have not checked its layout code, so ticket 07 should confirm.
 
 If these are accepted, 04 resolves with questions 1 to 9 as written, and a follow-up prototype ticket covers the Text view spelling.
+
+### 2026-11-02: single-Icon groups and visual indication (decided by the user, revises 3 and 6)
+
+Decided by the user:
+
+- **A group with fewer than two Icons can exist.** It is inert: it does not force empty space in other branches. It becomes active, and starts to force alignment, when a second Icon on another branch joins it.
+- **A visual indication or a view toggle is wanted** so the author can see alignments.
+
+Revised questions:
+
+3. **When an alignment group is valid** (replaces the earlier 3). A group has at most one Icon per branch. A group of one Icon is valid and inert. A group of two or more Icons on different branches is active. The active groups must be consistent with each branch's flow order: if group G1 comes before G2 in one branch and after it in another, that is a cycle and an `error` diagnostic naming both groups and the branches. Inert groups never take part in that check, so they cannot cause a cycle.
+6. **When the structure changes** (replaces the earlier 6). Deleting an Icon removes it from its group, and a group with no Icons left is removed. A group left with one Icon stays, inert. An edit that would make a group invalid (moving a member into a branch that already has one) drops that Icon from the group and tells the author with a `hint`. Imported or hand-edited JSON that is invalid gets an `error`. Moving an Icon so that an inert group gets a second branch makes the group active, and the layout changes accordingly.
+10. **Visual indication.** Recommend, for the Canvas view:
+    - An active group is drawn as a thin dashed horizontal guide through its member Icons, with the group `label` at the end.
+    - An inert group shows a lighter marker on its Icon and the tooltip "No Icon on another branch is aligned to this yet", so the author can tell it is not affecting the layout.
+    - Guides and markers are part of the editing aid, not of the Diagram, so they are not drawn in an exported image unless the Export plugins ask for it.
+11. **View toggle.** Recommend two separate things, so a view setting never changes the Model:
+    - `options.showAlignments` (default on in edit mode, off with `readOnly`), changed at runtime with `editor.setShowAlignments()`. It controls only the guides and markers in 10.
+    - Optionally, a toggle that draws the Diagram **without** the alignment spacing, to see the compact form quickly. This is a session view state. It is not the stored `compact` flag from question 4, which is part of the Model and applies for everyone. Recommend not adding this second toggle until someone asks, because `compact` already gives the dense drawing.
+    - View state is never stored in the Model. This extends the `options` list of [Embedding API shape](08-embedding-api-shape.md), so that ticket's list needs one more line when 04 resolves.
+
+If these are accepted, 04 resolves with questions 1 to 11 (3 and 6 as revised above), and a follow-up prototype ticket covers the Text view spelling.
