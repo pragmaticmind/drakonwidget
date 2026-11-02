@@ -29,6 +29,8 @@ Resolved by grilling, merging the agent's proposal with the user's own example.
 15. **Raw JSON**: a secondary "Source" tab shows the Model as JSON, checked against the Schema.
 ### Addendum: rejoins (2026-10-31)
 
+> Superseded by the 2026-11-01 addendum below: `join name` (points 18 and 19) is now written `goto @name`, and `repeat … until` (point 9) is replaced by `goto @name` back up.
+
 16. **Rejoin directly**: a side flow rejoins the main line on the line directly below its question's (or select's) blocks.
 17. **Rejoin further down**: steps a side flow skips are placed inside the first-listed (main-line) block. An empty block goes straight to the join point.
 18. **Shared joins**: when side flows share an Icon, mark the point with `@name` and jump to it with `join name`. A join only goes downward (to a later line), within the same branch, and must be drawable without crossing lines; anything else is a diagnostic. Upward jumps happen only through `loop` or `repeat … until`.
@@ -71,3 +73,54 @@ drakon
     branch Afsluiten
       Meld het resultaat\nper e-mail
 ```
+
+### Addendum: one jump keyword (2026-11-01)
+
+Decided while prototyping [Text view syntax mock-ups](06-text-view-syntax-mock-ups.md). Replaces `join name` (points 18 and 19) and the proposed `repeat … again`.
+
+21. **`goto` is the only jump keyword.** `goto <branch>` switches branch and becomes an address Icon. `goto @name` jumps to the line marked `@name`. The `@` tells the two apart, so a branch and a label may share a name.
+22. **Down is a join, up is a loop.** A `goto @name` whose target is further down in the drawing is a shared join. One whose target is further up is an arrow loop. Up or down is read from the drawing (a jump that closes a cycle), not from line order: a label on an earlier line can still be a join (`getEarRole`).
+23. **`loop` is the only block loop.** `repeat … again` is not added; any other loop is `@name` above the first step and `goto @name` back to it.
+24. **Where a loop-back may sit.** An upward `goto @name` must be the last line of the yes or no block that is drawn to the side. From the exit drawn downwards it cannot be drawn; on the main line or directly in a `case`, nothing decides when to stop.
+25. **Same branch only.** `goto @name` to a label in another branch is a diagnostic; use `goto <branch>`.
+26. **Unreachable lines.** Any line no path reaches (after a `goto`, or after a question whose exits all jump away) is a diagnostic and is not drawn.
+27. **Diagnostics explain and suggest.** A diagnostic names the author's own label, step text and line number, says why it is a problem, and where possible gives the lines to type instead. Example for a loop-back without a question:
+
+    > goto @call loops back to “Call the customer” (line 4) without a question. Nothing decides when to stop, so every step from there down to here would repeat forever. Let a question decide whether to go round again, and put the goto in its yes or no block:
+    > `question Go round again?` / `  yes` / `    goto @call`
+
+    The general rules for such messages are open in [User-friendly diagnostics](09-user-friendly-diagnostics.md).
+
+```text
+drakon
+  primitive "Reach the customer"
+    @call
+    Call the customer
+    question Did they answer?
+      no
+        Wait one hour [1 h]
+        goto @call
+    question Order complete?
+      yes
+        question Payment ok?
+          yes
+            Confirm the order
+          no
+            goto @reject
+      no
+        @reject
+        Reject the order
+    Close the call
+```
+
+`goto @call` goes up in the drawing, so it is an arrow loop. `goto @reject` goes down, so it is a shared join.
+
+### Addendum: mock-up findings (2026-11-01)
+
+Decided after the [Text view syntax mock-ups](06-text-view-syntax-mock-ups.md) prototype, which converted six real Diagrams from `dtsrc/` and ran them through the live Text view editor. Confirms the spellings that point 9 left open.
+
+28. **Guard shorthand.** A `question` that lists only one exit block, where that block ends in `goto` (so it never falls through), puts that block on the side. The following lines continue downwards as the other exit. A chain of guard questions stays flat instead of nesting one level per question. The flat form and the fully nested form give the same Model.
+29. **`input` and `output` Icons.** `input <text>` and `output <text>` are the simple forms. `input <who>: <what>` and `output <who>: <what>` are the two-part forms, like `shelf`. Import from drakon.tech maps `sinput` and `soutput` to these.
+30. **End is implicit only at the bottom of the last branch.** A last branch whose paths all end in `goto` has no End, so a state machine (`debounce`) is valid without one. Other branches still must end in `goto` (point 8).
+31. **Keywords are whole words.** A keyword counts only when it is followed by a space or the end of the line, so `action(msg)` is an action whose text is `action(msg)`. Text that is exactly a keyword or starts with `keyword ` is quoted with `"…"` (point 9).
+32. **Params stay `\n`-separated.** Several params are written in one line as `(dst\nsrc\nfields\ndefaultValue)`, the same escape as in Icon text (point 3). A comma-separated list form is not added. It is lossless but noisy, and the main audience, business analysts, rarely has multi-line params.
