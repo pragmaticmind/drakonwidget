@@ -14,7 +14,7 @@
 <meta charset="utf-8">
 <title>PROTOTYPE · Text view → DRAKON Diagram</title>
 <style>
-  :root { --accent: #2f5bd3; --ink: #1d2433; --muted: #6b7385; --line: #e3e6ee; --bad: #b42318; --bg: #f7f8fb; }
+  :root { --accent: #2f5bd3; --ink: #1d2433; --muted: #6b7385; --line: #e3e6ee; --bad: #b42318; --warn: #946200; --bg: #f7f8fb; }
   * { box-sizing: border-box; }
   body { margin: 0; font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
   header { padding: 14px 22px 10px; border-bottom: 1px solid var(--line); background: white; }
@@ -29,6 +29,7 @@
   .editor { flex: 1; display: flex; min-height: 0; font: 13px/20px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   .gutter { padding: 8px 6px 8px 0; width: 42px; text-align: right; color: #a0a7b6; background: #fafbfc; border-right: 1px solid var(--line); overflow: hidden; user-select: none; white-space: pre; }
   .gutter .err { color: var(--bad); font-weight: 700; }
+  .gutter .warning { color: var(--warn); background: #fff6d6; font-weight: 700; }
   textarea { flex: 1; border: 0; outline: 0; resize: none; padding: 8px 10px; font: inherit; color: var(--ink); white-space: pre; overflow: auto; tab-size: 2; }
   .snippets { padding: 8px 10px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px; }
   .snippets span { color: var(--muted); font-size: 12px; align-self: center; margin-right: 4px; }
@@ -46,6 +47,8 @@
   .diag li { padding: 5px 0; border-bottom: 1px dashed var(--line); cursor: pointer; }
   .diag li:last-child { border-bottom: 0; }
   .diag .ln { display: inline-block; min-width: 54px; color: var(--bad); font-weight: 600; }
+  .diag li.warning { background: #fff6d6; }
+  .diag .warning .ln { color: var(--warn); }
   .ok { color: #157f3b; }
   .diag pre.hint { margin: 6px 0 2px 54px; padding: 6px 10px; background: #f3f6ff; border-left: 3px solid var(--accent); font: 12px/1.45 ui-monospace, Menlo, Consolas, monospace; }
   .tabs { display: flex; gap: 2px; padding: 8px 10px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
@@ -420,11 +423,20 @@ var DrakonText = (function () {
       return { id: b.id, name: b.name, first: first, _line: b.line };
     });
 
-    // Resolve the sentinels: fell off the bottom, reached End, or goto @name.
-    var endUsed = false, fellOff = {}, jumpEdge = {};
+    // Resolve the sentinels: continue to the next branch, reach End, or goto @name.
+    var endUsed = false, fallAddress = {}, jumpEdge = {};
     function fix(v, from, key) {
       if (v === END) { endUsed = true; return "end"; }
-      if (typeof v === "string" && v.indexOf(FALL) === 0) { fellOff[v.slice(FALL.length)] = true; return null; }
+      if (typeof v === "string" && v.indexOf(FALL) === 0) {
+        var i = +v.slice(FALL.length);
+        if (!fallAddress[i]) {
+          var id = newId("to-" + slug(branchDefs[i + 1].name, "branch"));
+          ctx.icons[id] = { type: "address", branch: branchDefs[i + 1].id };
+          ctx.lineOf[id] = branchDefs[i + 1].line - 0.5;
+          fallAddress[i] = id;
+        }
+        return fallAddress[i];
+      }
       if (typeof v === "string" && v.indexOf(JUMP) === 0) {
         var j = ctx.jumps[+v.slice(JUMP.length)];
         jumpEdge[from + "|" + key] = j;
@@ -437,10 +449,6 @@ var DrakonText = (function () {
       ["next", "yes", "no"].forEach(function (k) { if (k in ic) ic[k] = fix(ic[k], id, k); });
     });
     branches.forEach(function (b) { b.first = fix(b.first, null, "first"); });
-    Object.keys(fellOff).forEach(function (i) {
-      var b = branchDefs[i];
-      diags.push(diag(b.line, "Branch “" + b.name + "” can run off its bottom. Every branch except the last must end with goto."));
-    });
     if (endUsed) { ctx.icons.end = { type: "end" }; ctx.lineOf.end = Infinity; }
 
     // A goto @name that closes a cycle goes upward in the drawing: it is an arrow loop.
@@ -471,6 +479,30 @@ var DrakonText = (function () {
     Object.keys(ctx.icons).forEach(function (id) {
       var t = ctx.icons[id].type;
       if (!seen[id] && t !== "end" && t !== "loopend" && t !== "case") diags.push(diag(ctx.lineOf[id], "This line can never be reached: every path above it jumps away."));
+    });
+    // Start only at the first branch, following addresses as well as local Icon edges.
+    // Keep the all-branch walk above: unreachable branches still belong in the drawing,
+    // and their Icons must not each produce an unreachable-branch warning.
+    var reachedBranches = {}, reachedIcons = {}, branchesById = {};
+    branches.forEach(function (b) { branchesById[b.id] = b; });
+    function visitBranch(id) {
+      if (reachedBranches[id] || !branchesById[id]) return;
+      reachedBranches[id] = true;
+      visitIcon(branchesById[id].first);
+    }
+    function visitIcon(id) {
+      if (reachedIcons[id] || !ctx.icons[id]) return;
+      reachedIcons[id] = true;
+      var ic = ctx.icons[id];
+      if (ic.type === "address") visitBranch(ic.branch);
+      else successors(ic).forEach(function (s) { visitIcon(s[1]); });
+    }
+    if (branches.length) visitBranch(branches[0].id);
+    branches.forEach(function (b) {
+      if (reachedBranches[b.id]) return;
+      var warning = diag(b._line, "Branch “" + b.name + "” is never reached from the first branch.");
+      warning.severity = "warning";
+      diags.push(warning);
     });
 
     // Order icons by text line so the Model reads top to bottom.
@@ -692,7 +724,7 @@ var DrakonText = (function () {
     },
     {
       name: "Silhouette and goto",
-      desc: "The example from ticket 05. Every branch except the last must end in goto; the last one ends in End.",
+      desc: "An explicit goto switches branch. Without one, a path continues to the next branch in text order; the last branch ends in End.",
       steps: [
         { label: "1. The ticket 05 example", note: "Three branches. The empty case C falls through to goto Afsluiten.", text: [
           "drakon",
@@ -714,7 +746,7 @@ var DrakonText = (function () {
           "    branch Afsluiten",
           "      Meld het resultaat\\nper e-mail"
         ] },
-        { label: "2. Forget a goto", note: "Branch Keuze now runs off its bottom. That is a Problem, not a silent guess.", text: [
+        { label: "2. Default next branch", note: "Without goto Afsluiten, every case in Keuze continues to the next branch, Afsluiten. Same meaning as step 1.", text: [
           "drakon",
           "  silhouette \"Claim afhandeling\" (claim)",
           "    branch Controle",
@@ -747,6 +779,20 @@ var DrakonText = (function () {
           "      goto Afsluiten",
           "    branch Afsluiten",
           "      Meld het resultaat"
+        ] },
+        { label: "4. Unreachable branch", note: "A explicitly skips B. B and C default to the next branch. Only B gets an amber warning; click it to select branch B. All four branches stay visible.", text: [
+          "drakon",
+          "  silhouette \"Example default next branch\" (claim)",
+          "    branch A",
+          "      question to C?",
+          "        yes",
+          "          goto C",
+          "        no",
+          "          goto D",
+          "    branch B",
+          "    branch C",
+          "    branch D",
+          "      action"
         ] }
       ]
     },
@@ -1043,11 +1089,12 @@ var DrakonText = (function () {
     errBox.title = msg || "";
     if (!msg) { errBox.textContent = ""; return; }
     mountWidget(); // drop whatever drakonwidget half-drew
-    var d = last.parsed && last.parsed.diagnostics[0];
+    var errors = last.parsed ? last.parsed.diagnostics.filter(function (d) { return d.severity !== "warning"; }) : [];
+    var d = errors[0];
     if (!d) { errBox.textContent = "drakonwidget could not draw this Model: " + msg; return; }
     errBox.textContent = "This can’t be drawn yet. Line " + Math.floor(d.line) + ": " + d.message +
       (d.hint ? "\n\n" + d.hint.map(function (l) { return l.replace(/^ +/, function (s) { return s.slice(Math.min(s.length, d.hint[0].match(/^ */)[0].length)); }); }).join("\n") : "") +
-      (last.parsed.diagnostics.length > 1 ? "\n\n(" + (last.parsed.diagnostics.length - 1) + " more under Problems.)" : "");
+      (errors.length > 1 ? "\n\n(" + (errors.length - 1) + " more errors under Problems.)" : "");
   }
 
   function update() {
@@ -1072,9 +1119,12 @@ var DrakonText = (function () {
 
   function renderGutter(text, diags) {
     var bad = {};
-    diags.forEach(function (d) { bad[Math.floor(d.line)] = true; });
+    diags.forEach(function (d) {
+      var line = Math.floor(d.line);
+      if (bad[line] !== "err") bad[line] = d.severity === "warning" ? "warning" : "err";
+    });
     var n = text.split("\n").length, out = [];
-    for (var i = 1; i <= n; i++) out.push(bad[i] ? "<span class=err>" + i + "</span>" : String(i));
+    for (var i = 1; i <= n; i++) out.push(bad[i] ? "<span class=" + bad[i] + ">" + i + "</span>" : String(i));
     gutter.innerHTML = out.join("\n");
     gutter.scrollTop = textEl.scrollTop;
   }
@@ -1108,8 +1158,9 @@ var DrakonText = (function () {
     if (!diags.length) { diagsEl.innerHTML = "<li class=ok>No problems. The text is a valid Diagram.</li>"; return; }
     diags.forEach(function (d) {
       var li = document.createElement("li"), ln = document.createElement("span");
+      if (d.severity === "warning") li.className = "warning";
       ln.className = "ln"; ln.textContent = d.line ? "Line " + Math.floor(d.line) : "";
-      li.appendChild(ln); li.appendChild(document.createTextNode(d.message));
+      li.appendChild(ln); li.appendChild(document.createTextNode((d.severity === "warning" ? "Warning: " : "") + d.message));
       if (d.hint) { var pre = document.createElement("pre"); pre.className = "hint"; pre.textContent = d.hint.join("\n"); li.appendChild(pre); }
       li.onclick = function () { goToLine(Math.floor(d.line)); };
       diagsEl.appendChild(li);

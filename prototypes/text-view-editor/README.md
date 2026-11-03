@@ -29,6 +29,8 @@ The page around the logic block is a thin shell:
 The syntax is ticket 05 plus its 2026-11-01 addendum.
 
 - `goto <branch>` switches branch.
+- A path that reaches the bottom of a branch continues to the next branch in text order. This also applies to empty branches and question or case outcomes without an explicit jump. The final branch reaches End.
+- Branch reachability starts at the first branch and follows all possible paths, including explicit and default transitions. An unreachable branch gets one non-blocking amber warning on its `branch` line; clicking it selects that line. The branch remains in the Model and on the Canvas.
 - `goto @name` jumps to the line marked `@name`. When the target is lower in the drawing it is a join; when it is higher it is an arrow loop.
 - `loop` is the only block loop.
 - Guard shorthand: a question that lists a single `yes` or `no` block ending in `goto` puts that block on the side, and the following lines continue downwards.
@@ -42,3 +44,12 @@ The syntax is ticket 05 plus its 2026-11-01 addendum.
 - **drakonwidget expects the arrow loop at the top.** Its `arrow-loop` item sits at the top of the loop: both the line coming in from above and the loop-back point at it.
 - **No End is fine.** drakonwidget draws a Diagram with no End Icon (the `debounce` state machine) without trouble.
 - **drakonwidget fails on Models with gaps.** When the text has Problems, drakonwidget throws internal errors. The Canvas view therefore shows the first Problem, with its suggested fix, instead.
+- **Warnings are not drawing errors.** Unreachable branches stay visible. If drawing fails, the Canvas error panel uses an error diagnostic, never an unreachable-branch warning.
+
+## Regression tests
+
+Run `node --test prototypes/text-view-editor/text-view.test.cjs` from the repository root. Uses Node's built-in test runner, with no dependencies.
+
+The suite exercises `DrakonText.parse` and `DrakonText.toDrakonwidget`: default transitions, explicit jumps, empty branches, disconnected and reachable cycles, partial question/case outcomes, loop exits, and the guided walkthroughs.
+
+Run `node --test prototypes/text-view-editor/*.test.cjs` to include the headless browser regression. It requires `google-chrome` on PATH, or `CHROME_BIN` pointing to a Chrome/Chromium executable. It checks amber styling, click-to-line navigation, warning removal after editing, and continued Canvas rendering with all branches visible. Its temporary browser profile is removed afterwards.
