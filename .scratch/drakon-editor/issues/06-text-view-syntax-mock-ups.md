@@ -24,3 +24,10 @@ What does the chosen Text view syntax look like on realistic Diagrams (a primiti
 - Reachability starts at the first branch and follows every possible explicit or default transition. Disconnected cycles are unreachable too.
 - Emit one non-blocking warning on each unreachable branch's declaration: “Branch ‘B’ is never reached from the first branch.” Use amber, click to select the line, and keep the branch in the Model and on the Canvas. Do not repeat this warning on its Icons.
 - Regression seams: `DrakonText.parse` and `DrakonText.toDrakonwidget`, plus a browser check for warning styling, navigation, and continued drawing.
+
+### 2026-11-04: optional wrapper and inline question jumps (approved by the user)
+
+- A Diagram may start directly with `primitive <name>` or `silhouette <name>` at the top level. The original `drakon` wrapper remains valid. Both forms still allow only one Diagram per text.
+- A single-jump outcome may use `yes goto <branch>` / `no goto <branch>` or the corresponding `goto @label` form. It has the same Model, exit ordering, guard behaviour, and jump validation as an indented outcome.
+- Inline outcomes cannot also have indented steps. Other inline statements remain invalid; use the existing block form for several steps.
+- Existing valid walkthroughs are tested for equivalent Models with wrapper-free headers and inline jumps. Browser coverage checks the concise walkthrough, drawing, and warning navigation at the shortened source line.

@@ -67,7 +67,8 @@
   <h1><span class="tag">PROTOTYPE</span>Text view → DRAKON Diagram</h1>
   <p><b>The question:</b> can a process owner write a Diagram as an indented outline (the Text view syntax from ticket 05, plus the
   amendments proposed in the ticket 06 mock-ups, with one jump keyword: <code>goto Branch</code> switches branch, <code>goto @label</code> joins
-  further down or loops back up) and get exactly the drawing they meant? Type on the left. The text is turned into the
+  further down or loops back up) and get exactly the drawing they meant? The <code>drakon</code> wrapper is optional;
+  single-jump outcomes can be written <code>yes goto Branch</code> or <code>no goto @label</code>. Type on the left. The text is turned into the
   Model (ticket 03 shape) and drawn with drakonwidget on the right. Anything the text cannot express, or expresses wrongly, shows up under
   <i>Problems</i>.</p>
 </header>
@@ -187,6 +188,19 @@ var DrakonText = (function () {
       parent.children.push(node);
       stack.push(node);
     });
+    // Normalize the concise form before labels, IDs and control flow are resolved.
+    function expandInline(node) {
+      if (node.kw === "yes" || node.kw === "no") {
+        var jump = /^goto\s+(.+)$/i.exec(node.text);
+        if (jump) {
+          if (node.children.length) diags.push(diag(node.line, "An inline " + node.kw + " goto cannot also have indented steps. Use an indented " + node.kw + " block instead."));
+          node.children = [{ kw: "goto", text: jump[1].trim(), line: node.line, depth: node.depth + 1, children: [] }];
+          node.text = "";
+        }
+      }
+      node.children.forEach(expandInline);
+    }
+    expandInline(root);
     return root;
   }
 
@@ -212,7 +226,7 @@ var DrakonText = (function () {
     var hdr;
 
     if (!top.length) {
-      diags.push(diag(1, "The text is empty. Start with drakon, then primitive <name> or silhouette <name>."));
+      diags.push(diag(1, "The text is empty. Start with primitive <name> or silhouette <name>, optionally wrapped in drakon."));
       return { model: null, diagnostics: diags, info: {} };
     }
     if (top[0].kw === "drakon") {
@@ -220,8 +234,8 @@ var DrakonText = (function () {
       hdr = top[0].children[0];
       top[0].children.slice(1).forEach(function (n) { diags.push(diag(n.line, "One Diagram per text: this line must be indented under the " + (hdr ? hdr.kw : "header") + " line.")); });
     } else {
-      diags.push(diag(top[0].line, "The first line must be drakon."));
       hdr = top[0];
+      top.slice(1).forEach(function (n) { diags.push(diag(n.line, "One Diagram per text: this line must be indented under the " + hdr.kw + " line.")); });
     }
     if (!hdr || (hdr.kw !== "primitive" && hdr.kw !== "silhouette")) {
       diags.push(diag(hdr ? hdr.line : top[0].line, "Expected primitive <name> (<params>) or silhouette <name> (<params>)."));
@@ -372,7 +386,7 @@ var DrakonText = (function () {
             if (ch.kw === "yes" || ch.kw === "no") {
               if (blocks.some(function (b) { return b.kw === ch.kw; })) diags.push(diag(ch.line, "This question already has a " + ch.kw + " block."));
               else blocks.push(ch);
-              if (ch.text) diags.push(diag(ch.line, "Put the steps on their own lines, indented under " + ch.kw + "."));
+              if (ch.text) diags.push(diag(ch.line, "Write " + ch.kw + " goto <branch> or " + ch.kw + " goto @label, or put the steps on their own lines, indented under " + ch.kw + "."));
             } else diags.push(diag(ch.line, "Under a question, only yes and no blocks are allowed."));
           });
           var down;
@@ -793,6 +807,17 @@ var DrakonText = (function () {
           "    branch C",
           "    branch D",
           "      action"
+        ] },
+        { label: "5. Concise syntax", note: "Same Model and drawing as step 4: omit the drakon wrapper and put single-jump outcomes on one line. B's warning now points to line 6.", text: [
+          "silhouette \"Example default next branch\" (claim)",
+          "  branch A",
+          "    question to C?",
+          "      yes goto C",
+          "      no goto D",
+          "  branch B",
+          "  branch C",
+          "  branch D",
+          "    action"
         ] }
       ]
     },

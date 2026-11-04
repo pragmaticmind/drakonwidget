@@ -26,8 +26,10 @@ The page around the logic block is a thin shell:
 
 ## Syntax tested
 
-The syntax is ticket 05 plus its 2026-11-01 addendum.
+The syntax is ticket 05 plus the amendments recorded in ticket 06.
 
+- Start directly with `primitive <name>` or `silhouette <name>`. The original `drakon` wrapper, with the header indented beneath it, remains valid.
+- A question outcome containing only a jump may be written `yes goto <branch>`, `no goto <branch>`, `yes goto @label`, or `no goto @label`. This has exactly the same meaning as an indented `goto`, including exit ordering and guard shorthand. Inline jumps cannot also have indented steps; use a block for several steps. Other inline statements are not supported.
 - `goto <branch>` switches branch.
 - A path that reaches the bottom of a branch continues to the next branch in text order. This also applies to empty branches and question or case outcomes without an explicit jump. The final branch reaches End.
 - Branch reachability starts at the first branch and follows all possible paths, including explicit and default transitions. An unreachable branch gets one non-blocking amber warning on its `branch` line; clicking it selects that line. The branch remains in the Model and on the Canvas.
@@ -36,6 +38,20 @@ The syntax is ticket 05 plus its 2026-11-01 addendum.
 - Guard shorthand: a question that lists a single `yes` or `no` block ending in `goto` puts that block on the side, and the following lines continue downwards.
 - `input`, `output`, `shelf <who>: <what>`, `insert <text> -> <id>`, `note:`, the `[duration]` suffix and `"literal"` lines are supported.
 - The old keywords `join`, `repeat` and `again` are flagged as Problems.
+
+For example, the concise form below is equivalent to walkthrough “Silhouette and goto”, step 4. Branch B still gets one unreachable-branch warning:
+
+```text
+silhouette "Example default next branch" (claim)
+  branch A
+    question to C?
+      yes goto C
+      no goto D
+  branch B
+  branch C
+  branch D
+    action
+```
 
 ## Findings so far
 
@@ -50,6 +66,6 @@ The syntax is ticket 05 plus its 2026-11-01 addendum.
 
 Run `node --test prototypes/text-view-editor/text-view.test.cjs` from the repository root. Uses Node's built-in test runner, with no dependencies.
 
-The suite exercises `DrakonText.parse` and `DrakonText.toDrakonwidget`: default transitions, explicit jumps, empty branches, disconnected and reachable cycles, partial question/case outcomes, loop exits, and the guided walkthroughs.
+The suite exercises `DrakonText.parse` and `DrakonText.toDrakonwidget`: optional wrappers, inline question jumps and their diagnostics, compatibility with indented outcomes, default transitions, explicit jumps, empty branches, disconnected and reachable cycles, partial question/case outcomes, loop exits, and the guided walkthroughs.
 
 Run `node --test prototypes/text-view-editor/*.test.cjs` to include the headless browser regression. It requires `google-chrome` on PATH, or `CHROME_BIN` pointing to a Chrome/Chromium executable. It checks amber styling, click-to-line navigation, warning removal after editing, and continued Canvas rendering with all branches visible. Its temporary browser profile is removed afterwards.

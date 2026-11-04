@@ -40,8 +40,23 @@ frame.onload = async function () {
     for (const name of ["A", "B", "C", "D"]) {
       check(canvasText.includes(name), "Canvas omitted branch " + name);
     }
+    const originalModel = JSON.stringify(win.DrakonText.parse(text.value).model);
+    // The concise walkthrough must preserve drawing and update source navigation.
+    doc.querySelectorAll("#scenario .steps button")[4].click();
+    await wait();
+    check(text.value.startsWith("silhouette "), "Concise walkthrough still has a wrapper");
+    check(text.value.includes("yes goto C"), "Concise walkthrough did not use inline outcomes");
+    check(JSON.stringify(win.DrakonText.parse(text.value).model) === originalModel, "Concise syntax changed the Model");
+    check(doc.querySelectorAll("#diags li").length === 1, "Concise syntax added diagnostics");
+    const conciseWarning = doc.querySelector("#diags li.warning");
+    check(conciseWarning && conciseWarning.textContent.includes("Line 6"), "Concise warning has the wrong line");
+    check(doc.querySelector("#gutter .warning").textContent === "6", "Concise gutter has the wrong line");
+    conciseWarning.click();
+    check(text.value.slice(text.selectionStart, text.selectionEnd) === "  branch B", "Concise warning selected the wrong line");
+    check(doc.getElementById("render-error").style.display === "none", "Concise syntax blocked drawing");
+    check(doc.getElementById("canvas-host").textContent.includes("B"), "Concise Canvas omitted B");
     // Making B part of the default path removes the warning on the next edit.
-    text.value = "drakon\\n  silhouette All reachable\\n    branch A\\n      Do A\\n    branch B\\n      Do B";
+    text.value = "silhouette All reachable\\n  branch A\\n    Do A\\n  branch B\\n    Do B";
     text.dispatchEvent(new win.Event("input"));
     await wait();
     check(!doc.querySelector("#diags li.warning"), "Stale branch warning");

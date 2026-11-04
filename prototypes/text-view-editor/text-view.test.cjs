@@ -22,6 +22,194 @@ const example = `drakon
     branch D
       action`;
 
+test("primitive and silhouette headers work without the drakon wrapper", () => {
+  for (const wrapped of ["drakon\n  primitive Example (claim)\n    Do work", example]) {
+    const original = parse(wrapped);
+    const unwrapped = parse(wrapped.split("\n").slice(1).map((line) => line.slice(2)).join("\n"));
+    assert.deepEqual(unwrapped.model, original.model);
+    assert.deepEqual(unwrapped.info, original.info);
+    assert.deepEqual(unwrapped.diagnostics, original.diagnostics.map((d) => ({ ...d, line: d.line - 1 })));
+  }
+});
+
+test("wrapper-free input still rejects extra top-level Diagrams and unindented steps", () => {
+  for (const extra of ["primitive Another", "Do work"]) {
+    const { diagnostics } = parse("primitive Example\n  First step\n" + extra);
+    assert.ok(diagnostics.some((d) => d.line === 3 && /One Diagram per text/.test(d.message)));
+  }
+});
+
+test("inline yes/no branch jumps produce the same Model and Canvas as indented outcomes", () => {
+  const inline = parse(`silhouette "Example default next branch" (claim)
+  branch A
+    question to C?
+      yes goto C
+      no goto D
+  branch B
+  branch C
+  branch D
+    action`);
+  const original = parse(example);
+  assert.deepEqual(inline.model, original.model);
+  assert.deepEqual(inline.info, original.info);
+  assert.deepEqual(inline.diagnostics, [{
+    line: 6, message: "Branch “B” is never reached from the first branch.", severity: "warning"
+  }]);
+  assert.deepEqual(
+    JSON.parse(JSON.stringify(DrakonText.toDrakonwidget(inline.model))),
+    JSON.parse(JSON.stringify(DrakonText.toDrakonwidget(original.model)))
+  );
+});
+
+test("inline outcomes preserve explicit exit ordering and mix with indented outcomes", () => {
+  const { model, diagnostics } = parse(`drakon
+  silhouette Mixed
+    branch A
+      question Skip?
+        no goto C
+        yes
+          Do work
+    branch B
+      Done
+    branch C
+      Finished`);
+  assert.deepEqual(diagnostics, []);
+  const q = model.icons[model.branches[0].first];
+  assert.equal(q.down, "no");
+  assert.equal(model.icons[q.no].branch, model.branches[2].id);
+  assert.equal(model.icons[q.yes].text, "Do work");
+  assert.equal(model.icons[model.icons[q.yes].next].branch, model.branches[1].id);
+});
+
+for (const outcome of ["yes", "no"]) {
+  test("a lone inline " + outcome + " goto remains a side guard", () => {
+    const { model, diagnostics } = parse(`silhouette Guard
+  branch A
+    question Skip?
+      ${outcome} goto C
+    Continue working
+  branch B
+    Done
+  branch C
+    Finished`);
+    assert.deepEqual(diagnostics, []);
+    const q = model.icons[model.branches[0].first];
+    assert.equal(q.down, outcome === "yes" ? "no" : "yes");
+    assert.equal(model.icons[q[outcome]].branch, model.branches[2].id);
+    assert.equal(model.icons[q[q.down]].text, "Continue working");
+  });
+}
+
+test("inline goto @label supports arrow loops and is equivalent to an indented guard", () => {
+  const concise = `primitive Retry
+  @try
+  Try work
+  question Done?
+    no goto @try
+  Finish`;
+  const inline = parse(concise);
+  const expanded = parse(concise.replace("no goto @try", "no\n      goto @try"));
+  assert.deepEqual(inline.diagnostics, []);
+  assert.deepEqual(inline.model, expanded.model);
+  assert.deepEqual(inline.info, expanded.info);
+  assert.equal(inline.info.loops, 1);
+  const canvas = DrakonText.toDrakonwidget(inline.model);
+  assert.equal(Object.values(canvas.items).filter((icon) => icon.type === "arrow-loop").length, 1);
+});
+
+test("inline goto @label supports a forward join without creating an address", () => {
+  const { model, diagnostics, info } = parse(`primitive Join
+  question Skip?
+    yes goto @done
+  Do work
+  @done
+  Finish`);
+  assert.deepEqual(diagnostics, []);
+  const q = model.icons[model.branches[0].first];
+  assert.equal(model.icons[q.yes].text, "Finish");
+  assert.equal(model.icons[q.no].text, "Do work");
+  assert.equal(info.joins, 1);
+  assert.equal(info.loops, 0);
+  assert.ok(!Object.values(model.icons).some((icon) => icon.type === "address"));
+});
+
+test("inline keywords are case insensitive and branch names may contain spaces", () => {
+  const { model, diagnostics } = parse(`SILHOUETTE Names
+  branch A
+    question Ready?
+      YES   GoTo   Final branch
+      NO
+        Work
+  branch Final branch
+    Finish`);
+  assert.deepEqual(diagnostics, []);
+  const q = model.icons[model.branches[0].first];
+  assert.equal(model.icons[q.yes].branch, model.branches[1].id);
+});
+
+for (const [outcome, message] of [
+  ["yes goto Missing", /There is no branch/],
+  ["no goto @missing", /There is no label/],
+  ["yes goto", /Write yes goto/],
+  ["no Do work", /Write no goto/]
+]) {
+  test("invalid inline outcome is diagnosed on its source line: " + outcome, () => {
+    const { diagnostics } = parse("silhouette Invalid\n  branch A\n    question Ready?\n      " + outcome);
+    assert.ok(diagnostics.some((d) => d.line === 4 && message.test(d.message)));
+  });
+}
+
+test("an inline outcome cannot also contain indented steps", () => {
+  const { diagnostics } = parse(`silhouette Mixed
+  branch A
+    question Ready?
+      yes goto B
+        Do work
+  branch B
+    Finish`);
+  assert.ok(diagnostics.some((d) => d.line === 4 && /cannot also have indented steps/.test(d.message)));
+});
+
+test("duplicate inline outcomes and outcomes outside questions remain invalid", () => {
+  const duplicate = parse(`silhouette Duplicate
+  branch A
+    question Ready?
+      yes goto B
+      yes goto B
+  branch B
+    Finish`);
+  assert.ok(duplicate.diagnostics.some((d) => d.line === 5 && /already has a yes block/.test(d.message)));
+  const misplaced = parse("primitive Invalid\n  yes goto @done\n  @done\n  Finish");
+  assert.ok(misplaced.diagnostics.some((d) => d.line === 2 && /only goes directly under a question/.test(d.message)));
+});
+
+test("inline label jumps retain branch boundaries and loop orientation checks", () => {
+  const crossBranch = parse(`silhouette Invalid
+  branch A
+    question Ready?
+      no goto @done
+  branch B
+    @done
+    Finish`);
+  assert.ok(crossBranch.diagnostics.some((d) => d.line === 4 && /stays within one branch/.test(d.message)));
+  const downwardLoop = parse(`primitive Invalid
+  @try
+  Try work
+  question Ready?
+    no goto @try
+    yes
+  Finish`);
+  assert.ok(downwardLoop.diagnostics.some((d) => d.line === 5 && /drawn downwards/.test(d.message)));
+});
+
+test("empty input and malformed wrapped headers still get actionable diagnostics", () => {
+  assert.match(parse("").diagnostics[0].message, /optionally wrapped in drakon/);
+  for (const input of ["drakon", "Do work", "drakon\nprimitive Invalid"]) {
+    assert.ok(parse(input).diagnostics.length);
+  }
+  assert.ok(parse("  primitive Invalid\n    Do work").diagnostics.some((d) => /indented deeper/.test(d.message)));
+});
+
 test("a branch without goto continues to the next branch through an address Icon", () => {
   const { model, diagnostics } = parse(`drakon
   silhouette Example
@@ -210,6 +398,17 @@ for (const scenario of scenarios) {
       assert.ok(canvas.items);
       if (scenario.name !== "Mistakes" && !/Loop drawn down|Loop with no way out|Typo/.test(step.label)) {
         assert.deepEqual(parsed.diagnostics.filter((d) => d.severity !== "warning"), []);
+        const concise = step.text.join("\n").replace(/^(\s*)(yes|no)\n\1  goto ([^\n]+)/gm, "$1$2 goto $3");
+        const inline = parse(concise);
+        assert.deepEqual(inline.model, parsed.model);
+        assert.deepEqual(inline.info, parsed.info);
+        assert.deepEqual(inline.diagnostics.filter((d) => d.severity !== "warning"), []);
+        if (step.text[0] === "drakon") {
+          const unwrapped = parse(concise.split("\n").slice(1).map((line) => line.slice(2)).join("\n"));
+          assert.deepEqual(unwrapped.model, parsed.model);
+          assert.deepEqual(unwrapped.info, parsed.info);
+          assert.deepEqual(unwrapped.diagnostics.filter((d) => d.severity !== "warning"), []);
+        }
       }
     });
   }
