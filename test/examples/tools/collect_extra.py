@@ -7,8 +7,10 @@ Usage:
 Adds:
   drakonwidget-dtsrc.jsonl   widget-format diagrams from <DRAKONWIDGET_DIR>/dtsrc
   drn/<name>.json            diagrams exported from DRAKON Editor .drn (SQLite) files
+  drn-converted.jsonl        the same .drn diagrams converted to widget format by
+                             drn2graph.py, or the errors DRAKON Editor would show
 and appends entries to manifest.json. Existing entries are kept; re-running
-replaces entries with format "drakon-json-lines" and "drn-items".
+replaces every entry that is not format "drakon-json".
 
 Diagrams already present (same structure, ignoring text) are skipped, so the
 corpus has no duplicates.
@@ -24,6 +26,8 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.dirname(HERE)  # test/examples
+sys.path.insert(0, HERE)
+import drn2graph  # noqa: E402
 
 
 def widget_sig(d):
@@ -108,14 +112,20 @@ def main():
                      "diagrams": len(lines), "features": dict(sorted(counts.items()))})
 
     # 2. DRAKON Editor .drn files (SQLite, layout based)
+    # 3. ...and the same diagrams converted to widget format
     drn_seen = set()
     roots = [("drakon_editor", editor_dir)]
     if tech_dir:
         roots.append(("drakon.tech.desktop", tech_dir))
     used = set()
+    converted_lines = []
+    status_counts = collections.Counter()
+    converted_features = collections.Counter()
     for label, root in roots:
         for p in sorted(glob.glob(os.path.join(root, "**", "*.drn"), recursive=True)):
             origin = label + "/" + os.path.relpath(p, root)
+            graph_input = {did: (name, is_drakon, items) for did, name, is_drakon, items in drn2graph.read_drn(p)}
+            file_lines = []
             c = sqlite3.connect(p)
             tables = {r[0] for r in c.execute("select name from sqlite_master where type='table'")}
             if "items" not in tables or "diagrams" not in tables:
@@ -144,6 +154,27 @@ def main():
                     info = dict(c.execute("select name,value from diagram_info where diagram_id=?", (did,)).fetchall())
                 diagrams.append({"name": name, "origin": dorigin, "description": desc, "info": info,
                                  "nodes": len(items), "features": feats, "items": items})
+                gname, is_drakon, gitems = graph_input[did]
+                rec = drn2graph.convert_diagram(gname, is_drakon, gitems)
+                if "drakon" in rec:
+                    status = "converted"
+                elif not is_drakon:
+                    status = "not-drakon"
+                elif "exception" in rec:
+                    status = "exception"
+                else:
+                    status = "rejected"
+                status_counts[status] += 1
+                line = {"origin": origin, "name": name, "status": status}
+                if status == "converted":
+                    gfeats = widget_features(rec["drakon"])
+                    converted_features.update(gfeats)
+                    line.update({"nodes": len(rec["drakon"]["items"]), "features": gfeats, "diagram": rec["drakon"]})
+                else:
+                    line["errors"] = rec["errors"]
+                    if "exception" in rec:
+                        line["exception"] = rec["exception"]
+                file_lines.append(line)
             if not diagrams:
                 continue
             file_info = dict(c.execute("select key,value from info").fetchall()) if "info" in tables else {}
@@ -158,11 +189,21 @@ def main():
                                                 "columns": cols, "diagrams": diagrams})
             manifest.append({"file": rel, "source": label, "origin": origin, "format": "drn-items",
                              "diagrams": len(diagrams), "features": dict(sorted(fcounts.items()))})
+            for line in file_lines:
+                line["drn_file"] = rel
+                converted_lines.append(json.dumps(line, ensure_ascii=False))
+
+    with open(os.path.join(OUT, "drn-converted.jsonl"), "w", encoding="utf8") as f:
+        f.write("\n".join(converted_lines) + "\n")
+    manifest.append({"file": "drn-converted.jsonl", "source": "drn-converted", "format": "drn-converted-lines",
+                     "diagrams": len(converted_lines), "status": dict(sorted(status_counts.items())),
+                     "features": dict(sorted(converted_features.items()))})
 
     write_json(manifest_path, manifest)
     print("widget-dtsrc diagrams:", len(lines))
     print("drn files:", sum(1 for m in manifest if m["format"] == "drn-items"),
           "drn diagrams:", sum(m["diagrams"] for m in manifest if m["format"] == "drn-items"))
+    print("drn converted:", dict(sorted(status_counts.items())))
 
 
 if __name__ == "__main__":

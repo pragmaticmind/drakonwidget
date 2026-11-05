@@ -4240,5 +4240,30 @@
    "loopend": 3,
    "loopstart": 3
   }
+ },
+ {
+  "file": "drn-converted.jsonl",
+  "source": "drn-converted",
+  "format": "drn-converted-lines",
+  "diagrams": 3321,
+  "status": {
+   "converted": 3097,
+   "not-drakon": 81,
+   "rejected": 143
+  },
+  "features": {
+   "arrow-loop": 85,
+   "case": 270,
+   "flipped-yes-no": 857,
+   "input": 1,
+   "insertion": 5,
+   "loopbegin": 626,
+   "loopend": 626,
+   "output": 2,
+   "question": 1295,
+   "select": 270,
+   "shelf": 154,
+   "silhouette": 363
+  }
  }
 ]
