@@ -1,0 +1,1489 @@
+[
+  {
+    "file": "drakonhub/a-star-algorithm.json",
+    "source": "drakonhub",
+    "origin": "A-star  algorithm.drakon",
+    "nodes": 26,
+    "features": [
+      "comment",
+      "flipped-yes-no",
+      "header",
+      "loopbegin",
+      "loopend",
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakonhub/adaptive-design.json",
+    "source": "drakonhub",
+    "origin": "Adaptive design.drakon",
+    "nodes": 22,
+    "features": [
+      "case",
+      "header",
+      "select"
+    ]
+  },
+  {
+    "file": "drakonhub/buy-a-puppy.json",
+    "source": "drakonhub",
+    "origin": "Buy a puppy.drakon",
+    "nodes": 8,
+    "features": [
+      "header",
+      "question",
+      "style"
+    ]
+  },
+  {
+    "file": "drakonhub/drunk-driving-in-greece.json",
+    "source": "drakonhub",
+    "origin": "Drunk driving in Greece.drakon",
+    "nodes": 13,
+    "features": [
+      "callout",
+      "case",
+      "header",
+      "select",
+      "style"
+    ]
+  },
+  {
+    "file": "drakonhub/go-out.json",
+    "source": "drakonhub",
+    "origin": "Go out.drakon",
+    "nodes": 7,
+    "features": [
+      "flipped-yes-no",
+      "header",
+      "question",
+      "style"
+    ]
+  },
+  {
+    "file": "drakonhub/good-day.json",
+    "source": "drakonhub",
+    "origin": "Good day.drakon",
+    "nodes": 6,
+    "features": [
+      "header"
+    ]
+  },
+  {
+    "file": "drakonhub/how-to-build-a-healthy-relationship.json",
+    "source": "drakonhub",
+    "origin": "How to build a healthy relationship.drakon",
+    "nodes": 13,
+    "features": [
+      "arrow-loop",
+      "callout",
+      "comment",
+      "header",
+      "question",
+      "style"
+    ]
+  },
+  {
+    "file": "drakonhub/how-to-get-a-tattoo.json",
+    "source": "drakonhub",
+    "origin": "How to get a tattoo.drakon",
+    "nodes": 15,
+    "features": [
+      "case",
+      "comment",
+      "header",
+      "question",
+      "select",
+      "style"
+    ]
+  },
+  {
+    "file": "drakonhub/how-to-learn-to-understand-foregn-speech.json",
+    "source": "drakonhub",
+    "origin": "How to learn to understand foregn speech.drakon",
+    "nodes": 27,
+    "features": [
+      "arrow-loop",
+      "callout",
+      "comment",
+      "header",
+      "loopbegin",
+      "loopend",
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakonhub/lunch-break.json",
+    "source": "drakonhub",
+    "origin": "Lunch break.drakon",
+    "nodes": 11,
+    "features": [
+      "header",
+      "question",
+      "silhouette",
+      "style"
+    ]
+  },
+  {
+    "file": "drakonhub/machine-wash.json",
+    "source": "drakonhub",
+    "origin": "Machine wash.drakon",
+    "nodes": 9,
+    "features": [
+      "duration",
+      "header"
+    ]
+  },
+  {
+    "file": "drakonhub/should-i-make-art.json",
+    "source": "drakonhub",
+    "origin": "Should I make art.drakon",
+    "nodes": 14,
+    "features": [
+      "callout",
+      "header",
+      "question",
+      "style"
+    ]
+  },
+  {
+    "file": "drakonhub/take-a-train.json",
+    "source": "drakonhub",
+    "origin": "Take a train.drakon",
+    "nodes": 12,
+    "features": [
+      "flipped-yes-no",
+      "header",
+      "question",
+      "style"
+    ]
+  },
+  {
+    "file": "drakonhub/work-out-action-question.json",
+    "source": "drakonhub",
+    "origin": "Work out - action-question.drakon",
+    "nodes": 8,
+    "features": [
+      "arrow-loop",
+      "header",
+      "question"
+    ]
+  },
+  {
+    "file": "drakonhub/work-out-cycle.json",
+    "source": "drakonhub",
+    "origin": "Work out - cycle.drakon",
+    "nodes": 8,
+    "features": [
+      "flipped-yes-no",
+      "header",
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakonhub/work-out-question-action.json",
+    "source": "drakonhub",
+    "origin": "Work out - question-action.drakon",
+    "nodes": 8,
+    "features": [
+      "arrow-loop",
+      "header",
+      "question"
+    ]
+  },
+  {
+    "file": "drakonwidget/adaptive-design.json",
+    "source": "drakonwidget",
+    "origin": "Adaptive design",
+    "nodes": 21,
+    "features": [
+      "case",
+      "select"
+    ]
+  },
+  {
+    "file": "drakonwidget/go-out.json",
+    "source": "drakonwidget",
+    "origin": "Go out",
+    "nodes": 6,
+    "features": [
+      "flipped-yes-no",
+      "insertion",
+      "question"
+    ]
+  },
+  {
+    "file": "drakonwidget/leave-the-house.json",
+    "source": "drakonwidget",
+    "origin": "Leave the house",
+    "nodes": 6,
+    "features": []
+  },
+  {
+    "file": "drakonwidget/how-to-learn-to-understand-foregn-speech.json",
+    "source": "drakonwidget",
+    "origin": "How to learn to understand foregn speech",
+    "nodes": 24,
+    "features": [
+      "arrow-loop",
+      "loopbegin",
+      "loopend",
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakonwidget/scientific-method.json",
+    "source": "drakonwidget",
+    "origin": "Scientific method",
+    "nodes": 13,
+    "features": [
+      "flipped-yes-no",
+      "question",
+      "style"
+    ]
+  },
+  {
+    "file": "drakonwidget/снятие-шлема-с-мотоциклиста.json",
+    "source": "drakonwidget",
+    "origin": "Снятие шлема с мотоциклиста",
+    "nodes": 29,
+    "features": [
+      "parbegin",
+      "parend",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakonwidget/реанимация-беременной-женщины.json",
+    "source": "drakonwidget",
+    "origin": "Реанимация беременной женщины",
+    "nodes": 33,
+    "features": [
+      "arrow-loop",
+      "duration",
+      "flipped-yes-no",
+      "group-duration",
+      "insertion",
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-arrowloop-dowhile.json",
+    "source": "drakontech",
+    "origin": "c/green/ArrowLoop/doWhile.drakon",
+    "nodes": 7,
+    "features": [
+      "arrow-loop",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-arrowloop-dowhiledo.json",
+    "source": "drakontech",
+    "origin": "c/green/ArrowLoop/doWhileDo.drakon",
+    "nodes": 8,
+    "features": [
+      "arrow-loop",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-arrowloop-selectarrow.json",
+    "source": "drakontech",
+    "origin": "c/green/ArrowLoop/selectArrow.drakon",
+    "nodes": 11,
+    "features": [
+      "arrow-loop",
+      "case",
+      "select"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-arrowloop-twoexits.json",
+    "source": "drakontech",
+    "origin": "c/green/ArrowLoop/twoExits.drakon",
+    "nodes": 12,
+    "features": [
+      "arrow-loop",
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-arrowloop-whiledo.json",
+    "source": "drakontech",
+    "origin": "c/green/ArrowLoop/whileDo.drakon",
+    "nodes": 7,
+    "features": [
+      "arrow-loop",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-badenbaden-nodublicates.json",
+    "source": "drakontech",
+    "origin": "c/green/BadenBaden/noDublicates.drakon",
+    "nodes": 12,
+    "features": [
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-forloop-earlyexit.json",
+    "source": "drakontech",
+    "origin": "c/green/ForLoop/earlyExit.drakon",
+    "nodes": 12,
+    "features": [
+      "flipped-yes-no",
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-forloop-forarray.json",
+    "source": "drakontech",
+    "origin": "c/green/ForLoop/forArray.drakon",
+    "nodes": 8,
+    "features": [
+      "loopbegin",
+      "loopend"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-math-add.json",
+    "source": "drakontech",
+    "origin": "c/green/Math/add.drakon",
+    "nodes": 5,
+    "features": []
+  },
+  {
+    "file": "drakontech/c-green-math-addcore.json",
+    "source": "drakontech",
+    "origin": "c/green/Math/addCore.drakon",
+    "nodes": 3,
+    "features": []
+  },
+  {
+    "file": "drakontech/c-green-question-badshortcircuit.json",
+    "source": "drakontech",
+    "origin": "c/green/Question/badShortCircuit.drakon",
+    "nodes": 6,
+    "features": [
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-question-complexand.json",
+    "source": "drakontech",
+    "origin": "c/green/Question/complexAnd.drakon",
+    "nodes": 7,
+    "features": [
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-question-complexor.json",
+    "source": "drakontech",
+    "origin": "c/green/Question/complexOr.drakon",
+    "nodes": 7,
+    "features": [
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-question-fizzbuzz.json",
+    "source": "drakontech",
+    "origin": "c/green/Question/fizzBuzz.drakon",
+    "nodes": 9,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-question-inversedand.json",
+    "source": "drakontech",
+    "origin": "c/green/Question/inversedAnd.drakon",
+    "nodes": 7,
+    "features": [
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-question-inversedor.json",
+    "source": "drakontech",
+    "origin": "c/green/Question/inversedOr.drakon",
+    "nodes": 7,
+    "features": [
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-question-question.json",
+    "source": "drakontech",
+    "origin": "c/green/Question/question.drakon",
+    "nodes": 5,
+    "features": [
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-question-questionmerge.json",
+    "source": "drakontech",
+    "origin": "c/green/Question/questionMerge.drakon",
+    "nodes": 10,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-question-simpleand.json",
+    "source": "drakontech",
+    "origin": "c/green/Question/simpleAnd.drakon",
+    "nodes": 7,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-question-simpleor.json",
+    "source": "drakontech",
+    "origin": "c/green/Question/simpleOr.drakon",
+    "nodes": 7,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-select-degenerateselect.json",
+    "source": "drakontech",
+    "origin": "c/green/Select/degenerateSelect.drakon",
+    "nodes": 7,
+    "features": [
+      "case",
+      "select"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-select-select.json",
+    "source": "drakontech",
+    "origin": "c/green/Select/select.drakon",
+    "nodes": 9,
+    "features": [
+      "case",
+      "select"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-select-selectshortcircuit.json",
+    "source": "drakontech",
+    "origin": "c/green/Select/selectShortCircuit.drakon",
+    "nodes": 8,
+    "features": [
+      "case",
+      "select"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-silhouette-complexsilnoreturn.json",
+    "source": "drakontech",
+    "origin": "c/green/Silhouette/complexSilNoReturn.drakon",
+    "nodes": 11,
+    "features": [
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-silhouette-complexsilhouette.json",
+    "source": "drakontech",
+    "origin": "c/green/Silhouette/complexSilhouette.drakon",
+    "nodes": 12,
+    "features": [
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-silhouette-fibonacci.json",
+    "source": "drakontech",
+    "origin": "c/green/Silhouette/fibonacci.drakon",
+    "nodes": 16,
+    "features": [
+      "case",
+      "loopbegin",
+      "loopend",
+      "select",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-silhouette-fibonaccisil.json",
+    "source": "drakontech",
+    "origin": "c/green/Silhouette/fibonacciSil.drakon",
+    "nodes": 18,
+    "features": [
+      "action-side-link",
+      "case",
+      "flipped-yes-no",
+      "question",
+      "select",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-silhouette-resourcesexample.json",
+    "source": "drakontech",
+    "origin": "c/green/Silhouette/resourcesExample.drakon",
+    "nodes": 12,
+    "features": [
+      "action-side-link",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-silhouette-sil2.json",
+    "source": "drakontech",
+    "origin": "c/green/Silhouette/sil2.drakon",
+    "nodes": 12,
+    "features": [
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-tools-checkint.json",
+    "source": "drakontech",
+    "origin": "c/green/Tools/checkInt.drakon",
+    "nodes": 7,
+    "features": [
+      "action-side-link",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-green-begin_source.json",
+    "source": "drakontech",
+    "origin": "c/green/begin_source.drakon",
+    "nodes": 7,
+    "features": []
+  },
+  {
+    "file": "drakontech/c-green-empty.json",
+    "source": "drakontech",
+    "origin": "c/green/empty.drakon",
+    "nodes": 2,
+    "features": []
+  },
+  {
+    "file": "drakontech/c-green-main.json",
+    "source": "drakontech",
+    "origin": "c/green/main.drakon",
+    "nodes": 66,
+    "features": [
+      "action-side-link",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/c-intarray-begin_source.json",
+    "source": "drakontech",
+    "origin": "c/intarray/begin_source.drakon",
+    "nodes": 4,
+    "features": []
+  },
+  {
+    "file": "drakontech/c-intarray-intarray.json",
+    "source": "drakontech",
+    "origin": "c/intarray/intarray.drakon",
+    "nodes": 4,
+    "features": []
+  },
+  {
+    "file": "drakontech/c-intarray-intarray_create.json",
+    "source": "drakontech",
+    "origin": "c/intarray/intarray_create.drakon",
+    "nodes": 17,
+    "features": [
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-intarray-intarray_delete.json",
+    "source": "drakontech",
+    "origin": "c/intarray/intarray_delete.drakon",
+    "nodes": 6,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-intarray-intarray_get.json",
+    "source": "drakontech",
+    "origin": "c/intarray/intarray_get.drakon",
+    "nodes": 6,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/c-intarray-intarray_set.json",
+    "source": "drakontech",
+    "origin": "c/intarray/intarray_set.drakon",
+    "nodes": 6,
+    "features": [
+      "action-side-link",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/clojure-hello-drakon-clojure-fibonacci.json",
+    "source": "drakontech",
+    "origin": "clojure/hello-drakon-clojure/fibonacci.drakon",
+    "nodes": 7,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/clojure-hello-drakon-clojure-hello.json",
+    "source": "drakontech",
+    "origin": "clojure/hello-drakon-clojure/hello.drakon",
+    "nodes": 4,
+    "features": []
+  },
+  {
+    "file": "drakontech/clojure-hello-drakon-clojure-only-no.json",
+    "source": "drakontech",
+    "origin": "clojure/hello-drakon-clojure/only-no.drakon",
+    "nodes": 5,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/clojure-hello-drakon-clojure-run-me.json",
+    "source": "drakontech",
+    "origin": "clojure/hello-drakon-clojure/run-me.drakon",
+    "nodes": 6,
+    "features": []
+  },
+  {
+    "file": "drakontech/clojure-hello-drakon-clojure-select-case.json",
+    "source": "drakontech",
+    "origin": "clojure/hello-drakon-clojure/select-case.drakon",
+    "nodes": 10,
+    "features": [
+      "case",
+      "select"
+    ]
+  },
+  {
+    "file": "drakontech/clojure-hello-drakon-clojure-short-circuit-and.json",
+    "source": "drakontech",
+    "origin": "clojure/hello-drakon-clojure/short-circuit-and.drakon",
+    "nodes": 9,
+    "features": [
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/clojure-hello-drakon-clojure-short-if-2.json",
+    "source": "drakontech",
+    "origin": "clojure/hello-drakon-clojure/short-if-2.drakon",
+    "nodes": 6,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/clojure-hello-drakon-clojure-silhouette.json",
+    "source": "drakontech",
+    "origin": "clojure/hello-drakon-clojure/silhouette.drakon",
+    "nodes": 9,
+    "features": [
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-cdeu1-listexample-app-commands-clickitem.json",
+    "source": "drakontech",
+    "origin": "javascript/cdeu1/listexample/App/Commands/clickItem.drakon",
+    "nodes": 4,
+    "features": []
+  },
+  {
+    "file": "drakontech/javascript-cdeu1-listexample-app-commands-renamecurrent.json",
+    "source": "drakontech",
+    "origin": "javascript/cdeu1/listexample/App/Commands/renameCurrent.drakon",
+    "nodes": 8,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-cdeu1-listexample-app-private-render.json",
+    "source": "drakontech",
+    "origin": "javascript/cdeu1/listexample/App/Private/render.drakon",
+    "nodes": 17,
+    "features": [
+      "action-side-link",
+      "flipped-yes-no",
+      "loopbegin",
+      "loopend",
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-cdeu1-listexample-app-init.json",
+    "source": "drakontech",
+    "origin": "javascript/cdeu1/listexample/App/init.drakon",
+    "nodes": 5,
+    "features": []
+  },
+  {
+    "file": "drakontech/javascript-cdeu1-listexample-dom-createelement.json",
+    "source": "drakontech",
+    "origin": "javascript/cdeu1/listexample/DOM/createElement.drakon",
+    "nodes": 20,
+    "features": [
+      "flipped-yes-no",
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-cdeu1-listexample-utils-findbyproperty.json",
+    "source": "drakontech",
+    "origin": "javascript/cdeu1/listexample/Utils/findByProperty.drakon",
+    "nodes": 8,
+    "features": [
+      "flipped-yes-no",
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-cdeu1-listexample-widgets-createbutton.json",
+    "source": "drakontech",
+    "origin": "javascript/cdeu1/listexample/Widgets/createButton.drakon",
+    "nodes": 5,
+    "features": []
+  },
+  {
+    "file": "drakontech/javascript-cdeu1-listexample-widgets-createhorcontainer.json",
+    "source": "drakontech",
+    "origin": "javascript/cdeu1/listexample/Widgets/createHorContainer.drakon",
+    "nodes": 7,
+    "features": [
+      "loopbegin",
+      "loopend"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-cdeu1-listexample-widgets-createtextinput.json",
+    "source": "drakontech",
+    "origin": "javascript/cdeu1/listexample/Widgets/createTextInput.drakon",
+    "nodes": 5,
+    "features": [
+      "action-side-link"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-cdeu1-listexample-main.json",
+    "source": "drakontech",
+    "origin": "javascript/cdeu1/listexample/main.drakon",
+    "nodes": 8,
+    "features": [
+      "async"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-arrowloop-twoexits.json",
+    "source": "drakontech",
+    "origin": "javascript/green/ArrowLoop/twoExits.drakon",
+    "nodes": 13,
+    "features": [
+      "arrow-loop",
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-async-slow.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Async/slow.drakon",
+    "nodes": 5,
+    "features": [
+      "async"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-badenbaden-nodublicates.json",
+    "source": "drakontech",
+    "origin": "javascript/green/BadenBaden/noDublicates.drakon",
+    "nodes": 11,
+    "features": [
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-catch-complexcatch.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Catch/complexCatch.drakon",
+    "nodes": 13,
+    "features": [
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-catch-simplecatch.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Catch/simpleCatch.drakon",
+    "nodes": 8,
+    "features": [
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-forloop-earlyexit.json",
+    "source": "drakontech",
+    "origin": "javascript/green/ForLoop/earlyExit.drakon",
+    "nodes": 11,
+    "features": [
+      "flipped-yes-no",
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-forloop-forarray.json",
+    "source": "drakontech",
+    "origin": "javascript/green/ForLoop/forArray.drakon",
+    "nodes": 7,
+    "features": [
+      "loopbegin",
+      "loopend"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-forloop-forloopnodeclare.json",
+    "source": "drakontech",
+    "origin": "javascript/green/ForLoop/forLoopNoDeclare.drakon",
+    "nodes": 8,
+    "features": [
+      "loopbegin",
+      "loopend"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-forloop-foreacharray.json",
+    "source": "drakontech",
+    "origin": "javascript/green/ForLoop/foreachArray.drakon",
+    "nodes": 5,
+    "features": [
+      "loopbegin",
+      "loopend"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-forloop-foreachloopobject.json",
+    "source": "drakontech",
+    "origin": "javascript/green/ForLoop/foreachLoopObject.drakon",
+    "nodes": 9,
+    "features": [
+      "loopbegin",
+      "loopend"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-question-questionmerge.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Question/questionMerge.drakon",
+    "nodes": 9,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-scope-foreachuntil.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Scope/forEachUntil.drakon",
+    "nodes": 6,
+    "features": [
+      "flipped-yes-no",
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-scope-scope3.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Scope/scope3.drakon",
+    "nodes": 6,
+    "features": []
+  },
+  {
+    "file": "drakontech/javascript-green-silhouette-complexsilhouette.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Silhouette/complexSilhouette.drakon",
+    "nodes": 11,
+    "features": [
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-silhouette-fibonacci.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Silhouette/fibonacci.drakon",
+    "nodes": 15,
+    "features": [
+      "case",
+      "loopbegin",
+      "loopend",
+      "select",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-silhouette-fibonaccisil.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Silhouette/fibonacciSil.drakon",
+    "nodes": 16,
+    "features": [
+      "action-side-link",
+      "case",
+      "flipped-yes-no",
+      "question",
+      "select",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-silhouette-monitorpaymentstatus.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Silhouette/monitorPaymentStatus.drakon",
+    "nodes": 10,
+    "features": [
+      "case",
+      "question",
+      "select",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-silhouette-sil2.json",
+    "source": "drakontech",
+    "origin": "javascript/green/Silhouette/sil2.drakon",
+    "nodes": 11,
+    "features": [
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-green-generateid.json",
+    "source": "drakontech",
+    "origin": "javascript/green/generateId.drakon",
+    "nodes": 5,
+    "features": []
+  },
+  {
+    "file": "drakontech/javascript-machines-red-machinemethod.json",
+    "source": "drakontech",
+    "origin": "javascript/machines/Red/machineMethod.drakon",
+    "nodes": 5,
+    "features": [
+      "sinput"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-machines-priminput.json",
+    "source": "drakontech",
+    "origin": "javascript/machines/primInput.drakon",
+    "nodes": 7,
+    "features": [
+      "sinput"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-machines-priminputnoreturn.json",
+    "source": "drakontech",
+    "origin": "javascript/machines/primInputNoReturn.drakon",
+    "nodes": 6,
+    "features": [
+      "sinput"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-machines-silreceive.json",
+    "source": "drakontech",
+    "origin": "javascript/machines/silReceive.drakon",
+    "nodes": 24,
+    "features": [
+      "case",
+      "flipped-yes-no",
+      "question",
+      "select",
+      "silhouette",
+      "sinput"
+    ]
+  },
+  {
+    "file": "drakontech/javascript-machines-simplesilnoreturn.json",
+    "source": "drakontech",
+    "origin": "javascript/machines/simpleSilNoReturn.drakon",
+    "nodes": 6,
+    "features": [
+      "silhouette",
+      "sinput"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-вопрос-обратноеили.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Вопрос/ОбратноеИли.drakon",
+    "nodes": 7,
+    "features": [
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-вопрос-простоеи.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Вопрос/ПростоеИ.drakon",
+    "nodes": 8,
+    "features": [
+      "action-side-link",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-вопрос-слияниевопросов.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Вопрос/СлияниеВопросов.drakon",
+    "nodes": 9,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-выбор-выборбезумолчания.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Выбор/ВыборБезУмолчания.drakon",
+    "nodes": 9,
+    "features": [
+      "action-side-link",
+      "case",
+      "select"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-повторы-без-повторов.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Повторы/без повторов.drakon",
+    "nodes": 13,
+    "features": [
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-разное-запуск-тестов.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Разное/запуск тестов.drakon",
+    "nodes": 46,
+    "features": [
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-силуэт-фибоначчи.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Силуэт/Фибоначчи.drakon",
+    "nodes": 17,
+    "features": [
+      "case",
+      "loopbegin",
+      "loopend",
+      "select",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-тестирование-лог_в_лит.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Тестирование/лог_в_лит.drakon",
+    "nodes": 5,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-тестирование-проверка-булева.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Тестирование/проверка булева.drakon",
+    "nodes": 7,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-выборсострелкой.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Цикл со стрелкой/ВыборСоСтрелкой.drakon",
+    "nodes": 11,
+    "features": [
+      "arrow-loop",
+      "case",
+      "select"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-проверкадействие.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Цикл со стрелкой/ПроверкаДействие.drakon",
+    "nodes": 7,
+    "features": [
+      "arrow-loop",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-проверкадействиепроверка.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Цикл со стрелкой/ПроверкаДействиеПроверка.drakon",
+    "nodes": 8,
+    "features": [
+      "arrow-loop",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-проверкадействиецикл.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/Цикл со стрелкой/ПроверкаДействиеЦикл.drakon",
+    "nodes": 7,
+    "features": [
+      "loopbegin",
+      "loopend"
+    ]
+  },
+  {
+    "file": "drakontech/kumir-зелёная-старт.json",
+    "source": "drakontech",
+    "origin": "kumir/Зелёная/старт.drakon",
+    "nodes": 5,
+    "features": []
+  },
+  {
+    "file": "drakontech/lua-green-arrowloop-twoexits.json",
+    "source": "drakontech",
+    "origin": "lua/green/ArrowLoop/twoExits.drakon",
+    "nodes": 12,
+    "features": [
+      "arrow-loop",
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/lua-green-forloop-earlyexit.json",
+    "source": "drakontech",
+    "origin": "lua/green/ForLoop/earlyExit.drakon",
+    "nodes": 10,
+    "features": [
+      "flipped-yes-no",
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/lua-machines-silreceive.json",
+    "source": "drakontech",
+    "origin": "lua/machines/silReceive.drakon",
+    "nodes": 26,
+    "features": [
+      "case",
+      "flipped-yes-no",
+      "question",
+      "select",
+      "silhouette",
+      "sinput"
+    ]
+  },
+  {
+    "file": "drakontech/oscript-зелёная-вопрос-простоеи.json",
+    "source": "drakontech",
+    "origin": "oscript/Зелёная/Вопрос/ПростоеИ.drakon",
+    "nodes": 7,
+    "features": [
+      "action-side-link",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/oscript-зелёная-запусктестов.json",
+    "source": "drakontech",
+    "origin": "oscript/Зелёная/ЗапускТестов.drakon",
+    "nodes": 57,
+    "features": [
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/oscript-зелёная-силуэт-сложныйсилуэтбеззначения.json",
+    "source": "drakontech",
+    "origin": "oscript/Зелёная/Силуэт/СложныйСилуэтБезЗначения.drakon",
+    "nodes": 10,
+    "features": [
+      "question",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/oscript-зелёная-силуэт-фибоначчи.json",
+    "source": "drakontech",
+    "origin": "oscript/Зелёная/Силуэт/Фибоначчи.drakon",
+    "nodes": 15,
+    "features": [
+      "case",
+      "loopbegin",
+      "loopend",
+      "select",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/oscript-зелёная-старт.json",
+    "source": "drakontech",
+    "origin": "oscript/Зелёная/Старт.drakon",
+    "nodes": 4,
+    "features": []
+  },
+  {
+    "file": "drakontech/oscript-зелёная-цикл-для-дляпомассиву.json",
+    "source": "drakontech",
+    "origin": "oscript/Зелёная/Цикл Для/ДляПоМассиву.drakon",
+    "nodes": 5,
+    "features": [
+      "loopbegin",
+      "loopend"
+    ]
+  },
+  {
+    "file": "drakontech/oscript-зелёная-цикл-для-раннийвыход.json",
+    "source": "drakontech",
+    "origin": "oscript/Зелёная/Цикл Для/РаннийВыход.drakon",
+    "nodes": 10,
+    "features": [
+      "flipped-yes-no",
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/oscript-зелёная-цикл-со-стрелкой-двавыхода.json",
+    "source": "drakontech",
+    "origin": "oscript/Зелёная/Цикл со стрелкой/ДваВыхода.drakon",
+    "nodes": 10,
+    "features": [
+      "arrow-loop",
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-вопрос-слияниевопросов.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Вопрос/СлияниеВопросов.drakon",
+    "nodes": 10,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-запусктестов.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/ЗапускТестов.drakon",
+    "nodes": 56,
+    "features": [
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-силуэт-фибоначчи.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Силуэт/Фибоначчи.drakon",
+    "nodes": 17,
+    "features": [
+      "case",
+      "loopbegin",
+      "loopend",
+      "select",
+      "silhouette"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-старт.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Старт.drakon",
+    "nodes": 6,
+    "features": []
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-тестирование-проверкабулева.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Тестирование/ПроверкаБулева.drakon",
+    "nodes": 5,
+    "features": [
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-для-дляпомассиву.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл Для/ДляПоМассиву.drakon",
+    "nodes": 6,
+    "features": [
+      "loopbegin",
+      "loopend"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-для-раннийвыход.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл Для/РаннийВыход.drakon",
+    "nodes": 11,
+    "features": [
+      "flipped-yes-no",
+      "loopbegin",
+      "loopend",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-выборсострелкой.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ВыборСоСтрелкой.drakon",
+    "nodes": 12,
+    "features": [
+      "arrow-loop",
+      "case",
+      "select"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-двавыхода.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ДваВыхода.drakon",
+    "nodes": 11,
+    "features": [
+      "arrow-loop",
+      "flipped-yes-no",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-действиепроверка.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ДействиеПроверка.drakon",
+    "nodes": 8,
+    "features": [
+      "arrow-loop",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-проверкадействие.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ПроверкаДействие.drakon",
+    "nodes": 8,
+    "features": [
+      "arrow-loop",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-проверкадействиепроверка.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ПроверкаДействиеПроверка.drakon",
+    "nodes": 9,
+    "features": [
+      "arrow-loop",
+      "question"
+    ]
+  },
+  {
+    "file": "drakontech/perfolenta-классы-класс-полнаяинформация-телокласса.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Классы/Класс ПолнаяИнформация/ТелоКласса.drakon",
+    "nodes": 5,
+    "features": []
+  },
+  {
+    "file": "drakontech/perfolenta-классы-класс-серый-конструктор.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Классы/Класс Серый/Конструктор.drakon",
+    "nodes": 5,
+    "features": []
+  },
+  {
+    "file": "drakontech/perfolenta-классы-класс-серый-открытое-получитьполнуюинформацию.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Классы/Класс Серый/Открытое/ПолучитьПолнуюИнформацию.drakon",
+    "nodes": 6,
+    "features": []
+  },
+  {
+    "file": "drakontech/perfolenta-классы-класс-серый-открытое-приветствовать.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Классы/Класс Серый/Открытое/Приветствовать.drakon",
+    "nodes": 6,
+    "features": []
+  },
+  {
+    "file": "drakontech/perfolenta-классы-класс-серый-телокласса.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Классы/Класс Серый/ТелоКласса.drakon",
+    "nodes": 7,
+    "features": []
+  },
+  {
+    "file": "drakontech/perfolenta-классы-программа-классы-старт.json",
+    "source": "drakontech",
+    "origin": "perfolenta/Классы/Программа Классы/Старт.drakon",
+    "nodes": 12,
+    "features": []
+  }
+]

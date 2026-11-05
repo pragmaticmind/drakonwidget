@@ -1,0 +1,75 @@
+{
+  "name": "Scientific method",
+  "items": {
+    "1": {
+      "type": "end"
+    },
+    "2": {
+      "type": "branch",
+      "branchId": 0,
+      "one": "3"
+    },
+    "3": {
+      "type": "action",
+      "one": "4",
+      "content": "Investigate the question"
+    },
+    "4": {
+      "flag1": 0,
+      "type": "question",
+      "content": "Are there existing sufficient explanations?",
+      "one": "6",
+      "two": "5"
+    },
+    "5": {
+      "type": "action",
+      "content": "Nothing to do, life is good",
+      "one": "1"
+    },
+    "6": {
+      "type": "action",
+      "one": "7",
+      "content": "Form a _hypothesis_"
+    },
+    "7": {
+      "type": "action",
+      "one": "8",
+      "content": "Deduce _predictions_ from the _hypothesis_"
+    },
+    "8": {
+      "type": "action",
+      "one": "9",
+      "content": "Compare the _predictions_ to __reproducible__ facts"
+    },
+    "9": {
+      "flag1": 0,
+      "type": "question",
+      "content": "Are there facts that contradict the predictions?",
+      "one": "11",
+      "two": "10"
+    },
+    "10": {
+      "type": "action",
+      "content": "The _hypothesis_ is not valid",
+      "one": "1"
+    },
+    "11": {
+      "flag1": 1,
+      "type": "question",
+      "two": "12",
+      "one": "13",
+      "content": "Are there facts that confirm the predictions?"
+    },
+    "12": {
+      "type": "action",
+      "content": "This _hypothesis_ is a waste of time",
+      "one": "1"
+    },
+    "13": {
+      "type": "action",
+      "content": "The _hypothesis_ could be a valid explanation of the question. Or maybe not.",
+      "one": "1",
+      "style": "{\"iconBack\":\"darkgreen\",\"color\":\"white\",\"iconBorder\":\"\",\"font\":\"\",\"padding\":\"\",\"internalLine\":\"\",\"borderWidth\":0}"
+    }
+  }
+}
