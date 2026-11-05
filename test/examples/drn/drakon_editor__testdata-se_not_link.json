@@ -1,0 +1,95 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/se_not_link.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "diagram",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "shelf",
+     "text": "NotLinkField : int",
+     "x": 120,
+     "y": 190,
+     "w": 90,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Foo"
+    },
+    {
+     "item_id": 2,
+     "type": "shelf",
+     "text": "",
+     "x": 690,
+     "y": 190,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Bar"
+    },
+    {
+     "item_id": 7,
+     "type": "beginend",
+     "text": "NotLinkField",
+     "x": 300,
+     "y": 190,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 190,
+     "w": 470,
+     "h": 0,
+     "a": 20300,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "beginend",
+     "text": "BlueField",
+     "x": 530,
+     "y": 190,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

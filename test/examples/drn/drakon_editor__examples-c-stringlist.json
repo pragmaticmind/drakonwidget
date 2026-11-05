@@ -1,0 +1,2048 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/C++/StringList.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1",
+  "language": "C++"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "Fibonacci",
+   "origin": "-149 -114",
+   "description": "Generates a Fibonacci series of the given length and puts it in the specified vector.",
+   "info": {},
+   "nodes": 30,
+   "features": [
+    "case",
+    "if",
+    "loopend",
+    "loopstart",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 448,
+     "type": "beginend",
+     "text": "Fibonacci",
+     "x": 100,
+     "y": -420,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 449,
+     "type": "beginend",
+     "text": "End",
+     "x": 100,
+     "y": 650,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 450,
+     "type": "vertical",
+     "text": "",
+     "x": 100,
+     "y": -410,
+     "w": 0,
+     "h": 1060,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 451,
+     "type": "action",
+     "text": "public\n\nint n // The length of the series to generate. Must be >= 0.\nstd::vector<int>* output // The pointer to the result vector. Not null.",
+     "x": 520,
+     "y": -420,
+     "w": 300,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 452,
+     "type": "horizontal",
+     "text": "",
+     "x": 140,
+     "y": -420,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 453,
+     "type": "select",
+     "text": "n",
+     "x": 100,
+     "y": 120,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 454,
+     "type": "case",
+     "text": "",
+     "x": 560,
+     "y": 180,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 455,
+     "type": "case",
+     "text": "1",
+     "x": 320,
+     "y": 180,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 456,
+     "type": "case",
+     "text": "0",
+     "x": 100,
+     "y": 180,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 457,
+     "type": "action",
+     "text": "output->push_back(0);",
+     "x": 100,
+     "y": 250,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 460,
+     "type": "horizontal",
+     "text": "",
+     "x": 100,
+     "y": 150,
+     "w": 460,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 461,
+     "type": "vertical",
+     "text": "",
+     "x": 560,
+     "y": 150,
+     "w": 0,
+     "h": 420,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 462,
+     "type": "vertical",
+     "text": "",
+     "x": 320,
+     "y": 150,
+     "w": 0,
+     "h": 420,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 463,
+     "type": "loopstart",
+     "text": "i = 2; i <= n; i += 1",
+     "x": 560,
+     "y": 340,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 464,
+     "type": "action",
+     "text": "int f2 = output->at(i - 2);\nint f1 = output->at(i - 1);\nint fib = f1 + f2;",
+     "x": 560,
+     "y": 410,
+     "w": 120,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 465,
+     "type": "action",
+     "text": "output->push_back(fib);",
+     "x": 560,
+     "y": 480,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 466,
+     "type": "loopend",
+     "text": "",
+     "x": 560,
+     "y": 530,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 467,
+     "type": "horizontal",
+     "text": "",
+     "x": 100,
+     "y": 570,
+     "w": 460,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 470,
+     "type": "action",
+     "text": "int i;",
+     "x": 100,
+     "y": -340,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 471,
+     "type": "action",
+     "text": "output->push_back(0);\noutput->push_back(1);",
+     "x": 320,
+     "y": 260,
+     "w": 100,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 782,
+     "type": "action",
+     "text": "printf(\"Fibonacci: output is null.\\n\");\nabort();",
+     "x": 290,
+     "y": -40,
+     "w": 170,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 783,
+     "type": "if",
+     "text": "n >= 0",
+     "x": 100,
+     "y": -270,
+     "w": 100,
+     "h": 20,
+     "a": 80,
+     "b": 1
+    },
+    {
+     "item_id": 784,
+     "type": "action",
+     "text": "printf(\"Fibonacci: n < 0: %d\\n\", n);\nabort();",
+     "x": 280,
+     "y": -200,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 785,
+     "type": "horizontal",
+     "text": "",
+     "x": 100,
+     "y": -150,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 786,
+     "type": "vertical",
+     "text": "",
+     "x": 280,
+     "y": -270,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 787,
+     "type": "if",
+     "text": "output == 0",
+     "x": 100,
+     "y": -110,
+     "w": 100,
+     "h": 20,
+     "a": 80,
+     "b": 0
+    },
+    {
+     "item_id": 788,
+     "type": "vertical",
+     "text": "",
+     "x": 280,
+     "y": -110,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 789,
+     "type": "horizontal",
+     "text": "",
+     "x": 100,
+     "y": 10,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 790,
+     "type": "action",
+     "text": "output->push_back(0);\noutput->push_back(1);",
+     "x": 560,
+     "y": 260,
+     "w": 120,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 791,
+     "type": "action",
+     "text": "output->clear();",
+     "x": 100,
+     "y": 50,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "QuickSort",
+   "origin": "1222 290",
+   "description": "In-place quick sort.",
+   "info": {},
+   "nodes": 49,
+   "features": [
+    "address",
+    "arrow",
+    "case",
+    "if",
+    "loopend",
+    "loopstart",
+    "select",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 578,
+     "type": "beginend",
+     "text": "QuickSort",
+     "x": -30,
+     "y": 30,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 579,
+     "type": "beginend",
+     "text": "End",
+     "x": 2190,
+     "y": 510,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 580,
+     "type": "vertical",
+     "text": "",
+     "x": -30,
+     "y": 40,
+     "w": 0,
+     "h": 750,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 581,
+     "type": "vertical",
+     "text": "",
+     "x": 680,
+     "y": 130,
+     "w": 0,
+     "h": 660,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 582,
+     "type": "vertical",
+     "text": "",
+     "x": 2190,
+     "y": 130,
+     "w": 0,
+     "h": 370,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 583,
+     "type": "horizontal",
+     "text": "",
+     "x": -30,
+     "y": 130,
+     "w": 2220,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 584,
+     "type": "arrow",
+     "text": "",
+     "x": -170,
+     "y": 130,
+     "w": 140,
+     "h": 660,
+     "a": 2030,
+     "b": 1
+    },
+    {
+     "item_id": 585,
+     "type": "branch",
+     "text": "analyze input",
+     "x": -30,
+     "y": 170,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 586,
+     "type": "address",
+     "text": "exit",
+     "x": -30,
+     "y": 750,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 587,
+     "type": "branch",
+     "text": "simple case",
+     "x": 680,
+     "y": 170,
+     "w": 220,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 588,
+     "type": "branch",
+     "text": "partition",
+     "x": 1350,
+     "y": 170,
+     "w": 200,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 589,
+     "type": "address",
+     "text": "exit",
+     "x": 680,
+     "y": 750,
+     "w": 220,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 590,
+     "type": "horizontal",
+     "text": "",
+     "x": 10,
+     "y": 30,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 592,
+     "type": "action",
+     "text": "int length = end - begin;\nint last = end - 1;",
+     "x": -30,
+     "y": 340,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 593,
+     "type": "select",
+     "text": "length",
+     "x": -30,
+     "y": 560,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 594,
+     "type": "case",
+     "text": "0",
+     "x": -30,
+     "y": 630,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 595,
+     "type": "case",
+     "text": "1",
+     "x": 140,
+     "y": 630,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 596,
+     "type": "case",
+     "text": "2",
+     "x": 260,
+     "y": 630,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 597,
+     "type": "branch",
+     "text": "exit",
+     "x": 2190,
+     "y": 170,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 598,
+     "type": "horizontal",
+     "text": "",
+     "x": -30,
+     "y": 590,
+     "w": 410,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 599,
+     "type": "case",
+     "text": "",
+     "x": 380,
+     "y": 630,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 600,
+     "type": "vertical",
+     "text": "",
+     "x": 140,
+     "y": 590,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 601,
+     "type": "vertical",
+     "text": "",
+     "x": 380,
+     "y": 590,
+     "w": 0,
+     "h": 200,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 602,
+     "type": "vertical",
+     "text": "",
+     "x": 260,
+     "y": 590,
+     "w": 0,
+     "h": 200,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 603,
+     "type": "horizontal",
+     "text": "",
+     "x": -30,
+     "y": 700,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 605,
+     "type": "address",
+     "text": "simple case",
+     "x": 260,
+     "y": 750,
+     "w": 60,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 606,
+     "type": "vertical",
+     "text": "",
+     "x": 1350,
+     "y": 130,
+     "w": 0,
+     "h": 660,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 607,
+     "type": "address",
+     "text": "recurse",
+     "x": 1350,
+     "y": 750,
+     "w": 200,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 608,
+     "type": "address",
+     "text": "partition",
+     "x": 380,
+     "y": 750,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 610,
+     "type": "if",
+     "text": "Compare(collection, begin, last, comparer) <= 0",
+     "x": 680,
+     "y": 400,
+     "w": 220,
+     "h": 20,
+     "a": 70,
+     "b": 1
+    },
+    {
+     "item_id": 611,
+     "type": "action",
+     "text": "collection->Swap(begin, last);",
+     "x": 970,
+     "y": 480,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 612,
+     "type": "vertical",
+     "text": "",
+     "x": 970,
+     "y": 400,
+     "w": 0,
+     "h": 130,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 613,
+     "type": "horizontal",
+     "text": "",
+     "x": 680,
+     "y": 530,
+     "w": 290,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 614,
+     "type": "action",
+     "text": "pivotIndex = begin + length / 2;",
+     "x": 1350,
+     "y": 240,
+     "w": 200,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 615,
+     "type": "loopstart",
+     "text": "i = begin; i < last; i++",
+     "x": 1350,
+     "y": 410,
+     "w": 200,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 616,
+     "type": "loopend",
+     "text": "",
+     "x": 1350,
+     "y": 620,
+     "w": 200,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 623,
+     "type": "branch",
+     "text": "recurse",
+     "x": 1860,
+     "y": 170,
+     "w": 230,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 624,
+     "type": "address",
+     "text": "exit",
+     "x": 1860,
+     "y": 750,
+     "w": 230,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 625,
+     "type": "vertical",
+     "text": "",
+     "x": 1860,
+     "y": 130,
+     "w": 0,
+     "h": 660,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 632,
+     "type": "action",
+     "text": "public\n\nStringList* collection // The array to sort.\nint begin // The first element of the range to sort.\nint end // The element which is right after the last element.\nIStringComparer* comparer // The comparison function.",
+     "x": 310,
+     "y": 30,
+     "w": 260,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 633,
+     "type": "action",
+     "text": "int i;\nint pivotIndex;\nint storeIndex;",
+     "x": -30,
+     "y": 250,
+     "w": 110,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 650,
+     "type": "action",
+     "text": "collection->Swap(pivotIndex, last);\nstoreIndex = begin;",
+     "x": 1350,
+     "y": 340,
+     "w": 200,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 651,
+     "type": "if",
+     "text": "Compare(collection, i, last, comparer) < 0",
+     "x": 1350,
+     "y": 460,
+     "w": 200,
+     "h": 20,
+     "a": 40,
+     "b": 1
+    },
+    {
+     "item_id": 652,
+     "type": "action",
+     "text": "collection->Swap(i, storeIndex);\nstoreIndex++;",
+     "x": 1350,
+     "y": 540,
+     "w": 200,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 653,
+     "type": "horizontal",
+     "text": "",
+     "x": 1350,
+     "y": 590,
+     "w": 240,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 654,
+     "type": "vertical",
+     "text": "",
+     "x": 1590,
+     "y": 460,
+     "w": 0,
+     "h": 130,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 655,
+     "type": "action",
+     "text": "collection->Swap(storeIndex, last);",
+     "x": 1350,
+     "y": 680,
+     "w": 200,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 656,
+     "type": "action",
+     "text": "QuickSort(collection, begin, storeIndex, comparer);",
+     "x": 1860,
+     "y": 390,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 657,
+     "type": "action",
+     "text": "QuickSort(collection, storeIndex + 1, end, comparer);",
+     "x": 1860,
+     "y": 450,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "UnexpectedBranch",
+   "origin": "-226 -6",
+   "description": "The code generator inserts a call to this function each time there is no \"default\" value in a 'select' ('switch') construct.",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 705,
+     "type": "beginend",
+     "text": "UnexpectedBranch",
+     "x": 170,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 706,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 707,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 708,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 709,
+     "type": "action",
+     "text": "public\n\nint switchValue // The unexpected switch value.",
+     "x": 490,
+     "y": 60,
+     "w": 200,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 710,
+     "type": "action",
+     "text": "printf(\"An unexpected value in the 'select' ('switch') construct: %d\\n\", switchValue);\nabort();",
+     "x": 170,
+     "y": 200,
+     "w": 360,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "ignored diagram",
+   "origin": "-16.77777777777777 -18.77777777777777",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 713,
+     "type": "beginend",
+     "text": "ignored diagram",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 714,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 715,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 716,
+     "type": "action",
+     "text": "This diagram is not included into\nthe code generation because\nits first argument is #comment",
+     "x": 170,
+     "y": 190,
+     "w": 150,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 717,
+     "type": "action",
+     "text": "#comment",
+     "x": 410,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 718,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 160,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "default constructor",
+   "origin": "0 0",
+   "description": "This is the default constructor of the StringList class.\n\nThe actual name of the diagram does not matter. What matters is the 'ctr' keyword in the first line of the parameters icon.",
+   "info": {},
+   "nodes": 5,
+   "features": [],
+   "items": [
+    {
+     "item_id": 719,
+     "type": "beginend",
+     "text": "default constructor",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 720,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 721,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 722,
+     "type": "horizontal",
+     "text": "",
+     "x": 240,
+     "y": 60,
+     "w": 120,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 723,
+     "type": "action",
+     "text": "public ctr",
+     "x": 370,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "destructor",
+   "origin": "-127 -23",
+   "description": "The destructor of class StringList.\nDeletes all elements of the list.",
+   "info": {},
+   "nodes": 12,
+   "features": [
+    "arrow",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 724,
+     "type": "beginend",
+     "text": "destructor",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 725,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 480,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 726,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 400,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 727,
+     "type": "action",
+     "text": "dtr",
+     "x": 340,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 728,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 130,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 729,
+     "type": "action",
+     "text": "List::iterator it = _elements.begin();",
+     "x": 170,
+     "y": 160,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 730,
+     "type": "if",
+     "text": "it == _elements.end()",
+     "x": 170,
+     "y": 250,
+     "w": 170,
+     "h": 20,
+     "a": 90,
+     "b": 1
+    },
+    {
+     "item_id": 731,
+     "type": "vertical",
+     "text": "",
+     "x": 430,
+     "y": 250,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 732,
+     "type": "action",
+     "text": "delete *it;",
+     "x": 430,
+     "y": 310,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 733,
+     "type": "arrow",
+     "text": "",
+     "x": 530,
+     "y": 210,
+     "w": 360,
+     "h": 210,
+     "a": 100,
+     "b": 0
+    },
+    {
+     "item_id": 734,
+     "type": "action",
+     "text": "_elements.resize(0);",
+     "x": 170,
+     "y": 350,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 735,
+     "type": "action",
+     "text": "++it;",
+     "x": 430,
+     "y": 370,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Add",
+   "origin": "0 -100",
+   "description": "Adds a new element to the list.",
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 736,
+     "type": "beginend",
+     "text": "Add",
+     "x": 170,
+     "y": 40,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 737,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 738,
+     "type": "vertical",
+     "x": 170,
+     "y": 60,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 739,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 40,
+     "w": 120,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 740,
+     "type": "action",
+     "text": "public method\n\nstd::string* element // The new element. Not null. Ownership.",
+     "x": 520,
+     "y": 40,
+     "w": 260,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 741,
+     "type": "if",
+     "text": "element == 0",
+     "x": 170,
+     "y": 140,
+     "w": 130,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 742,
+     "type": "action",
+     "text": "printf(\"StringList::Add: element is null\\n\");\nabort();",
+     "x": 390,
+     "y": 220,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 743,
+     "type": "vertical",
+     "text": "",
+     "x": 370,
+     "y": 140,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 744,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 260,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 745,
+     "type": "action",
+     "text": "_elements.push_back(element);",
+     "x": 170,
+     "y": 300,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Get",
+   "origin": "0 -100",
+   "description": "Adds a new element to the list.",
+   "info": {},
+   "nodes": 11,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 746,
+     "type": "beginend",
+     "text": "Get",
+     "x": 170,
+     "y": 50,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 747,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 460,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 748,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 0,
+     "h": 390,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 749,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 50,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 750,
+     "type": "action",
+     "text": "public method\n\nint index // Must be >= 0 and < Count.\n\nreturns std::string* // Returns a reference to an element. Not null. No ownership.",
+     "x": 630,
+     "y": 50,
+     "w": 340,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 751,
+     "type": "if",
+     "text": "index >= 0",
+     "x": 170,
+     "y": 130,
+     "w": 110,
+     "h": 20,
+     "a": 160,
+     "b": 1
+    },
+    {
+     "item_id": 752,
+     "type": "action",
+     "text": "printf(\"StringList::Get: index out of range: %d\\n\", index);\nabort();",
+     "x": 440,
+     "y": 270,
+     "w": 250,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 753,
+     "type": "vertical",
+     "text": "",
+     "x": 440,
+     "y": 130,
+     "w": 0,
+     "h": 200,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 754,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 330,
+     "w": 270,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 755,
+     "type": "action",
+     "text": "return _elements[index];",
+     "x": 170,
+     "y": 390,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 756,
+     "type": "if",
+     "text": "index < Count()",
+     "x": 170,
+     "y": 200,
+     "w": 110,
+     "h": 20,
+     "a": 160,
+     "b": 1
+    }
+   ]
+  },
+  {
+   "name": "Swap",
+   "origin": "0 150",
+   "description": "Swaps two elements in the list.",
+   "info": {},
+   "nodes": 19,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 757,
+     "type": "beginend",
+     "text": "Swap",
+     "x": 170,
+     "y": 40,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 758,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 820,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 759,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 0,
+     "h": 770,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 760,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 40,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 761,
+     "type": "action",
+     "text": "public method\n\nint index1 // Must be >= 0 and < Count.\nint index2 // Must be >= 0 and < Count.",
+     "x": 460,
+     "y": 40,
+     "w": 170,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 762,
+     "type": "if",
+     "text": "index1 >= 0",
+     "x": 170,
+     "y": 130,
+     "w": 170,
+     "h": 20,
+     "a": 110,
+     "b": 1
+    },
+    {
+     "item_id": 763,
+     "type": "action",
+     "text": "printf(\"StringList::Swap: index1 out of range: %d\\n\", index1);\nabort();",
+     "x": 450,
+     "y": 270,
+     "w": 260,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 764,
+     "type": "vertical",
+     "text": "",
+     "x": 450,
+     "y": 130,
+     "w": 0,
+     "h": 200,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 765,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 330,
+     "w": 280,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 766,
+     "type": "action",
+     "text": "std::string* old1 = _elements[index1];\n_elements[index1] = _elements[index2];\n_elements[index2] = old1;",
+     "x": 170,
+     "y": 710,
+     "w": 170,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 767,
+     "type": "if",
+     "text": "index1 < Count()",
+     "x": 170,
+     "y": 200,
+     "w": 170,
+     "h": 20,
+     "a": 110,
+     "b": 1
+    },
+    {
+     "item_id": 768,
+     "type": "if",
+     "text": "index2 >= 0",
+     "x": 170,
+     "y": 380,
+     "w": 170,
+     "h": 20,
+     "a": 110,
+     "b": 1
+    },
+    {
+     "item_id": 769,
+     "type": "action",
+     "text": "printf(\"StringList::Swap: index2 out of range: %d\\n\", index2);\nabort();",
+     "x": 450,
+     "y": 520,
+     "w": 260,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 770,
+     "type": "vertical",
+     "text": "",
+     "x": 450,
+     "y": 380,
+     "w": 0,
+     "h": 200,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 771,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 580,
+     "w": 280,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 772,
+     "type": "if",
+     "text": "index2 < Count()",
+     "x": 170,
+     "y": 450,
+     "w": 170,
+     "h": 20,
+     "a": 110,
+     "b": 1
+    },
+    {
+     "item_id": 773,
+     "type": "if",
+     "text": "index1 == index2",
+     "x": 170,
+     "y": 620,
+     "w": 170,
+     "h": 20,
+     "a": 20,
+     "b": 0
+    },
+    {
+     "item_id": 774,
+     "type": "vertical",
+     "text": "",
+     "x": 360,
+     "y": 620,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 775,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 770,
+     "w": 190,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Count",
+   "origin": "0 0",
+   "description": "Gets the number of elements in the list.",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 776,
+     "type": "beginend",
+     "text": "Count",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 777,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 778,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 779,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 60,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 780,
+     "type": "action",
+     "text": "public const method\n\nreturns int // Returns the number of elements.",
+     "x": 500,
+     "y": 60,
+     "w": 200,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 781,
+     "type": "action",
+     "text": "return (int)_elements.size();",
+     "x": 170,
+     "y": 230,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "AddFromCString",
+   "origin": "-101 -23",
+   "description": "Creates an std::string object from the provided C-string and adds it to the list.",
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 792,
+     "type": "beginend",
+     "text": "AddFromCString",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 793,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 794,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 795,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 60,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 796,
+     "type": "action",
+     "text": "public method\n\nconst char* text// The new element. Not null. No ownership.",
+     "x": 510,
+     "y": 60,
+     "w": 250,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 797,
+     "type": "if",
+     "text": "text == 0",
+     "x": 170,
+     "y": 140,
+     "w": 190,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 798,
+     "type": "action",
+     "text": "printf(\"StringList::AddFromCString: text is null\\n\");\nabort();",
+     "x": 430,
+     "y": 210,
+     "w": 230,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 799,
+     "type": "vertical",
+     "text": "",
+     "x": 430,
+     "y": 140,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 800,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 250,
+     "w": 260,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 801,
+     "type": "action",
+     "text": "std::string* element = new std::string(text);\nAdd(element);",
+     "x": 170,
+     "y": 300,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Compare",
+   "origin": "-93 -15",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 802,
+     "type": "beginend",
+     "text": "Compare",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 803,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 804,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 805,
+     "type": "action",
+     "text": "StringList* collection\nint leftIndex\nint rightIndex\nIStringComparer* comparer\n\nreturns int",
+     "x": 410,
+     "y": 60,
+     "w": 110,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 806,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 60,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 807,
+     "type": "action",
+     "text": "const std::string* left = collection->Get(leftIndex);\nconst std::string* right = collection->Get(rightIndex);",
+     "x": 170,
+     "y": 170,
+     "w": 230,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 808,
+     "type": "action",
+     "text": "return comparer->Compare(left, right);",
+     "x": 170,
+     "y": 260,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,383 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/DrakonLua/drakon_lua_demo.drn",
+ "info": {
+  "type": "drakon",
+  "version": "9",
+  "start_version": "1",
+  "language": "DrakonLua"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "main",
+   "origin": "-40.0 -56.0",
+   "description": "",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 47,
+     "type": "beginend",
+     "text": "main",
+     "x": 170,
+     "y": -10,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 330,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 49,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 0,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 310,
+     "type": "action",
+     "text": "print(\"hello\")",
+     "x": 170,
+     "y": 50,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 386,
+     "type": "action",
+     "text": "doSomething\n\t100\n\t2000\n\t{x=60000}",
+     "x": 170,
+     "y": 130,
+     "w": 80,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 387,
+     "type": "action",
+     "text": "print(\"bye\")",
+     "x": 170,
+     "y": 270,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 418,
+     "type": "action",
+     "text": "lambdas()",
+     "x": 170,
+     "y": 210,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "doSomething",
+   "origin": "0 -364",
+   "description": null,
+   "info": {},
+   "nodes": 23,
+   "features": [
+    "address",
+    "arrow",
+    "loopend",
+    "loopstart",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 364,
+     "type": "beginend",
+     "text": "doSomething",
+     "x": 260,
+     "y": -350,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 365,
+     "type": "beginend",
+     "text": "End",
+     "x": 940,
+     "y": 10,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 366,
+     "type": "vertical",
+     "x": 260,
+     "y": -330,
+     "w": 0,
+     "h": 570,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 367,
+     "type": "horizontal",
+     "x": 250,
+     "y": -350,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 368,
+     "type": "action",
+     "text": "first\nsecond\nthird",
+     "x": 420,
+     "y": -350,
+     "w": 50,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 369,
+     "type": "action",
+     "text": "fourth = first + second\nfifth = second + 10\nthird = third or \"\"",
+     "x": 260,
+     "y": -140,
+     "w": 140,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 370,
+     "type": "action",
+     "text": "bar = createBar\n\tfirst\n\t444",
+     "x": 580,
+     "y": -40,
+     "w": 70,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 371,
+     "type": "action",
+     "text": "moo =\n\tx : 10 + math.cos(first)\n\ty : 20",
+     "x": 260,
+     "y": 40,
+     "w": 140,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 372,
+     "type": "action",
+     "text": "x37 = fourth -\n\tfifth * 2",
+     "x": 260,
+     "y": -50,
+     "w": 140,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 373,
+     "type": "action",
+     "text": "print\n\tfourth\n\tfifth\n\tx37\n\tmoo\n\tbar",
+     "x": 580,
+     "y": 80,
+     "w": 70,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 374,
+     "type": "action",
+     "text": "third.z = 30",
+     "x": 260,
+     "y": 120,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 389,
+     "type": "branch",
+     "text": "Morning",
+     "x": 260,
+     "y": -240,
+     "w": 140,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 390,
+     "type": "branch",
+     "text": "Evening",
+     "x": 580,
+     "y": -240,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 392,
+     "type": "horizontal",
+     "text": "",
+     "x": 260,
+     "y": -290,
+     "w": 680,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 393,
+     "type": "vertical",
+     "text": "",
+     "x": 580,
+     "y": -290,
+     "w": 0,
+     "h": 530,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 394,
+     "type": "vertical",
+     "text": "",
+     "x": 940,
+     "y": -290,
+     "w": 0,
+     "h": 300,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 395,
+     "type": "arrow",
+     "text": "",
+     "x": 100,
+     "y": -290,
+     "w": 160,
+     "h": 530,
+     "a": 480,
+     "b": 1
+    },
+    {
+     "item_id": 396,
+     "type": "address",
+     "text": "Evening",
+     "x": 260,
+     "y": 190,
+     "w": 140,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 398,
+     "type": "loopstart",
+     "text": "i = 0; i < 2; i = i+1",
+     "x": 940,
+     "y": -170,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 399,
+     "type": "loopend",
+     "text": "",
+     "x": 940,
+     "y": -50,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 400,
+     "type": "action",
+     "text": "print(i)",
+     "x": 940,
+     "y": -110,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 403,
+     "type": "branch",
+     "text": "Last one",
+     "x": 940,
+     "y": -240,
+     "w": 100,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 404,
+     "type": "address",
+     "text": "Last one",
+     "x": 580,
+     "y": 190,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

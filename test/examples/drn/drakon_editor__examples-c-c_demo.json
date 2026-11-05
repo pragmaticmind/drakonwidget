@@ -1,0 +1,6347 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/C/c_demo.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1",
+  "language": "C"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "main",
+   "origin": "-601 -33",
+   "description": "The standard entry point of a C program.",
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "insertion",
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "main",
+     "x": 160,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 160,
+     "y": 510,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 160,
+     "y": 80,
+     "w": 0,
+     "h": 410,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "action",
+     "text": "public\n\nint argc     // The number of arguments.\nchar** argv  // The array of argumens.\n\nreturns int  // Returns 0 on success.",
+     "x": 450,
+     "y": 60,
+     "w": 170,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 60,
+     "w": 120,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "PrintHello();",
+     "x": 160,
+     "y": 240,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "action",
+     "text": "return result;",
+     "x": 160,
+     "y": 450,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 724,
+     "type": "insertion",
+     "text": "IterationDemo();\nQuickSortDemo();",
+     "x": 160,
+     "y": 380,
+     "w": 90,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 725,
+     "type": "shelf",
+     "text": "0",
+     "x": 160,
+     "y": 160,
+     "w": 90,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "int result"
+    },
+    {
+     "item_id": 773,
+     "type": "action",
+     "text": "alt_select_test();",
+     "x": 160,
+     "y": 300,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "String_FromCString",
+   "origin": "-98 274",
+   "description": "Creates a new String object and copies the provided text to it.",
+   "info": {},
+   "nodes": 15,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 200,
+     "type": "beginend",
+     "text": "String_FromCString",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 201,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 760,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 202,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 680,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 203,
+     "type": "action",
+     "text": "/* own */\n\nstruct String* string = 0;",
+     "x": 170,
+     "y": 220,
+     "w": 250,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 204,
+     "type": "action",
+     "text": "length = (int)strlen(text);",
+     "x": 170,
+     "y": 470,
+     "w": 250,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 205,
+     "type": "horizontal",
+     "text": "",
+     "x": 260,
+     "y": 60,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 206,
+     "type": "action",
+     "text": "public\n\nconst char* text  // A null-terminated C-string. Not null.\n\nreturns struct String* // Returns the constructed String. Ownership. Not null.",
+     "x": 650,
+     "y": 60,
+     "w": 330,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 207,
+     "type": "if",
+     "text": "text == 0",
+     "x": 170,
+     "y": 310,
+     "w": 250,
+     "h": 20,
+     "a": 20,
+     "b": 0
+    },
+    {
+     "item_id": 208,
+     "type": "action",
+     "text": "printf(\"String_FromCString: text argument is null.\\n\");\nabort();",
+     "x": 440,
+     "y": 380,
+     "w": 230,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 209,
+     "type": "vertical",
+     "text": "",
+     "x": 440,
+     "y": 310,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 210,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 430,
+     "w": 270,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 211,
+     "type": "action",
+     "text": "int length;",
+     "x": 170,
+     "y": 150,
+     "w": 250,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 212,
+     "type": "action",
+     "text": "string = Memory_Allocate(1, sizeof(struct String));\nstring->Buffer = Memory_Allocate(length + 1, sizeof(char));\nstring->Length = length;",
+     "x": 170,
+     "y": 550,
+     "w": 250,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 213,
+     "type": "action",
+     "text": "strncpy(string->Buffer, text, length);",
+     "x": 170,
+     "y": 630,
+     "w": 250,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 214,
+     "type": "action",
+     "text": "return string;",
+     "x": 170,
+     "y": 690,
+     "w": 250,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "String_Delete",
+   "origin": "-195 -195",
+   "description": "Deletes a String object.",
+   "info": {},
+   "nodes": 9,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 215,
+     "type": "beginend",
+     "text": "String_Delete",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 216,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 217,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 218,
+     "type": "action",
+     "text": "public\n\nstruct String* object // The object to delete. Ownership. Can be null.",
+     "x": 600,
+     "y": 60,
+     "w": 290,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 219,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 220,
+     "type": "if",
+     "text": "object == 0",
+     "x": 170,
+     "y": 170,
+     "w": 130,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 221,
+     "type": "vertical",
+     "text": "",
+     "x": 370,
+     "y": 170,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 222,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 340,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 223,
+     "type": "action",
+     "text": "Memory_Free(object->Buffer);\nMemory_Free(object);",
+     "x": 170,
+     "y": 250,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "String_Compare",
+   "origin": "89 -80",
+   "description": "Compares two String objects in a case-sensitive manner.\n\nString data is treated as ascii.\n\nReturns values:\n-1: left < right\n 0: left == right\n 1: left > right",
+   "info": {},
+   "nodes": 50,
+   "features": [
+    "address",
+    "arrow",
+    "commentin",
+    "if",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 224,
+     "type": "beginend",
+     "text": "String_Compare",
+     "x": 80,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 226,
+     "type": "vertical",
+     "text": "",
+     "x": 80,
+     "y": 80,
+     "w": 0,
+     "h": 920,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 227,
+     "type": "horizontal",
+     "text": "",
+     "x": 110,
+     "y": 60,
+     "w": 300,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 228,
+     "type": "action",
+     "text": "public\n\nconst struct String* left  // The left string to compare. Not null.\nconst struct String* right // The right string to compare. Not null.\n\nreturns int // -1 <,  0 ==, 1 >.",
+     "x": 620,
+     "y": 60,
+     "w": 290,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 229,
+     "type": "if",
+     "text": "left == 0",
+     "x": 80,
+     "y": 360,
+     "w": 110,
+     "h": 20,
+     "a": 210,
+     "b": 0
+    },
+    {
+     "item_id": 230,
+     "type": "action",
+     "text": "printf(\"String_Compare: left is null.\\n\");\nabort();",
+     "x": 400,
+     "y": 420,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 231,
+     "type": "horizontal",
+     "text": "",
+     "x": 80,
+     "y": 470,
+     "w": 320,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 232,
+     "type": "vertical",
+     "text": "",
+     "x": 400,
+     "y": 360,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 233,
+     "type": "if",
+     "text": "right == 0",
+     "x": 80,
+     "y": 530,
+     "w": 110,
+     "h": 20,
+     "a": 210,
+     "b": 0
+    },
+    {
+     "item_id": 234,
+     "type": "action",
+     "text": "printf(\"String_Compare: right is null.\\n\");\nabort();",
+     "x": 400,
+     "y": 590,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 235,
+     "type": "horizontal",
+     "text": "",
+     "x": 80,
+     "y": 640,
+     "w": 320,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 236,
+     "type": "vertical",
+     "text": "",
+     "x": 400,
+     "y": 530,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 237,
+     "type": "action",
+     "text": "int i;\nint leftChar, rightChar;\nint result = 200;",
+     "x": 80,
+     "y": 280,
+     "w": 110,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 238,
+     "type": "action",
+     "text": "i = 0;",
+     "x": 780,
+     "y": 270,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 239,
+     "type": "if",
+     "text": "i < left->Length",
+     "x": 780,
+     "y": 360,
+     "w": 160,
+     "h": 20,
+     "a": 20,
+     "b": 0
+    },
+    {
+     "item_id": 240,
+     "type": "if",
+     "text": "i < right->Length",
+     "x": 960,
+     "y": 430,
+     "w": 90,
+     "h": 20,
+     "a": 160,
+     "b": 0
+    },
+    {
+     "item_id": 241,
+     "type": "vertical",
+     "text": "",
+     "x": 960,
+     "y": 360,
+     "w": 0,
+     "h": 130,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 242,
+     "type": "horizontal",
+     "text": "",
+     "x": 780,
+     "y": 490,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 243,
+     "type": "vertical",
+     "text": "",
+     "x": 1210,
+     "y": 430,
+     "w": 0,
+     "h": 470,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 244,
+     "type": "action",
+     "text": "leftChar = left->Buffer[i];\nrightChar = right->Buffer[i];",
+     "x": 1210,
+     "y": 510,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 245,
+     "type": "if",
+     "text": "leftChar < rightChar",
+     "x": 1210,
+     "y": 590,
+     "w": 130,
+     "h": 20,
+     "a": 120,
+     "b": 1
+    },
+    {
+     "item_id": 246,
+     "type": "if",
+     "text": "leftChar > rightChar",
+     "x": 1460,
+     "y": 660,
+     "w": 100,
+     "h": 20,
+     "a": 30,
+     "b": 1
+    },
+    {
+     "item_id": 247,
+     "type": "vertical",
+     "text": "",
+     "x": 1590,
+     "y": 660,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 248,
+     "type": "action",
+     "text": "result = 1;",
+     "x": 1460,
+     "y": 860,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 249,
+     "type": "action",
+     "text": "result = -1;",
+     "x": 1210,
+     "y": 860,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 250,
+     "type": "vertical",
+     "text": "",
+     "x": 1460,
+     "y": 590,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 251,
+     "type": "action",
+     "text": "i++;",
+     "x": 1590,
+     "y": 710,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 252,
+     "type": "arrow",
+     "text": "",
+     "x": 1650,
+     "y": 320,
+     "w": 870,
+     "h": 440,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 253,
+     "type": "if",
+     "text": "left->Length < right->Length",
+     "x": 780,
+     "y": 700,
+     "w": 160,
+     "h": 20,
+     "a": 270,
+     "b": 0
+    },
+    {
+     "item_id": 254,
+     "type": "if",
+     "text": "left->Length > right->Length",
+     "x": 780,
+     "y": 770,
+     "w": 160,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 255,
+     "type": "vertical",
+     "text": "",
+     "x": 1010,
+     "y": 770,
+     "w": 0,
+     "h": 130,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 256,
+     "type": "action",
+     "text": "result = 1;",
+     "x": 1010,
+     "y": 860,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 257,
+     "type": "action",
+     "text": "result = 0;",
+     "x": 780,
+     "y": 860,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 258,
+     "type": "horizontal",
+     "text": "",
+     "x": 780,
+     "y": 900,
+     "w": 680,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 259,
+     "type": "commentin",
+     "text": "All characters are equal in the\nfirst parts of the strings.\n\nAt this point, the shorter string\nwill be considered 'less'.",
+     "x": 780,
+     "y": 590,
+     "w": 160,
+     "h": 50,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 260,
+     "type": "branch",
+     "text": "actually compare",
+     "x": 780,
+     "y": 200,
+     "w": 160,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 261,
+     "type": "vertical",
+     "text": "",
+     "x": 780,
+     "y": 160,
+     "w": 0,
+     "h": 840,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 262,
+     "type": "branch",
+     "text": "init",
+     "x": 80,
+     "y": 200,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 263,
+     "type": "address",
+     "text": "actually compare",
+     "x": 80,
+     "y": 960,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 264,
+     "type": "horizontal",
+     "text": "",
+     "x": 80,
+     "y": 160,
+     "w": 1670,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 265,
+     "type": "arrow",
+     "text": "",
+     "x": -70,
+     "y": 160,
+     "w": 150,
+     "h": 840,
+     "a": 850,
+     "b": 1
+    },
+    {
+     "item_id": 661,
+     "type": "branch",
+     "text": "exit",
+     "x": 1750,
+     "y": 200,
+     "w": 70,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 662,
+     "type": "beginend",
+     "text": "End",
+     "x": 1750,
+     "y": 350,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 663,
+     "type": "vertical",
+     "text": "",
+     "x": 1750,
+     "y": 160,
+     "w": 0,
+     "h": 180,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 664,
+     "type": "address",
+     "text": "exit",
+     "x": 780,
+     "y": 960,
+     "w": 160,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 665,
+     "type": "if",
+     "text": "left == right",
+     "x": 80,
+     "y": 730,
+     "w": 110,
+     "h": 20,
+     "a": 210,
+     "b": 0
+    },
+    {
+     "item_id": 666,
+     "type": "action",
+     "text": "result = 0;",
+     "x": 400,
+     "y": 860,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 667,
+     "type": "vertical",
+     "text": "",
+     "x": 400,
+     "y": 730,
+     "w": 0,
+     "h": 270,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 668,
+     "type": "address",
+     "text": "exit",
+     "x": 400,
+     "y": 960,
+     "w": 190,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 677,
+     "type": "action",
+     "text": "return result;",
+     "x": 1750,
+     "y": 270,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "String_GetBuffer",
+   "origin": "-33 -38",
+   "description": "Returns a pointer to the buffer that contains the String object's data.\n\nThe buffer ends with a null character.",
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 266,
+     "type": "beginend",
+     "text": "String_GetBuffer",
+     "x": 170,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 267,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 268,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 269,
+     "type": "action",
+     "text": "public\n\nconst struct String* object // Not null.\n\nreturns const char* // Returns the internal buffer. Not null. Do not save this pointer or deallocate it.",
+     "x": 720,
+     "y": 60,
+     "w": 430,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 270,
+     "type": "horizontal",
+     "text": "",
+     "x": 240,
+     "y": 60,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 271,
+     "type": "if",
+     "text": "object == 0",
+     "x": 170,
+     "y": 160,
+     "w": 100,
+     "h": 20,
+     "a": 130,
+     "b": 0
+    },
+    {
+     "item_id": 272,
+     "type": "action",
+     "text": "printf(\"String_Buffer: object is null.\\n\");\nabort();",
+     "x": 400,
+     "y": 230,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 273,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 280,
+     "w": 230,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 274,
+     "type": "vertical",
+     "text": "",
+     "x": 400,
+     "y": 160,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 275,
+     "type": "action",
+     "text": "return object->Buffer;",
+     "x": 170,
+     "y": 320,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "IntArray_Create",
+   "origin": "-89 145",
+   "description": "Creates a new instance of IntArray with the specified size.",
+   "info": {},
+   "nodes": 17,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 276,
+     "type": "beginend",
+     "text": "IntArray_Create",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 277,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 760,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 278,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 680,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 279,
+     "type": "action",
+     "text": "/* own */\n\nstruct IntArray* object = 0;",
+     "x": 170,
+     "y": 220,
+     "w": 230,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 280,
+     "type": "horizontal",
+     "text": "",
+     "x": 240,
+     "y": 60,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 281,
+     "type": "action",
+     "text": "public\n\nint size  // Number of elements in the created array. Non-negative.\n\nreturns struct IntArray* // Returns the constructed object. Ownership. Not null.",
+     "x": 630,
+     "y": 60,
+     "w": 330,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 282,
+     "type": "if",
+     "text": "size < 0",
+     "x": 170,
+     "y": 310,
+     "w": 230,
+     "h": 20,
+     "a": 40,
+     "b": 0
+    },
+    {
+     "item_id": 283,
+     "type": "action",
+     "text": "printf(\"IntArray_Create: size is negative.\\n\");\nabort();",
+     "x": 440,
+     "y": 380,
+     "w": 200,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 284,
+     "type": "vertical",
+     "text": "",
+     "x": 440,
+     "y": 310,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 285,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 430,
+     "w": 270,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 286,
+     "type": "action",
+     "text": "object = Memory_Allocate(1, sizeof(struct IntArray));\nobject->Count = size;",
+     "x": 170,
+     "y": 490,
+     "w": 230,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 287,
+     "type": "action",
+     "text": "return object;",
+     "x": 170,
+     "y": 690,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 288,
+     "type": "if",
+     "text": "size == 0",
+     "x": 170,
+     "y": 570,
+     "w": 230,
+     "h": 20,
+     "a": 110,
+     "b": 0
+    },
+    {
+     "item_id": 289,
+     "type": "action",
+     "text": "object->Buffer = Memory_Allocate(size, sizeof(int));",
+     "x": 170,
+     "y": 630,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 290,
+     "type": "action",
+     "text": "object->Buffer = 0;",
+     "x": 510,
+     "y": 630,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 291,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 660,
+     "w": 340,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 292,
+     "type": "vertical",
+     "text": "",
+     "x": 510,
+     "y": 570,
+     "w": 0,
+     "h": 90,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "IntArray_Delete",
+   "origin": "0 0",
+   "description": "Deletes an IntArray object.",
+   "info": {},
+   "nodes": 9,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 293,
+     "type": "beginend",
+     "text": "IntArray_Delete",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 294,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 295,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 296,
+     "type": "action",
+     "text": "public\n\nstruct IntArray* object // The object to delete. Ownership. Can be null.",
+     "x": 560,
+     "y": 60,
+     "w": 300,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 297,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 70,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 298,
+     "type": "if",
+     "text": "object == 0",
+     "x": 170,
+     "y": 170,
+     "w": 130,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 299,
+     "type": "vertical",
+     "text": "",
+     "x": 370,
+     "y": 170,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 300,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 340,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 301,
+     "type": "action",
+     "text": "Memory_Free(object->Buffer);\nMemory_Free(object);",
+     "x": 170,
+     "y": 250,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "IntArray_Get",
+   "origin": "-195 -195",
+   "description": "Gets an array element by index.",
+   "info": {},
+   "nodes": 15,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 302,
+     "type": "beginend",
+     "text": "IntArray_Get",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 303,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 670,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 304,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 590,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 305,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 60,
+     "w": 160,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 306,
+     "type": "action",
+     "text": "public\n\nconst struct IntArray* object // Not null.\nint index // The element index. Must be within [0; count).\n\nreturns int // Returns the element at index.",
+     "x": 560,
+     "y": 60,
+     "w": 250,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 307,
+     "type": "if",
+     "text": "object == 0",
+     "x": 170,
+     "y": 200,
+     "w": 130,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 308,
+     "type": "action",
+     "text": "printf(\"IntArray_Get: object is null.\\n\");\nabort();",
+     "x": 370,
+     "y": 270,
+     "w": 180,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 309,
+     "type": "vertical",
+     "text": "",
+     "x": 370,
+     "y": 200,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 310,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 320,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 311,
+     "type": "if",
+     "text": "index < 0",
+     "x": 170,
+     "y": 370,
+     "w": 130,
+     "h": 20,
+     "a": 230,
+     "b": 0
+    },
+    {
+     "item_id": 312,
+     "type": "if",
+     "text": "index >= object->Count",
+     "x": 170,
+     "y": 430,
+     "w": 130,
+     "h": 20,
+     "a": 230,
+     "b": 0
+    },
+    {
+     "item_id": 313,
+     "type": "vertical",
+     "text": "",
+     "x": 530,
+     "y": 370,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 314,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 540,
+     "w": 360,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 315,
+     "type": "action",
+     "text": "return object->Buffer[index];",
+     "x": 170,
+     "y": 580,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 316,
+     "type": "action",
+     "text": "printf(\"IntArray_Get: index out of range. Index=%d\\n\", index);\nabort();",
+     "x": 530,
+     "y": 500,
+     "w": 260,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "IntArray_Put",
+   "origin": "0 -100",
+   "description": "Puts a value to an array element at the specified index.",
+   "info": {},
+   "nodes": 15,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 317,
+     "type": "beginend",
+     "text": "IntArray_Put",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 318,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 670,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 319,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 590,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 320,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 321,
+     "type": "action",
+     "text": "public\n\nstruct IntArray* object // Not null.\nint index // The element index. Must be within [0; count).\nint value // The value to put in the array.",
+     "x": 560,
+     "y": 60,
+     "w": 250,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 322,
+     "type": "if",
+     "text": "object == 0",
+     "x": 170,
+     "y": 200,
+     "w": 130,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 323,
+     "type": "action",
+     "text": "printf(\"IntArray_Put: object is null.\\n\");\nabort();",
+     "x": 370,
+     "y": 270,
+     "w": 180,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 324,
+     "type": "vertical",
+     "text": "",
+     "x": 370,
+     "y": 200,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 325,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 320,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 326,
+     "type": "if",
+     "text": "index < 0",
+     "x": 170,
+     "y": 370,
+     "w": 130,
+     "h": 20,
+     "a": 230,
+     "b": 0
+    },
+    {
+     "item_id": 327,
+     "type": "if",
+     "text": "index >= object->Count",
+     "x": 170,
+     "y": 430,
+     "w": 130,
+     "h": 20,
+     "a": 230,
+     "b": 0
+    },
+    {
+     "item_id": 328,
+     "type": "vertical",
+     "text": "",
+     "x": 530,
+     "y": 370,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 329,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 540,
+     "w": 360,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 330,
+     "type": "action",
+     "text": "object->Buffer[index] = value;",
+     "x": 170,
+     "y": 580,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 331,
+     "type": "action",
+     "text": "printf(\"IntArray_Put: index out of range. Index=%d\\n\", index);\nabort();",
+     "x": 530,
+     "y": 500,
+     "w": 260,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "IntArray_Count",
+   "origin": "0 20",
+   "description": "Gets the number of elements in the array.",
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 332,
+     "type": "beginend",
+     "text": "IntArray_Count",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 333,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 670,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 334,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 590,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 335,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 60,
+     "w": 150,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 336,
+     "type": "action",
+     "text": "public\n\nconst struct IntArray* object // Not null.\n\nreturns int // Returns the number of elements.",
+     "x": 500,
+     "y": 60,
+     "w": 200,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 337,
+     "type": "if",
+     "text": "object == 0",
+     "x": 170,
+     "y": 200,
+     "w": 100,
+     "h": 20,
+     "a": 120,
+     "b": 0
+    },
+    {
+     "item_id": 338,
+     "type": "action",
+     "text": "printf(\"IntArray_Count: object is null.\\n\");\nabort();",
+     "x": 390,
+     "y": 270,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 339,
+     "type": "vertical",
+     "text": "",
+     "x": 390,
+     "y": 200,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 340,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 320,
+     "w": 220,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 341,
+     "type": "action",
+     "text": "return object->Count;",
+     "x": 170,
+     "y": 470,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Memory_Allocate",
+   "origin": "-21 378",
+   "description": "Allocates a memory buffer big enough to hold the specified number of objects with the given size.\n\nNever returns NULL. Calls abort() if allocation fails.\n\nThe returned memory region is filled with zeroes.\n\nThe program must use Memory_Free later on to deallocate the memory block returned by Memory_Allocate.",
+   "info": {},
+   "nodes": 20,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 342,
+     "type": "beginend",
+     "text": "Memory_Allocate",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 343,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 950,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 344,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 860,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 345,
+     "type": "action",
+     "text": "public\n\nint numOfObjects // The number of objects to allocate memory for. Must be positive.\nint objectSize   // The size of each object in bytes. Must be positive.\n\nreturns void*    // Returns a pointer to the allocated buffer. Never returns NULL.",
+     "x": 660,
+     "y": 60,
+     "w": 350,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 346,
+     "type": "action",
+     "text": "return buffer;",
+     "x": 170,
+     "y": 890,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 347,
+     "type": "action",
+     "text": "/* own */\nvoid* buffer = 0;",
+     "x": 170,
+     "y": 150,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 348,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 349,
+     "type": "action",
+     "text": "printf(\"Memory_Allocated: non-positive objectSize: %d\\n\", objectSize);\nabort();",
+     "x": 490,
+     "y": 300,
+     "w": 290,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 350,
+     "type": "if",
+     "text": "objectSize <= 0",
+     "x": 170,
+     "y": 230,
+     "w": 130,
+     "h": 20,
+     "a": 190,
+     "b": 0
+    },
+    {
+     "item_id": 351,
+     "type": "action",
+     "text": "printf(\"Memory_Allocated: non-positive numOfObjects: %d\\n\", numOfObjects);\nabort();",
+     "x": 510,
+     "y": 470,
+     "w": 310,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 352,
+     "type": "vertical",
+     "text": "",
+     "x": 490,
+     "y": 230,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 353,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 350,
+     "w": 320,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 354,
+     "type": "if",
+     "text": "numOfObjects <= 0",
+     "x": 170,
+     "y": 400,
+     "w": 130,
+     "h": 20,
+     "a": 210,
+     "b": 0
+    },
+    {
+     "item_id": 355,
+     "type": "vertical",
+     "text": "",
+     "x": 510,
+     "y": 400,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 356,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 520,
+     "w": 340,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 357,
+     "type": "action",
+     "text": "buffer = calloc(\n\t(size_t)numOfObjects,\n\t(size_t)objectSize);",
+     "x": 170,
+     "y": 580,
+     "w": 130,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 358,
+     "type": "if",
+     "text": "buffer == 0",
+     "x": 170,
+     "y": 670,
+     "w": 130,
+     "h": 20,
+     "a": 240,
+     "b": 0
+    },
+    {
+     "item_id": 359,
+     "type": "action",
+     "text": "printf(\n\"Memory_Allocated: could not allocate memory: numOfObjects=%d, objectSize=%d\\n\", \nnumOfObjects, objectSize);\nabort();",
+     "x": 540,
+     "y": 760,
+     "w": 340,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 360,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 830,
+     "w": 370,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 361,
+     "type": "vertical",
+     "text": "",
+     "x": 540,
+     "y": 670,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Memory_Free",
+   "origin": "0 -50",
+   "description": "Deallocates a memory block previously allocated with Memory_Allocate.",
+   "info": {},
+   "nodes": 9,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 362,
+     "type": "beginend",
+     "text": "Memory_Free",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 363,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 364,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 365,
+     "type": "action",
+     "text": "public\n\nvoid* buffer // Points to the memory region to free. Can be null.",
+     "x": 570,
+     "y": 60,
+     "w": 270,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 366,
+     "type": "action",
+     "text": "free(buffer);",
+     "x": 170,
+     "y": 230,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 367,
+     "type": "if",
+     "text": "buffer == 0",
+     "x": 170,
+     "y": 160,
+     "w": 70,
+     "h": 20,
+     "a": 50,
+     "b": 0
+    },
+    {
+     "item_id": 368,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 190,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 369,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 290,
+     "w": 120,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 370,
+     "type": "vertical",
+     "text": "",
+     "x": 290,
+     "y": 160,
+     "w": 0,
+     "h": 130,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "ObjectArray_Create",
+   "origin": "-74 18",
+   "description": "Creates a new instance of ObjectArray with the specified size.\n\nIf a non-null elementDestructor is provided during the array construction, the array receives ownership on its elements. Ownership means the array will destroy its elements when it itself is being destroyed.",
+   "info": {},
+   "nodes": 17,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 371,
+     "type": "beginend",
+     "text": "ObjectArray_Create",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 372,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 760,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 373,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 680,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 374,
+     "type": "action",
+     "text": "/* own */\n\nstruct ObjectArray* object = 0;",
+     "x": 170,
+     "y": 220,
+     "w": 240,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 375,
+     "type": "horizontal",
+     "text": "",
+     "x": 240,
+     "y": 60,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 376,
+     "type": "action",
+     "text": "public\n\nint size  // Number of elements in the created array. Non-negative.\nObjectDestructor elementDestructor // The destructor to call for each element when \n                                   // the array is destroyed. Can be null.\n\nreturns struct ObjectArray* // Returns the constructed object. Ownership. Not null.",
+     "x": 630,
+     "y": 60,
+     "w": 350,
+     "h": 70,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 377,
+     "type": "if",
+     "text": "size < 0",
+     "x": 170,
+     "y": 310,
+     "w": 240,
+     "h": 20,
+     "a": 30,
+     "b": 0
+    },
+    {
+     "item_id": 378,
+     "type": "action",
+     "text": "printf(\"ObjectArray_Create: size is negative.\\n\");\nabort();",
+     "x": 440,
+     "y": 380,
+     "w": 210,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 379,
+     "type": "vertical",
+     "text": "",
+     "x": 440,
+     "y": 310,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 380,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 430,
+     "w": 270,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 381,
+     "type": "action",
+     "text": "object = Memory_Allocate(1, sizeof(struct ObjectArray));\nobject->Count = size;\nobject->ElementDestructor = elementDestructor;",
+     "x": 170,
+     "y": 490,
+     "w": 240,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 382,
+     "type": "action",
+     "text": "return object;",
+     "x": 170,
+     "y": 690,
+     "w": 240,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 383,
+     "type": "if",
+     "text": "size == 0",
+     "x": 170,
+     "y": 570,
+     "w": 240,
+     "h": 20,
+     "a": 100,
+     "b": 0
+    },
+    {
+     "item_id": 384,
+     "type": "action",
+     "text": "object->Buffer = Memory_Allocate(size, sizeof(void*));",
+     "x": 170,
+     "y": 630,
+     "w": 240,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 385,
+     "type": "action",
+     "text": "object->Buffer = 0;",
+     "x": 510,
+     "y": 630,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 386,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 660,
+     "w": 340,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 387,
+     "type": "vertical",
+     "text": "",
+     "x": 510,
+     "y": 570,
+     "w": 0,
+     "h": 90,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "ObjectArray_Delete",
+   "origin": "-64 -45",
+   "description": "Deletes an ObjectArray object.\n\nIf the array holds ownership of its elements, also destroys the elements.",
+   "info": {},
+   "nodes": 16,
+   "features": [
+    "if",
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 388,
+     "type": "beginend",
+     "text": "ObjectArray_Delete",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 389,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 700,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 390,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 620,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 391,
+     "type": "action",
+     "text": "public\n\nstruct ObjectArray* object // The object to delete. Ownership. Can be null.",
+     "x": 610,
+     "y": 60,
+     "w": 310,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 392,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 393,
+     "type": "if",
+     "text": "object == 0",
+     "x": 170,
+     "y": 200,
+     "w": 190,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 394,
+     "type": "vertical",
+     "text": "",
+     "x": 420,
+     "y": 200,
+     "w": 0,
+     "h": 450,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 395,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 650,
+     "w": 250,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 396,
+     "type": "action",
+     "text": "Memory_Free(object->Buffer);\nMemory_Free(object);",
+     "x": 170,
+     "y": 600,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 437,
+     "type": "loopstart",
+     "text": "i = 0; i < object->Count; i++",
+     "x": 170,
+     "y": 360,
+     "w": 190,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 438,
+     "type": "action",
+     "text": "int i;",
+     "x": 170,
+     "y": 140,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 439,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 460,
+     "w": 190,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 440,
+     "type": "action",
+     "text": "object->ElementDestructor(object->Buffer[i]);",
+     "x": 170,
+     "y": 410,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 441,
+     "type": "if",
+     "text": "object->ElementDestructor == 0",
+     "x": 170,
+     "y": 290,
+     "w": 190,
+     "h": 20,
+     "a": 30,
+     "b": 0
+    },
+    {
+     "item_id": 442,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 520,
+     "w": 220,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 443,
+     "type": "vertical",
+     "text": "",
+     "x": 390,
+     "y": 290,
+     "w": 0,
+     "h": 230,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "ObjectArray_Get",
+   "origin": "-195 -195",
+   "description": "Gets an array element by index.",
+   "info": {},
+   "nodes": 15,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 397,
+     "type": "beginend",
+     "text": "ObjectArray_Get",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 398,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 670,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 399,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 590,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 400,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 130,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 401,
+     "type": "action",
+     "text": "public\n\nstruct ObjectArray* object // Not null.\nint index // The element index. Must be within [0; count).\n\nreturns void* // Returns the element at index. Can be null.",
+     "x": 560,
+     "y": 60,
+     "w": 250,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 402,
+     "type": "if",
+     "text": "object == 0",
+     "x": 170,
+     "y": 200,
+     "w": 130,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 403,
+     "type": "action",
+     "text": "printf(\"ObjectArray_Get: object is null.\\n\");\nabort();",
+     "x": 370,
+     "y": 270,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 404,
+     "type": "vertical",
+     "text": "",
+     "x": 370,
+     "y": 200,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 405,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 320,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 406,
+     "type": "if",
+     "text": "index < 0",
+     "x": 170,
+     "y": 370,
+     "w": 130,
+     "h": 20,
+     "a": 230,
+     "b": 0
+    },
+    {
+     "item_id": 407,
+     "type": "if",
+     "text": "index >= object->Count",
+     "x": 170,
+     "y": 430,
+     "w": 130,
+     "h": 20,
+     "a": 230,
+     "b": 0
+    },
+    {
+     "item_id": 408,
+     "type": "vertical",
+     "text": "",
+     "x": 530,
+     "y": 370,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 409,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 540,
+     "w": 360,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 410,
+     "type": "action",
+     "text": "return object->Buffer[index];",
+     "x": 170,
+     "y": 580,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 411,
+     "type": "action",
+     "text": "printf(\"ObjectArray_Get: index out of range. Index=%d\\n\", index);\nabort();",
+     "x": 530,
+     "y": 500,
+     "w": 270,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "ObjectArray_Put",
+   "origin": "0 -100",
+   "description": "Puts a value to an array element at the specified index.",
+   "info": {},
+   "nodes": 15,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 412,
+     "type": "beginend",
+     "text": "ObjectArray_Put",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 413,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 670,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 414,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 590,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 415,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 416,
+     "type": "action",
+     "text": "public\n\nstruct ObjectArray* object // Not null.\nint index // The element index. Must be within [0; count).\nvoid* value // The value to put in the array. Can be null.",
+     "x": 560,
+     "y": 60,
+     "w": 250,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 417,
+     "type": "if",
+     "text": "object == 0",
+     "x": 170,
+     "y": 200,
+     "w": 130,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 418,
+     "type": "action",
+     "text": "printf(\"ObjectArray_Put: object is null.\\n\");\nabort();",
+     "x": 370,
+     "y": 270,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 419,
+     "type": "vertical",
+     "text": "",
+     "x": 370,
+     "y": 200,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 420,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 320,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 421,
+     "type": "if",
+     "text": "index < 0",
+     "x": 170,
+     "y": 370,
+     "w": 130,
+     "h": 20,
+     "a": 230,
+     "b": 0
+    },
+    {
+     "item_id": 422,
+     "type": "if",
+     "text": "index >= object->Count",
+     "x": 170,
+     "y": 430,
+     "w": 130,
+     "h": 20,
+     "a": 230,
+     "b": 0
+    },
+    {
+     "item_id": 423,
+     "type": "vertical",
+     "text": "",
+     "x": 530,
+     "y": 370,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 424,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 540,
+     "w": 360,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 425,
+     "type": "action",
+     "text": "object->Buffer[index] = value;",
+     "x": 170,
+     "y": 580,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 426,
+     "type": "action",
+     "text": "printf(\"ObjectArray_Put: index out of range. Index=%d\\n\", index);\nabort();",
+     "x": 530,
+     "y": 500,
+     "w": 270,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "ObjectArray_Count",
+   "origin": "0 -50",
+   "description": "Gets the number of elements in the array.",
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 427,
+     "type": "beginend",
+     "text": "ObjectArray_Count",
+     "x": 160,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 428,
+     "type": "beginend",
+     "text": "End",
+     "x": 160,
+     "y": 480,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 429,
+     "type": "vertical",
+     "text": "",
+     "x": 160,
+     "y": 80,
+     "w": 0,
+     "h": 410,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 430,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 60,
+     "w": 150,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 431,
+     "type": "action",
+     "text": "public\n\nconst struct ObjectArray* object // Not null.\n\nreturns int // Returns the number of elements.",
+     "x": 500,
+     "y": 60,
+     "w": 200,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 432,
+     "type": "if",
+     "text": "object == 0",
+     "x": 160,
+     "y": 200,
+     "w": 100,
+     "h": 20,
+     "a": 130,
+     "b": 0
+    },
+    {
+     "item_id": 433,
+     "type": "action",
+     "text": "printf(\"ObjectArray_Count: object is null.\\n\");\nabort();",
+     "x": 390,
+     "y": 270,
+     "w": 200,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 434,
+     "type": "vertical",
+     "text": "",
+     "x": 390,
+     "y": 200,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 435,
+     "type": "horizontal",
+     "text": "",
+     "x": 160,
+     "y": 320,
+     "w": 230,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 436,
+     "type": "action",
+     "text": "return object->Count;",
+     "x": 160,
+     "y": 390,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "IterationDemo",
+   "origin": "0 -100",
+   "description": "Shows off several collection iteration methods available for the C code generator.",
+   "info": {},
+   "nodes": 10,
+   "features": [],
+   "items": [
+    {
+     "item_id": 444,
+     "type": "beginend",
+     "text": "IterationDemo",
+     "x": 170,
+     "y": 0,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 445,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 560,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 446,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 10,
+     "w": 0,
+     "h": 550,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 447,
+     "type": "action",
+     "text": "printf(\"iteration demo\\n\");",
+     "x": 170,
+     "y": 200,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 504,
+     "type": "action",
+     "text": "/* own */\nstruct IntArray* sequence = 0;",
+     "x": 170,
+     "y": 130,
+     "w": 140,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 505,
+     "type": "action",
+     "text": "sequence = Fibonacci(n);",
+     "x": 170,
+     "y": 260,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 506,
+     "type": "action",
+     "text": "printf(\"\\n\");",
+     "x": 170,
+     "y": 420,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 507,
+     "type": "action",
+     "text": "PrintIntsArrow(sequence);\nPrintIntsBackward(sequence, n);\nPrintIntsFor(sequence);",
+     "x": 170,
+     "y": 340,
+     "w": 140,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 508,
+     "type": "action",
+     "text": "IntArray_Delete(sequence);",
+     "x": 170,
+     "y": 480,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 529,
+     "type": "action",
+     "text": "int n = 15;",
+     "x": 170,
+     "y": 60,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Fibonacci",
+   "origin": "-53 -224",
+   "description": "Generates a Fibonacci series of the given length and returns it in the form of an int array.",
+   "info": {},
+   "nodes": 23,
+   "features": [
+    "case",
+    "loopend",
+    "loopstart",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 448,
+     "type": "beginend",
+     "text": "Fibonacci",
+     "x": 110,
+     "y": -130,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 449,
+     "type": "beginend",
+     "text": "End",
+     "x": 110,
+     "y": 710,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 450,
+     "type": "vertical",
+     "text": "",
+     "x": 110,
+     "y": -120,
+     "w": 0,
+     "h": 840,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 451,
+     "type": "action",
+     "text": "public\n\nint n // The length of the series to generate.\n\nreturns struct IntArray* // Returns the generated sequence. Ownership. Not null.",
+     "x": 520,
+     "y": -130,
+     "w": 330,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 452,
+     "type": "horizontal",
+     "text": "",
+     "x": 150,
+     "y": -130,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 453,
+     "type": "select",
+     "text": "n",
+     "x": 110,
+     "y": 100,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 454,
+     "type": "case",
+     "text": "",
+     "x": 690,
+     "y": 180,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 455,
+     "type": "case",
+     "text": "1",
+     "x": 390,
+     "y": 180,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 456,
+     "type": "case",
+     "text": "0",
+     "x": 110,
+     "y": 180,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 457,
+     "type": "action",
+     "text": "result = IntArray_Create(1);\nIntArray_Put(result, 0, 0);",
+     "x": 110,
+     "y": 250,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 460,
+     "type": "horizontal",
+     "text": "",
+     "x": 110,
+     "y": 140,
+     "w": 580,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 461,
+     "type": "vertical",
+     "text": "",
+     "x": 690,
+     "y": 140,
+     "w": 0,
+     "h": 470,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 462,
+     "type": "vertical",
+     "text": "",
+     "x": 390,
+     "y": 140,
+     "w": 0,
+     "h": 470,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 463,
+     "type": "loopstart",
+     "text": "i = 2; i <= n; i += 1",
+     "x": 690,
+     "y": 350,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 464,
+     "type": "action",
+     "text": "f2 = IntArray_Get(result, i - 2);\nf1 = IntArray_Get(result, i - 1);\nfib = f1 + f2;",
+     "x": 690,
+     "y": 430,
+     "w": 150,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 465,
+     "type": "action",
+     "text": "IntArray_Put(result, i, fib);",
+     "x": 690,
+     "y": 510,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 466,
+     "type": "loopend",
+     "text": "",
+     "x": 690,
+     "y": 570,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 467,
+     "type": "horizontal",
+     "text": "",
+     "x": 110,
+     "y": 610,
+     "w": 580,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 468,
+     "type": "action",
+     "text": "return result;",
+     "x": 110,
+     "y": 650,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 469,
+     "type": "action",
+     "text": "/* own */\nstruct IntArray* result = 0;",
+     "x": 110,
+     "y": 30,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 470,
+     "type": "action",
+     "text": "int i, f1, f2, fib;",
+     "x": 110,
+     "y": -40,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 471,
+     "type": "action",
+     "text": "result = IntArray_Create(2);\nIntArray_Put(result, 0, 0);\nIntArray_Put(result, 1, 1);",
+     "x": 390,
+     "y": 260,
+     "w": 130,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 472,
+     "type": "action",
+     "text": "result = IntArray_Create(n + 1);\nIntArray_Put(result, 0, 0);\nIntArray_Put(result, 1, 1);",
+     "x": 690,
+     "y": 260,
+     "w": 150,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "PrintIntsArrow",
+   "origin": "-22 -158",
+   "description": "A loop constructed with an arrow.",
+   "info": {},
+   "nodes": 14,
+   "features": [
+    "arrow",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 473,
+     "type": "beginend",
+     "text": "PrintIntsArrow",
+     "x": 170,
+     "y": 0,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 474,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 570,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 475,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 10,
+     "w": 0,
+     "h": 560,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 476,
+     "type": "action",
+     "text": "const struct IntArray* collection // The collection\n                                  // to print.",
+     "x": 510,
+     "y": 0,
+     "w": 220,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 477,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 0,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 478,
+     "type": "action",
+     "text": "item = IntArray_Get(collection, i);\nprintf(\"%d \", item);",
+     "x": 350,
+     "y": 370,
+     "w": 150,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 479,
+     "type": "action",
+     "text": "length = IntArray_Count(collection);\ni = 0;",
+     "x": 170,
+     "y": 200,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 480,
+     "type": "if",
+     "text": "i < length",
+     "x": 170,
+     "y": 300,
+     "w": 160,
+     "h": 20,
+     "a": 20,
+     "b": 0
+    },
+    {
+     "item_id": 481,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 300,
+     "w": 0,
+     "h": 180,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 482,
+     "type": "action",
+     "text": "i++;",
+     "x": 350,
+     "y": 440,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 483,
+     "type": "arrow",
+     "text": "",
+     "x": 520,
+     "y": 260,
+     "w": 350,
+     "h": 220,
+     "a": 170,
+     "b": 0
+    },
+    {
+     "item_id": 484,
+     "type": "action",
+     "text": "printf(\"using if and arrow:\\n\");",
+     "x": 170,
+     "y": 130,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 485,
+     "type": "action",
+     "text": "printf(\"\\n\");",
+     "x": 170,
+     "y": 510,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 497,
+     "type": "action",
+     "text": "int i, length, item;",
+     "x": 170,
+     "y": 70,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "PrintIntsFor",
+   "origin": "-22 -58",
+   "description": "A loop constructed with loop icons, 'for'-style.",
+   "info": {},
+   "nodes": 12,
+   "features": [
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 486,
+     "type": "beginend",
+     "text": "PrintIntsFor",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 487,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 600,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 488,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 520,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 490,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 492,
+     "type": "loopstart",
+     "text": "i = 0; i < length; i++",
+     "x": 170,
+     "y": 320,
+     "w": 160,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 493,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 460,
+     "w": 160,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 498,
+     "type": "action",
+     "text": "length = IntArray_Count(collection);",
+     "x": 170,
+     "y": 250,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 499,
+     "type": "action",
+     "text": "printf(\"using for:\\n\");",
+     "x": 170,
+     "y": 190,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 500,
+     "type": "action",
+     "text": "int i, length, item;",
+     "x": 170,
+     "y": 130,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 501,
+     "type": "action",
+     "text": "printf(\"\\n\");",
+     "x": 170,
+     "y": 530,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 502,
+     "type": "action",
+     "text": "item = IntArray_Get(collection, i);\nprintf(\"%d \", item);",
+     "x": 170,
+     "y": 390,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 503,
+     "type": "action",
+     "text": "const struct IntArray* collection // The collection\n                                  // to print.",
+     "x": 490,
+     "y": 60,
+     "w": 220,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "PrintIntsBackward",
+   "origin": "-134 -233",
+   "description": "Prints an array of ints in the reversed order.",
+   "info": {},
+   "nodes": 11,
+   "features": [
+    "arrow",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 510,
+     "type": "beginend",
+     "text": "PrintIntsBackward",
+     "x": 170,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 512,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 330,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 513,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 520,
+     "type": "action",
+     "text": "printf(\"%d \", IntArray_Get(collection, n));",
+     "x": 380,
+     "y": 220,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 521,
+     "type": "action",
+     "text": "const struct IntArray* collection // The collection\n                                  // to print.\nint n // The last element to start with.",
+     "x": 520,
+     "y": 60,
+     "w": 220,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 522,
+     "type": "if",
+     "text": "n >= 0",
+     "x": 170,
+     "y": 160,
+     "w": 70,
+     "h": 20,
+     "a": 140,
+     "b": 0
+    },
+    {
+     "item_id": 524,
+     "type": "action",
+     "text": "n--;",
+     "x": 380,
+     "y": 280,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 525,
+     "type": "vertical",
+     "text": "",
+     "x": 380,
+     "y": 160,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 526,
+     "type": "arrow",
+     "text": "",
+     "x": 590,
+     "y": 120,
+     "w": 420,
+     "h": 200,
+     "a": 210,
+     "b": 0
+    },
+    {
+     "item_id": 527,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 400,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 528,
+     "type": "action",
+     "text": "printf(\"\\n\");",
+     "x": 170,
+     "y": 340,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Put",
+   "origin": "-16 -30",
+   "description": "Creates a String object and puts it in the specified string array.",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 530,
+     "type": "beginend",
+     "text": "Put",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 531,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 532,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 533,
+     "type": "action",
+     "text": "struct ObjectArray* array // An array of strings.\nint index                 // The index to put the string at.\nconst char* text          // The text to put into array.",
+     "x": 530,
+     "y": 60,
+     "w": 250,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 534,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 60,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 535,
+     "type": "action",
+     "text": "/* Transient ownership. */\nstruct String* item;",
+     "x": 170,
+     "y": 150,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 536,
+     "type": "action",
+     "text": "item = String_FromCString(text);\nObjectArray_Put(array, index, item);",
+     "x": 170,
+     "y": 230,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "QuickSortDemo",
+   "origin": "-632 -23",
+   "description": "A demo that creates a few arrays of strings and sorts them.",
+   "info": {},
+   "nodes": 22,
+   "features": [
+    "address",
+    "arrow",
+    "commentout",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 537,
+     "type": "beginend",
+     "text": "QuickSortDemo",
+     "x": -120,
+     "y": 50,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 538,
+     "type": "beginend",
+     "text": "End",
+     "x": 1110,
+     "y": 530,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 539,
+     "type": "vertical",
+     "x": -120,
+     "y": 70,
+     "w": 0,
+     "h": 780,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 540,
+     "type": "action",
+     "text": "const char* unsortedA[] = { \"the\", \"sooner\", \"we\", \"start\", \"this\", \"the\", \"better\", 0 };\nconst char* sortedA[] = { \"aa\", \"bb\", \"cc\", \"dd\", \"ee\", \"ff\", 0 };\nconst char* reverseA[] = { \"ff\", \"ee\", \"dd\", \"cc\", \"bb\", \"aa\", 0 };\nconst char* emptyA[] = { 0 };\nconst char* flatA[] = { \"flat\", \"flat\", \"flat\", \"flat\", \"flat\", 0};",
+     "x": -120,
+     "y": 390,
+     "w": 370,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 541,
+     "type": "action",
+     "text": "/* own */\nstruct ObjectArray* unsorted = 0;\nstruct ObjectArray* sorted = 0;\nstruct ObjectArray* reverse = 0;\nstruct ObjectArray* empty = 0;\nstruct ObjectArray* flat = 0;",
+     "x": -120,
+     "y": 250,
+     "w": 370,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 542,
+     "type": "branch",
+     "text": "exit",
+     "x": 1110,
+     "y": 140,
+     "w": 130,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 543,
+     "type": "vertical",
+     "text": "",
+     "x": 1110,
+     "y": 90,
+     "w": 0,
+     "h": 440,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 544,
+     "type": "action",
+     "text": "ObjectArray_Delete(unsorted);\nObjectArray_Delete(sorted);\nObjectArray_Delete(reverse);\nObjectArray_Delete(empty);\nObjectArray_Delete(flat);",
+     "x": 1110,
+     "y": 250,
+     "w": 130,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 545,
+     "type": "branch",
+     "text": "init",
+     "x": -120,
+     "y": 140,
+     "w": 370,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 546,
+     "type": "address",
+     "text": "print",
+     "x": -120,
+     "y": 800,
+     "w": 370,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 547,
+     "type": "action",
+     "text": "unsorted = ObjectArray_Create(7, (ObjectDestructor)&String_Delete);\nsorted = ObjectArray_Create(6, (ObjectDestructor)&String_Delete);\nreverse = ObjectArray_Create(6, (ObjectDestructor)&String_Delete);\nempty = ObjectArray_Create(0, (ObjectDestructor)&String_Delete);\nflat = ObjectArray_Create(5, (ObjectDestructor)&String_Delete);",
+     "x": -120,
+     "y": 570,
+     "w": 370,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 548,
+     "type": "branch",
+     "text": "print",
+     "x": 810,
+     "y": 140,
+     "w": 120,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 549,
+     "type": "address",
+     "text": "exit",
+     "x": 810,
+     "y": 800,
+     "w": 120,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 550,
+     "type": "vertical",
+     "text": "",
+     "x": 810,
+     "y": 90,
+     "w": 0,
+     "h": 760,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 563,
+     "type": "action",
+     "text": "Fill(unsorted, unsortedA);\nFill(sorted, sortedA);\nFill(reverse, reverseA);\nFill(empty, emptyA);\nFill(flat, flatA);",
+     "x": -120,
+     "y": 700,
+     "w": 370,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 564,
+     "type": "horizontal",
+     "text": "",
+     "x": -120,
+     "y": 90,
+     "w": 1230,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 565,
+     "type": "arrow",
+     "text": "",
+     "x": -510,
+     "y": 90,
+     "w": 390,
+     "h": 760,
+     "a": 1320,
+     "b": 1
+    },
+    {
+     "item_id": 576,
+     "type": "action",
+     "text": "Print(unsorted);\nPrint(sorted);\nPrint(reverse);\nPrint(empty);\nPrint(flat);",
+     "x": 810,
+     "y": 470,
+     "w": 120,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 577,
+     "type": "action",
+     "text": "printf(\"quick sort demo\\n\");",
+     "x": -120,
+     "y": 480,
+     "w": 370,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 669,
+     "type": "action",
+     "text": "SortStrings(unsorted);\nSortStrings(sorted);\nSortStrings(reverse);\nSortStrings(empty);\nSortStrings(flat);",
+     "x": 810,
+     "y": 250,
+     "w": 120,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 711,
+     "type": "action",
+     "text": "StringsAreSorted(unsorted);\nStringsAreSorted(sorted);\nStringsAreSorted(reverse);\nStringsAreSorted(empty);\nStringsAreSorted(flat);",
+     "x": 810,
+     "y": 630,
+     "w": 120,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 712,
+     "type": "commentout",
+     "text": "Note that objects that require cleanup\nare grouped in a special icon.\nThey will be delete right after exiting\nthe function.",
+     "x": 480,
+     "y": 240,
+     "w": 170,
+     "h": 50,
+     "a": 40,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Fill",
+   "origin": "-244 -163",
+   "description": "Copies C-strings to an ObjectArray.",
+   "info": {},
+   "nodes": 11,
+   "features": [
+    "arrow",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 552,
+     "type": "beginend",
+     "text": "Fill",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 553,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 450,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 554,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 350,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 555,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 80,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 556,
+     "type": "action",
+     "text": "struct ObjectArray* output // The array to put strings in.\nconst char* strings[] // An array of pointers to C-strings. The last element in the array is 0.",
+     "x": 630,
+     "y": 60,
+     "w": 390,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 557,
+     "type": "action",
+     "text": "int i = 0;\nconst char** current = strings;",
+     "x": 170,
+     "y": 140,
+     "w": 140,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 558,
+     "type": "action",
+     "text": "Put(output, i, *current);",
+     "x": 350,
+     "y": 290,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 559,
+     "type": "if",
+     "text": "*current == 0",
+     "x": 170,
+     "y": 230,
+     "w": 140,
+     "h": 20,
+     "a": 40,
+     "b": 1
+    },
+    {
+     "item_id": 560,
+     "type": "action",
+     "text": "i++;\ncurrent++;",
+     "x": 350,
+     "y": 370,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 561,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 230,
+     "w": 0,
+     "h": 190,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 562,
+     "type": "arrow",
+     "text": "",
+     "x": 480,
+     "y": 190,
+     "w": 310,
+     "h": 230,
+     "a": 130,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Print",
+   "origin": "-216 5",
+   "description": "Prints an array of strings to the console.",
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 566,
+     "type": "beginend",
+     "text": "Print",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 567,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 500,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 568,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 420,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 569,
+     "type": "action",
+     "text": "struct ObjectArray* array // The array of strings to print.",
+     "x": 580,
+     "y": 60,
+     "w": 250,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 570,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 60,
+     "w": 230,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 571,
+     "type": "action",
+     "text": "int i;\nstruct String* item;\nint length = ObjectArray_Count(array);",
+     "x": 170,
+     "y": 160,
+     "w": 170,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 572,
+     "type": "loopstart",
+     "text": "i = 0; i < length; i++",
+     "x": 170,
+     "y": 240,
+     "w": 170,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 573,
+     "type": "action",
+     "text": "item = ObjectArray_Get(array, i);\nprintf(\"%s \", String_GetBuffer(item));",
+     "x": 170,
+     "y": 300,
+     "w": 170,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 574,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 360,
+     "w": 170,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 575,
+     "type": "action",
+     "text": "printf(\"\\n\");",
+     "x": 170,
+     "y": 430,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "QuickSort",
+   "origin": "-224 -73",
+   "description": "In-place quick sort.",
+   "info": {},
+   "nodes": 49,
+   "features": [
+    "address",
+    "arrow",
+    "case",
+    "if",
+    "loopend",
+    "loopstart",
+    "select",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 578,
+     "type": "beginend",
+     "text": "QuickSort",
+     "x": -40,
+     "y": 30,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 579,
+     "type": "beginend",
+     "text": "End",
+     "x": 2150,
+     "y": 350,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 580,
+     "type": "vertical",
+     "text": "",
+     "x": -40,
+     "y": 40,
+     "w": 0,
+     "h": 750,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 581,
+     "type": "vertical",
+     "text": "",
+     "x": 710,
+     "y": 120,
+     "w": 0,
+     "h": 670,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 582,
+     "type": "vertical",
+     "text": "",
+     "x": 2150,
+     "y": 120,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 583,
+     "type": "horizontal",
+     "text": "",
+     "x": -40,
+     "y": 120,
+     "w": 2190,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 584,
+     "type": "arrow",
+     "text": "",
+     "x": -170,
+     "y": 120,
+     "w": 130,
+     "h": 670,
+     "a": 2000,
+     "b": 1
+    },
+    {
+     "item_id": 585,
+     "type": "branch",
+     "text": "analyze input",
+     "x": -40,
+     "y": 170,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 586,
+     "type": "address",
+     "text": "exit",
+     "x": -40,
+     "y": 740,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 587,
+     "type": "branch",
+     "text": "simple case",
+     "x": 710,
+     "y": 170,
+     "w": 210,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 588,
+     "type": "branch",
+     "text": "partition",
+     "x": 1330,
+     "y": 170,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 589,
+     "type": "address",
+     "text": "exit",
+     "x": 710,
+     "y": 740,
+     "w": 210,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 590,
+     "type": "horizontal",
+     "text": "",
+     "x": 0,
+     "y": 30,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 592,
+     "type": "action",
+     "text": "int length = end - begin;\nint last = end - 1;",
+     "x": -40,
+     "y": 350,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 593,
+     "type": "select",
+     "text": "length",
+     "x": -40,
+     "y": 420,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 594,
+     "type": "case",
+     "text": "0",
+     "x": -40,
+     "y": 500,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 595,
+     "type": "case",
+     "text": "1",
+     "x": 140,
+     "y": 500,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 596,
+     "type": "case",
+     "text": "2",
+     "x": 270,
+     "y": 500,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 597,
+     "type": "branch",
+     "text": "exit",
+     "x": 2150,
+     "y": 170,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 598,
+     "type": "horizontal",
+     "text": "",
+     "x": -40,
+     "y": 460,
+     "w": 440,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 599,
+     "type": "case",
+     "text": "",
+     "x": 400,
+     "y": 500,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 600,
+     "type": "vertical",
+     "text": "",
+     "x": 140,
+     "y": 460,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 601,
+     "type": "vertical",
+     "text": "",
+     "x": 400,
+     "y": 460,
+     "w": 0,
+     "h": 330,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 602,
+     "type": "vertical",
+     "text": "",
+     "x": 270,
+     "y": 460,
+     "w": 0,
+     "h": 330,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 603,
+     "type": "horizontal",
+     "text": "",
+     "x": -40,
+     "y": 570,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 605,
+     "type": "address",
+     "text": "simple case",
+     "x": 270,
+     "y": 740,
+     "w": 60,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 606,
+     "type": "vertical",
+     "text": "",
+     "x": 1330,
+     "y": 120,
+     "w": 0,
+     "h": 670,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 607,
+     "type": "address",
+     "text": "recurse",
+     "x": 1330,
+     "y": 740,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 608,
+     "type": "address",
+     "text": "partition",
+     "x": 400,
+     "y": 740,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 610,
+     "type": "if",
+     "text": "Compare(collection, begin, last, comparer) <= 0",
+     "x": 710,
+     "y": 340,
+     "w": 210,
+     "h": 20,
+     "a": 30,
+     "b": 1
+    },
+    {
+     "item_id": 611,
+     "type": "action",
+     "text": "Swap(collection, begin, last);",
+     "x": 950,
+     "y": 400,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 612,
+     "type": "vertical",
+     "text": "",
+     "x": 950,
+     "y": 340,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 613,
+     "type": "horizontal",
+     "text": "",
+     "x": 710,
+     "y": 440,
+     "w": 240,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 614,
+     "type": "action",
+     "text": "pivotIndex = begin + length / 2;",
+     "x": 1330,
+     "y": 240,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 615,
+     "type": "loopstart",
+     "text": "i = begin; i < last; i++",
+     "x": 1330,
+     "y": 380,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 616,
+     "type": "loopend",
+     "text": "",
+     "x": 1330,
+     "y": 610,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 623,
+     "type": "branch",
+     "text": "recurse",
+     "x": 1830,
+     "y": 170,
+     "w": 230,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 624,
+     "type": "address",
+     "text": "exit",
+     "x": 1830,
+     "y": 740,
+     "w": 230,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 625,
+     "type": "vertical",
+     "text": "",
+     "x": 1830,
+     "y": 120,
+     "w": 0,
+     "h": 670,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 632,
+     "type": "action",
+     "text": "public\n\nstruct ObjectArray* collection // The array to sort.\nint begin // The first element of the range to sort.\nint end // The element which is right after the last element.\nObjectComparer comparer // The comparison function.",
+     "x": 330,
+     "y": 30,
+     "w": 260,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 633,
+     "type": "action",
+     "text": "int i;\nint pivotIndex;\nint storeIndex;",
+     "x": -40,
+     "y": 260,
+     "w": 110,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 650,
+     "type": "action",
+     "text": "Swap(collection, pivotIndex, last);\nstoreIndex = begin;",
+     "x": 1330,
+     "y": 310,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 651,
+     "type": "if",
+     "text": "Compare(collection, i, last, comparer) < 0",
+     "x": 1330,
+     "y": 440,
+     "w": 190,
+     "h": 20,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 652,
+     "type": "action",
+     "text": "Swap(collection, i, storeIndex);\nstoreIndex++;",
+     "x": 1330,
+     "y": 520,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 653,
+     "type": "horizontal",
+     "text": "",
+     "x": 1330,
+     "y": 570,
+     "w": 250,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 654,
+     "type": "vertical",
+     "text": "",
+     "x": 1580,
+     "y": 440,
+     "w": 0,
+     "h": 130,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 655,
+     "type": "action",
+     "text": "Swap(collection, storeIndex, last);",
+     "x": 1330,
+     "y": 670,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 656,
+     "type": "action",
+     "text": "QuickSort(collection, begin, storeIndex, comparer);",
+     "x": 1830,
+     "y": 240,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 657,
+     "type": "action",
+     "text": "QuickSort(collection, storeIndex + 1, end, comparer);",
+     "x": 1830,
+     "y": 300,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Swap",
+   "origin": "-177 -6",
+   "description": "Swaps two elements in the array.",
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 635,
+     "type": "beginend",
+     "text": "Swap",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 636,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 400,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 637,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 300,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 638,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 60,
+     "w": 190,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 640,
+     "type": "action",
+     "text": "struct ObjectArray* collection\nint firstIndex\nint secondIndex",
+     "x": 410,
+     "y": 60,
+     "w": 130,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 641,
+     "type": "action",
+     "text": "void* first = ObjectArray_Get(collection, firstIndex);\nvoid* second = ObjectArray_Get(collection, secondIndex);",
+     "x": 170,
+     "y": 220,
+     "w": 240,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 642,
+     "type": "action",
+     "text": "ObjectArray_Put(collection, firstIndex, second);\nObjectArray_Put(collection, secondIndex, first);",
+     "x": 170,
+     "y": 310,
+     "w": 240,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 658,
+     "type": "if",
+     "text": "firstIndex == secondIndex",
+     "x": 170,
+     "y": 140,
+     "w": 240,
+     "h": 20,
+     "a": 20,
+     "b": 0
+    },
+    {
+     "item_id": 659,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 360,
+     "w": 260,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 660,
+     "type": "vertical",
+     "text": "",
+     "x": 430,
+     "y": 140,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Compare",
+   "origin": "-98 -40",
+   "description": "Compares two elements of an array.",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 643,
+     "type": "beginend",
+     "text": "Compare",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 644,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 400,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 645,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 646,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 220,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 647,
+     "type": "action",
+     "text": "struct ObjectArray* collection\nint firstIndex\nint secondIndex\nObjectComparer comparer // The comparison function.\n\nreturns int",
+     "x": 460,
+     "y": 60,
+     "w": 220,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 648,
+     "type": "action",
+     "text": "void* first = ObjectArray_Get(collection, firstIndex);\nvoid* second = ObjectArray_Get(collection, secondIndex);",
+     "x": 170,
+     "y": 210,
+     "w": 240,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 649,
+     "type": "action",
+     "text": "return comparer(first, second);",
+     "x": 170,
+     "y": 300,
+     "w": 240,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "SortStrings",
+   "origin": "-196 -195",
+   "description": "Sorts the contents of an ObjectArray assuming it contains strings.",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 670,
+     "type": "beginend",
+     "text": "SortStrings",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 671,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 672,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 673,
+     "type": "action",
+     "text": "struct ObjectArray* strings // Not null. Must contain strings.",
+     "x": 560,
+     "y": 60,
+     "w": 260,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 674,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 100,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 675,
+     "type": "action",
+     "text": "ObjectComparer comparer = (ObjectComparer)&String_Compare;\nint length = ObjectArray_Count(strings);",
+     "x": 170,
+     "y": 140,
+     "w": 250,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 676,
+     "type": "action",
+     "text": "QuickSort(strings, 0, length, comparer);",
+     "x": 170,
+     "y": 220,
+     "w": 250,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "StringsAreSorted",
+   "origin": "-133 -94",
+   "description": "Tests whether an array of strings is actually sorted.",
+   "info": {},
+   "nodes": 25,
+   "features": [
+    "case",
+    "commentin",
+    "loopend",
+    "loopstart",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 678,
+     "type": "beginend",
+     "text": "StringsAreSorted",
+     "x": 170,
+     "y": -50,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 679,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 750,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 680,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": -40,
+     "w": 0,
+     "h": 780,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 683,
+     "type": "loopstart",
+     "text": "i = 0; i < length; i += 1",
+     "x": 170,
+     "y": 140,
+     "w": 170,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 684,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 660,
+     "w": 170,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 685,
+     "type": "action",
+     "text": "current = ObjectArray_Get(array, i);",
+     "x": 170,
+     "y": 190,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 686,
+     "type": "loopstart",
+     "text": "j = i + 1; j < length; j += 1",
+     "x": 170,
+     "y": 260,
+     "w": 170,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 687,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 600,
+     "w": 170,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 688,
+     "type": "action",
+     "text": "after = ObjectArray_Get(array, j);",
+     "x": 170,
+     "y": 320,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 689,
+     "type": "action",
+     "text": "printf(\"Collection is not sorted.\\n\");\nabort();",
+     "x": 790,
+     "y": 600,
+     "w": 170,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 690,
+     "type": "vertical",
+     "text": "",
+     "x": 790,
+     "y": 410,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 691,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 700,
+     "w": 620,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 692,
+     "type": "action",
+     "text": "int i, j;\nstruct String* current;\nstruct String* after;\nint length = ObjectArray_Count(array);",
+     "x": 170,
+     "y": 60,
+     "w": 170,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 693,
+     "type": "select",
+     "text": "String_Compare(current, after)",
+     "x": 170,
+     "y": 380,
+     "w": 170,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 694,
+     "type": "case",
+     "text": "-1",
+     "x": 170,
+     "y": 450,
+     "w": 170,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 695,
+     "type": "case",
+     "text": "0",
+     "x": 470,
+     "y": 450,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 696,
+     "type": "case",
+     "text": "1",
+     "x": 790,
+     "y": 450,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 697,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 410,
+     "w": 620,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 698,
+     "type": "vertical",
+     "text": "",
+     "x": 470,
+     "y": 410,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 699,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 560,
+     "w": 300,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 700,
+     "type": "commentin",
+     "text": "'current' is less\nthan 'after'",
+     "x": 170,
+     "y": 510,
+     "w": 170,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 701,
+     "type": "commentin",
+     "text": "'current' is equal\nto 'after'",
+     "x": 470,
+     "y": 510,
+     "w": 100,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 702,
+     "type": "commentin",
+     "text": "'current' is greater\nthan 'after'",
+     "x": 790,
+     "y": 510,
+     "w": 170,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 703,
+     "type": "action",
+     "text": "struct ObjectArray* array // The array of strings to check.",
+     "x": 580,
+     "y": -50,
+     "w": 250,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 704,
+     "type": "horizontal",
+     "text": "",
+     "x": 240,
+     "y": -50,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "PrintHello",
+   "origin": "0 0",
+   "description": "Prints a banner.",
+   "info": {},
+   "nodes": 5,
+   "features": [
+    "commentin"
+   ],
+   "items": [
+    {
+     "item_id": 719,
+     "type": "beginend",
+     "text": "PrintHello",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 720,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 721,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 722,
+     "type": "action",
+     "text": "printf(\"DRAKON-C demo\\n\");\nprintf(\"=============\\n\");",
+     "x": 170,
+     "y": 210,
+     "w": 120,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 723,
+     "type": "commentin",
+     "text": "Note that this diagram does not\nhave a parameters icon.\n\nBy default, it will be treated as a static function\ntaking no parameters and returning void.",
+     "x": 550,
+     "y": 210,
+     "w": 228,
+     "h": 50,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "alt_select_test",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [],
+   "items": [
+    {
+     "item_id": 726,
+     "type": "beginend",
+     "text": "alt_select_test",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 727,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 728,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 730,
+     "type": "action",
+     "text": "alternative_select(-100, -1);\nalternative_select(100, 1);\nalternative_select(0, 0);",
+     "x": 170,
+     "y": 170,
+     "w": 130,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "alternative_select",
+   "origin": "289 -164",
+   "description": null,
+   "info": {},
+   "nodes": 44,
+   "features": [
+    "address",
+    "arrow",
+    "case",
+    "if",
+    "select",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 731,
+     "type": "beginend",
+     "text": "alternative_select",
+     "x": 440,
+     "y": -50,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 732,
+     "type": "beginend",
+     "text": "End",
+     "x": 1090,
+     "y": 550,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 733,
+     "type": "vertical",
+     "x": 440,
+     "y": -30,
+     "w": 0,
+     "h": 720,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 734,
+     "type": "horizontal",
+     "x": 440,
+     "y": -50,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 735,
+     "type": "action",
+     "text": "int value\nint expected",
+     "x": 610,
+     "y": -50,
+     "w": 60,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 736,
+     "type": "action",
+     "text": "int actual;",
+     "x": 440,
+     "y": 120,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 737,
+     "type": "select",
+     "text": "select",
+     "x": 440,
+     "y": 180,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 738,
+     "type": "horizontal",
+     "text": "",
+     "x": 440,
+     "y": 220,
+     "w": 320,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 739,
+     "type": "case",
+     "text": "value < 0",
+     "x": 440,
+     "y": 260,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 740,
+     "type": "case",
+     "text": "value == 0",
+     "x": 620,
+     "y": 260,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 741,
+     "type": "case",
+     "text": "",
+     "x": 760,
+     "y": 260,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 742,
+     "type": "vertical",
+     "text": "",
+     "x": 620,
+     "y": 220,
+     "w": 0,
+     "h": 140,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 743,
+     "type": "vertical",
+     "text": "",
+     "x": 760,
+     "y": 220,
+     "w": 0,
+     "h": 140,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 744,
+     "type": "horizontal",
+     "text": "",
+     "x": 440,
+     "y": 360,
+     "w": 320,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 745,
+     "type": "action",
+     "text": "actual = -1;",
+     "x": 440,
+     "y": 320,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 746,
+     "type": "action",
+     "text": "actual = 0;",
+     "x": 620,
+     "y": 320,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 747,
+     "type": "action",
+     "text": "actual = 1;",
+     "x": 760,
+     "y": 320,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 748,
+     "type": "if",
+     "text": "actual == expected",
+     "x": 440,
+     "y": 400,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 749,
+     "type": "vertical",
+     "text": "",
+     "x": 600,
+     "y": 400,
+     "w": 0,
+     "h": 190,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 750,
+     "type": "horizontal",
+     "text": "",
+     "x": 440,
+     "y": 590,
+     "w": 160,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 751,
+     "type": "horizontal",
+     "text": "",
+     "x": 440,
+     "y": 0,
+     "w": 650,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 752,
+     "type": "vertical",
+     "text": "",
+     "x": 1090,
+     "y": 0,
+     "w": 0,
+     "h": 540,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 753,
+     "type": "branch",
+     "text": "No default clause",
+     "x": 1090,
+     "y": 50,
+     "w": 100,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 754,
+     "type": "action",
+     "text": "printf(\"alt select failure!\\n\");",
+     "x": 600,
+     "y": 480,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 755,
+     "type": "address",
+     "text": "No default clause",
+     "x": 440,
+     "y": 640,
+     "w": 100,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 756,
+     "type": "branch",
+     "text": "With default",
+     "x": 440,
+     "y": 50,
+     "w": 100,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 757,
+     "type": "arrow",
+     "text": "",
+     "x": 320,
+     "y": 0,
+     "w": 120,
+     "h": 690,
+     "a": 120,
+     "b": 1
+    },
+    {
+     "item_id": 758,
+     "type": "select",
+     "text": "select",
+     "x": 1090,
+     "y": 120,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 759,
+     "type": "horizontal",
+     "text": "",
+     "x": 1090,
+     "y": 160,
+     "w": 320,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 760,
+     "type": "case",
+     "text": "value < 0",
+     "x": 1090,
+     "y": 200,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 761,
+     "type": "case",
+     "text": "value == 0",
+     "x": 1270,
+     "y": 200,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 762,
+     "type": "case",
+     "text": "value > 0",
+     "x": 1410,
+     "y": 200,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 763,
+     "type": "vertical",
+     "text": "",
+     "x": 1270,
+     "y": 160,
+     "w": 0,
+     "h": 140,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 764,
+     "type": "vertical",
+     "text": "",
+     "x": 1410,
+     "y": 160,
+     "w": 0,
+     "h": 140,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 765,
+     "type": "horizontal",
+     "text": "",
+     "x": 1090,
+     "y": 300,
+     "w": 320,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 766,
+     "type": "action",
+     "text": "actual = -1;",
+     "x": 1090,
+     "y": 260,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 767,
+     "type": "action",
+     "text": "actual = 0;",
+     "x": 1270,
+     "y": 260,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 768,
+     "type": "action",
+     "text": "actual = 1;",
+     "x": 1410,
+     "y": 260,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 769,
+     "type": "if",
+     "text": "actual == expected",
+     "x": 1090,
+     "y": 340,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 1,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 770,
+     "type": "vertical",
+     "text": "",
+     "x": 1250,
+     "y": 340,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 771,
+     "type": "action",
+     "text": "printf(\"alt select failure!\\n\");",
+     "x": 1250,
+     "y": 400,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 772,
+     "type": "horizontal",
+     "text": "",
+     "x": 1090,
+     "y": 510,
+     "w": 160,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 774,
+     "type": "action",
+     "text": "abort();",
+     "x": 600,
+     "y": 540,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 775,
+     "type": "action",
+     "text": "abort();",
+     "x": 1250,
+     "y": 460,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  }
+ ]
+}

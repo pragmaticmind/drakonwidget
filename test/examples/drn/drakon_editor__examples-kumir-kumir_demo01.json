@@ -1,0 +1,357 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/KuMir/kumir_demo01.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1",
+  "language": "KuMir"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "привет мир",
+   "origin": "38 14",
+   "description": "",
+   "info": {},
+   "nodes": 4,
+   "features": [],
+   "items": [
+    {
+     "item_id": 18,
+     "type": "beginend",
+     "text": "привет мир",
+     "x": 200,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 19,
+     "type": "beginend",
+     "text": "Конец",
+     "x": 200,
+     "y": 210,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 20,
+     "type": "vertical",
+     "text": "",
+     "x": 200,
+     "y": 80,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 21,
+     "type": "action",
+     "text": "вывод \"Привет, КуМир!\", нс",
+     "x": 200,
+     "y": 130,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "площадь",
+   "origin": "141 -37",
+   "description": "",
+   "info": {},
+   "nodes": 7,
+   "features": [
+    "commentout"
+   ],
+   "items": [
+    {
+     "item_id": 22,
+     "type": "beginend",
+     "text": "площадь",
+     "x": 290,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 23,
+     "type": "beginend",
+     "text": "Конец",
+     "x": 290,
+     "y": 210,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 24,
+     "type": "vertical",
+     "text": "",
+     "x": 290,
+     "y": 80,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 25,
+     "type": "horizontal",
+     "text": "",
+     "x": 290,
+     "y": 60,
+     "w": 80,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 26,
+     "type": "action",
+     "text": "вещ ширина \nвещ высота \n\nзнач вещ",
+     "x": 420,
+     "y": 60,
+     "w": 60,
+     "h": 50,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 27,
+     "type": "action",
+     "text": "знач := ширина * высота",
+     "x": 290,
+     "y": 150,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 41,
+     "type": "commentout",
+     "text": "Аргументы функции:\n- ширина\n- высота\nТип возвращаемого значения: вещ",
+     "x": 680,
+     "y": 80,
+     "w": 140,
+     "h": 50,
+     "a": 80,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "главный",
+   "origin": "-15 -90",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [
+    "commentout"
+   ],
+   "items": [
+    {
+     "item_id": 28,
+     "type": "beginend",
+     "text": "главный",
+     "x": 190,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 29,
+     "type": "beginend",
+     "text": "Конец",
+     "x": 190,
+     "y": 260,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 30,
+     "type": "vertical",
+     "text": "",
+     "x": 190,
+     "y": 80,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 31,
+     "type": "action",
+     "text": "вывод площадь(ширина, 3), нс",
+     "x": 190,
+     "y": 190,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 32,
+     "type": "action",
+     "text": "привет мир",
+     "x": 190,
+     "y": 130,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 40,
+     "type": "commentout",
+     "text": "В файле должен быть алгоритм\nс названием \"главный\".\nЭтот алгоритм будет запущен при\nвыполнении файла.",
+     "x": 470,
+     "y": 60,
+     "w": 140,
+     "h": 50,
+     "a": 100,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "вступление",
+   "origin": "43 -15",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [
+    "commentout"
+   ],
+   "items": [
+    {
+     "item_id": 33,
+     "type": "beginend",
+     "text": "вступление",
+     "x": 160,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "beginend",
+     "text": "Конец",
+     "x": 160,
+     "y": 280,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "vertical",
+     "x": 160,
+     "y": 80,
+     "w": 0,
+     "h": 180,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 37,
+     "type": "action",
+     "text": "вещ ширина\nширина := 10",
+     "x": 160,
+     "y": 170,
+     "w": 60,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 38,
+     "type": "commentout",
+     "text": "Это вступление.\nТело этого алгоритма будет помещено \nв начале kum-файла.",
+     "x": 420,
+     "y": 70,
+     "w": 160,
+     "h": 40,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "commentout",
+     "text": "Во вступлении допускаются только\nиконы \"Действие\" с объявлением переменных\nи присвоением им значений.",
+     "x": 460,
+     "y": 190,
+     "w": 180,
+     "h": 40,
+     "a": 70,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  }
+ ]
+}

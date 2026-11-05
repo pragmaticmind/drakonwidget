@@ -1,0 +1,579 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/QtC++/qt_cpp.drn",
+ "info": {
+  "type": "drakon",
+  "version": "11",
+  "start_version": "1",
+  "language": "C++"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "main",
+   "origin": "-223 13",
+   "description": null,
+   "info": {},
+   "nodes": 9,
+   "features": [],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "main",
+     "x": 180,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 180,
+     "y": 560,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 180,
+     "y": 80,
+     "w": 0,
+     "h": 460,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "x": 180,
+     "y": 60,
+     "w": 190,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "public function\nreturns int",
+     "x": 370,
+     "y": 60,
+     "w": 70,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "return 0;",
+     "x": 180,
+     "y": 390,
+     "w": 330,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "action",
+     "text": "QtDemo sender;\nQtDemo receiver;",
+     "x": 180,
+     "y": 170,
+     "w": 330,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 38,
+     "type": "action",
+     "text": "QObject::connect(&sender, SIGNAL(MySignal(int)), &receiver, SLOT(SlotA(int)));\nQObject::connect(&sender, SIGNAL(MySignal(int)), &receiver, SLOT(SlotB(int)));\nQObject::connect(&sender, SIGNAL(MySignal(int)), &receiver, SLOT(SlotC(int)));",
+     "x": 180,
+     "y": 250,
+     "w": 330,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 44,
+     "type": "action",
+     "text": "sender.DoIt();",
+     "x": 180,
+     "y": 330,
+     "w": 330,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "SlotB",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 8,
+     "type": "beginend",
+     "text": "SlotB",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "action",
+     "text": "protected slot\nint i",
+     "x": 370,
+     "y": 60,
+     "w": 70,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "action",
+     "text": "cout << \"SlotB: \" << i << endl;",
+     "x": 170,
+     "y": 190,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "SlotA",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 13,
+     "type": "beginend",
+     "text": "SlotA",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 220,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "action",
+     "text": "public virtual slot\nint i",
+     "x": 390,
+     "y": 60,
+     "w": 90,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 33,
+     "type": "action",
+     "text": "cout << \"SlotA: \" << i << endl;",
+     "x": 170,
+     "y": 200,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "SlotC",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 18,
+     "type": "beginend",
+     "text": "SlotC",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 19,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 20,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 21,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 22,
+     "type": "action",
+     "text": "private slot\nint i",
+     "x": 370,
+     "y": 60,
+     "w": 60,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "action",
+     "text": "cout << \"SlotC: \" << i << endl;",
+     "x": 170,
+     "y": 210,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "MySignal",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 5,
+   "features": [],
+   "items": [
+    {
+     "item_id": 45,
+     "type": "beginend",
+     "text": "MySignal",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 46,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 47,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 49,
+     "type": "action",
+     "text": "signal\nint i",
+     "x": 370,
+     "y": 60,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "DoIt",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 50,
+     "type": "beginend",
+     "text": "DoIt",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 51,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 52,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 53,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 54,
+     "type": "action",
+     "text": "public method",
+     "x": 370,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 55,
+     "type": "action",
+     "text": "int i = 892;",
+     "x": 170,
+     "y": 210,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 56,
+     "type": "action",
+     "text": "emit MySignal(i);",
+     "x": 170,
+     "y": 280,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Constructor",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 5,
+   "features": [],
+   "items": [
+    {
+     "item_id": 57,
+     "type": "beginend",
+     "text": "Constructor",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 58,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 59,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 60,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 61,
+     "type": "action",
+     "text": "public ctr",
+     "x": 370,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

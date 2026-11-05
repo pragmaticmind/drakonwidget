@@ -1,0 +1,538 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/02.Silhouette.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "Cook lunch",
+   "origin": "36 -15",
+   "description": "This is an example of a \"silhouette\" diagram.\nA silhouette has several vertical lines called \"Branches\".\n\nThe leftmost branch is run first.\nThe footer of a branch points at the next branch.\n\nThe branches represent the main parts of the problem.",
+   "info": {},
+   "nodes": 21,
+   "features": [
+    "address",
+    "arrow",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 75,
+     "type": "beginend",
+     "text": "Cook lunch",
+     "x": 170,
+     "y": 30,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 76,
+     "type": "beginend",
+     "text": "End",
+     "x": 530,
+     "y": 400,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 77,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 50,
+     "w": 0,
+     "h": 400,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 78,
+     "type": "branch",
+     "text": "Salad",
+     "x": 170,
+     "y": 120,
+     "w": 80,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 79,
+     "type": "branch",
+     "text": "Potatoes",
+     "x": 350,
+     "y": 120,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 80,
+     "type": "branch",
+     "text": "Meat",
+     "x": 530,
+     "y": 120,
+     "w": 80,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 81,
+     "type": "address",
+     "text": "Potatoes",
+     "x": 170,
+     "y": 400,
+     "w": 80,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 82,
+     "type": "address",
+     "text": "Meat",
+     "x": 350,
+     "y": 400,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 83,
+     "type": "action",
+     "text": "Wash vegetables",
+     "x": 170,
+     "y": 190,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 84,
+     "type": "action",
+     "text": "Slice vegetables",
+     "x": 170,
+     "y": 260,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 85,
+     "type": "action",
+     "text": "Blend vegetables",
+     "x": 170,
+     "y": 330,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 86,
+     "type": "action",
+     "text": "Peel potatoes",
+     "x": 350,
+     "y": 190,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 87,
+     "type": "action",
+     "text": "Boil potatoes",
+     "x": 350,
+     "y": 260,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 88,
+     "type": "action",
+     "text": "Add butter",
+     "x": 350,
+     "y": 330,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 89,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 70,
+     "w": 0,
+     "h": 380,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 90,
+     "type": "vertical",
+     "text": "",
+     "x": 530,
+     "y": 70,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 91,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 70,
+     "w": 360,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 92,
+     "type": "action",
+     "text": "Cut in pieces",
+     "x": 530,
+     "y": 190,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 93,
+     "type": "action",
+     "text": "Stuff with garlic",
+     "x": 530,
+     "y": 260,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 94,
+     "type": "action",
+     "text": "Bake in oven",
+     "x": 530,
+     "y": 330,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 95,
+     "type": "arrow",
+     "text": "",
+     "x": 70,
+     "y": 70,
+     "w": 100,
+     "h": 380,
+     "a": 280,
+     "b": 1
+    }
+   ]
+  },
+  {
+   "name": "Cook lunch (with parameters)",
+   "origin": "-16 -13",
+   "description": "This is a procedure with parameters:\n\t- vegetables;\n\t- potatoes;\n\t- butter;\n\t- meat;\n\t- garlic.",
+   "info": {},
+   "nodes": 23,
+   "features": [
+    "address",
+    "arrow",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 52,
+     "type": "beginend",
+     "text": "Cook lunch (with parameters)",
+     "x": 170,
+     "y": 50,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 53,
+     "type": "beginend",
+     "text": "End",
+     "x": 560,
+     "y": 450,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 54,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 70,
+     "w": 0,
+     "h": 430,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 55,
+     "type": "branch",
+     "text": "Salad",
+     "x": 170,
+     "y": 170,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 56,
+     "type": "branch",
+     "text": "Potatoes",
+     "x": 390,
+     "y": 170,
+     "w": 70,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 57,
+     "type": "branch",
+     "text": "Meat",
+     "x": 560,
+     "y": 170,
+     "w": 80,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 58,
+     "type": "address",
+     "text": "Potatoes",
+     "x": 170,
+     "y": 450,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 59,
+     "type": "address",
+     "text": "Meat",
+     "x": 390,
+     "y": 450,
+     "w": 70,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 60,
+     "type": "action",
+     "text": "Wash vegetables",
+     "x": 170,
+     "y": 240,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 61,
+     "type": "action",
+     "text": "Slice vegetables",
+     "x": 170,
+     "y": 310,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 62,
+     "type": "action",
+     "text": "Blend vegetables",
+     "x": 170,
+     "y": 380,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 63,
+     "type": "action",
+     "text": "Peel potatoes",
+     "x": 390,
+     "y": 240,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 64,
+     "type": "action",
+     "text": "Boil potatoes",
+     "x": 390,
+     "y": 310,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 65,
+     "type": "action",
+     "text": "Add butter",
+     "x": 390,
+     "y": 380,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 66,
+     "type": "vertical",
+     "text": "",
+     "x": 390,
+     "y": 120,
+     "w": 0,
+     "h": 380,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 67,
+     "type": "vertical",
+     "text": "",
+     "x": 560,
+     "y": 120,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 68,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 120,
+     "w": 390,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 69,
+     "type": "action",
+     "text": "Cut in pieces",
+     "x": 560,
+     "y": 240,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 70,
+     "type": "action",
+     "text": "Stuff with garlic",
+     "x": 560,
+     "y": 310,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 71,
+     "type": "action",
+     "text": "Bake in oven",
+     "x": 560,
+     "y": 380,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 72,
+     "type": "arrow",
+     "text": "",
+     "x": 30,
+     "y": 120,
+     "w": 140,
+     "h": 380,
+     "a": 360,
+     "b": 1
+    },
+    {
+     "item_id": 73,
+     "type": "horizontal",
+     "text": "",
+     "x": 280,
+     "y": 50,
+     "w": 40,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 74,
+     "type": "action",
+     "text": "vegetables\npotatoes\nbutter\nmeat\ngarlic",
+     "x": 370,
+     "y": 50,
+     "w": 50,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,222 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/Processing.org/south_norway/Sky.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1",
+  "language": "Processing.org"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "Sky",
+   "origin": "-38 -142",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "Sky",
+     "x": 150,
+     "y": -30,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 150,
+     "y": 210,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 150,
+     "y": -10,
+     "w": 0,
+     "h": 200,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "x": 150,
+     "y": -30,
+     "w": 260,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "ctr\n\nfloat width\nfloat height\ncolor topColor\ncolor bottomColor",
+     "x": 410,
+     "y": -30,
+     "w": 80,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "this.width = width;\nthis.height = height;",
+     "x": 150,
+     "y": 40,
+     "w": 150,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "action",
+     "text": "this.topColor = topColor;\nthis.bottomColor = bottomColor;",
+     "x": 150,
+     "y": 120,
+     "w": 150,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "draw",
+   "origin": "0 -50",
+   "description": null,
+   "info": {},
+   "nodes": 9,
+   "features": [],
+   "items": [
+    {
+     "item_id": 9,
+     "type": "beginend",
+     "text": "draw",
+     "x": 180,
+     "y": -10,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "beginend",
+     "text": "End",
+     "x": 180,
+     "y": 450,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "vertical",
+     "x": 180,
+     "y": 10,
+     "w": 0,
+     "h": 420,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "action",
+     "text": "fill(topColor);",
+     "x": 180,
+     "y": 110,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "action",
+     "text": "fill(bottomColor);",
+     "x": 180,
+     "y": 250,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "text2": ""
+    },
+    {
+     "item_id": 15,
+     "type": "action",
+     "text": "vertex(0, 0);\nvertex(width, 0);",
+     "x": 180,
+     "y": 180,
+     "w": 100,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "action",
+     "text": "vertex(width, height);\nvertex(0, height);",
+     "x": 180,
+     "y": 320,
+     "w": 100,
+     "h": 30,
+     "a": 0,
+     "b": 0,
+     "text2": ""
+    },
+    {
+     "item_id": 17,
+     "type": "action",
+     "text": "endShape(CLOSE);",
+     "x": 180,
+     "y": 390,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 18,
+     "type": "action",
+     "text": "beginShape();",
+     "x": 180,
+     "y": 50,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

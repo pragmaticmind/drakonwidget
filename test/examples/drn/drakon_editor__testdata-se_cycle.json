@@ -1,0 +1,110 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/se_cycle.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "diagram",
+   "origin": "0 -150",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "shelf",
+     "text": "",
+     "x": 390,
+     "y": 420,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Foo"
+    },
+    {
+     "item_id": 2,
+     "type": "shelf",
+     "text": "",
+     "x": 390,
+     "y": 150,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Bar"
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "text": "",
+     "x": 390,
+     "y": 190,
+     "w": 0,
+     "h": 190,
+     "a": 10200,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "action",
+     "text": "Foo",
+     "x": 530,
+     "y": 170,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 10,
+     "type": "vertical",
+     "text": "",
+     "x": 530,
+     "y": 190,
+     "w": 0,
+     "h": 190,
+     "a": 10200,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 11,
+     "type": "action",
+     "text": "Bar",
+     "x": 530,
+     "y": 400,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

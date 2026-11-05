@@ -1,0 +1,148 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/11 (Do-Check-Do (hybrid) loop).drn",
+ "info": {
+  "type": "drakon",
+  "version": "22",
+  "start_version": "1",
+  "language": "AutoHotkey_L"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "DoCheckDoLoop",
+   "origin": "-96 -141",
+   "description": null,
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "arrow",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "DoCheckDoLoop",
+     "x": 170,
+     "y": 40,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 440,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 60,
+     "w": 0,
+     "h": 360,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "x": 170,
+     "y": 40,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "a",
+     "x": 370,
+     "y": 40,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "line := FileRead(a)",
+     "x": 170,
+     "y": 180,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "if",
+     "text": "line = 0",
+     "x": 170,
+     "y": 260,
+     "w": 90,
+     "h": 20,
+     "a": 30,
+     "b": 1
+    },
+    {
+     "item_id": 8,
+     "type": "vertical",
+     "text": "",
+     "x": 290,
+     "y": 260,
+     "w": 0,
+     "h": 130,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "arrow",
+     "text": "",
+     "x": 460,
+     "y": 120,
+     "w": 290,
+     "h": 270,
+     "a": 170,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "action",
+     "text": "PrintLine(line)",
+     "x": 290,
+     "y": 320,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,173 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/hi_veri.drn",
+ "info": {
+  "type": "drakon",
+  "version": "22",
+  "start_version": "1",
+  "language": "Verilog"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "always2",
+   "origin": "-79 -113",
+   "description": "пример простого блока always",
+   "info": {},
+   "nodes": 12,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 61,
+     "type": "beginend",
+     "text": "Конец",
+     "x": 170,
+     "y": 570,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 62,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 470,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 63,
+     "type": "horizontal",
+     "x": 170,
+     "y": 60,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 64,
+     "type": "action",
+     "text": "=== name ===\nblock_name_here\n=== sensitivity ===\nclk+ // тактовый сигнал по положительному фронту\nreset_n- // сигнал сброса\n=== reset ===\nreset_n- // сброс - активный низкий\n=== wires ===\n[7:0] a\n[7:0] b\n[2:0] c\n=== regs ===\n[7:0] qwe\n[3:0] asd\n[2:0] xcz",
+     "x": 500,
+     "y": 60,
+     "w": 210,
+     "h": 130,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 65,
+     "type": "if",
+     "text": "a > b",
+     "x": 170,
+     "y": 260,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 66,
+     "type": "vertical",
+     "text": "",
+     "x": 290,
+     "y": 260,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 67,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 410,
+     "w": 120,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 68,
+     "type": "action",
+     "text": "c = a + b;",
+     "x": 290,
+     "y": 320,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 69,
+     "type": "action",
+     "text": "c = b - a;",
+     "x": 170,
+     "y": 370,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 74,
+     "type": "beginend",
+     "text": "always",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 322,
+     "type": "action",
+     "text": "// escaping \\ in string\n\"hello \\\nwe continue\" here",
+     "x": 620,
+     "y": 370,
+     "w": 110,
+     "h": 40,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 323,
+     "type": "action",
+     "text": "\"hello 'world' \\t \\\" bar\" normal(10);",
+     "x": 620,
+     "y": 490,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/se_wrong_inherit.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "diagram",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "shelf",
+     "text": "",
+     "x": 120,
+     "y": 190,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Foo"
+    },
+    {
+     "item_id": 2,
+     "type": "shelf",
+     "text": "",
+     "x": 120,
+     "y": 460,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Bar"
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "text": "",
+     "x": 120,
+     "y": 230,
+     "w": 0,
+     "h": 200,
+     "a": 10200,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "beginend",
+     "text": "safd",
+     "x": 120,
+     "y": 320,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

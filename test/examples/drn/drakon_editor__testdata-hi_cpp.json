@@ -1,0 +1,217 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/hi_cpp.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1",
+  "language": "C++"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "StringsAreSorted",
+   "origin": "-43 -127",
+   "description": "Tests whether an array of strings is actually sorted.",
+   "info": {},
+   "nodes": 16,
+   "features": [
+    "if",
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 678,
+     "type": "beginend",
+     "text": "StringsAreSorted",
+     "x": 170,
+     "y": -50,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 679,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 650,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 680,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": -40,
+     "w": 0,
+     "h": 690,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 683,
+     "type": "loopstart",
+     "text": "i = 0; i < length; i += 1",
+     "x": 170,
+     "y": 140,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 684,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 560,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 685,
+     "type": "action",
+     "text": "current = array->Get(i);",
+     "x": 170,
+     "y": 190,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 686,
+     "type": "loopstart",
+     "text": "j = i + 1; j < length; j += 1",
+     "x": 170,
+     "y": 260,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 687,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 500,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 688,
+     "type": "action",
+     "text": "after = array->Get(j);",
+     "x": 170,
+     "y": 320,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 689,
+     "type": "action",
+     "text": "cout << \"Collection is not sorted.\" << endl;\nabort();",
+     "x": 520,
+     "y": 510,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 690,
+     "type": "vertical",
+     "text": "",
+     "x": 520,
+     "y": 410,
+     "w": 0,
+     "h": 190,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 691,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 600,
+     "w": 350,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 692,
+     "type": "action",
+     "text": "int i, j;\nstd::string* current;\nstd::string* after;\nint length = array->Count();",
+     "x": 170,
+     "y": 60,
+     "w": 130,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 703,
+     "type": "action",
+     "text": "StringList* array // The array of strings to check.",
+     "x": 580,
+     "y": -50,
+     "w": 220,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 704,
+     "type": "horizontal",
+     "text": "",
+     "x": 240,
+     "y": -50,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 726,
+     "type": "if",
+     "text": "*current > *after",
+     "x": 170,
+     "y": 410,
+     "w": 130,
+     "h": 20,
+     "a": 220,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

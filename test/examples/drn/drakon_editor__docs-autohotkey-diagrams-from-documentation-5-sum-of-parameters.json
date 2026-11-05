@@ -1,0 +1,112 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/5 (sum of parameters).drn",
+ "info": {
+  "type": "drakon",
+  "version": "22",
+  "start_version": "1",
+  "language": "AutoHotkey_L"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "sum",
+   "origin": "-20 42",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "sum",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "x": 170,
+     "y": 60,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "a ; First parameter\nb ; Second parameter",
+     "x": 370,
+     "y": 60,
+     "w": 90,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "c:=a+b",
+     "x": 170,
+     "y": 170,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "action",
+     "text": "msgbox, %c%",
+     "x": 170,
+     "y": 250,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

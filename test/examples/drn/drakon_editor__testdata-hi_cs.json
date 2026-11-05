@@ -1,0 +1,608 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/hi_cs.drn",
+ "info": {
+  "type": "drakon",
+  "version": "9",
+  "start_version": "1",
+  "language": "C#"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "StringsAreSorted",
+   "origin": "-93 -129",
+   "description": "Tests whether an array of strings is actually sorted.",
+   "info": {},
+   "nodes": 25,
+   "features": [
+    "case",
+    "commentin",
+    "loopend",
+    "loopstart",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 66,
+     "type": "beginend",
+     "text": "StringsAreSorted",
+     "x": 170,
+     "y": -30,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 67,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 750,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 68,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": -10,
+     "w": 0,
+     "h": 750,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 69,
+     "type": "action",
+     "text": "private static\n\nObject[] array",
+     "x": 440,
+     "y": -30,
+     "w": 70,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 70,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": -30,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 71,
+     "type": "loopstart",
+     "text": "i = 0; i < length; i++",
+     "x": 170,
+     "y": 130,
+     "w": 140,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 72,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 660,
+     "w": 140,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 73,
+     "type": "action",
+     "text": "current = (String)array[i];",
+     "x": 170,
+     "y": 190,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 74,
+     "type": "loopstart",
+     "text": "j = i + 1; j < length; j += 1",
+     "x": 170,
+     "y": 260,
+     "w": 140,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 75,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 600,
+     "w": 140,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 76,
+     "type": "action",
+     "text": "String after = (String)array[j];",
+     "x": 170,
+     "y": 320,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 77,
+     "type": "action",
+     "text": "throw new InvalidOperationException(\"Collection is not sorted.\");",
+     "x": 820,
+     "y": 600,
+     "w": 270,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 78,
+     "type": "vertical",
+     "text": "",
+     "x": 820,
+     "y": 410,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 79,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 700,
+     "w": 650,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 80,
+     "type": "action",
+     "text": "String current = null;\nint i, j = 0;\nint length = array.Length;",
+     "x": 170,
+     "y": 50,
+     "w": 140,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 81,
+     "type": "select",
+     "text": "current.CompareTo(after)",
+     "x": 170,
+     "y": 380,
+     "w": 140,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 82,
+     "type": "case",
+     "text": "-1",
+     "x": 820,
+     "y": 450,
+     "w": 270,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 83,
+     "type": "case",
+     "text": "0",
+     "x": 430,
+     "y": 450,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 84,
+     "type": "case",
+     "text": "1",
+     "x": 170,
+     "y": 450,
+     "w": 140,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 85,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 410,
+     "w": 650,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 86,
+     "type": "vertical",
+     "text": "",
+     "x": 430,
+     "y": 410,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 87,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 560,
+     "w": 260,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 88,
+     "type": "commentin",
+     "text": "'current' is less\nthan 'after'",
+     "x": 820,
+     "y": 510,
+     "w": 270,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 89,
+     "type": "commentin",
+     "text": "'current' is equal\nto 'after'",
+     "x": 430,
+     "y": 510,
+     "w": 100,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 90,
+     "type": "commentin",
+     "text": "'current' is greater\nthan 'after'",
+     "x": 170,
+     "y": 510,
+     "w": 140,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Write",
+   "origin": "27 -13",
+   "description": "Writes an object to the console followed by a whitespace.\nDoes not add a new line.",
+   "info": {},
+   "nodes": 15,
+   "features": [],
+   "items": [
+    {
+     "item_id": 144,
+     "type": "beginend",
+     "text": "Write",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 145,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 146,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 147,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 100,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 149,
+     "type": "action",
+     "text": "private static\n\nObject item",
+     "x": 340,
+     "y": 60,
+     "w": 70,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 180,
+     "type": "action",
+     "text": "Console.Write(item);\nConsole.Write(\" \");",
+     "x": 170,
+     "y": 220,
+     "w": 90,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 248,
+     "type": "action",
+     "text": "string foo = @\"one\ntwo\"\"three\\asdf\nfour\";",
+     "x": 440,
+     "y": 250,
+     "w": 90,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 249,
+     "type": "action",
+     "text": "string foo = \"one\ntwo\"\"three\nfour\";",
+     "x": 540,
+     "y": 410,
+     "w": 80,
+     "h": 40,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 250,
+     "type": "action",
+     "text": "char c = '\\'';\nchar u = '\"';\nchar b = '\\\\';\nchar g = 'g';",
+     "x": 830,
+     "y": 230,
+     "w": 70,
+     "h": 50,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 251,
+     "type": "action",
+     "text": "asfasdf // asdf\nasdfaff /* asdfsdf\n*\nafdasdf\n*\nasfda */ what?",
+     "x": 790,
+     "y": 490,
+     "w": 90,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 252,
+     "type": "action",
+     "text": "var u = \"fa\\t \\\"bar\\\\0\"+new String(0);",
+     "x": 380,
+     "y": 560,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 253,
+     "type": "action",
+     "text": "bool result = this.FindAnswer(life, 10.0, 0xff28);",
+     "x": 650,
+     "y": 690,
+     "w": 210,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 254,
+     "type": "action",
+     "text": "// escaping, end of line\n\"one two\\\nhello();",
+     "x": 1040,
+     "y": 360,
+     "w": 110,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 255,
+     "type": "action",
+     "text": "// escaping char, end of line\n'\\\nhello();",
+     "x": 1060,
+     "y": 500,
+     "w": 130,
+     "h": 40,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 256,
+     "type": "action",
+     "text": "// verbatim start, end of line\n@\nvar nothing = 0;",
+     "x": 1060,
+     "y": 610,
+     "w": 130,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "ForeachDemo",
+   "origin": "-272 -48",
+   "description": "Shows off several collection iteration methods available for the Python code generator.",
+   "info": {},
+   "nodes": 9,
+   "features": [],
+   "items": [
+    {
+     "item_id": 150,
+     "type": "beginend",
+     "text": "ForeachDemo",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 151,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 152,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 153,
+     "type": "action",
+     "text": "List<int> sequence = Fibonacci(15);",
+     "x": 170,
+     "y": 170,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 154,
+     "type": "action",
+     "text": "PrintListArrow(sequence);\nPrintListFor(sequence);\nPrintListForeach(sequence);",
+     "x": 170,
+     "y": 250,
+     "w": 160,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 155,
+     "type": "action",
+     "text": "Console.WriteLine(\"iteration demo\");",
+     "x": 170,
+     "y": 120,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 156,
+     "type": "action",
+     "text": "Console.WriteLine();",
+     "x": 170,
+     "y": 330,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 178,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 150,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 179,
+     "type": "action",
+     "text": "private static",
+     "x": 350,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

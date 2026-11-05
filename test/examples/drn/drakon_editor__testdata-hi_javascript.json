@@ -1,0 +1,344 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/hi_javascript.drn",
+ "info": {
+  "type": "drakon",
+  "version": "9",
+  "start_version": "1",
+  "language": "Javascript"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "ns.main = function",
+   "origin": "-64 -317",
+   "description": "",
+   "info": {},
+   "nodes": 9,
+   "features": [
+    "commentout",
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 47,
+     "type": "beginend",
+     "text": "ns.main = function",
+     "x": 170,
+     "y": 20,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 490,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 49,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 30,
+     "w": 0,
+     "h": 440,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 50,
+     "type": "action",
+     "text": "quicksortDemo();",
+     "x": 170,
+     "y": 280,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 189,
+     "type": "action",
+     "text": "foreachDemo();",
+     "x": 170,
+     "y": 220,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 260,
+     "type": "shelf",
+     "text": "0",
+     "x": 170,
+     "y": 350,
+     "w": 140,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "var result"
+    },
+    {
+     "item_id": 261,
+     "type": "action",
+     "text": "return result;",
+     "x": 170,
+     "y": 430,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 310,
+     "type": "action",
+     "text": "alt_select_test();",
+     "x": 170,
+     "y": 160,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 363,
+     "type": "commentout",
+     "text": "This is a public function.\nIt will be visible outside of the namespace.\n\nns.main = function() {\n.....\n}",
+     "x": 550,
+     "y": 20,
+     "w": 190,
+     "h": 50,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "printListArrow",
+   "origin": "-245 -211",
+   "description": "A 'while' loop constructed with an arrow.",
+   "info": {},
+   "nodes": 17,
+   "features": [
+    "arrow",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 120,
+     "type": "beginend",
+     "text": "printListArrow",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 121,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 600,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 122,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 520,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 123,
+     "type": "action",
+     "text": "collection",
+     "x": 340,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 124,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 125,
+     "type": "action",
+     "text": "var item = collection[i];\nlist.push(item);",
+     "x": 360,
+     "y": 410,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 126,
+     "type": "action",
+     "text": "var length = collection.length;\nvar i = 0;",
+     "x": 170,
+     "y": 250,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 127,
+     "type": "if",
+     "text": "i < length",
+     "x": 170,
+     "y": 340,
+     "w": 160,
+     "h": 20,
+     "a": 30,
+     "b": 0
+    },
+    {
+     "item_id": 128,
+     "type": "vertical",
+     "text": "",
+     "x": 360,
+     "y": 340,
+     "w": 0,
+     "h": 180,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 129,
+     "type": "action",
+     "text": "i++;",
+     "x": 360,
+     "y": 480,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 130,
+     "type": "arrow",
+     "text": "",
+     "x": 550,
+     "y": 300,
+     "w": 380,
+     "h": 220,
+     "a": 190,
+     "b": 0
+    },
+    {
+     "item_id": 131,
+     "type": "action",
+     "text": "printHeader(\"Using 'if' and arrow\");",
+     "x": 170,
+     "y": 120,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 335,
+     "type": "action",
+     "text": "printArray(list);",
+     "x": 170,
+     "y": 540,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 336,
+     "type": "action",
+     "text": "var list = [];",
+     "x": 170,
+     "y": 180,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 364,
+     "type": "action",
+     "text": "var u = \"one \\t \\\\ \\\" 'two' \";",
+     "x": 560,
+     "y": 110,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 365,
+     "type": "action",
+     "text": "var u = 'one \\t \\\\ \\' \"two\" ';",
+     "x": 560,
+     "y": 200,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 366,
+     "type": "action",
+     "text": "this.foo = function(moo) {\n\treturn moo; // nothing more\n}\n\nthis.bar = 10; /* this is\n* a long comment *\n**/ this.foo(3);",
+     "x": 730,
+     "y": 370,
+     "w": 150,
+     "h": 70,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

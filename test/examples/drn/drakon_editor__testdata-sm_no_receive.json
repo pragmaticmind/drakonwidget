@@ -1,0 +1,173 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/sm_no_receive.drn",
+ "info": {
+  "type": "drakon",
+  "version": "21",
+  "start_version": "1",
+  "language": "C#"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "state machine",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 12,
+   "features": [
+    "address",
+    "arrow",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "state machine",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 660,
+     "y": 510,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 520,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "vertical",
+     "text": "",
+     "x": 420,
+     "y": 120,
+     "w": 0,
+     "h": 480,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "vertical",
+     "text": "",
+     "x": 660,
+     "y": 120,
+     "w": 0,
+     "h": 380,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 120,
+     "w": 490,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "arrow",
+     "text": "",
+     "x": 20,
+     "y": 120,
+     "w": 150,
+     "h": 480,
+     "a": 400,
+     "b": 1
+    },
+    {
+     "item_id": 8,
+     "type": "branch",
+     "text": "branch 1",
+     "x": 170,
+     "y": 170,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "address",
+     "text": "branch 2",
+     "x": 170,
+     "y": 550,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "branch",
+     "text": "branch 2",
+     "x": 420,
+     "y": 170,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "branch",
+     "text": "branch 3",
+     "x": 660,
+     "y": 170,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "address",
+     "text": "branch 3",
+     "x": 420,
+     "y": 550,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

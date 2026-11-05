@@ -1,0 +1,395 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/JsUtopist/utopist.drn",
+ "info": {
+  "type": "drakon",
+  "version": "28",
+  "start_version": "1",
+  "language": "Javascript"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "Quadric.a",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 3,
+   "features": [],
+   "items": [
+    {
+     "item_id": 4,
+     "type": "beginend",
+     "text": "Quadric.a",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Quadric.c",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 3,
+   "features": [],
+   "items": [
+    {
+     "item_id": 14,
+     "type": "beginend",
+     "text": "Quadric.c",
+     "x": 190,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 15,
+     "type": "beginend",
+     "text": "End",
+     "x": 190,
+     "y": 240,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 16,
+     "type": "vertical",
+     "text": "",
+     "x": 190,
+     "y": 80,
+     "w": 0,
+     "h": 140,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "Quadric.discriminant",
+   "origin": "-332 -144",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [],
+   "items": [
+    {
+     "item_id": 19,
+     "type": "beginend",
+     "text": "Quadric.discriminant",
+     "x": 170,
+     "y": 0,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 20,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 130,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 21,
+     "type": "vertical",
+     "x": 170,
+     "y": 20,
+     "w": 0,
+     "h": 90,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 40,
+     "type": "action",
+     "text": "return @b * @b - 4 * @a * @c",
+     "x": 170,
+     "y": 60,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Quadric.roots",
+   "origin": "39 -282",
+   "description": null,
+   "info": {},
+   "nodes": 19,
+   "features": [
+    "case",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 66,
+     "type": "beginend",
+     "text": "Quadric.roots",
+     "x": 420,
+     "y": -130,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 67,
+     "type": "beginend",
+     "text": "End",
+     "x": 420,
+     "y": 310,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 68,
+     "type": "vertical",
+     "x": 420,
+     "y": -110,
+     "w": 0,
+     "h": 400,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 69,
+     "type": "horizontal",
+     "x": 420,
+     "y": -130,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 70,
+     "type": "action",
+     "text": "#output",
+     "x": 590,
+     "y": -130,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 71,
+     "type": "select",
+     "text": "select",
+     "x": 420,
+     "y": -50,
+     "w": 160,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 72,
+     "type": "horizontal",
+     "text": "",
+     "x": 420,
+     "y": -10,
+     "w": 480,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 73,
+     "type": "case",
+     "text": "@discriminant > 0",
+     "x": 420,
+     "y": 30,
+     "w": 160,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 74,
+     "type": "case",
+     "text": "@discriminant == 0",
+     "x": 700,
+     "y": 30,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 75,
+     "type": "case",
+     "text": "@discriminant < 0",
+     "x": 900,
+     "y": 30,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 76,
+     "type": "vertical",
+     "text": "",
+     "x": 700,
+     "y": -10,
+     "w": 0,
+     "h": 280,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 77,
+     "type": "vertical",
+     "text": "",
+     "x": 900,
+     "y": -10,
+     "w": 0,
+     "h": 280,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 78,
+     "type": "horizontal",
+     "text": "",
+     "x": 420,
+     "y": 270,
+     "w": 480,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 79,
+     "type": "action",
+     "text": "var x1 = (-@b + radix) / (2 * @a)\nvar x2 = (-@b - radix) / (2 * @a)",
+     "x": 420,
+     "y": 160,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 80,
+     "type": "action",
+     "text": "var radix = Math.sqrt(@discriminant)",
+     "x": 420,
+     "y": 90,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 81,
+     "type": "action",
+     "text": "return [x1, x2]",
+     "x": 420,
+     "y": 230,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 82,
+     "type": "action",
+     "text": "var x = -@b / (2 * @a)",
+     "x": 700,
+     "y": 170,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 83,
+     "type": "action",
+     "text": "return [x]",
+     "x": 700,
+     "y": 230,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 84,
+     "type": "action",
+     "text": "return []",
+     "x": 900,
+     "y": 230,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

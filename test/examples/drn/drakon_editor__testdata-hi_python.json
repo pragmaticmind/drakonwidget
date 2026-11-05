@@ -1,0 +1,563 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/hi_python.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1",
+  "language": "Python 2.x"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "strings_are_sorted",
+   "origin": "-225 0",
+   "description": "Tests whether an array of strings is actually sorted.",
+   "info": {},
+   "nodes": 25,
+   "features": [
+    "case",
+    "commentin",
+    "loopend",
+    "loopstart",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 21,
+     "type": "beginend",
+     "text": "strings_are_sorted",
+     "x": 170,
+     "y": 20,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 22,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 750,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 23,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 40,
+     "w": 0,
+     "h": 700,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 24,
+     "type": "action",
+     "text": "array",
+     "x": 350,
+     "y": 20,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 25,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 20,
+     "w": 80,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 26,
+     "type": "loopstart",
+     "text": "i = 0; i < length; i += 1",
+     "x": 170,
+     "y": 140,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 27,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 660,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 28,
+     "type": "action",
+     "text": "current = array[i]",
+     "x": 170,
+     "y": 190,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 29,
+     "type": "loopstart",
+     "text": "j = i + 1; j < length; j += 1",
+     "x": 170,
+     "y": 260,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 30,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 600,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 31,
+     "type": "action",
+     "text": "after = array[j]",
+     "x": 170,
+     "y": 320,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 32,
+     "type": "action",
+     "text": "raise Exception( \"Collection is not sorted:\\n\" + str(array))",
+     "x": 810,
+     "y": 600,
+     "w": 250,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 33,
+     "type": "vertical",
+     "text": "",
+     "x": 810,
+     "y": 410,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 700,
+     "w": 640,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "action",
+     "text": "length = len(array)",
+     "x": 170,
+     "y": 70,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 36,
+     "type": "select",
+     "text": "string_comparer(current, after)",
+     "x": 170,
+     "y": 380,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 37,
+     "type": "case",
+     "text": "-1",
+     "x": 170,
+     "y": 450,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 38,
+     "type": "case",
+     "text": "0",
+     "x": 440,
+     "y": 450,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "case",
+     "text": "1",
+     "x": 810,
+     "y": 450,
+     "w": 250,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 40,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 410,
+     "w": 640,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 41,
+     "type": "vertical",
+     "text": "",
+     "x": 440,
+     "y": 410,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 42,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 560,
+     "w": 270,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 43,
+     "type": "commentin",
+     "text": "'current' is less\nthan 'after'",
+     "x": 170,
+     "y": 510,
+     "w": 150,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 44,
+     "type": "commentin",
+     "text": "'current' is equal\nto 'after'",
+     "x": 440,
+     "y": 510,
+     "w": 100,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 45,
+     "type": "commentin",
+     "text": "'current' is greater\nthan 'after'",
+     "x": 810,
+     "y": 510,
+     "w": 250,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "foreach_demo",
+   "origin": "0 0",
+   "description": "Shows off several collection iteration methods available for the Python code generator.",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 144,
+     "type": "beginend",
+     "text": "foreach_demo",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 145,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 146,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 169,
+     "type": "action",
+     "text": "sequence = fibonacci(15)",
+     "x": 170,
+     "y": 170,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 170,
+     "type": "action",
+     "text": "print_list_arrow(sequence)\nprint_list_for(sequence)\nprint_list_foreach(sequence)",
+     "x": 170,
+     "y": 250,
+     "w": 130,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 178,
+     "type": "action",
+     "text": "print(\"iteration demo\")",
+     "x": 170,
+     "y": 120,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 179,
+     "type": "action",
+     "text": "print(\"\")",
+     "x": 170,
+     "y": 330,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "main",
+   "origin": "-20 -170",
+   "description": "This procedure is executed by the interpreter. See File description, '=== footer ===' section.",
+   "info": {},
+   "nodes": 13,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 171,
+     "type": "beginend",
+     "text": "main",
+     "x": 170,
+     "y": 20,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 172,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 470,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 173,
+     "type": "vertical",
+     "x": 170,
+     "y": 30,
+     "w": 0,
+     "h": 420,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 174,
+     "type": "action",
+     "text": "foreach_demo()",
+     "x": 170,
+     "y": 210,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 175,
+     "type": "action",
+     "text": "quick_sort_demo()",
+     "x": 170,
+     "y": 270,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 182,
+     "type": "action",
+     "text": "print(\"DRAKON-Python demo\")\nprint(\"==================\")",
+     "x": 170,
+     "y": 80,
+     "w": 120,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 192,
+     "type": "action",
+     "text": "return result",
+     "x": 170,
+     "y": 410,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 193,
+     "type": "shelf",
+     "text": "\"success\"",
+     "x": 170,
+     "y": 340,
+     "w": 120,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "result"
+    },
+    {
+     "item_id": 242,
+     "type": "action",
+     "text": "alt_select_test()",
+     "x": 170,
+     "y": 150,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 243,
+     "type": "action",
+     "text": "a = 'one \\' \"two\" \\\\ \\n \\t three' + u\nb = \"one \\\" 'two' \\\\ \\n \\t three\" + m",
+     "x": 530,
+     "y": 170,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 244,
+     "type": "action",
+     "text": "foo() # comment\nnormal()\n# full line comment\nagain()\ncool() # isn't it?",
+     "x": 530,
+     "y": 300,
+     "w": 90,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 245,
+     "type": "action",
+     "text": "# escaping \\ in string\n\"hello \\\nwe continue here",
+     "x": 840,
+     "y": 280,
+     "w": 100,
+     "h": 40,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 246,
+     "type": "action",
+     "text": "# escaping \\ in atom\n'hello \\\nwe continue here",
+     "x": 840,
+     "y": 400,
+     "w": 90,
+     "h": 40,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  }
+ ]
+}

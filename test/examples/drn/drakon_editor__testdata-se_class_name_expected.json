@@ -1,0 +1,47 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/se_class_name_expected.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "class name expected",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 1,
+   "features": [],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "action",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

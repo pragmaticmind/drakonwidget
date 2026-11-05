@@ -1,0 +1,170 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/13 (For loop without loop icons).drn",
+ "info": {
+  "type": "drakon",
+  "version": "22",
+  "start_version": "1",
+  "language": "AutoHotkey_L"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "ForLoopTestWithoutLoopIcons",
+   "origin": "-159 -30",
+   "description": null,
+   "info": {},
+   "nodes": 12,
+   "features": [
+    "arrow",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "ForLoopTestWithoutLoopIcons",
+     "x": 170,
+     "y": 80,
+     "w": 120,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 620,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 100,
+     "w": 0,
+     "h": 500,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "x": 290,
+     "y": 80,
+     "w": 80,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "a",
+     "x": 420,
+     "y": 80,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "i := 1",
+     "x": 170,
+     "y": 170,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "if",
+     "text": "i <= 3",
+     "x": 170,
+     "y": 290,
+     "w": 60,
+     "h": 20,
+     "a": 90,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "vertical",
+     "text": "",
+     "x": 320,
+     "y": 290,
+     "w": 0,
+     "h": 180,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "arrow",
+     "text": "",
+     "x": 450,
+     "y": 230,
+     "w": 280,
+     "h": 240,
+     "a": 130,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "action",
+     "text": "a := a * a",
+     "x": 320,
+     "y": 340,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "action",
+     "text": "i := i + 1",
+     "x": 320,
+     "y": 410,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "action",
+     "text": "msgbox, %a%",
+     "x": 170,
+     "y": 530,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

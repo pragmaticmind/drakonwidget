@@ -1,0 +1,73 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/se_no_labels.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "diagram",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 3,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "shelf",
+     "text": "",
+     "x": 160,
+     "y": 150,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Foo"
+    },
+    {
+     "item_id": 2,
+     "type": "shelf",
+     "text": "",
+     "x": 390,
+     "y": 150,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Bar"
+    },
+    {
+     "item_id": 8,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 150,
+     "w": 130,
+     "h": 0,
+     "a": 20100,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

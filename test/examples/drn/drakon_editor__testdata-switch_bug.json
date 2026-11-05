@@ -1,0 +1,497 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/switch_bug.drn",
+ "info": {
+  "type": "drakon",
+  "version": "14",
+  "start_version": "1",
+  "language": "Tcl"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "check_index_fields2",
+   "origin": "8 440",
+   "description": "",
+   "info": {},
+   "nodes": 22,
+   "features": [
+    "case",
+    "if",
+    "loopend",
+    "loopstart",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 38,
+     "type": "beginend",
+     "text": "check_index_fields2",
+     "x": 210,
+     "y": 500,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "beginend",
+     "text": "End",
+     "x": 210,
+     "y": 1180,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 40,
+     "type": "vertical",
+     "text": "",
+     "x": 210,
+     "y": 520,
+     "w": 0,
+     "h": 640,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 41,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 500,
+     "w": 410,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 42,
+     "type": "action",
+     "text": "index\nstate",
+     "x": 620,
+     "y": 500,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 45,
+     "type": "if",
+     "text": "$ifields == {}",
+     "x": 210,
+     "y": 690,
+     "w": 90,
+     "h": 20,
+     "a": 520,
+     "b": 0
+    },
+    {
+     "item_id": 46,
+     "type": "vertical",
+     "text": "",
+     "x": 820,
+     "y": 690,
+     "w": 0,
+     "h": 390,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 47,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 1080,
+     "w": 610,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "action",
+     "text": "A",
+     "x": 820,
+     "y": 730,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 52,
+     "type": "action",
+     "text": "U",
+     "x": 210,
+     "y": 760,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 53,
+     "type": "loopstart",
+     "text": "foreach ifield; $ifields",
+     "x": 210,
+     "y": 620,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 54,
+     "type": "loopend",
+     "text": "",
+     "x": 210,
+     "y": 1000,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 59,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 850,
+     "w": 400,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 61,
+     "type": "case",
+     "text": "",
+     "x": 610,
+     "y": 880,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 63,
+     "type": "vertical",
+     "text": "",
+     "x": 610,
+     "y": 850,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 65,
+     "type": "action",
+     "text": "B",
+     "x": 610,
+     "y": 950,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 66,
+     "type": "case",
+     "text": "\"value\"",
+     "x": 210,
+     "y": 880,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 70,
+     "type": "select",
+     "text": "$type",
+     "x": 210,
+     "y": 820,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 71,
+     "type": "horizontal",
+     "text": "",
+     "x": 610,
+     "y": 1000,
+     "w": 210,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 73,
+     "type": "action",
+     "text": "foo",
+     "x": 210,
+     "y": 1110,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 74,
+     "type": "action",
+     "text": "C",
+     "x": 820,
+     "y": 1040,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 97,
+     "type": "action",
+     "text": "Y",
+     "x": 210,
+     "y": 940,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "check_index_fields3",
+   "origin": "-47 466",
+   "description": "",
+   "info": {},
+   "nodes": 18,
+   "features": [
+    "if",
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 75,
+     "type": "beginend",
+     "text": "check_index_fields3",
+     "x": 210,
+     "y": 500,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 76,
+     "type": "beginend",
+     "text": "End",
+     "x": 210,
+     "y": 1180,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 77,
+     "type": "vertical",
+     "text": "",
+     "x": 210,
+     "y": 520,
+     "w": 0,
+     "h": 640,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 78,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 500,
+     "w": 410,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 79,
+     "type": "action",
+     "text": "index\nstate",
+     "x": 620,
+     "y": 500,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 80,
+     "type": "if",
+     "text": "$ifields == {}",
+     "x": 210,
+     "y": 690,
+     "w": 90,
+     "h": 20,
+     "a": 520,
+     "b": 0
+    },
+    {
+     "item_id": 81,
+     "type": "vertical",
+     "text": "",
+     "x": 820,
+     "y": 690,
+     "w": 0,
+     "h": 390,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 82,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 1080,
+     "w": 610,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 83,
+     "type": "action",
+     "text": "A",
+     "x": 820,
+     "y": 730,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 84,
+     "type": "action",
+     "text": "U",
+     "x": 210,
+     "y": 760,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 85,
+     "type": "loopstart",
+     "text": "foreach ifield; $ifields",
+     "x": 210,
+     "y": 620,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 86,
+     "type": "loopend",
+     "text": "",
+     "x": 210,
+     "y": 1000,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 89,
+     "type": "vertical",
+     "text": "",
+     "x": 610,
+     "y": 850,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 90,
+     "type": "action",
+     "text": "B",
+     "x": 610,
+     "y": 950,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 93,
+     "type": "horizontal",
+     "text": "",
+     "x": 610,
+     "y": 1000,
+     "w": 210,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 94,
+     "type": "action",
+     "text": "foo",
+     "x": 210,
+     "y": 1110,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 95,
+     "type": "action",
+     "text": "C",
+     "x": 820,
+     "y": 1040,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 96,
+     "type": "if",
+     "text": "X",
+     "x": 210,
+     "y": 850,
+     "w": 70,
+     "h": 20,
+     "a": 330,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

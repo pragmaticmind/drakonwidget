@@ -1,0 +1,126 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/hi_tcl.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1",
+  "language": "Tcl"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "write",
+   "origin": "0 0",
+   "description": "Writes an object to the console followed by a whitespace.\nDoes not add a new line.",
+   "info": {},
+   "nodes": 8,
+   "features": [],
+   "items": [
+    {
+     "item_id": 138,
+     "type": "beginend",
+     "text": "write",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 139,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 140,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 141,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 60,
+     "w": 100,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 142,
+     "type": "action",
+     "text": "puts -nonewline \"$item \"",
+     "x": 170,
+     "y": 230,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 143,
+     "type": "action",
+     "text": "item",
+     "x": 330,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 339,
+     "type": "action",
+     "text": "puts \"foo${bar} moo [hello] $world(yes)\"\nputs \"foo\\$\\{bar\\} \\[hello\\] word\\(no\\)\"\nputs \"wow \\\\ next \\\" one more ' end\"\nset m [ hello 10 \"bar\" ]",
+     "x": 510,
+     "y": 210,
+     "w": 170,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 340,
+     "type": "action",
+     "text": "# escaping \\ in string\n\"hello \\\nwe continue here",
+     "x": 610,
+     "y": 440,
+     "w": 100,
+     "h": 40,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  }
+ ]
+}

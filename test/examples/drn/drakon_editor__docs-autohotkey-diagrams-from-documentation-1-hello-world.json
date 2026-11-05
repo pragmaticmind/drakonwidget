@@ -1,0 +1,80 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/1 (Hello, world).drn",
+ "info": {
+  "type": "drakon",
+  "version": "22",
+  "start_version": "1",
+  "language": "AutoHotkey_L"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "Hello",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "Hello",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "action",
+     "text": "msgbox, Hello, World!",
+     "x": 170,
+     "y": 210,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

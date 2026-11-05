@@ -1,0 +1,156 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/sm_no_branches.drn",
+ "info": {
+  "type": "drakon",
+  "version": "21",
+  "start_version": "1",
+  "language": "C#"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "state machine",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "state machine",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 580,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 520,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 116,
+     "type": "action",
+     "text": "receive",
+     "x": 170,
+     "y": 210,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Main",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 108,
+     "type": "beginend",
+     "text": "Main",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 109,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 110,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 112,
+     "type": "action",
+     "text": "Console.WriteLine(\"Hi!\");",
+     "x": 170,
+     "y": 210,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 113,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 114,
+     "type": "action",
+     "text": "public static",
+     "x": 310,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

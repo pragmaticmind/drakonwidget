@@ -1,0 +1,721 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/04.Joinings.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "1. Check wallet - too many angles",
+   "origin": "0 0",
+   "description": "There are too many angles and redundant lines at the bottom of this diagram.",
+   "info": {},
+   "nodes": 19,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "1. Check wallet - too many angles",
+     "x": 170,
+     "y": 100,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 460,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 110,
+     "w": 0,
+     "h": 340,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "if",
+     "text": "Have you lost any money?",
+     "x": 170,
+     "y": 160,
+     "w": 150,
+     "h": 20,
+     "a": 140,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "if",
+     "text": "Have any money\nin the first place?",
+     "x": 170,
+     "y": 240,
+     "w": 150,
+     "h": 30,
+     "a": 30,
+     "b": 1
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "Fine!",
+     "x": 170,
+     "y": 340,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 240,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 400,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "if",
+     "text": "Lost more\nthan $50?",
+     "x": 460,
+     "y": 210,
+     "w": 80,
+     "h": 30,
+     "a": 100,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "action",
+     "text": "Bad",
+     "x": 460,
+     "y": 340,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "vertical",
+     "text": "",
+     "x": 460,
+     "y": 160,
+     "w": 0,
+     "h": 260,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 420,
+     "w": 290,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "if",
+     "text": "Lost more\nthan $500?",
+     "x": 640,
+     "y": 260,
+     "w": 80,
+     "h": 30,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "action",
+     "text": "Very bad",
+     "x": 640,
+     "y": 340,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "action",
+     "text": "Damn it!",
+     "x": 790,
+     "y": 340,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "vertical",
+     "text": "",
+     "x": 640,
+     "y": 210,
+     "w": 0,
+     "h": 190,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "horizontal",
+     "text": "",
+     "x": 460,
+     "y": 400,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 18,
+     "type": "vertical",
+     "text": "",
+     "x": 790,
+     "y": 260,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 19,
+     "type": "horizontal",
+     "text": "",
+     "x": 640,
+     "y": 380,
+     "w": 150,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "2. Check wallet - good",
+   "origin": "0 0",
+   "description": "Horizontal joining eliminates redundant angles.",
+   "info": {},
+   "nodes": 16,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 20,
+     "type": "beginend",
+     "text": "2. Check wallet - good",
+     "x": 170,
+     "y": 100,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 21,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 420,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 22,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 110,
+     "w": 0,
+     "h": 300,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 23,
+     "type": "if",
+     "text": "Have you lost any money?",
+     "x": 170,
+     "y": 160,
+     "w": 130,
+     "h": 20,
+     "a": 140,
+     "b": 0
+    },
+    {
+     "item_id": 24,
+     "type": "if",
+     "text": "Have any money\nin the first place?",
+     "x": 170,
+     "y": 240,
+     "w": 130,
+     "h": 30,
+     "a": 30,
+     "b": 1
+    },
+    {
+     "item_id": 25,
+     "type": "action",
+     "text": "Fine!",
+     "x": 170,
+     "y": 340,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 26,
+     "type": "vertical",
+     "text": "",
+     "x": 330,
+     "y": 240,
+     "w": 0,
+     "h": 140,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 28,
+     "type": "if",
+     "text": "Lost more\nthan $50?",
+     "x": 440,
+     "y": 210,
+     "w": 80,
+     "h": 30,
+     "a": 120,
+     "b": 0
+    },
+    {
+     "item_id": 29,
+     "type": "action",
+     "text": "Bad",
+     "x": 440,
+     "y": 340,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 30,
+     "type": "vertical",
+     "text": "",
+     "x": 440,
+     "y": 160,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 31,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 380,
+     "w": 640,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 32,
+     "type": "if",
+     "text": "Lost more\nthan $500?",
+     "x": 640,
+     "y": 260,
+     "w": 80,
+     "h": 30,
+     "a": 90,
+     "b": 0
+    },
+    {
+     "item_id": 33,
+     "type": "action",
+     "text": "Very bad",
+     "x": 640,
+     "y": 340,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "action",
+     "text": "Damn it!",
+     "x": 810,
+     "y": 340,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "vertical",
+     "text": "",
+     "x": 640,
+     "y": 210,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 37,
+     "type": "vertical",
+     "text": "",
+     "x": 810,
+     "y": 260,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "3. Spend weekend - copy-paste!",
+   "origin": "0 0",
+   "description": "Copy-paste alert! The \"Stay home...\" icon repeats several times.",
+   "info": {},
+   "nodes": 14,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 38,
+     "type": "beginend",
+     "text": "3. Spend weekend - copy-paste!",
+     "x": 170,
+     "y": 90,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 440,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 40,
+     "type": "vertical",
+     "x": 170,
+     "y": 110,
+     "w": 0,
+     "h": 320,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 41,
+     "type": "if",
+     "text": "Is it raining?",
+     "x": 170,
+     "y": 150,
+     "w": 130,
+     "h": 20,
+     "a": 360,
+     "b": 0
+    },
+    {
+     "item_id": 42,
+     "type": "if",
+     "text": "Is it cold?",
+     "x": 170,
+     "y": 220,
+     "w": 130,
+     "h": 20,
+     "a": 220,
+     "b": 0
+    },
+    {
+     "item_id": 43,
+     "type": "if",
+     "text": "Is sun shining?",
+     "x": 170,
+     "y": 290,
+     "w": 130,
+     "h": 20,
+     "a": 80,
+     "b": 1
+    },
+    {
+     "item_id": 44,
+     "type": "action",
+     "text": "Go to the park!",
+     "x": 170,
+     "y": 360,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 45,
+     "type": "action",
+     "text": "Stay home...",
+     "x": 380,
+     "y": 360,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 46,
+     "type": "action",
+     "text": "Stay home...",
+     "x": 520,
+     "y": 360,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 47,
+     "type": "action",
+     "text": "Stay home...",
+     "x": 660,
+     "y": 360,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "vertical",
+     "text": "",
+     "x": 380,
+     "y": 290,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 49,
+     "type": "vertical",
+     "text": "",
+     "x": 520,
+     "y": 220,
+     "w": 0,
+     "h": 180,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 50,
+     "type": "vertical",
+     "text": "",
+     "x": 660,
+     "y": 150,
+     "w": 0,
+     "h": 250,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 51,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 400,
+     "w": 490,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "4. Spend weekend - good",
+   "origin": "0 0",
+   "description": "A vertical joining can help get rid of repetition.",
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 52,
+     "type": "beginend",
+     "text": "4. Spend weekend - good",
+     "x": 170,
+     "y": 90,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 53,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 440,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 54,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 110,
+     "w": 0,
+     "h": 320,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 55,
+     "type": "if",
+     "text": "Is it raining?",
+     "x": 170,
+     "y": 150,
+     "w": 110,
+     "h": 20,
+     "a": 90,
+     "b": 0
+    },
+    {
+     "item_id": 56,
+     "type": "if",
+     "text": "Is it cold?",
+     "x": 170,
+     "y": 220,
+     "w": 110,
+     "h": 20,
+     "a": 90,
+     "b": 0
+    },
+    {
+     "item_id": 57,
+     "type": "if",
+     "text": "Is sun shining?",
+     "x": 170,
+     "y": 290,
+     "w": 110,
+     "h": 20,
+     "a": 90,
+     "b": 1
+    },
+    {
+     "item_id": 58,
+     "type": "action",
+     "text": "Go to the park!",
+     "x": 170,
+     "y": 360,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 59,
+     "type": "action",
+     "text": "Stay home...",
+     "x": 370,
+     "y": 360,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 62,
+     "type": "vertical",
+     "text": "",
+     "x": 370,
+     "y": 150,
+     "w": 0,
+     "h": 250,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 65,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 400,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

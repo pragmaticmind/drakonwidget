@@ -1,0 +1,228 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/unittest/bad_break.drn",
+ "info": {
+  "type": "drakon",
+  "version": "16",
+  "start_version": "1",
+  "language": "Lua"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "TE_get_or_create_texture",
+   "origin": "-185 -81",
+   "description": "",
+   "info": {},
+   "nodes": 17,
+   "features": [
+    "if",
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "TE_get_or_create_texture",
+     "x": 130,
+     "y": 90,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 130,
+     "y": 680,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "text": "",
+     "x": 130,
+     "y": 110,
+     "w": 0,
+     "h": 550,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "text": "",
+     "x": 130,
+     "y": 90,
+     "w": 240,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "cache\nwidth\nheight",
+     "x": 370,
+     "y": 90,
+     "w": 50,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "loopstart",
+     "text": "foreach i, texture; ipairs(cache)",
+     "x": 130,
+     "y": 160,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "loopend",
+     "text": "",
+     "x": 130,
+     "y": 380,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "if",
+     "text": "texture.width == width",
+     "x": 130,
+     "y": 230,
+     "w": 120,
+     "h": 20,
+     "a": 40,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "vertical",
+     "text": "",
+     "x": 290,
+     "y": 230,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "horizontal",
+     "text": "",
+     "x": 130,
+     "y": 340,
+     "w": 160,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "if",
+     "text": "texture.height == height",
+     "x": 290,
+     "y": 290,
+     "w": 130,
+     "h": 20,
+     "a": 30,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "horizontal",
+     "text": "",
+     "x": 130,
+     "y": 640,
+     "w": 320,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "vertical",
+     "text": "",
+     "x": 450,
+     "y": 290,
+     "w": 0,
+     "h": 350,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "action",
+     "text": "table.remove(cache, i)",
+     "x": 450,
+     "y": 380,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "action",
+     "text": "local id = engine.create_texture(\n\twidth,\n\theight\n)",
+     "x": 130,
+     "y": 460,
+     "w": 150,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "action",
+     "text": "return {\n\tid = id,\n\twidth = width,\n\theight = height\n}",
+     "x": 130,
+     "y": 570,
+     "w": 150,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "action",
+     "text": "return texture",
+     "x": 450,
+     "y": 600,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

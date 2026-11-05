@@ -1,0 +1,659 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/03.The skewer.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "1. Prepare car - BAD",
+   "origin": "33 -70",
+   "description": "The problem with this diagram is that the happy path does not lie on the leftmost vertical (which is called \"the skewer\").\n\nReplacing a wheel is an undesirable exception and should placed outside of the skewer.",
+   "info": {},
+   "nodes": 9,
+   "features": [
+    "commentout",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "1. Prepare car - BAD",
+     "x": 170,
+     "y": 90,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 360,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 110,
+     "w": 0,
+     "h": 240,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "if",
+     "text": "Are any tyres flat?",
+     "x": 170,
+     "y": 150,
+     "w": 100,
+     "h": 20,
+     "a": 40,
+     "b": 1
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "Replace wheel",
+     "x": 170,
+     "y": 220,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "Start engine",
+     "x": 170,
+     "y": 300,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "vertical",
+     "text": "",
+     "x": 310,
+     "y": 150,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 260,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "commentout",
+     "text": "To swap YES and NO,\nright click on the IF icon\nand select \"Swap YES and NO\".",
+     "x": 530,
+     "y": 150,
+     "w": 130,
+     "h": 40,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "2. Prepare car - GOOD",
+   "origin": "-13 -17",
+   "description": "This diagram is correct: dealing with problems is removed from the main vertical.\nThe happy path goes straight down the skewer.",
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 10,
+     "type": "beginend",
+     "text": "2. Prepare car - GOOD",
+     "x": 170,
+     "y": 90,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 350,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "vertical",
+     "x": 170,
+     "y": 110,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "if",
+     "text": "Are any tyres flat?",
+     "x": 170,
+     "y": 150,
+     "w": 100,
+     "h": 20,
+     "a": 40,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "action",
+     "text": "Replace wheel",
+     "x": 310,
+     "y": 210,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "action",
+     "text": "Start engine",
+     "x": 170,
+     "y": 290,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 250,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "vertical",
+     "text": "",
+     "x": 310,
+     "y": 150,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "3. Akward move",
+   "origin": "-82 29",
+   "description": "The further to the right - the worse it is.",
+   "info": {},
+   "nodes": 16,
+   "features": [
+    "commentin",
+    "commentout",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 18,
+     "type": "beginend",
+     "text": "3. Akward move",
+     "x": 150,
+     "y": 90,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 19,
+     "type": "beginend",
+     "text": "End",
+     "x": 150,
+     "y": 610,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 20,
+     "type": "vertical",
+     "x": 150,
+     "y": 110,
+     "w": 0,
+     "h": 480,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 21,
+     "type": "commentin",
+     "text": "You have just made\nan akward move.",
+     "x": 150,
+     "y": 160,
+     "w": 110,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 22,
+     "type": "if",
+     "text": "Did you drop the cup?",
+     "x": 150,
+     "y": 230,
+     "w": 110,
+     "h": 20,
+     "a": 120,
+     "b": 0
+    },
+    {
+     "item_id": 23,
+     "type": "commentin",
+     "text": "Good catch!",
+     "x": 150,
+     "y": 300,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 24,
+     "type": "commentin",
+     "text": "OOPS!",
+     "x": 380,
+     "y": 300,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 25,
+     "type": "if",
+     "text": "Did the cup break?",
+     "x": 380,
+     "y": 380,
+     "w": 100,
+     "h": 20,
+     "a": 40,
+     "b": 0
+    },
+    {
+     "item_id": 26,
+     "type": "vertical",
+     "text": "",
+     "x": 380,
+     "y": 230,
+     "w": 0,
+     "h": 340,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 27,
+     "type": "action",
+     "text": "collect\nthe fragments",
+     "x": 520,
+     "y": 440,
+     "w": 70,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 28,
+     "type": "action",
+     "text": "clean the floor",
+     "x": 380,
+     "y": 530,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 29,
+     "type": "vertical",
+     "text": "",
+     "x": 520,
+     "y": 380,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 30,
+     "type": "horizontal",
+     "text": "",
+     "x": 380,
+     "y": 490,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 31,
+     "type": "horizontal",
+     "text": "",
+     "x": 150,
+     "y": 570,
+     "w": 230,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 32,
+     "type": "commentout",
+     "text": "This is the most successful\nscenario.\nThat is why it is placed\non the skewer.",
+     "x": -30,
+     "y": 450,
+     "w": 120,
+     "h": 50,
+     "a": 40,
+     "b": 1
+    },
+    {
+     "item_id": 33,
+     "type": "commentout",
+     "text": "This is the worst case\nscenario. It goes through\nthe rightmost route.",
+     "x": 740,
+     "y": 390,
+     "w": 110,
+     "h": 40,
+     "a": 80,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "4. Hangover - Switch",
+   "origin": "6 9",
+   "description": "The main route should go on the skewer.\n\nThe further to the right - the worse.",
+   "info": {},
+   "nodes": 20,
+   "features": [
+    "case",
+    "commentin",
+    "commentout",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 34,
+     "type": "beginend",
+     "text": "4. Hangover - Switch",
+     "x": 140,
+     "y": 90,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "beginend",
+     "text": "End",
+     "x": 140,
+     "y": 520,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 36,
+     "type": "vertical",
+     "x": 140,
+     "y": 110,
+     "w": 0,
+     "h": 400,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 37,
+     "type": "select",
+     "text": "How much vodka\nhave you drunk?",
+     "x": 140,
+     "y": 160,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 38,
+     "type": "case",
+     "text": "0 liters",
+     "x": 140,
+     "y": 250,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "case",
+     "text": "< 0.5 liters",
+     "x": 330,
+     "y": 250,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 40,
+     "type": "case",
+     "text": "< 1.0 liters",
+     "x": 470,
+     "y": 250,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 41,
+     "type": "case",
+     "text": "",
+     "x": 630,
+     "y": 250,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 42,
+     "type": "action",
+     "text": "drive home\nsafely",
+     "x": 140,
+     "y": 320,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 43,
+     "type": "action",
+     "text": "call for\ntaxi",
+     "x": 330,
+     "y": 320,
+     "w": 60,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 44,
+     "type": "action",
+     "text": "fall on\nthe floor",
+     "x": 470,
+     "y": 320,
+     "w": 60,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 45,
+     "type": "action",
+     "text": "call\nambulance",
+     "x": 630,
+     "y": 320,
+     "w": 80,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 46,
+     "type": "commentin",
+     "text": "The optimal scenario.\nYou will enjoy\nyour next morning.",
+     "x": 140,
+     "y": 410,
+     "w": 110,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 47,
+     "type": "commentin",
+     "text": "The worst case\nscenario.",
+     "x": 630,
+     "y": 410,
+     "w": 80,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "horizontal",
+     "text": "",
+     "x": 140,
+     "y": 210,
+     "w": 490,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 49,
+     "type": "vertical",
+     "text": "",
+     "x": 630,
+     "y": 210,
+     "w": 0,
+     "h": 260,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 50,
+     "type": "vertical",
+     "text": "",
+     "x": 470,
+     "y": 210,
+     "w": 0,
+     "h": 260,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 51,
+     "type": "vertical",
+     "text": "",
+     "x": 330,
+     "y": 210,
+     "w": 0,
+     "h": 260,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 52,
+     "type": "horizontal",
+     "text": "",
+     "x": 140,
+     "y": 470,
+     "w": 490,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 53,
+     "type": "commentout",
+     "text": "The empty case\nicon means \nthe default.",
+     "x": 810,
+     "y": 230,
+     "w": 70,
+     "h": 40,
+     "a": 20,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

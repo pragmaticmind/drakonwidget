@@ -1,22 +1,45 @@
 # DRAKON example corpus
 
-147 structurally distinct DRAKON diagrams, used to check whether real-world diagrams can be represented in the text syntax (see `prototypes/text-syntax`).
+Real-world DRAKON diagrams, used to check whether they can be represented in the text syntax (see `prototypes/text-syntax`). Structurally identical diagrams (same structure, ignoring text) are stored once. `manifest.json` lists every file with origin, format and feature tags.
 
-Each file is one diagram in the upstream DrakonWidget/DrakonTech JSON format (`items`, `one`/`two` links, `keywords`, `params`). `manifest.json` lists every file with its origin, node count and feature tags.
+The widget-format sources (drakonhub_desktop, drakonwidget, drakon.tech.desktop) are released under The Unlicense. The DRAKON Editor sources come from pragmaticmind/drakon_editor, a fork of stepan-mitkin/drakon_editor. That repo has no LICENSE file and GitHub detects no license, so confirm its terms before redistributing the `drn/` files outside this repo.
+
+## Formats
+
+- `drakon-json`: one diagram per file, the DrakonWidget/DrakonTech JSON format (`items`, `one`/`two` links, `keywords`, `params`). This is what `prototypes/text-syntax/dump.py` reads.
+- `drakon-json-lines`: the same diagrams, one per line, wrapped as `{origin, nodes, features, diagram}`.
+- `drn-items`: DRAKON Editor `.drn` files. A `.drn` is an SQLite database whose diagrams are stored as drawn geometry (icons and lines with x/y/w/h, arrows), not as a node graph. These files export each diagram's `items` table rows unchanged (null columns omitted), plus the diagram name, description and info. Older `.drn` versions lack some columns, so `columns` lists the ones present.
 
 ## Sources
 
-- `drakonhub/` (16): `drakon_examples` in stepan-mitkin/drakonhub_desktop. Real-life flowcharts with headers, comments, callouts, durations and styles.
-- `drakonwidget/` (7): `js/examples.js` in stepan-mitkin/drakonwidget. Includes the only parallel (`parbegin`/`parend`), `insertion` and `group-duration` samples.
-- `drakontech/` (124): `examples` in stepan-mitkin/drakon.tech.desktop. Loops, select/case, silhouettes, state machines and classes. The upstream repo repeats each diagram per target language, so duplicates were removed by comparing structure while ignoring text.
+Widget-format (`drakon-json`, `drakon-json-lines`):
+- `drakonhub/` (16): `drakon_examples` in drakonhub_desktop. Real-life flowcharts with headers, comments, callouts, durations and styles.
+- `drakonwidget/` (7): `js/examples.js` in drakonwidget. The only parallel (`parbegin`/`parend`), `insertion` and `group-duration` samples in this format.
+- `drakontech/` (124): `examples` in drakon.tech.desktop. Loops, select/case, silhouettes, state machines and classes. Upstream repeats each diagram per target language, so duplicates were removed.
+- `drakonwidget-dtsrc.jsonl` (807): the widget's own source in `dtsrc/`, written in Drakon-JavaScript. Larger diagrams (up to 97 nodes) than the examples above, but no new icon types.
 
-All three upstream repos are released under The Unlicense.
+DRAKON Editor (`drn-items`, in `drn/`):
+- 3321 distinct diagrams from 189 of the 195 `.drn` files (5 of the others only contain duplicates of diagrams already stored, 1 has no diagrams): `examples`, `testdata`, `unittest`, `generators`, `docs` and the editor's own source in drakon_editor, plus the `src/static/*.drn` sources of drakon.tech.desktop. `testdata` is mostly small diagrams (median 7 items, largest 102).
 
-## Feature coverage (unique diagrams)
+## Feature coverage
 
-question 83, silhouette 32, loopbegin/loopend 30, flipped Yes/No 34, arrow-loop 22, select 22, case 22, header 16, action side-link 11, style 9, sinput 6, comment 4, callout 4, duration 2, insertion 2, async 2, parbegin/parend 1, group-duration 1.
+Widget-format (unique diagrams, excluding dtsrc): question 83, silhouette 32, loopbegin/loopend 30, flipped Yes/No 34, arrow-loop 22, select 22, case 22, header 16, action side-link 11, style 9, sinput 6, comment 4, callout 4, duration 2, insertion 2, async 2, parbegin/parend 1, group-duration 1.
+
+dtsrc: question 511, flipped Yes/No 325, silhouette 148, loopbegin/loopend 176, case/select 70 each, arrow-loop 18, async 11, sinput 9.
+
+`.drn` (icon names are the editor's): if 1348, loopstart/loopend 643/642, silhouette 395, arrow 483, address 397, case/select 298 each, shelf 230, commentout 56, commentin 41, insertion 10, output 2, input 1, pause 1.
+
+## Differences between the two icon vocabularies
+
+- `.drn` has `shelf`, `commentin`/`commentout`, `pause`, `input`, `output` and explicit `address` icons. The widget format has no `shelf`, and models addresses as links to `branch` items.
+- `.drn` stores Yes/No placement and line routing as geometry. The widget format stores it as `flag1` and `one`/`two` links.
+- Converting `.drn` to the widget graph means reconstructing connectivity from the geometry. That is not done here, so `.drn` examples cannot be fed to `dump.py` yet.
 
 ## Notes for validation
 
 - Merged flows (several icons pointing at one icon) and arrow-loop back-edges are the likely hard cases for a tree-like text syntax.
-- Layout coordinates (callouts) and per-icon `style` are probably not round-trippable and may need to be dropped or kept as optional attributes.
+- Layout coordinates (callouts, `.drn` geometry) and per-icon `style` are probably not round-trippable and may need to be dropped or kept as optional attributes.
+
+## Regenerating
+
+`tools/collect_extra.py DRAKONWIDGET_DIR DRAKON_EDITOR_DIR [DRAKON_TECH_DESKTOP_DIR]` rebuilds `drakonwidget-dtsrc.jsonl`, `drn/` and the matching `manifest.json` entries. The per-diagram files in `drakonhub/`, `drakonwidget/` and `drakontech/` were produced by an earlier one-off extraction and are not regenerated by this script.

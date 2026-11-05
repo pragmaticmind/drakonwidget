@@ -1,1489 +1,4244 @@
 [
-  {
-    "file": "drakonhub/a-star-algorithm.json",
-    "source": "drakonhub",
-    "origin": "A-star  algorithm.drakon",
-    "nodes": 26,
-    "features": [
-      "comment",
-      "flipped-yes-no",
-      "header",
-      "loopbegin",
-      "loopend",
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakonhub/adaptive-design.json",
-    "source": "drakonhub",
-    "origin": "Adaptive design.drakon",
-    "nodes": 22,
-    "features": [
-      "case",
-      "header",
-      "select"
-    ]
-  },
-  {
-    "file": "drakonhub/buy-a-puppy.json",
-    "source": "drakonhub",
-    "origin": "Buy a puppy.drakon",
-    "nodes": 8,
-    "features": [
-      "header",
-      "question",
-      "style"
-    ]
-  },
-  {
-    "file": "drakonhub/drunk-driving-in-greece.json",
-    "source": "drakonhub",
-    "origin": "Drunk driving in Greece.drakon",
-    "nodes": 13,
-    "features": [
-      "callout",
-      "case",
-      "header",
-      "select",
-      "style"
-    ]
-  },
-  {
-    "file": "drakonhub/go-out.json",
-    "source": "drakonhub",
-    "origin": "Go out.drakon",
-    "nodes": 7,
-    "features": [
-      "flipped-yes-no",
-      "header",
-      "question",
-      "style"
-    ]
-  },
-  {
-    "file": "drakonhub/good-day.json",
-    "source": "drakonhub",
-    "origin": "Good day.drakon",
-    "nodes": 6,
-    "features": [
-      "header"
-    ]
-  },
-  {
-    "file": "drakonhub/how-to-build-a-healthy-relationship.json",
-    "source": "drakonhub",
-    "origin": "How to build a healthy relationship.drakon",
-    "nodes": 13,
-    "features": [
-      "arrow-loop",
-      "callout",
-      "comment",
-      "header",
-      "question",
-      "style"
-    ]
-  },
-  {
-    "file": "drakonhub/how-to-get-a-tattoo.json",
-    "source": "drakonhub",
-    "origin": "How to get a tattoo.drakon",
-    "nodes": 15,
-    "features": [
-      "case",
-      "comment",
-      "header",
-      "question",
-      "select",
-      "style"
-    ]
-  },
-  {
-    "file": "drakonhub/how-to-learn-to-understand-foregn-speech.json",
-    "source": "drakonhub",
-    "origin": "How to learn to understand foregn speech.drakon",
-    "nodes": 27,
-    "features": [
-      "arrow-loop",
-      "callout",
-      "comment",
-      "header",
-      "loopbegin",
-      "loopend",
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakonhub/lunch-break.json",
-    "source": "drakonhub",
-    "origin": "Lunch break.drakon",
-    "nodes": 11,
-    "features": [
-      "header",
-      "question",
-      "silhouette",
-      "style"
-    ]
-  },
-  {
-    "file": "drakonhub/machine-wash.json",
-    "source": "drakonhub",
-    "origin": "Machine wash.drakon",
-    "nodes": 9,
-    "features": [
-      "duration",
-      "header"
-    ]
-  },
-  {
-    "file": "drakonhub/should-i-make-art.json",
-    "source": "drakonhub",
-    "origin": "Should I make art.drakon",
-    "nodes": 14,
-    "features": [
-      "callout",
-      "header",
-      "question",
-      "style"
-    ]
-  },
-  {
-    "file": "drakonhub/take-a-train.json",
-    "source": "drakonhub",
-    "origin": "Take a train.drakon",
-    "nodes": 12,
-    "features": [
-      "flipped-yes-no",
-      "header",
-      "question",
-      "style"
-    ]
-  },
-  {
-    "file": "drakonhub/work-out-action-question.json",
-    "source": "drakonhub",
-    "origin": "Work out - action-question.drakon",
-    "nodes": 8,
-    "features": [
-      "arrow-loop",
-      "header",
-      "question"
-    ]
-  },
-  {
-    "file": "drakonhub/work-out-cycle.json",
-    "source": "drakonhub",
-    "origin": "Work out - cycle.drakon",
-    "nodes": 8,
-    "features": [
-      "flipped-yes-no",
-      "header",
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakonhub/work-out-question-action.json",
-    "source": "drakonhub",
-    "origin": "Work out - question-action.drakon",
-    "nodes": 8,
-    "features": [
-      "arrow-loop",
-      "header",
-      "question"
-    ]
-  },
-  {
-    "file": "drakonwidget/adaptive-design.json",
-    "source": "drakonwidget",
-    "origin": "Adaptive design",
-    "nodes": 21,
-    "features": [
-      "case",
-      "select"
-    ]
-  },
-  {
-    "file": "drakonwidget/go-out.json",
-    "source": "drakonwidget",
-    "origin": "Go out",
-    "nodes": 6,
-    "features": [
-      "flipped-yes-no",
-      "insertion",
-      "question"
-    ]
-  },
-  {
-    "file": "drakonwidget/leave-the-house.json",
-    "source": "drakonwidget",
-    "origin": "Leave the house",
-    "nodes": 6,
-    "features": []
-  },
-  {
-    "file": "drakonwidget/how-to-learn-to-understand-foregn-speech.json",
-    "source": "drakonwidget",
-    "origin": "How to learn to understand foregn speech",
-    "nodes": 24,
-    "features": [
-      "arrow-loop",
-      "loopbegin",
-      "loopend",
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakonwidget/scientific-method.json",
-    "source": "drakonwidget",
-    "origin": "Scientific method",
-    "nodes": 13,
-    "features": [
-      "flipped-yes-no",
-      "question",
-      "style"
-    ]
-  },
-  {
-    "file": "drakonwidget/снятие-шлема-с-мотоциклиста.json",
-    "source": "drakonwidget",
-    "origin": "Снятие шлема с мотоциклиста",
-    "nodes": 29,
-    "features": [
-      "parbegin",
-      "parend",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakonwidget/реанимация-беременной-женщины.json",
-    "source": "drakonwidget",
-    "origin": "Реанимация беременной женщины",
-    "nodes": 33,
-    "features": [
-      "arrow-loop",
-      "duration",
-      "flipped-yes-no",
-      "group-duration",
-      "insertion",
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-arrowloop-dowhile.json",
-    "source": "drakontech",
-    "origin": "c/green/ArrowLoop/doWhile.drakon",
-    "nodes": 7,
-    "features": [
-      "arrow-loop",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-arrowloop-dowhiledo.json",
-    "source": "drakontech",
-    "origin": "c/green/ArrowLoop/doWhileDo.drakon",
-    "nodes": 8,
-    "features": [
-      "arrow-loop",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-arrowloop-selectarrow.json",
-    "source": "drakontech",
-    "origin": "c/green/ArrowLoop/selectArrow.drakon",
-    "nodes": 11,
-    "features": [
-      "arrow-loop",
-      "case",
-      "select"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-arrowloop-twoexits.json",
-    "source": "drakontech",
-    "origin": "c/green/ArrowLoop/twoExits.drakon",
-    "nodes": 12,
-    "features": [
-      "arrow-loop",
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-arrowloop-whiledo.json",
-    "source": "drakontech",
-    "origin": "c/green/ArrowLoop/whileDo.drakon",
-    "nodes": 7,
-    "features": [
-      "arrow-loop",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-badenbaden-nodublicates.json",
-    "source": "drakontech",
-    "origin": "c/green/BadenBaden/noDublicates.drakon",
-    "nodes": 12,
-    "features": [
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-forloop-earlyexit.json",
-    "source": "drakontech",
-    "origin": "c/green/ForLoop/earlyExit.drakon",
-    "nodes": 12,
-    "features": [
-      "flipped-yes-no",
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-forloop-forarray.json",
-    "source": "drakontech",
-    "origin": "c/green/ForLoop/forArray.drakon",
-    "nodes": 8,
-    "features": [
-      "loopbegin",
-      "loopend"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-math-add.json",
-    "source": "drakontech",
-    "origin": "c/green/Math/add.drakon",
-    "nodes": 5,
-    "features": []
-  },
-  {
-    "file": "drakontech/c-green-math-addcore.json",
-    "source": "drakontech",
-    "origin": "c/green/Math/addCore.drakon",
-    "nodes": 3,
-    "features": []
-  },
-  {
-    "file": "drakontech/c-green-question-badshortcircuit.json",
-    "source": "drakontech",
-    "origin": "c/green/Question/badShortCircuit.drakon",
-    "nodes": 6,
-    "features": [
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-question-complexand.json",
-    "source": "drakontech",
-    "origin": "c/green/Question/complexAnd.drakon",
-    "nodes": 7,
-    "features": [
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-question-complexor.json",
-    "source": "drakontech",
-    "origin": "c/green/Question/complexOr.drakon",
-    "nodes": 7,
-    "features": [
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-question-fizzbuzz.json",
-    "source": "drakontech",
-    "origin": "c/green/Question/fizzBuzz.drakon",
-    "nodes": 9,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-question-inversedand.json",
-    "source": "drakontech",
-    "origin": "c/green/Question/inversedAnd.drakon",
-    "nodes": 7,
-    "features": [
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-question-inversedor.json",
-    "source": "drakontech",
-    "origin": "c/green/Question/inversedOr.drakon",
-    "nodes": 7,
-    "features": [
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-question-question.json",
-    "source": "drakontech",
-    "origin": "c/green/Question/question.drakon",
-    "nodes": 5,
-    "features": [
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-question-questionmerge.json",
-    "source": "drakontech",
-    "origin": "c/green/Question/questionMerge.drakon",
-    "nodes": 10,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-question-simpleand.json",
-    "source": "drakontech",
-    "origin": "c/green/Question/simpleAnd.drakon",
-    "nodes": 7,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-question-simpleor.json",
-    "source": "drakontech",
-    "origin": "c/green/Question/simpleOr.drakon",
-    "nodes": 7,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-select-degenerateselect.json",
-    "source": "drakontech",
-    "origin": "c/green/Select/degenerateSelect.drakon",
-    "nodes": 7,
-    "features": [
-      "case",
-      "select"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-select-select.json",
-    "source": "drakontech",
-    "origin": "c/green/Select/select.drakon",
-    "nodes": 9,
-    "features": [
-      "case",
-      "select"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-select-selectshortcircuit.json",
-    "source": "drakontech",
-    "origin": "c/green/Select/selectShortCircuit.drakon",
-    "nodes": 8,
-    "features": [
-      "case",
-      "select"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-silhouette-complexsilnoreturn.json",
-    "source": "drakontech",
-    "origin": "c/green/Silhouette/complexSilNoReturn.drakon",
-    "nodes": 11,
-    "features": [
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-silhouette-complexsilhouette.json",
-    "source": "drakontech",
-    "origin": "c/green/Silhouette/complexSilhouette.drakon",
-    "nodes": 12,
-    "features": [
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-silhouette-fibonacci.json",
-    "source": "drakontech",
-    "origin": "c/green/Silhouette/fibonacci.drakon",
-    "nodes": 16,
-    "features": [
-      "case",
-      "loopbegin",
-      "loopend",
-      "select",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-silhouette-fibonaccisil.json",
-    "source": "drakontech",
-    "origin": "c/green/Silhouette/fibonacciSil.drakon",
-    "nodes": 18,
-    "features": [
-      "action-side-link",
-      "case",
-      "flipped-yes-no",
-      "question",
-      "select",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-silhouette-resourcesexample.json",
-    "source": "drakontech",
-    "origin": "c/green/Silhouette/resourcesExample.drakon",
-    "nodes": 12,
-    "features": [
-      "action-side-link",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-silhouette-sil2.json",
-    "source": "drakontech",
-    "origin": "c/green/Silhouette/sil2.drakon",
-    "nodes": 12,
-    "features": [
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-tools-checkint.json",
-    "source": "drakontech",
-    "origin": "c/green/Tools/checkInt.drakon",
-    "nodes": 7,
-    "features": [
-      "action-side-link",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-green-begin_source.json",
-    "source": "drakontech",
-    "origin": "c/green/begin_source.drakon",
-    "nodes": 7,
-    "features": []
-  },
-  {
-    "file": "drakontech/c-green-empty.json",
-    "source": "drakontech",
-    "origin": "c/green/empty.drakon",
-    "nodes": 2,
-    "features": []
-  },
-  {
-    "file": "drakontech/c-green-main.json",
-    "source": "drakontech",
-    "origin": "c/green/main.drakon",
-    "nodes": 66,
-    "features": [
-      "action-side-link",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/c-intarray-begin_source.json",
-    "source": "drakontech",
-    "origin": "c/intarray/begin_source.drakon",
-    "nodes": 4,
-    "features": []
-  },
-  {
-    "file": "drakontech/c-intarray-intarray.json",
-    "source": "drakontech",
-    "origin": "c/intarray/intarray.drakon",
-    "nodes": 4,
-    "features": []
-  },
-  {
-    "file": "drakontech/c-intarray-intarray_create.json",
-    "source": "drakontech",
-    "origin": "c/intarray/intarray_create.drakon",
-    "nodes": 17,
-    "features": [
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-intarray-intarray_delete.json",
-    "source": "drakontech",
-    "origin": "c/intarray/intarray_delete.drakon",
-    "nodes": 6,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-intarray-intarray_get.json",
-    "source": "drakontech",
-    "origin": "c/intarray/intarray_get.drakon",
-    "nodes": 6,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/c-intarray-intarray_set.json",
-    "source": "drakontech",
-    "origin": "c/intarray/intarray_set.drakon",
-    "nodes": 6,
-    "features": [
-      "action-side-link",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/clojure-hello-drakon-clojure-fibonacci.json",
-    "source": "drakontech",
-    "origin": "clojure/hello-drakon-clojure/fibonacci.drakon",
-    "nodes": 7,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/clojure-hello-drakon-clojure-hello.json",
-    "source": "drakontech",
-    "origin": "clojure/hello-drakon-clojure/hello.drakon",
-    "nodes": 4,
-    "features": []
-  },
-  {
-    "file": "drakontech/clojure-hello-drakon-clojure-only-no.json",
-    "source": "drakontech",
-    "origin": "clojure/hello-drakon-clojure/only-no.drakon",
-    "nodes": 5,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/clojure-hello-drakon-clojure-run-me.json",
-    "source": "drakontech",
-    "origin": "clojure/hello-drakon-clojure/run-me.drakon",
-    "nodes": 6,
-    "features": []
-  },
-  {
-    "file": "drakontech/clojure-hello-drakon-clojure-select-case.json",
-    "source": "drakontech",
-    "origin": "clojure/hello-drakon-clojure/select-case.drakon",
-    "nodes": 10,
-    "features": [
-      "case",
-      "select"
-    ]
-  },
-  {
-    "file": "drakontech/clojure-hello-drakon-clojure-short-circuit-and.json",
-    "source": "drakontech",
-    "origin": "clojure/hello-drakon-clojure/short-circuit-and.drakon",
-    "nodes": 9,
-    "features": [
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/clojure-hello-drakon-clojure-short-if-2.json",
-    "source": "drakontech",
-    "origin": "clojure/hello-drakon-clojure/short-if-2.drakon",
-    "nodes": 6,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/clojure-hello-drakon-clojure-silhouette.json",
-    "source": "drakontech",
-    "origin": "clojure/hello-drakon-clojure/silhouette.drakon",
-    "nodes": 9,
-    "features": [
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-cdeu1-listexample-app-commands-clickitem.json",
-    "source": "drakontech",
-    "origin": "javascript/cdeu1/listexample/App/Commands/clickItem.drakon",
-    "nodes": 4,
-    "features": []
-  },
-  {
-    "file": "drakontech/javascript-cdeu1-listexample-app-commands-renamecurrent.json",
-    "source": "drakontech",
-    "origin": "javascript/cdeu1/listexample/App/Commands/renameCurrent.drakon",
-    "nodes": 8,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-cdeu1-listexample-app-private-render.json",
-    "source": "drakontech",
-    "origin": "javascript/cdeu1/listexample/App/Private/render.drakon",
-    "nodes": 17,
-    "features": [
-      "action-side-link",
-      "flipped-yes-no",
-      "loopbegin",
-      "loopend",
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-cdeu1-listexample-app-init.json",
-    "source": "drakontech",
-    "origin": "javascript/cdeu1/listexample/App/init.drakon",
-    "nodes": 5,
-    "features": []
-  },
-  {
-    "file": "drakontech/javascript-cdeu1-listexample-dom-createelement.json",
-    "source": "drakontech",
-    "origin": "javascript/cdeu1/listexample/DOM/createElement.drakon",
-    "nodes": 20,
-    "features": [
-      "flipped-yes-no",
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-cdeu1-listexample-utils-findbyproperty.json",
-    "source": "drakontech",
-    "origin": "javascript/cdeu1/listexample/Utils/findByProperty.drakon",
-    "nodes": 8,
-    "features": [
-      "flipped-yes-no",
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-cdeu1-listexample-widgets-createbutton.json",
-    "source": "drakontech",
-    "origin": "javascript/cdeu1/listexample/Widgets/createButton.drakon",
-    "nodes": 5,
-    "features": []
-  },
-  {
-    "file": "drakontech/javascript-cdeu1-listexample-widgets-createhorcontainer.json",
-    "source": "drakontech",
-    "origin": "javascript/cdeu1/listexample/Widgets/createHorContainer.drakon",
-    "nodes": 7,
-    "features": [
-      "loopbegin",
-      "loopend"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-cdeu1-listexample-widgets-createtextinput.json",
-    "source": "drakontech",
-    "origin": "javascript/cdeu1/listexample/Widgets/createTextInput.drakon",
-    "nodes": 5,
-    "features": [
-      "action-side-link"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-cdeu1-listexample-main.json",
-    "source": "drakontech",
-    "origin": "javascript/cdeu1/listexample/main.drakon",
-    "nodes": 8,
-    "features": [
-      "async"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-arrowloop-twoexits.json",
-    "source": "drakontech",
-    "origin": "javascript/green/ArrowLoop/twoExits.drakon",
-    "nodes": 13,
-    "features": [
-      "arrow-loop",
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-async-slow.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Async/slow.drakon",
-    "nodes": 5,
-    "features": [
-      "async"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-badenbaden-nodublicates.json",
-    "source": "drakontech",
-    "origin": "javascript/green/BadenBaden/noDublicates.drakon",
-    "nodes": 11,
-    "features": [
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-catch-complexcatch.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Catch/complexCatch.drakon",
-    "nodes": 13,
-    "features": [
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-catch-simplecatch.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Catch/simpleCatch.drakon",
-    "nodes": 8,
-    "features": [
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-forloop-earlyexit.json",
-    "source": "drakontech",
-    "origin": "javascript/green/ForLoop/earlyExit.drakon",
-    "nodes": 11,
-    "features": [
-      "flipped-yes-no",
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-forloop-forarray.json",
-    "source": "drakontech",
-    "origin": "javascript/green/ForLoop/forArray.drakon",
-    "nodes": 7,
-    "features": [
-      "loopbegin",
-      "loopend"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-forloop-forloopnodeclare.json",
-    "source": "drakontech",
-    "origin": "javascript/green/ForLoop/forLoopNoDeclare.drakon",
-    "nodes": 8,
-    "features": [
-      "loopbegin",
-      "loopend"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-forloop-foreacharray.json",
-    "source": "drakontech",
-    "origin": "javascript/green/ForLoop/foreachArray.drakon",
-    "nodes": 5,
-    "features": [
-      "loopbegin",
-      "loopend"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-forloop-foreachloopobject.json",
-    "source": "drakontech",
-    "origin": "javascript/green/ForLoop/foreachLoopObject.drakon",
-    "nodes": 9,
-    "features": [
-      "loopbegin",
-      "loopend"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-question-questionmerge.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Question/questionMerge.drakon",
-    "nodes": 9,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-scope-foreachuntil.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Scope/forEachUntil.drakon",
-    "nodes": 6,
-    "features": [
-      "flipped-yes-no",
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-scope-scope3.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Scope/scope3.drakon",
-    "nodes": 6,
-    "features": []
-  },
-  {
-    "file": "drakontech/javascript-green-silhouette-complexsilhouette.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Silhouette/complexSilhouette.drakon",
-    "nodes": 11,
-    "features": [
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-silhouette-fibonacci.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Silhouette/fibonacci.drakon",
-    "nodes": 15,
-    "features": [
-      "case",
-      "loopbegin",
-      "loopend",
-      "select",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-silhouette-fibonaccisil.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Silhouette/fibonacciSil.drakon",
-    "nodes": 16,
-    "features": [
-      "action-side-link",
-      "case",
-      "flipped-yes-no",
-      "question",
-      "select",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-silhouette-monitorpaymentstatus.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Silhouette/monitorPaymentStatus.drakon",
-    "nodes": 10,
-    "features": [
-      "case",
-      "question",
-      "select",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-silhouette-sil2.json",
-    "source": "drakontech",
-    "origin": "javascript/green/Silhouette/sil2.drakon",
-    "nodes": 11,
-    "features": [
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-green-generateid.json",
-    "source": "drakontech",
-    "origin": "javascript/green/generateId.drakon",
-    "nodes": 5,
-    "features": []
-  },
-  {
-    "file": "drakontech/javascript-machines-red-machinemethod.json",
-    "source": "drakontech",
-    "origin": "javascript/machines/Red/machineMethod.drakon",
-    "nodes": 5,
-    "features": [
-      "sinput"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-machines-priminput.json",
-    "source": "drakontech",
-    "origin": "javascript/machines/primInput.drakon",
-    "nodes": 7,
-    "features": [
-      "sinput"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-machines-priminputnoreturn.json",
-    "source": "drakontech",
-    "origin": "javascript/machines/primInputNoReturn.drakon",
-    "nodes": 6,
-    "features": [
-      "sinput"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-machines-silreceive.json",
-    "source": "drakontech",
-    "origin": "javascript/machines/silReceive.drakon",
-    "nodes": 24,
-    "features": [
-      "case",
-      "flipped-yes-no",
-      "question",
-      "select",
-      "silhouette",
-      "sinput"
-    ]
-  },
-  {
-    "file": "drakontech/javascript-machines-simplesilnoreturn.json",
-    "source": "drakontech",
-    "origin": "javascript/machines/simpleSilNoReturn.drakon",
-    "nodes": 6,
-    "features": [
-      "silhouette",
-      "sinput"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-вопрос-обратноеили.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Вопрос/ОбратноеИли.drakon",
-    "nodes": 7,
-    "features": [
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-вопрос-простоеи.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Вопрос/ПростоеИ.drakon",
-    "nodes": 8,
-    "features": [
-      "action-side-link",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-вопрос-слияниевопросов.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Вопрос/СлияниеВопросов.drakon",
-    "nodes": 9,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-выбор-выборбезумолчания.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Выбор/ВыборБезУмолчания.drakon",
-    "nodes": 9,
-    "features": [
-      "action-side-link",
-      "case",
-      "select"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-повторы-без-повторов.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Повторы/без повторов.drakon",
-    "nodes": 13,
-    "features": [
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-разное-запуск-тестов.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Разное/запуск тестов.drakon",
-    "nodes": 46,
-    "features": [
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-силуэт-фибоначчи.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Силуэт/Фибоначчи.drakon",
-    "nodes": 17,
-    "features": [
-      "case",
-      "loopbegin",
-      "loopend",
-      "select",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-тестирование-лог_в_лит.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Тестирование/лог_в_лит.drakon",
-    "nodes": 5,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-тестирование-проверка-булева.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Тестирование/проверка булева.drakon",
-    "nodes": 7,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-выборсострелкой.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Цикл со стрелкой/ВыборСоСтрелкой.drakon",
-    "nodes": 11,
-    "features": [
-      "arrow-loop",
-      "case",
-      "select"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-проверкадействие.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Цикл со стрелкой/ПроверкаДействие.drakon",
-    "nodes": 7,
-    "features": [
-      "arrow-loop",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-проверкадействиепроверка.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Цикл со стрелкой/ПроверкаДействиеПроверка.drakon",
-    "nodes": 8,
-    "features": [
-      "arrow-loop",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-проверкадействиецикл.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/Цикл со стрелкой/ПроверкаДействиеЦикл.drakon",
-    "nodes": 7,
-    "features": [
-      "loopbegin",
-      "loopend"
-    ]
-  },
-  {
-    "file": "drakontech/kumir-зелёная-старт.json",
-    "source": "drakontech",
-    "origin": "kumir/Зелёная/старт.drakon",
-    "nodes": 5,
-    "features": []
-  },
-  {
-    "file": "drakontech/lua-green-arrowloop-twoexits.json",
-    "source": "drakontech",
-    "origin": "lua/green/ArrowLoop/twoExits.drakon",
-    "nodes": 12,
-    "features": [
-      "arrow-loop",
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/lua-green-forloop-earlyexit.json",
-    "source": "drakontech",
-    "origin": "lua/green/ForLoop/earlyExit.drakon",
-    "nodes": 10,
-    "features": [
-      "flipped-yes-no",
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/lua-machines-silreceive.json",
-    "source": "drakontech",
-    "origin": "lua/machines/silReceive.drakon",
-    "nodes": 26,
-    "features": [
-      "case",
-      "flipped-yes-no",
-      "question",
-      "select",
-      "silhouette",
-      "sinput"
-    ]
-  },
-  {
-    "file": "drakontech/oscript-зелёная-вопрос-простоеи.json",
-    "source": "drakontech",
-    "origin": "oscript/Зелёная/Вопрос/ПростоеИ.drakon",
-    "nodes": 7,
-    "features": [
-      "action-side-link",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/oscript-зелёная-запусктестов.json",
-    "source": "drakontech",
-    "origin": "oscript/Зелёная/ЗапускТестов.drakon",
-    "nodes": 57,
-    "features": [
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/oscript-зелёная-силуэт-сложныйсилуэтбеззначения.json",
-    "source": "drakontech",
-    "origin": "oscript/Зелёная/Силуэт/СложныйСилуэтБезЗначения.drakon",
-    "nodes": 10,
-    "features": [
-      "question",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/oscript-зелёная-силуэт-фибоначчи.json",
-    "source": "drakontech",
-    "origin": "oscript/Зелёная/Силуэт/Фибоначчи.drakon",
-    "nodes": 15,
-    "features": [
-      "case",
-      "loopbegin",
-      "loopend",
-      "select",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/oscript-зелёная-старт.json",
-    "source": "drakontech",
-    "origin": "oscript/Зелёная/Старт.drakon",
-    "nodes": 4,
-    "features": []
-  },
-  {
-    "file": "drakontech/oscript-зелёная-цикл-для-дляпомассиву.json",
-    "source": "drakontech",
-    "origin": "oscript/Зелёная/Цикл Для/ДляПоМассиву.drakon",
-    "nodes": 5,
-    "features": [
-      "loopbegin",
-      "loopend"
-    ]
-  },
-  {
-    "file": "drakontech/oscript-зелёная-цикл-для-раннийвыход.json",
-    "source": "drakontech",
-    "origin": "oscript/Зелёная/Цикл Для/РаннийВыход.drakon",
-    "nodes": 10,
-    "features": [
-      "flipped-yes-no",
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/oscript-зелёная-цикл-со-стрелкой-двавыхода.json",
-    "source": "drakontech",
-    "origin": "oscript/Зелёная/Цикл со стрелкой/ДваВыхода.drakon",
-    "nodes": 10,
-    "features": [
-      "arrow-loop",
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-вопрос-слияниевопросов.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Вопрос/СлияниеВопросов.drakon",
-    "nodes": 10,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-запусктестов.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/ЗапускТестов.drakon",
-    "nodes": 56,
-    "features": [
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-силуэт-фибоначчи.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Силуэт/Фибоначчи.drakon",
-    "nodes": 17,
-    "features": [
-      "case",
-      "loopbegin",
-      "loopend",
-      "select",
-      "silhouette"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-старт.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Старт.drakon",
-    "nodes": 6,
-    "features": []
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-тестирование-проверкабулева.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Тестирование/ПроверкаБулева.drakon",
-    "nodes": 5,
-    "features": [
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-для-дляпомассиву.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл Для/ДляПоМассиву.drakon",
-    "nodes": 6,
-    "features": [
-      "loopbegin",
-      "loopend"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-для-раннийвыход.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл Для/РаннийВыход.drakon",
-    "nodes": 11,
-    "features": [
-      "flipped-yes-no",
-      "loopbegin",
-      "loopend",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-выборсострелкой.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ВыборСоСтрелкой.drakon",
-    "nodes": 12,
-    "features": [
-      "arrow-loop",
-      "case",
-      "select"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-двавыхода.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ДваВыхода.drakon",
-    "nodes": 11,
-    "features": [
-      "arrow-loop",
-      "flipped-yes-no",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-действиепроверка.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ДействиеПроверка.drakon",
-    "nodes": 8,
-    "features": [
-      "arrow-loop",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-проверкадействие.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ПроверкаДействие.drakon",
-    "nodes": 8,
-    "features": [
-      "arrow-loop",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-проверкадействиепроверка.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ПроверкаДействиеПроверка.drakon",
-    "nodes": 9,
-    "features": [
-      "arrow-loop",
-      "question"
-    ]
-  },
-  {
-    "file": "drakontech/perfolenta-классы-класс-полнаяинформация-телокласса.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Классы/Класс ПолнаяИнформация/ТелоКласса.drakon",
-    "nodes": 5,
-    "features": []
-  },
-  {
-    "file": "drakontech/perfolenta-классы-класс-серый-конструктор.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Классы/Класс Серый/Конструктор.drakon",
-    "nodes": 5,
-    "features": []
-  },
-  {
-    "file": "drakontech/perfolenta-классы-класс-серый-открытое-получитьполнуюинформацию.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Классы/Класс Серый/Открытое/ПолучитьПолнуюИнформацию.drakon",
-    "nodes": 6,
-    "features": []
-  },
-  {
-    "file": "drakontech/perfolenta-классы-класс-серый-открытое-приветствовать.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Классы/Класс Серый/Открытое/Приветствовать.drakon",
-    "nodes": 6,
-    "features": []
-  },
-  {
-    "file": "drakontech/perfolenta-классы-класс-серый-телокласса.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Классы/Класс Серый/ТелоКласса.drakon",
-    "nodes": 7,
-    "features": []
-  },
-  {
-    "file": "drakontech/perfolenta-классы-программа-классы-старт.json",
-    "source": "drakontech",
-    "origin": "perfolenta/Классы/Программа Классы/Старт.drakon",
-    "nodes": 12,
-    "features": []
+ {
+  "file": "drakonhub/a-star-algorithm.json",
+  "source": "drakonhub",
+  "origin": "A-star  algorithm.drakon",
+  "nodes": 26,
+  "features": [
+   "comment",
+   "flipped-yes-no",
+   "header",
+   "loopbegin",
+   "loopend",
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/adaptive-design.json",
+  "source": "drakonhub",
+  "origin": "Adaptive design.drakon",
+  "nodes": 22,
+  "features": [
+   "case",
+   "header",
+   "select"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/buy-a-puppy.json",
+  "source": "drakonhub",
+  "origin": "Buy a puppy.drakon",
+  "nodes": 8,
+  "features": [
+   "header",
+   "question",
+   "style"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/drunk-driving-in-greece.json",
+  "source": "drakonhub",
+  "origin": "Drunk driving in Greece.drakon",
+  "nodes": 13,
+  "features": [
+   "callout",
+   "case",
+   "header",
+   "select",
+   "style"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/go-out.json",
+  "source": "drakonhub",
+  "origin": "Go out.drakon",
+  "nodes": 7,
+  "features": [
+   "flipped-yes-no",
+   "header",
+   "question",
+   "style"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/good-day.json",
+  "source": "drakonhub",
+  "origin": "Good day.drakon",
+  "nodes": 6,
+  "features": [
+   "header"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/how-to-build-a-healthy-relationship.json",
+  "source": "drakonhub",
+  "origin": "How to build a healthy relationship.drakon",
+  "nodes": 13,
+  "features": [
+   "arrow-loop",
+   "callout",
+   "comment",
+   "header",
+   "question",
+   "style"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/how-to-get-a-tattoo.json",
+  "source": "drakonhub",
+  "origin": "How to get a tattoo.drakon",
+  "nodes": 15,
+  "features": [
+   "case",
+   "comment",
+   "header",
+   "question",
+   "select",
+   "style"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/how-to-learn-to-understand-foregn-speech.json",
+  "source": "drakonhub",
+  "origin": "How to learn to understand foregn speech.drakon",
+  "nodes": 27,
+  "features": [
+   "arrow-loop",
+   "callout",
+   "comment",
+   "header",
+   "loopbegin",
+   "loopend",
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/lunch-break.json",
+  "source": "drakonhub",
+  "origin": "Lunch break.drakon",
+  "nodes": 11,
+  "features": [
+   "header",
+   "question",
+   "silhouette",
+   "style"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/machine-wash.json",
+  "source": "drakonhub",
+  "origin": "Machine wash.drakon",
+  "nodes": 9,
+  "features": [
+   "duration",
+   "header"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/should-i-make-art.json",
+  "source": "drakonhub",
+  "origin": "Should I make art.drakon",
+  "nodes": 14,
+  "features": [
+   "callout",
+   "header",
+   "question",
+   "style"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/take-a-train.json",
+  "source": "drakonhub",
+  "origin": "Take a train.drakon",
+  "nodes": 12,
+  "features": [
+   "flipped-yes-no",
+   "header",
+   "question",
+   "style"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/work-out-action-question.json",
+  "source": "drakonhub",
+  "origin": "Work out - action-question.drakon",
+  "nodes": 8,
+  "features": [
+   "arrow-loop",
+   "header",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/work-out-cycle.json",
+  "source": "drakonhub",
+  "origin": "Work out - cycle.drakon",
+  "nodes": 8,
+  "features": [
+   "flipped-yes-no",
+   "header",
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonhub/work-out-question-action.json",
+  "source": "drakonhub",
+  "origin": "Work out - question-action.drakon",
+  "nodes": 8,
+  "features": [
+   "arrow-loop",
+   "header",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonwidget/adaptive-design.json",
+  "source": "drakonwidget",
+  "origin": "Adaptive design",
+  "nodes": 21,
+  "features": [
+   "case",
+   "select"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonwidget/go-out.json",
+  "source": "drakonwidget",
+  "origin": "Go out",
+  "nodes": 6,
+  "features": [
+   "flipped-yes-no",
+   "insertion",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonwidget/leave-the-house.json",
+  "source": "drakonwidget",
+  "origin": "Leave the house",
+  "nodes": 6,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonwidget/how-to-learn-to-understand-foregn-speech.json",
+  "source": "drakonwidget",
+  "origin": "How to learn to understand foregn speech",
+  "nodes": 24,
+  "features": [
+   "arrow-loop",
+   "loopbegin",
+   "loopend",
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonwidget/scientific-method.json",
+  "source": "drakonwidget",
+  "origin": "Scientific method",
+  "nodes": 13,
+  "features": [
+   "flipped-yes-no",
+   "question",
+   "style"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonwidget/снятие-шлема-с-мотоциклиста.json",
+  "source": "drakonwidget",
+  "origin": "Снятие шлема с мотоциклиста",
+  "nodes": 29,
+  "features": [
+   "parbegin",
+   "parend",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonwidget/реанимация-беременной-женщины.json",
+  "source": "drakonwidget",
+  "origin": "Реанимация беременной женщины",
+  "nodes": 33,
+  "features": [
+   "arrow-loop",
+   "duration",
+   "flipped-yes-no",
+   "group-duration",
+   "insertion",
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-arrowloop-dowhile.json",
+  "source": "drakontech",
+  "origin": "c/green/ArrowLoop/doWhile.drakon",
+  "nodes": 7,
+  "features": [
+   "arrow-loop",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-arrowloop-dowhiledo.json",
+  "source": "drakontech",
+  "origin": "c/green/ArrowLoop/doWhileDo.drakon",
+  "nodes": 8,
+  "features": [
+   "arrow-loop",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-arrowloop-selectarrow.json",
+  "source": "drakontech",
+  "origin": "c/green/ArrowLoop/selectArrow.drakon",
+  "nodes": 11,
+  "features": [
+   "arrow-loop",
+   "case",
+   "select"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-arrowloop-twoexits.json",
+  "source": "drakontech",
+  "origin": "c/green/ArrowLoop/twoExits.drakon",
+  "nodes": 12,
+  "features": [
+   "arrow-loop",
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-arrowloop-whiledo.json",
+  "source": "drakontech",
+  "origin": "c/green/ArrowLoop/whileDo.drakon",
+  "nodes": 7,
+  "features": [
+   "arrow-loop",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-badenbaden-nodublicates.json",
+  "source": "drakontech",
+  "origin": "c/green/BadenBaden/noDublicates.drakon",
+  "nodes": 12,
+  "features": [
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-forloop-earlyexit.json",
+  "source": "drakontech",
+  "origin": "c/green/ForLoop/earlyExit.drakon",
+  "nodes": 12,
+  "features": [
+   "flipped-yes-no",
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-forloop-forarray.json",
+  "source": "drakontech",
+  "origin": "c/green/ForLoop/forArray.drakon",
+  "nodes": 8,
+  "features": [
+   "loopbegin",
+   "loopend"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-math-add.json",
+  "source": "drakontech",
+  "origin": "c/green/Math/add.drakon",
+  "nodes": 5,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-math-addcore.json",
+  "source": "drakontech",
+  "origin": "c/green/Math/addCore.drakon",
+  "nodes": 3,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-question-badshortcircuit.json",
+  "source": "drakontech",
+  "origin": "c/green/Question/badShortCircuit.drakon",
+  "nodes": 6,
+  "features": [
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-question-complexand.json",
+  "source": "drakontech",
+  "origin": "c/green/Question/complexAnd.drakon",
+  "nodes": 7,
+  "features": [
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-question-complexor.json",
+  "source": "drakontech",
+  "origin": "c/green/Question/complexOr.drakon",
+  "nodes": 7,
+  "features": [
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-question-fizzbuzz.json",
+  "source": "drakontech",
+  "origin": "c/green/Question/fizzBuzz.drakon",
+  "nodes": 9,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-question-inversedand.json",
+  "source": "drakontech",
+  "origin": "c/green/Question/inversedAnd.drakon",
+  "nodes": 7,
+  "features": [
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-question-inversedor.json",
+  "source": "drakontech",
+  "origin": "c/green/Question/inversedOr.drakon",
+  "nodes": 7,
+  "features": [
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-question-question.json",
+  "source": "drakontech",
+  "origin": "c/green/Question/question.drakon",
+  "nodes": 5,
+  "features": [
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-question-questionmerge.json",
+  "source": "drakontech",
+  "origin": "c/green/Question/questionMerge.drakon",
+  "nodes": 10,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-question-simpleand.json",
+  "source": "drakontech",
+  "origin": "c/green/Question/simpleAnd.drakon",
+  "nodes": 7,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-question-simpleor.json",
+  "source": "drakontech",
+  "origin": "c/green/Question/simpleOr.drakon",
+  "nodes": 7,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-select-degenerateselect.json",
+  "source": "drakontech",
+  "origin": "c/green/Select/degenerateSelect.drakon",
+  "nodes": 7,
+  "features": [
+   "case",
+   "select"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-select-select.json",
+  "source": "drakontech",
+  "origin": "c/green/Select/select.drakon",
+  "nodes": 9,
+  "features": [
+   "case",
+   "select"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-select-selectshortcircuit.json",
+  "source": "drakontech",
+  "origin": "c/green/Select/selectShortCircuit.drakon",
+  "nodes": 8,
+  "features": [
+   "case",
+   "select"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-silhouette-complexsilnoreturn.json",
+  "source": "drakontech",
+  "origin": "c/green/Silhouette/complexSilNoReturn.drakon",
+  "nodes": 11,
+  "features": [
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-silhouette-complexsilhouette.json",
+  "source": "drakontech",
+  "origin": "c/green/Silhouette/complexSilhouette.drakon",
+  "nodes": 12,
+  "features": [
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-silhouette-fibonacci.json",
+  "source": "drakontech",
+  "origin": "c/green/Silhouette/fibonacci.drakon",
+  "nodes": 16,
+  "features": [
+   "case",
+   "loopbegin",
+   "loopend",
+   "select",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-silhouette-fibonaccisil.json",
+  "source": "drakontech",
+  "origin": "c/green/Silhouette/fibonacciSil.drakon",
+  "nodes": 18,
+  "features": [
+   "action-side-link",
+   "case",
+   "flipped-yes-no",
+   "question",
+   "select",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-silhouette-resourcesexample.json",
+  "source": "drakontech",
+  "origin": "c/green/Silhouette/resourcesExample.drakon",
+  "nodes": 12,
+  "features": [
+   "action-side-link",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-silhouette-sil2.json",
+  "source": "drakontech",
+  "origin": "c/green/Silhouette/sil2.drakon",
+  "nodes": 12,
+  "features": [
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-tools-checkint.json",
+  "source": "drakontech",
+  "origin": "c/green/Tools/checkInt.drakon",
+  "nodes": 7,
+  "features": [
+   "action-side-link",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-begin_source.json",
+  "source": "drakontech",
+  "origin": "c/green/begin_source.drakon",
+  "nodes": 7,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-empty.json",
+  "source": "drakontech",
+  "origin": "c/green/empty.drakon",
+  "nodes": 2,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-green-main.json",
+  "source": "drakontech",
+  "origin": "c/green/main.drakon",
+  "nodes": 66,
+  "features": [
+   "action-side-link",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-intarray-begin_source.json",
+  "source": "drakontech",
+  "origin": "c/intarray/begin_source.drakon",
+  "nodes": 4,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-intarray-intarray.json",
+  "source": "drakontech",
+  "origin": "c/intarray/intarray.drakon",
+  "nodes": 4,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-intarray-intarray_create.json",
+  "source": "drakontech",
+  "origin": "c/intarray/intarray_create.drakon",
+  "nodes": 17,
+  "features": [
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-intarray-intarray_delete.json",
+  "source": "drakontech",
+  "origin": "c/intarray/intarray_delete.drakon",
+  "nodes": 6,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-intarray-intarray_get.json",
+  "source": "drakontech",
+  "origin": "c/intarray/intarray_get.drakon",
+  "nodes": 6,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/c-intarray-intarray_set.json",
+  "source": "drakontech",
+  "origin": "c/intarray/intarray_set.drakon",
+  "nodes": 6,
+  "features": [
+   "action-side-link",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/clojure-hello-drakon-clojure-fibonacci.json",
+  "source": "drakontech",
+  "origin": "clojure/hello-drakon-clojure/fibonacci.drakon",
+  "nodes": 7,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/clojure-hello-drakon-clojure-hello.json",
+  "source": "drakontech",
+  "origin": "clojure/hello-drakon-clojure/hello.drakon",
+  "nodes": 4,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/clojure-hello-drakon-clojure-only-no.json",
+  "source": "drakontech",
+  "origin": "clojure/hello-drakon-clojure/only-no.drakon",
+  "nodes": 5,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/clojure-hello-drakon-clojure-run-me.json",
+  "source": "drakontech",
+  "origin": "clojure/hello-drakon-clojure/run-me.drakon",
+  "nodes": 6,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/clojure-hello-drakon-clojure-select-case.json",
+  "source": "drakontech",
+  "origin": "clojure/hello-drakon-clojure/select-case.drakon",
+  "nodes": 10,
+  "features": [
+   "case",
+   "select"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/clojure-hello-drakon-clojure-short-circuit-and.json",
+  "source": "drakontech",
+  "origin": "clojure/hello-drakon-clojure/short-circuit-and.drakon",
+  "nodes": 9,
+  "features": [
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/clojure-hello-drakon-clojure-short-if-2.json",
+  "source": "drakontech",
+  "origin": "clojure/hello-drakon-clojure/short-if-2.drakon",
+  "nodes": 6,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/clojure-hello-drakon-clojure-silhouette.json",
+  "source": "drakontech",
+  "origin": "clojure/hello-drakon-clojure/silhouette.drakon",
+  "nodes": 9,
+  "features": [
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-cdeu1-listexample-app-commands-clickitem.json",
+  "source": "drakontech",
+  "origin": "javascript/cdeu1/listexample/App/Commands/clickItem.drakon",
+  "nodes": 4,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-cdeu1-listexample-app-commands-renamecurrent.json",
+  "source": "drakontech",
+  "origin": "javascript/cdeu1/listexample/App/Commands/renameCurrent.drakon",
+  "nodes": 8,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-cdeu1-listexample-app-private-render.json",
+  "source": "drakontech",
+  "origin": "javascript/cdeu1/listexample/App/Private/render.drakon",
+  "nodes": 17,
+  "features": [
+   "action-side-link",
+   "flipped-yes-no",
+   "loopbegin",
+   "loopend",
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-cdeu1-listexample-app-init.json",
+  "source": "drakontech",
+  "origin": "javascript/cdeu1/listexample/App/init.drakon",
+  "nodes": 5,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-cdeu1-listexample-dom-createelement.json",
+  "source": "drakontech",
+  "origin": "javascript/cdeu1/listexample/DOM/createElement.drakon",
+  "nodes": 20,
+  "features": [
+   "flipped-yes-no",
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-cdeu1-listexample-utils-findbyproperty.json",
+  "source": "drakontech",
+  "origin": "javascript/cdeu1/listexample/Utils/findByProperty.drakon",
+  "nodes": 8,
+  "features": [
+   "flipped-yes-no",
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-cdeu1-listexample-widgets-createbutton.json",
+  "source": "drakontech",
+  "origin": "javascript/cdeu1/listexample/Widgets/createButton.drakon",
+  "nodes": 5,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-cdeu1-listexample-widgets-createhorcontainer.json",
+  "source": "drakontech",
+  "origin": "javascript/cdeu1/listexample/Widgets/createHorContainer.drakon",
+  "nodes": 7,
+  "features": [
+   "loopbegin",
+   "loopend"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-cdeu1-listexample-widgets-createtextinput.json",
+  "source": "drakontech",
+  "origin": "javascript/cdeu1/listexample/Widgets/createTextInput.drakon",
+  "nodes": 5,
+  "features": [
+   "action-side-link"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-cdeu1-listexample-main.json",
+  "source": "drakontech",
+  "origin": "javascript/cdeu1/listexample/main.drakon",
+  "nodes": 8,
+  "features": [
+   "async"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-arrowloop-twoexits.json",
+  "source": "drakontech",
+  "origin": "javascript/green/ArrowLoop/twoExits.drakon",
+  "nodes": 13,
+  "features": [
+   "arrow-loop",
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-async-slow.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Async/slow.drakon",
+  "nodes": 5,
+  "features": [
+   "async"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-badenbaden-nodublicates.json",
+  "source": "drakontech",
+  "origin": "javascript/green/BadenBaden/noDublicates.drakon",
+  "nodes": 11,
+  "features": [
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-catch-complexcatch.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Catch/complexCatch.drakon",
+  "nodes": 13,
+  "features": [
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-catch-simplecatch.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Catch/simpleCatch.drakon",
+  "nodes": 8,
+  "features": [
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-forloop-earlyexit.json",
+  "source": "drakontech",
+  "origin": "javascript/green/ForLoop/earlyExit.drakon",
+  "nodes": 11,
+  "features": [
+   "flipped-yes-no",
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-forloop-forarray.json",
+  "source": "drakontech",
+  "origin": "javascript/green/ForLoop/forArray.drakon",
+  "nodes": 7,
+  "features": [
+   "loopbegin",
+   "loopend"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-forloop-forloopnodeclare.json",
+  "source": "drakontech",
+  "origin": "javascript/green/ForLoop/forLoopNoDeclare.drakon",
+  "nodes": 8,
+  "features": [
+   "loopbegin",
+   "loopend"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-forloop-foreacharray.json",
+  "source": "drakontech",
+  "origin": "javascript/green/ForLoop/foreachArray.drakon",
+  "nodes": 5,
+  "features": [
+   "loopbegin",
+   "loopend"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-forloop-foreachloopobject.json",
+  "source": "drakontech",
+  "origin": "javascript/green/ForLoop/foreachLoopObject.drakon",
+  "nodes": 9,
+  "features": [
+   "loopbegin",
+   "loopend"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-question-questionmerge.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Question/questionMerge.drakon",
+  "nodes": 9,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-scope-foreachuntil.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Scope/forEachUntil.drakon",
+  "nodes": 6,
+  "features": [
+   "flipped-yes-no",
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-scope-scope3.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Scope/scope3.drakon",
+  "nodes": 6,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-silhouette-complexsilhouette.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Silhouette/complexSilhouette.drakon",
+  "nodes": 11,
+  "features": [
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-silhouette-fibonacci.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Silhouette/fibonacci.drakon",
+  "nodes": 15,
+  "features": [
+   "case",
+   "loopbegin",
+   "loopend",
+   "select",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-silhouette-fibonaccisil.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Silhouette/fibonacciSil.drakon",
+  "nodes": 16,
+  "features": [
+   "action-side-link",
+   "case",
+   "flipped-yes-no",
+   "question",
+   "select",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-silhouette-monitorpaymentstatus.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Silhouette/monitorPaymentStatus.drakon",
+  "nodes": 10,
+  "features": [
+   "case",
+   "question",
+   "select",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-silhouette-sil2.json",
+  "source": "drakontech",
+  "origin": "javascript/green/Silhouette/sil2.drakon",
+  "nodes": 11,
+  "features": [
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-green-generateid.json",
+  "source": "drakontech",
+  "origin": "javascript/green/generateId.drakon",
+  "nodes": 5,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-machines-red-machinemethod.json",
+  "source": "drakontech",
+  "origin": "javascript/machines/Red/machineMethod.drakon",
+  "nodes": 5,
+  "features": [
+   "sinput"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-machines-priminput.json",
+  "source": "drakontech",
+  "origin": "javascript/machines/primInput.drakon",
+  "nodes": 7,
+  "features": [
+   "sinput"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-machines-priminputnoreturn.json",
+  "source": "drakontech",
+  "origin": "javascript/machines/primInputNoReturn.drakon",
+  "nodes": 6,
+  "features": [
+   "sinput"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-machines-silreceive.json",
+  "source": "drakontech",
+  "origin": "javascript/machines/silReceive.drakon",
+  "nodes": 24,
+  "features": [
+   "case",
+   "flipped-yes-no",
+   "question",
+   "select",
+   "silhouette",
+   "sinput"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/javascript-machines-simplesilnoreturn.json",
+  "source": "drakontech",
+  "origin": "javascript/machines/simpleSilNoReturn.drakon",
+  "nodes": 6,
+  "features": [
+   "silhouette",
+   "sinput"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-вопрос-обратноеили.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Вопрос/ОбратноеИли.drakon",
+  "nodes": 7,
+  "features": [
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-вопрос-простоеи.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Вопрос/ПростоеИ.drakon",
+  "nodes": 8,
+  "features": [
+   "action-side-link",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-вопрос-слияниевопросов.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Вопрос/СлияниеВопросов.drakon",
+  "nodes": 9,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-выбор-выборбезумолчания.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Выбор/ВыборБезУмолчания.drakon",
+  "nodes": 9,
+  "features": [
+   "action-side-link",
+   "case",
+   "select"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-повторы-без-повторов.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Повторы/без повторов.drakon",
+  "nodes": 13,
+  "features": [
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-разное-запуск-тестов.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Разное/запуск тестов.drakon",
+  "nodes": 46,
+  "features": [
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-силуэт-фибоначчи.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Силуэт/Фибоначчи.drakon",
+  "nodes": 17,
+  "features": [
+   "case",
+   "loopbegin",
+   "loopend",
+   "select",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-тестирование-лог_в_лит.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Тестирование/лог_в_лит.drakon",
+  "nodes": 5,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-тестирование-проверка-булева.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Тестирование/проверка булева.drakon",
+  "nodes": 7,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-выборсострелкой.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Цикл со стрелкой/ВыборСоСтрелкой.drakon",
+  "nodes": 11,
+  "features": [
+   "arrow-loop",
+   "case",
+   "select"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-проверкадействие.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Цикл со стрелкой/ПроверкаДействие.drakon",
+  "nodes": 7,
+  "features": [
+   "arrow-loop",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-проверкадействиепроверка.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Цикл со стрелкой/ПроверкаДействиеПроверка.drakon",
+  "nodes": 8,
+  "features": [
+   "arrow-loop",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-цикл-со-стрелкой-проверкадействиецикл.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/Цикл со стрелкой/ПроверкаДействиеЦикл.drakon",
+  "nodes": 7,
+  "features": [
+   "loopbegin",
+   "loopend"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/kumir-зелёная-старт.json",
+  "source": "drakontech",
+  "origin": "kumir/Зелёная/старт.drakon",
+  "nodes": 5,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/lua-green-arrowloop-twoexits.json",
+  "source": "drakontech",
+  "origin": "lua/green/ArrowLoop/twoExits.drakon",
+  "nodes": 12,
+  "features": [
+   "arrow-loop",
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/lua-green-forloop-earlyexit.json",
+  "source": "drakontech",
+  "origin": "lua/green/ForLoop/earlyExit.drakon",
+  "nodes": 10,
+  "features": [
+   "flipped-yes-no",
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/lua-machines-silreceive.json",
+  "source": "drakontech",
+  "origin": "lua/machines/silReceive.drakon",
+  "nodes": 26,
+  "features": [
+   "case",
+   "flipped-yes-no",
+   "question",
+   "select",
+   "silhouette",
+   "sinput"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/oscript-зелёная-вопрос-простоеи.json",
+  "source": "drakontech",
+  "origin": "oscript/Зелёная/Вопрос/ПростоеИ.drakon",
+  "nodes": 7,
+  "features": [
+   "action-side-link",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/oscript-зелёная-запусктестов.json",
+  "source": "drakontech",
+  "origin": "oscript/Зелёная/ЗапускТестов.drakon",
+  "nodes": 57,
+  "features": [
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/oscript-зелёная-силуэт-сложныйсилуэтбеззначения.json",
+  "source": "drakontech",
+  "origin": "oscript/Зелёная/Силуэт/СложныйСилуэтБезЗначения.drakon",
+  "nodes": 10,
+  "features": [
+   "question",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/oscript-зелёная-силуэт-фибоначчи.json",
+  "source": "drakontech",
+  "origin": "oscript/Зелёная/Силуэт/Фибоначчи.drakon",
+  "nodes": 15,
+  "features": [
+   "case",
+   "loopbegin",
+   "loopend",
+   "select",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/oscript-зелёная-старт.json",
+  "source": "drakontech",
+  "origin": "oscript/Зелёная/Старт.drakon",
+  "nodes": 4,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/oscript-зелёная-цикл-для-дляпомассиву.json",
+  "source": "drakontech",
+  "origin": "oscript/Зелёная/Цикл Для/ДляПоМассиву.drakon",
+  "nodes": 5,
+  "features": [
+   "loopbegin",
+   "loopend"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/oscript-зелёная-цикл-для-раннийвыход.json",
+  "source": "drakontech",
+  "origin": "oscript/Зелёная/Цикл Для/РаннийВыход.drakon",
+  "nodes": 10,
+  "features": [
+   "flipped-yes-no",
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/oscript-зелёная-цикл-со-стрелкой-двавыхода.json",
+  "source": "drakontech",
+  "origin": "oscript/Зелёная/Цикл со стрелкой/ДваВыхода.drakon",
+  "nodes": 10,
+  "features": [
+   "arrow-loop",
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-вопрос-слияниевопросов.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Вопрос/СлияниеВопросов.drakon",
+  "nodes": 10,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-запусктестов.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/ЗапускТестов.drakon",
+  "nodes": 56,
+  "features": [
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-силуэт-фибоначчи.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Силуэт/Фибоначчи.drakon",
+  "nodes": 17,
+  "features": [
+   "case",
+   "loopbegin",
+   "loopend",
+   "select",
+   "silhouette"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-старт.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Старт.drakon",
+  "nodes": 6,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-тестирование-проверкабулева.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Тестирование/ПроверкаБулева.drakon",
+  "nodes": 5,
+  "features": [
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-для-дляпомассиву.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл Для/ДляПоМассиву.drakon",
+  "nodes": 6,
+  "features": [
+   "loopbegin",
+   "loopend"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-для-раннийвыход.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл Для/РаннийВыход.drakon",
+  "nodes": 11,
+  "features": [
+   "flipped-yes-no",
+   "loopbegin",
+   "loopend",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-выборсострелкой.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ВыборСоСтрелкой.drakon",
+  "nodes": 12,
+  "features": [
+   "arrow-loop",
+   "case",
+   "select"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-двавыхода.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ДваВыхода.drakon",
+  "nodes": 11,
+  "features": [
+   "arrow-loop",
+   "flipped-yes-no",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-действиепроверка.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ДействиеПроверка.drakon",
+  "nodes": 8,
+  "features": [
+   "arrow-loop",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-проверкадействие.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ПроверкаДействие.drakon",
+  "nodes": 8,
+  "features": [
+   "arrow-loop",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-зелёная-программа-зелёная-цикл-со-стрелкой-проверкадействиепроверка.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Зелёная/Программа Зелёная/Цикл со стрелкой/ПроверкаДействиеПроверка.drakon",
+  "nodes": 9,
+  "features": [
+   "arrow-loop",
+   "question"
+  ],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-классы-класс-полнаяинформация-телокласса.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Классы/Класс ПолнаяИнформация/ТелоКласса.drakon",
+  "nodes": 5,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-классы-класс-серый-конструктор.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Классы/Класс Серый/Конструктор.drakon",
+  "nodes": 5,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-классы-класс-серый-открытое-получитьполнуюинформацию.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Классы/Класс Серый/Открытое/ПолучитьПолнуюИнформацию.drakon",
+  "nodes": 6,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-классы-класс-серый-открытое-приветствовать.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Классы/Класс Серый/Открытое/Приветствовать.drakon",
+  "nodes": 6,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-классы-класс-серый-телокласса.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Классы/Класс Серый/ТелоКласса.drakon",
+  "nodes": 7,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakontech/perfolenta-классы-программа-классы-старт.json",
+  "source": "drakontech",
+  "origin": "perfolenta/Классы/Программа Классы/Старт.drakon",
+  "nodes": 12,
+  "features": [],
+  "format": "drakon-json"
+ },
+ {
+  "file": "drakonwidget-dtsrc.jsonl",
+  "source": "drakonwidget-dtsrc",
+  "format": "drakon-json-lines",
+  "diagrams": 807,
+  "features": {
+   "arrow-loop": 18,
+   "async": 11,
+   "case": 70,
+   "flipped-yes-no": 325,
+   "loopbegin": 176,
+   "loopend": 176,
+   "question": 511,
+   "select": 70,
+   "silhouette": 148,
+   "sinput": 9
   }
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-1-hello-world.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/1 (Hello, world).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-10-check-do-loop.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/10 (Check-Do loop).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "arrow": 1,
+   "if": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-11-do-check-do-hybrid-loop.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/11 (Do-Check-Do (hybrid) loop).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "arrow": 1,
+   "if": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-12-for-loop.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/12 (For loop).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "loopend": 1,
+   "loopstart": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-13-for-loop-without-loop-icons.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/13 (For loop without loop icons).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "arrow": 1,
+   "if": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-14-simplified-for-loop.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/14 (Simplified For loop).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "loopend": 1,
+   "loopstart": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-3-free-type-hello-world.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/3 Free type (Hello, world).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-4-hotkey-diagrams.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/4 (hotkey diagrams).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-5-sum-of-parameters.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/5 (sum of parameters).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-6-if.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/6 (if).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "if": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-7-switch.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/7 (Switch).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "case": 1,
+   "select": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-8-switch.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/8 (Switch).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "case": 1,
+   "select": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__docs-autohotkey-diagrams-from-documentation-9-do-check-loop.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/9 (Do-check loop).drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "arrow": 1,
+   "if": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-01.insertion.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/01.Insertion.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "commentin": 2,
+   "commentout": 4,
+   "insertion": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-02.silhouette.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/02.Silhouette.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 2,
+   "arrow": 2,
+   "silhouette": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-03.the-skewer.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/03.The skewer.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "case": 1,
+   "commentin": 2,
+   "commentout": 3,
+   "if": 3,
+   "select": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-04.joinings.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/04.Joinings.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "if": 4
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-05.loops.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/05.Loops.drn",
+  "format": "drn-items",
+  "diagrams": 7,
+  "features": {
+   "address": 1,
+   "arrow": 5,
+   "case": 1,
+   "commentin": 2,
+   "commentout": 1,
+   "if": 5,
+   "loopend": 2,
+   "loopstart": 2,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-06.logic.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/06.Logic.drn",
+  "format": "drn-items",
+  "diagrams": 7,
+  "features": {
+   "if": 7
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-autohotkey-fibonacci-sequence.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/AutoHotkey/Fibonacci sequence.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "if": 1,
+   "insertion": 1,
+   "output": 1,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-autohotkey-get-position-and-color-of-pixel.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/AutoHotkey/Get position and color of pixel.drn",
+  "format": "drn-items",
+  "diagrams": 3,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__examples-c-demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/C#/Demo.drn",
+  "format": "drn-items",
+  "diagrams": 15,
+  "features": {
+   "address": 2,
+   "arrow": 3,
+   "case": 3,
+   "commentin": 1,
+   "if": 4,
+   "loopend": 6,
+   "loopstart": 6,
+   "select": 3,
+   "shelf": 2,
+   "silhouette": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-c-reversestringcomparer.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/C#/ReverseStringComparer.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__examples-c-sorter.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/C#/Sorter.drn",
+  "format": "drn-items",
+  "diagrams": 3,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "if": 1,
+   "loopend": 1,
+   "loopstart": 1,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-c-stringlist.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/C++/StringList.drn",
+  "format": "drn-items",
+  "diagrams": 12,
+  "features": {
+   "address": 1,
+   "arrow": 2,
+   "case": 2,
+   "if": 7,
+   "loopend": 2,
+   "loopstart": 2,
+   "select": 2,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-c-cpp_demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/C++/cpp_demo.drn",
+  "format": "drn-items",
+  "diagrams": 11,
+  "features": {
+   "address": 1,
+   "arrow": 4,
+   "commentin": 1,
+   "if": 4,
+   "loopend": 3,
+   "loopstart": 3,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-c-c_demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/C/c_demo.drn",
+  "format": "drn-items",
+  "diagrams": 34,
+  "features": {
+   "address": 4,
+   "arrow": 7,
+   "case": 4,
+   "commentin": 3,
+   "commentout": 1,
+   "if": 22,
+   "insertion": 1,
+   "loopend": 6,
+   "loopstart": 6,
+   "select": 4,
+   "shelf": 1,
+   "silhouette": 4
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-c2-test.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/C2/test.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "if": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-d-test.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/D/test.drn",
+  "format": "drn-items",
+  "diagrams": 11,
+  "features": {
+   "address": 3,
+   "arrow": 5,
+   "case": 2,
+   "commentout": 1,
+   "if": 6,
+   "loopend": 3,
+   "loopstart": 3,
+   "select": 2,
+   "shelf": 1,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-drakonjs-demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/DrakonJS/Demo.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "loopend": 1,
+   "loopstart": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-drakonlua-drakon_lua_demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/DrakonLua/drakon_lua_demo.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "loopend": 1,
+   "loopstart": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-erlang-basic-basic.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Erlang/basic/basic.drn",
+  "format": "drn-items",
+  "diagrams": 19,
+  "features": {
+   "address": 2,
+   "arrow": 2,
+   "case": 5,
+   "commentout": 1,
+   "if": 6,
+   "select": 5,
+   "silhouette": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-erlang-fsm-code_door.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Erlang/fsm/code_door.drn",
+  "format": "drn-items",
+  "diagrams": 15,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "commentout": 5,
+   "if": 1,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-erlang-fsm-lexer.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Erlang/fsm/lexer.drn",
+  "format": "drn-items",
+  "diagrams": 13,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "commentin": 1,
+   "commentout": 3,
+   "if": 7,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-erlang-gen_server-musician.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Erlang/gen_server/musician.drn",
+  "format": "drn-items",
+  "diagrams": 13,
+  "features": {
+   "case": 2,
+   "if": 2,
+   "select": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-erlang-supervision-super.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Erlang/supervision/super.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-go-go_demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Go/go_demo.drn",
+  "format": "drn-items",
+  "diagrams": 30,
+  "features": {
+   "address": 2,
+   "arrow": 3,
+   "case": 3,
+   "commentout": 1,
+   "if": 16,
+   "loopend": 7,
+   "loopstart": 7,
+   "select": 3,
+   "shelf": 1,
+   "silhouette": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-java-demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Java/Demo.drn",
+  "format": "drn-items",
+  "diagrams": 13,
+  "features": {
+   "address": 1,
+   "arrow": 2,
+   "case": 2,
+   "commentin": 1,
+   "if": 4,
+   "loopend": 6,
+   "loopstart": 6,
+   "select": 2,
+   "shelf": 2,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-java-reversestringcomparer.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Java/ReverseStringComparer.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__examples-java-sorter.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Java/Sorter.drn",
+  "format": "drn-items",
+  "diagrams": 3,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "if": 1,
+   "loopend": 1,
+   "loopstart": 1,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-javascript-demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Javascript/Demo.drn",
+  "format": "drn-items",
+  "diagrams": 16,
+  "features": {
+   "address": 3,
+   "arrow": 4,
+   "case": 4,
+   "commentin": 1,
+   "if": 3,
+   "loopend": 7,
+   "loopstart": 7,
+   "select": 4,
+   "shelf": 1,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-javascript-machine_sorting.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Javascript/machine_sorting.drn",
+  "format": "drn-items",
+  "diagrams": 19,
+  "features": {
+   "address": 3,
+   "arrow": 4,
+   "case": 4,
+   "if": 5,
+   "select": 4,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-jsutopist-utopist.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/JsUtopist/utopist.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "case": 1,
+   "select": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-kumir-kumir_demo01.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/KuMir/kumir_demo01.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "commentout": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-kumir-kumir_demo02.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/KuMir/kumir_demo02.drn",
+  "format": "drn-items",
+  "diagrams": 6,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 2,
+   "commentout": 6,
+   "if": 2,
+   "loopend": 2,
+   "loopstart": 2,
+   "select": 2,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-lua-lua_demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Lua/lua_demo.drn",
+  "format": "drn-items",
+  "diagrams": 19,
+  "features": {
+   "address": 6,
+   "arrow": 8,
+   "case": 4,
+   "commentin": 3,
+   "if": 8,
+   "loopend": 8,
+   "loopstart": 8,
+   "select": 4,
+   "shelf": 2,
+   "silhouette": 6
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-processing.org-south_norway-displacement.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Processing.org/south_norway/Displacement.drn",
+  "format": "drn-items",
+  "diagrams": 5,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "if": 2,
+   "loopend": 3,
+   "loopstart": 3,
+   "shelf": 4,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-processing.org-south_norway-sky.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Processing.org/south_norway/Sky.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__examples-python-python_demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Python/python_demo.drn",
+  "format": "drn-items",
+  "diagrams": 16,
+  "features": {
+   "address": 3,
+   "arrow": 4,
+   "case": 4,
+   "commentin": 2,
+   "commentout": 1,
+   "if": 6,
+   "loopend": 6,
+   "loopstart": 6,
+   "select": 4,
+   "shelf": 2,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-python-short_circuit.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Python/short_circuit.drn",
+  "format": "drn-items",
+  "diagrams": 11,
+  "features": {
+   "if": 10
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-qtc-qt_cpp.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/QtC++/qt_cpp.drn",
+  "format": "drn-items",
+  "diagrams": 7,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__examples-tcl-tcl_demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Tcl/tcl_demo.drn",
+  "format": "drn-items",
+  "diagrams": 15,
+  "features": {
+   "address": 3,
+   "arrow": 4,
+   "case": 4,
+   "commentin": 1,
+   "if": 5,
+   "loopend": 6,
+   "loopstart": 6,
+   "select": 4,
+   "shelf": 2,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-verilog-verilog_example.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/Verilog/verilog_example.drn",
+  "format": "drn-items",
+  "diagrams": 13,
+  "features": {
+   "address": 5,
+   "arrow": 5,
+   "case": 4,
+   "if": 9,
+   "input": 1,
+   "insertion": 4,
+   "loopend": 1,
+   "loopstart": 1,
+   "output": 1,
+   "select": 4,
+   "shelf": 6,
+   "silhouette": 5
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-automaton-c-automaton-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/automaton/C#/automaton-cs.drn",
+  "format": "drn-items",
+  "diagrams": 13,
+  "features": {
+   "address": 3,
+   "arrow": 3,
+   "case": 2,
+   "commentin": 1,
+   "if": 6,
+   "loopend": 3,
+   "loopstart": 3,
+   "select": 2,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-automaton-c-frog.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/automaton/C#/frog.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-automaton-c-automaton-c.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/automaton/C/automaton-c.drn",
+  "format": "drn-items",
+  "diagrams": 20,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 2,
+   "commentout": 2,
+   "if": 10,
+   "loopend": 4,
+   "loopstart": 4,
+   "select": 2,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-automaton-javascript-automaton-js.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/automaton/Javascript/automaton-js.drn",
+  "format": "drn-items",
+  "diagrams": 19,
+  "features": {
+   "address": 2,
+   "arrow": 2,
+   "case": 2,
+   "if": 9,
+   "loopend": 5,
+   "loopstart": 5,
+   "select": 2,
+   "silhouette": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-automaton-lua-automaton-lua.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/automaton/Lua/automaton-lua.drn",
+  "format": "drn-items",
+  "diagrams": 16,
+  "features": {
+   "address": 3,
+   "arrow": 3,
+   "case": 2,
+   "if": 8,
+   "loopend": 5,
+   "loopstart": 5,
+   "select": 2,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-automaton-python-automaton-py.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/automaton/Python/automaton-py.drn",
+  "format": "drn-items",
+  "diagrams": 16,
+  "features": {
+   "address": 3,
+   "arrow": 3,
+   "case": 2,
+   "if": 4,
+   "loopend": 3,
+   "loopstart": 3,
+   "select": 2,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-nools-nools_demo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/nools/nools_demo.drn",
+  "format": "drn-items",
+  "diagrams": 3,
+  "features": {
+   "if": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-01-simple-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/01-simple-cs.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "if": 2,
+   "loopend": 2,
+   "loopstart": 2,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-02-index-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/02-index-cs.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "if": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-03-index2-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/03-index2-cs.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-04-peer-arrow-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/04-peer-arrow-cs.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-05-own-arrow-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/05-own-arrow-cs.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-06-peer-paw-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/06-peer-paw-cs.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-07-own-paw-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/07-own-paw-cs.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-08-m2m-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/08-m2m-cs.drn",
+  "format": "drn-items",
+  "diagrams": 5,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "if": 2,
+   "loopend": 1,
+   "loopstart": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-09-inherit-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/09-inherit-cs.drn",
+  "format": "drn-items",
+  "diagrams": 3,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-10-inherit2-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/10-inherit2-cs.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-11-oop-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C#/11-oop-cs.drn",
+  "format": "drn-items",
+  "diagrams": 6,
+  "features": {
+   "if": 1,
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-globals.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C/globals.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "loopend": 1,
+   "loopstart": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-indexed.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C/indexed.drn",
+  "format": "drn-items",
+  "diagrams": 3,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-indexed2.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C/indexed2.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-m2m.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C/m2m.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-ownarrow.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C/ownarrow.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-ownpaw.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C/ownpaw.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-peerarrow.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C/peerarrow.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-peerpaw.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C/peerpaw.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-c-simple.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/C/simple.drn",
+  "format": "drn-items",
+  "diagrams": 3,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-tcl-01-simple-tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/Tcl/01-simple-tcl.drn",
+  "format": "drn-items",
+  "diagrams": 5,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "loopend": 1,
+   "loopstart": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-tcl-02-index-tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/Tcl/02-index-tcl.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-tcl-03-index2-tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/Tcl/03-index2-tcl.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-tcl-04-peer-arrow-tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/Tcl/04-peer-arrow-tcl.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-tcl-05-own-arrow-tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/Tcl/05-own-arrow-tcl.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-tcl-06-peer-paw-tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/Tcl/06-peer-paw-tcl.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-tcl-07-own-paw-tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/Tcl/07-own-paw-tcl.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-tcl-08-m2m-tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/Tcl/08-m2m-tcl.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-tcl-09-inherit-tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/Tcl/09-inherit-tcl.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__examples-structure-tcl-10-inherit2-tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/examples/structure/Tcl/10-inherit2-tcl.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-autohotkey_l.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/AutoHotkey_L.drn",
+  "format": "drn-items",
+  "diagrams": 39,
+  "features": {
+   "address": 6,
+   "arrow": 6,
+   "case": 1,
+   "if": 9,
+   "loopend": 8,
+   "loopstart": 8,
+   "select": 1,
+   "silhouette": 6
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-c.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/c.drn",
+  "format": "drn-items",
+  "diagrams": 24,
+  "features": {
+   "address": 6,
+   "arrow": 6,
+   "case": 2,
+   "if": 8,
+   "loopend": 5,
+   "loopstart": 5,
+   "select": 2,
+   "silhouette": 6
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-cpp.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/cpp.drn",
+  "format": "drn-items",
+  "diagrams": 94,
+  "features": {
+   "address": 19,
+   "arrow": 19,
+   "case": 5,
+   "if": 56,
+   "loopend": 38,
+   "loopstart": 38,
+   "select": 5,
+   "shelf": 3,
+   "silhouette": 19
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/cs.drn",
+  "format": "drn-items",
+  "diagrams": 43,
+  "features": {
+   "address": 7,
+   "arrow": 7,
+   "case": 6,
+   "if": 21,
+   "loopend": 14,
+   "loopstart": 14,
+   "select": 6,
+   "shelf": 2,
+   "silhouette": 7
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-cycle_body.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/cycle_body.drn",
+  "format": "drn-items",
+  "diagrams": 11,
+  "features": {
+   "address": 3,
+   "arrow": 3,
+   "case": 3,
+   "if": 4,
+   "loopend": 1,
+   "loopstart": 1,
+   "select": 3,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-erlang_hi.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/erlang_hi.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "if": 2,
+   "loopend": 1,
+   "loopstart": 1,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-java.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/java.drn",
+  "format": "drn-items",
+  "diagrams": 29,
+  "features": {
+   "address": 5,
+   "arrow": 5,
+   "case": 2,
+   "if": 8,
+   "loopend": 4,
+   "loopstart": 4,
+   "select": 2,
+   "silhouette": 5
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-js_task.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/js_task.drn",
+  "format": "drn-items",
+  "diagrams": 22,
+  "features": {
+   "address": 4,
+   "arrow": 4,
+   "if": 12,
+   "loopend": 12,
+   "loopstart": 12,
+   "shelf": 4,
+   "silhouette": 4
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-lua.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/lua.drn",
+  "format": "drn-items",
+  "diagrams": 36,
+  "features": {
+   "address": 7,
+   "arrow": 7,
+   "case": 2,
+   "if": 16,
+   "loopend": 12,
+   "loopstart": 12,
+   "select": 2,
+   "shelf": 2,
+   "silhouette": 7
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-machine.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/machine.drn",
+  "format": "drn-items",
+  "diagrams": 51,
+  "features": {
+   "address": 6,
+   "arrow": 7,
+   "if": 21,
+   "loopend": 16,
+   "loopstart": 16,
+   "shelf": 6,
+   "silhouette": 6
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-node_sorter.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/node_sorter.drn",
+  "format": "drn-items",
+  "diagrams": 26,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "if": 7,
+   "loopend": 4,
+   "loopstart": 4,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-nogoto.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/nogoto.drn",
+  "format": "drn-items",
+  "diagrams": 67,
+  "features": {
+   "address": 5,
+   "arrow": 9,
+   "case": 2,
+   "if": 18,
+   "loopend": 12,
+   "loopstart": 12,
+   "select": 2,
+   "silhouette": 5
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-python.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/python.drn",
+  "format": "drn-items",
+  "diagrams": 26,
+  "features": {
+   "address": 4,
+   "arrow": 4,
+   "case": 3,
+   "commentout": 1,
+   "if": 7,
+   "loopend": 7,
+   "loopstart": 7,
+   "select": 3,
+   "shelf": 1,
+   "silhouette": 4
+  }
+ },
+ {
+  "file": "drn/drakon_editor__generators-verilog.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/generators/verilog.drn",
+  "format": "drn-items",
+  "diagrams": 83,
+  "features": {
+   "address": 11,
+   "arrow": 11,
+   "case": 4,
+   "commentin": 2,
+   "commentout": 2,
+   "if": 31,
+   "loopend": 21,
+   "loopstart": 21,
+   "select": 4,
+   "shelf": 53,
+   "silhouette": 11
+  }
+ },
+ {
+  "file": "drn/drakon_editor__scripts-alt_edit.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/scripts/alt_edit.drn",
+  "format": "drn-items",
+  "diagrams": 29,
+  "features": {
+   "address": 3,
+   "arrow": 3,
+   "case": 7,
+   "commentin": 1,
+   "if": 7,
+   "loopend": 7,
+   "loopstart": 7,
+   "select": 7,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__scripts-graph2.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/scripts/graph2.drn",
+  "format": "drn-items",
+  "diagrams": 74,
+  "features": {
+   "address": 7,
+   "arrow": 7,
+   "case": 2,
+   "commentin": 2,
+   "if": 35,
+   "loopend": 18,
+   "loopstart": 18,
+   "select": 2,
+   "shelf": 22,
+   "silhouette": 7
+  }
+ },
+ {
+  "file": "drn/drakon_editor__scripts-hie_engine.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/scripts/hie_engine.drn",
+  "format": "drn-items",
+  "diagrams": 11,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "if": 4,
+   "loopend": 3,
+   "loopstart": 3,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__scripts-highlight.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/scripts/highlight.drn",
+  "format": "drn-items",
+  "diagrams": 11,
+  "features": {
+   "address": 3,
+   "arrow": 3,
+   "case": 2,
+   "if": 8,
+   "loopend": 5,
+   "loopstart": 5,
+   "select": 2,
+   "shelf": 4,
+   "silhouette": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__structure-struct.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/structure/struct.drn",
+  "format": "drn-items",
+  "diagrams": 131,
+  "features": {
+   "address": 50,
+   "arrow": 50,
+   "case": 12,
+   "commentin": 1,
+   "if": 61,
+   "loopend": 29,
+   "loopstart": 29,
+   "select": 12,
+   "silhouette": 50
+  }
+ },
+ {
+  "file": "drn/drakon_editor__structure-tables.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/structure/tables.drn",
+  "format": "drn-items",
+  "diagrams": 104,
+  "features": {
+   "address": 18,
+   "arrow": 19,
+   "case": 32,
+   "commentout": 1,
+   "if": 57,
+   "loopend": 47,
+   "loopstart": 47,
+   "select": 32,
+   "shelf": 15,
+   "silhouette": 18
+  }
+ },
+ {
+  "file": "drn/drakon_editor__structure-tables_c.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/structure/tables_c.drn",
+  "format": "drn-items",
+  "diagrams": 93,
+  "features": {
+   "address": 6,
+   "arrow": 6,
+   "case": 7,
+   "if": 56,
+   "loopend": 22,
+   "loopstart": 22,
+   "select": 7,
+   "shelf": 11,
+   "silhouette": 6
+  }
+ },
+ {
+  "file": "drn/drakon_editor__structure-tables_cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/structure/tables_cs.drn",
+  "format": "drn-items",
+  "diagrams": 87,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 6,
+   "if": 27,
+   "loopend": 13,
+   "loopstart": 13,
+   "select": 6,
+   "shelf": 2,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__structure-tables_tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/structure/tables_tcl.drn",
+  "format": "drn-items",
+  "diagrams": 72,
+  "features": {
+   "address": 2,
+   "arrow": 2,
+   "case": 5,
+   "if": 9,
+   "loopend": 11,
+   "loopstart": 11,
+   "select": 5,
+   "shelf": 1,
+   "silhouette": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-abstract_model.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/abstract_model.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "shelf": 3
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-base1.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/base1.drn",
+  "format": "drn-items",
+  "diagrams": 8,
+  "features": {
+   "address": 1,
+   "arrow": 5,
+   "case": 2,
+   "commentin": 3,
+   "commentout": 2,
+   "if": 4,
+   "loopend": 2,
+   "loopstart": 3,
+   "select": 1,
+   "silhouette": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-branch_trouble.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/branch_trouble.drn",
+  "format": "drn-items",
+  "diagrams": 5,
+  "features": {
+   "address": 2,
+   "arrow": 2,
+   "case": 3,
+   "if": 1,
+   "select": 3,
+   "silhouette": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-connect_graph.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/connect_graph.drn",
+  "format": "drn-items",
+  "diagrams": 10,
+  "features": {
+   "arrow": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-cpp_test.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/cpp_test.drn",
+  "format": "drn-items",
+  "diagrams": 30,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__testdata-cs_test.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/cs_test.drn",
+  "format": "drn-items",
+  "diagrams": 23,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__testdata-erlcomma.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/erlcomma.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "case": 1,
+   "select": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-erldemo.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/erldemo.drn",
+  "format": "drn-items",
+  "diagrams": 12,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 3,
+   "commentin": 2,
+   "if": 5,
+   "select": 3,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-extract_auto.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/extract_auto.drn",
+  "format": "drn-items",
+  "diagrams": 64,
+  "features": {
+   "address": 25,
+   "arrow": 25,
+   "case": 15,
+   "if": 29,
+   "insertion": 2,
+   "loopend": 2,
+   "loopstart": 2,
+   "select": 16,
+   "silhouette": 22
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-extract_auto2.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/extract_auto2.drn",
+  "format": "drn-items",
+  "diagrams": 15,
+  "features": {
+   "arrow": 6,
+   "case": 5,
+   "if": 11,
+   "loopend": 15,
+   "loopstart": 15,
+   "select": 5
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-foreach_py.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/foreach_py.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "arrow": 1,
+   "if": 1,
+   "loopend": 2,
+   "loopstart": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-foreach_tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/foreach_tcl.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "if": 2,
+   "loopend": 1,
+   "loopstart": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-gen1.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/gen1.drn",
+  "format": "drn-items",
+  "diagrams": 11,
+  "features": {
+   "address": 6,
+   "arrow": 6,
+   "case": 2,
+   "if": 2,
+   "loopend": 4,
+   "loopstart": 4,
+   "select": 2,
+   "silhouette": 6
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_auto.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_auto.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "insertion": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_cpp.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_cpp.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "if": 1,
+   "loopend": 1,
+   "loopstart": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_cs.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_cs.drn",
+  "format": "drn-items",
+  "diagrams": 3,
+  "features": {
+   "case": 1,
+   "commentin": 1,
+   "loopend": 1,
+   "loopstart": 1,
+   "select": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_d.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_d.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "commentout": 1,
+   "loopend": 1,
+   "loopstart": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_erlang.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_erlang.drn",
+  "format": "drn-items",
+  "diagrams": 7,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "if": 4,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_java.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_java.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_javascript.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_javascript.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "arrow": 1,
+   "commentout": 1,
+   "if": 1,
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_lua.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_lua.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "commentin": 2,
+   "loopend": 2,
+   "loopstart": 2,
+   "select": 1,
+   "shelf": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_python.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_python.drn",
+  "format": "drn-items",
+  "diagrams": 3,
+  "features": {
+   "case": 1,
+   "commentin": 1,
+   "loopend": 1,
+   "loopstart": 1,
+   "select": 1,
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_tcl.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__testdata-hi_veri.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/hi_veri.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "if": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-java_test.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/java_test.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__testdata-line_merge.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/line_merge.drn",
+  "format": "drn-items",
+  "diagrams": 16,
+  "features": {
+   "arrow": 2,
+   "if": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-quick_sort_py.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/quick_sort_py.drn",
+  "format": "drn-items",
+  "diagrams": 5,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 2,
+   "commentin": 1,
+   "if": 2,
+   "loopend": 2,
+   "loopstart": 2,
+   "select": 2,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-quick_sort_tcl.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/quick_sort_tcl.drn",
+  "format": "drn-items",
+  "diagrams": 4,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 2,
+   "commentin": 1,
+   "if": 1,
+   "loopend": 2,
+   "loopstart": 2,
+   "select": 2,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_class_already_defined.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_class_already_defined.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_class_expected.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_class_expected.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_class_name_expected.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_class_name_expected.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_class_not_expected.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_class_not_expected.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_cycle.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_cycle.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_dest_field_reuse.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_dest_field_reuse.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_error_in_field.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_error_in_field.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_field_defined.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_field_defined.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_id.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_id.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_index_expected.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_index_expected.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_index_field_not_found.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_index_field_not_found.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_indexed_collection.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_indexed_collection.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_multi.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_multi.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_no_labels.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_no_labels.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_not_link.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_not_link.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_repeating_index_field.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_repeating_index_field.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_source_field_reuse.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_source_field_reuse.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_wrong_arrow.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_wrong_arrow.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_wrong_inherit.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_wrong_inherit.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_wrong_line.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_wrong_line.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-se_wrong_paw.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/se_wrong_paw.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-skip.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/skip.drn",
+  "format": "drn-items",
+  "diagrams": 3,
+  "features": {
+   "address": 1,
+   "arrow": 2,
+   "case": 2,
+   "if": 3,
+   "loopend": 2,
+   "loopstart": 2,
+   "select": 2,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-sm_no_branches.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/sm_no_branches.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {}
+ },
+ {
+  "file": "drn/drakon_editor__testdata-sm_no_receive.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/sm_no_receive.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-sm_no_receive_middle.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/sm_no_receive_middle.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "if": 1,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-sm_receive_end.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/sm_receive_end.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "if": 1,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-sm_receive_middle.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/sm_receive_middle.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "if": 1,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-sm_test.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/sm_test.drn",
+  "format": "drn-items",
+  "diagrams": 6,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "commentin": 1,
+   "if": 2,
+   "loopend": 1,
+   "loopstart": 1,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-struct_index_repindex.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/struct_index_repindex.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "shelf": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-structure_test.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/structure_test.drn",
+  "format": "drn-items",
+  "diagrams": 32,
+  "features": {
+   "shelf": 27
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-switch_bug.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/switch_bug.drn",
+  "format": "drn-items",
+  "diagrams": 2,
+  "features": {
+   "case": 1,
+   "if": 2,
+   "loopend": 2,
+   "loopstart": 2,
+   "select": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__testdata-tjoins.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/testdata/tjoins.drn",
+  "format": "drn-items",
+  "diagrams": 20,
+  "features": {
+   "address": 2,
+   "arrow": 3,
+   "case": 3,
+   "commentin": 2,
+   "if": 5,
+   "pause": 1,
+   "select": 3,
+   "silhouette": 2
+  }
+ },
+ {
+  "file": "drn/drakon_editor__tmp-lua.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/tmp/lua.drn",
+  "format": "drn-items",
+  "diagrams": 12,
+  "features": {
+   "address": 6,
+   "arrow": 6,
+   "if": 7,
+   "loopend": 7,
+   "loopstart": 7,
+   "shelf": 2,
+   "silhouette": 6
+  }
+ },
+ {
+  "file": "drn/drakon_editor__tmp-tmp.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/tmp/tmp.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__unittest-algo2.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/unittest/algo2.drn",
+  "format": "drn-items",
+  "diagrams": 16,
+  "features": {
+   "arrow": 3,
+   "case": 1,
+   "if": 14,
+   "loopend": 1,
+   "loopstart": 1,
+   "select": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__unittest-bad_break.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/unittest/bad_break.drn",
+  "format": "drn-items",
+  "diagrams": 1,
+  "features": {
+   "if": 1,
+   "loopend": 1,
+   "loopstart": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__unittest-erltest.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/unittest/erltest.drn",
+  "format": "drn-items",
+  "diagrams": 6,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "if": 3,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon_editor__unittest-nogoto_src.json",
+  "source": "drakon_editor",
+  "origin": "drakon_editor/unittest/nogoto_src.drn",
+  "format": "drn-items",
+  "diagrams": 38,
+  "features": {
+   "address": 1,
+   "arrow": 17,
+   "case": 3,
+   "if": 29,
+   "loopend": 4,
+   "loopstart": 4,
+   "select": 3,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon-tech-desktop__src-static-behaviour.json",
+  "source": "drakon.tech.desktop",
+  "origin": "drakon.tech.desktop/src/static/Behaviour.drn",
+  "format": "drn-items",
+  "diagrams": 72,
+  "features": {
+   "address": 7,
+   "arrow": 7,
+   "case": 10,
+   "if": 27,
+   "loopend": 1,
+   "loopstart": 1,
+   "select": 10,
+   "silhouette": 7
+  }
+ },
+ {
+  "file": "drn/drakon-tech-desktop__src-static-calltrace.json",
+  "source": "drakon.tech.desktop",
+  "origin": "drakon.tech.desktop/src/static/CallTrace.drn",
+  "format": "drn-items",
+  "diagrams": 5,
+  "features": {
+   "if": 1
+  }
+ },
+ {
+  "file": "drn/drakon-tech-desktop__src-static-contextmenu.json",
+  "source": "drakon.tech.desktop",
+  "origin": "drakon.tech.desktop/src/static/ContextMenu.drn",
+  "format": "drn-items",
+  "diagrams": 12,
+  "features": {
+   "if": 5,
+   "loopend": 3,
+   "loopstart": 3
+  }
+ },
+ {
+  "file": "drn/drakon-tech-desktop__src-static-lomma.json",
+  "source": "drakon.tech.desktop",
+  "origin": "drakon.tech.desktop/src/static/Lomma.drn",
+  "format": "drn-items",
+  "diagrams": 700,
+  "features": {
+   "address": 45,
+   "arrow": 58,
+   "case": 45,
+   "if": 325,
+   "loopend": 106,
+   "loopstart": 106,
+   "select": 45,
+   "silhouette": 45
+  }
+ },
+ {
+  "file": "drn/drakon-tech-desktop__src-static-main.json",
+  "source": "drakon.tech.desktop",
+  "origin": "drakon.tech.desktop/src/static/Main.drn",
+  "format": "drn-items",
+  "diagrams": 80,
+  "features": {
+   "address": 6,
+   "arrow": 6,
+   "case": 6,
+   "if": 26,
+   "loopend": 5,
+   "loopstart": 5,
+   "select": 6,
+   "silhouette": 6
+  }
+ },
+ {
+  "file": "drn/drakon-tech-desktop__src-static-main2.json",
+  "source": "drakon.tech.desktop",
+  "origin": "drakon.tech.desktop/src/static/Main2.drn",
+  "format": "drn-items",
+  "diagrams": 32,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 4,
+   "if": 10,
+   "loopend": 3,
+   "loopstart": 3,
+   "select": 4,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon-tech-desktop__src-static-multitouch.json",
+  "source": "drakon.tech.desktop",
+  "origin": "drakon.tech.desktop/src/static/Multitouch.drn",
+  "format": "drn-items",
+  "diagrams": 25,
+  "features": {
+   "address": 1,
+   "arrow": 1,
+   "case": 1,
+   "if": 4,
+   "loopend": 5,
+   "loopstart": 5,
+   "select": 1,
+   "silhouette": 1
+  }
+ },
+ {
+  "file": "drn/drakon-tech-desktop__src-static-theme.json",
+  "source": "drakon.tech.desktop",
+  "origin": "drakon.tech.desktop/src/static/Theme.drn",
+  "format": "drn-items",
+  "diagrams": 26,
+  "features": {
+   "if": 3
+  }
+ },
+ {
+  "file": "drn/drakon-tech-desktop__src-static-utils.json",
+  "source": "drakon.tech.desktop",
+  "origin": "drakon.tech.desktop/src/static/Utils.drn",
+  "format": "drn-items",
+  "diagrams": 194,
+  "features": {
+   "address": 12,
+   "arrow": 17,
+   "case": 4,
+   "if": 114,
+   "loopend": 53,
+   "loopstart": 53,
+   "select": 4,
+   "silhouette": 12
+  }
+ },
+ {
+  "file": "drn/drakon-tech-desktop__src-static-viewwidget.json",
+  "source": "drakon.tech.desktop",
+  "origin": "drakon.tech.desktop/src/static/ViewWidget.drn",
+  "format": "drn-items",
+  "diagrams": 58,
+  "features": {
+   "if": 11,
+   "loopend": 3,
+   "loopstart": 3
+  }
+ }
 ]

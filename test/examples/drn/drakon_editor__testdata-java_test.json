@@ -1,0 +1,157 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/java_test.drn",
+ "info": {
+  "type": "drakon",
+  "version": "9",
+  "start_version": "1",
+  "language": "Java"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "private throwing constructor",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 5,
+   "features": [],
+   "items": [
+    {
+     "item_id": 11,
+     "type": "beginend",
+     "text": "private throwing constructor",
+     "x": 170,
+     "y": 60,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "horizontal",
+     "text": "",
+     "x": 260,
+     "y": 60,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "action",
+     "text": "private ctr\n\nArrayList<Integer> ints\n\nthrows BadException GoodException",
+     "x": 470,
+     "y": 60,
+     "w": 150,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "none throwing constructor",
+   "origin": "0 -100",
+   "description": "",
+   "info": {},
+   "nodes": 5,
+   "features": [],
+   "items": [
+    {
+     "item_id": 16,
+     "type": "beginend",
+     "text": "none throwing constructor",
+     "x": 170,
+     "y": 60,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 18,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 19,
+     "type": "horizontal",
+     "text": "",
+     "x": 260,
+     "y": 60,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 20,
+     "type": "action",
+     "text": "ctr\n\nArrayList<Integer> ints\nfloat height\n\nthrows BadException",
+     "x": 470,
+     "y": 60,
+     "w": 110,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,866 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/connect_graph.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1",
+  "language": "Tcl"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "up",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "action",
+     "text": "action",
+     "x": 170,
+     "y": 270,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 210,
+     "w": 0,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "action",
+     "text": "action",
+     "x": 370,
+     "y": 270,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "vertical",
+     "text": "",
+     "x": 370,
+     "y": 210,
+     "w": 0,
+     "h": 70,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "action",
+     "x": 560,
+     "y": 270,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "vertical",
+     "text": "",
+     "x": 560,
+     "y": 210,
+     "w": 0,
+     "h": 80,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "down",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 7,
+     "type": "action",
+     "text": "action",
+     "x": 160,
+     "y": 200,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "vertical",
+     "text": "",
+     "x": 160,
+     "y": 220,
+     "w": 0,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "action",
+     "text": "action",
+     "x": 360,
+     "y": 200,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "vertical",
+     "text": "",
+     "x": 360,
+     "y": 190,
+     "w": 0,
+     "h": 70,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "action",
+     "text": "action",
+     "x": 550,
+     "y": 200,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "vertical",
+     "text": "",
+     "x": 550,
+     "y": 180,
+     "w": 0,
+     "h": 80,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "left",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 13,
+     "type": "action",
+     "text": "action",
+     "x": 370,
+     "y": 90,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 90,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "action",
+     "text": "action",
+     "x": 370,
+     "y": 180,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 180,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "action",
+     "text": "action",
+     "x": 370,
+     "y": 280,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 18,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 280,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "right",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 19,
+     "type": "action",
+     "text": "action",
+     "x": 310,
+     "y": 80,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 20,
+     "type": "horizontal",
+     "text": "",
+     "x": 370,
+     "y": 80,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 21,
+     "type": "action",
+     "text": "action",
+     "x": 310,
+     "y": 170,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 22,
+     "type": "horizontal",
+     "text": "",
+     "x": 340,
+     "y": 170,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 23,
+     "type": "action",
+     "text": "action",
+     "x": 310,
+     "y": 270,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 24,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 270,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "through",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [],
+   "items": [
+    {
+     "item_id": 25,
+     "type": "action",
+     "text": "action",
+     "x": 140,
+     "y": 150,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 26,
+     "type": "vertical",
+     "text": "",
+     "x": 140,
+     "y": 100,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 27,
+     "type": "action",
+     "text": "action",
+     "x": 140,
+     "y": 250,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 28,
+     "type": "action",
+     "text": "action",
+     "x": 140,
+     "y": 350,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 29,
+     "type": "action",
+     "text": "action",
+     "x": 320,
+     "y": 270,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 30,
+     "type": "action",
+     "text": "action",
+     "x": 480,
+     "y": 270,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 31,
+     "type": "action",
+     "text": "action",
+     "x": 640,
+     "y": 270,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 32,
+     "type": "horizontal",
+     "text": "",
+     "x": 240,
+     "y": 270,
+     "w": 490,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "through2",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [],
+   "items": [
+    {
+     "item_id": 33,
+     "type": "action",
+     "text": "action",
+     "x": 150,
+     "y": 110,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "action",
+     "text": "action",
+     "x": 360,
+     "y": 110,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "action",
+     "text": "action",
+     "x": 150,
+     "y": 240,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 36,
+     "type": "action",
+     "text": "action",
+     "x": 360,
+     "y": 240,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 37,
+     "type": "vertical",
+     "text": "",
+     "x": 150,
+     "y": 70,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 38,
+     "type": "vertical",
+     "text": "",
+     "x": 360,
+     "y": 70,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "horizontal",
+     "text": "",
+     "x": 70,
+     "y": 110,
+     "w": 380,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 40,
+     "type": "horizontal",
+     "text": "",
+     "x": 70,
+     "y": 240,
+     "w": 380,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "two",
+   "origin": "-75 46",
+   "description": null,
+   "info": {},
+   "nodes": 12,
+   "features": [],
+   "items": [
+    {
+     "item_id": 41,
+     "type": "action",
+     "text": "action",
+     "x": 130,
+     "y": 190,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 42,
+     "type": "vertical",
+     "text": "",
+     "x": 110,
+     "y": 70,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 43,
+     "type": "vertical",
+     "text": "",
+     "x": 150,
+     "y": 70,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 44,
+     "type": "action",
+     "text": "action",
+     "x": 330,
+     "y": 190,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 45,
+     "type": "vertical",
+     "text": "",
+     "x": 310,
+     "y": 210,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 46,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 210,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 47,
+     "type": "action",
+     "text": "action",
+     "x": 130,
+     "y": 430,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "action",
+     "text": "action",
+     "x": 330,
+     "y": 430,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 49,
+     "type": "horizontal",
+     "text": "",
+     "x": 390,
+     "y": 420,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 50,
+     "type": "horizontal",
+     "text": "",
+     "x": 390,
+     "y": 440,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 51,
+     "type": "horizontal",
+     "text": "",
+     "x": 10,
+     "y": 420,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 52,
+     "type": "horizontal",
+     "text": "",
+     "x": 10,
+     "y": 440,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "inside",
+   "origin": "0 0",
+   "description": "Has two lines behind the action.",
+   "info": {},
+   "nodes": 3,
+   "features": [],
+   "items": [
+    {
+     "item_id": 55,
+     "type": "action",
+     "text": "action",
+     "x": 380,
+     "y": 310,
+     "w": 140,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 56,
+     "type": "horizontal",
+     "text": "",
+     "x": 290,
+     "y": 300,
+     "w": 150,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 57,
+     "type": "vertical",
+     "text": "",
+     "x": 480,
+     "y": 260,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "square",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [],
+   "items": [
+    {
+     "item_id": 58,
+     "type": "vertical",
+     "text": "",
+     "x": 80,
+     "y": 60,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 59,
+     "type": "horizontal",
+     "text": "",
+     "x": 80,
+     "y": 60,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 60,
+     "type": "horizontal",
+     "text": "",
+     "x": 80,
+     "y": 160,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 61,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "bad_arrows",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "arrow"
+   ],
+   "items": [
+    {
+     "item_id": 62,
+     "type": "arrow",
+     "text": "",
+     "x": 210,
+     "y": 80,
+     "w": 150,
+     "h": 120,
+     "a": 100,
+     "b": 0
+    },
+    {
+     "item_id": 63,
+     "type": "horizontal",
+     "text": "",
+     "x": 60,
+     "y": 80,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 64,
+     "type": "arrow",
+     "text": "",
+     "x": 310,
+     "y": 80,
+     "w": 130,
+     "h": 100,
+     "a": 40,
+     "b": 1
+    },
+    {
+     "item_id": 65,
+     "type": "horizontal",
+     "text": "",
+     "x": 310,
+     "y": 80,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 66,
+     "type": "arrow",
+     "text": "",
+     "x": 300,
+     "y": 260,
+     "w": 120,
+     "h": 100,
+     "a": 40,
+     "b": 0
+    },
+    {
+     "item_id": 67,
+     "type": "horizontal",
+     "text": "",
+     "x": 120,
+     "y": 260,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 68,
+     "type": "arrow",
+     "text": "",
+     "x": 370,
+     "y": 230,
+     "w": 70,
+     "h": 100,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 69,
+     "type": "horizontal",
+     "text": "",
+     "x": 410,
+     "y": 230,
+     "w": 80,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3027 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/generators/node_sorter.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1",
+  "language": "Tcl"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "ensure_node_exists",
+   "origin": "-78 12",
+   "description": null,
+   "info": {},
+   "nodes": 11,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 30,
+     "type": "beginend",
+     "text": "ensure_node_exists",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 31,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 450,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 32,
+     "type": "vertical",
+     "x": 170,
+     "y": 70,
+     "w": 0,
+     "h": 360,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 33,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "action",
+     "text": "set count [ $db onecolumn {\n\tselect count(*)\n\tfrom nodes\n\twhere node_id = :node_id } ]",
+     "x": 170,
+     "y": 210,
+     "w": 160,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "action",
+     "text": "node_id",
+     "x": 350,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 36,
+     "type": "if",
+     "text": "$count == 0",
+     "x": 170,
+     "y": 310,
+     "w": 80,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 37,
+     "type": "action",
+     "text": "error \"Node $node_id not found.\"",
+     "x": 320,
+     "y": 370,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 38,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 410,
+     "w": 150,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "vertical",
+     "text": "",
+     "x": 320,
+     "y": 310,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 321,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 120,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "add_incoming",
+   "origin": "-33 5",
+   "description": "",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 62,
+     "type": "beginend",
+     "text": "add_incoming",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 63,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 64,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 65,
+     "type": "action",
+     "text": "node_id",
+     "x": 320,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 66,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 67,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 120,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 68,
+     "type": "action",
+     "text": "$db eval {\n\tupdate nodes\n\tset incoming = incoming + 1\n\twhere node_id = :node_id\n}",
+     "x": 170,
+     "y": 220,
+     "w": 150,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "get_link_dst",
+   "origin": "-1 -7",
+   "description": "",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 69,
+     "type": "beginend",
+     "text": "get_link_dst",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 70,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 71,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 72,
+     "type": "action",
+     "text": "link_id",
+     "x": 310,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 73,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 74,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 120,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 75,
+     "type": "action",
+     "text": "return [ $db onecolumn {\n\tselect dst\n\tfrom links\n\twhere link_id = :link_id } ]",
+     "x": 170,
+     "y": 220,
+     "w": 160,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "add_node",
+   "origin": "-142 -27",
+   "description": "",
+   "info": {},
+   "nodes": 11,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 84,
+     "type": "beginend",
+     "text": "add_node",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 85,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 430,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 86,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 330,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 87,
+     "type": "if",
+     "text": "$stage == \"filling\"",
+     "x": 170,
+     "y": 200,
+     "w": 190,
+     "h": 20,
+     "a": 170,
+     "b": 1
+    },
+    {
+     "item_id": 88,
+     "type": "action",
+     "text": "node_id",
+     "x": 310,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 89,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 90,
+     "type": "action",
+     "text": "variable db\nvariable stage",
+     "x": 170,
+     "y": 130,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 91,
+     "type": "action",
+     "text": "error \"Cannot add any nodes now.\"",
+     "x": 530,
+     "y": 280,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 92,
+     "type": "vertical",
+     "text": "",
+     "x": 530,
+     "y": 200,
+     "w": 0,
+     "h": 180,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 93,
+     "type": "action",
+     "text": "$db eval {\n\tinsert into nodes (node_id, incoming)\n\tvalues (:node_id, 0);\n}",
+     "x": 170,
+     "y": 310,
+     "w": 190,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 94,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 380,
+     "w": 360,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "add_link",
+   "origin": "-591 -298",
+   "description": "",
+   "info": {},
+   "nodes": 12,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 95,
+     "type": "beginend",
+     "text": "add_link",
+     "x": 170,
+     "y": 30,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 96,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 500,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 97,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 50,
+     "w": 0,
+     "h": 450,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 98,
+     "type": "if",
+     "text": "$stage == \"filling\"",
+     "x": 170,
+     "y": 200,
+     "w": 230,
+     "h": 20,
+     "a": 180,
+     "b": 1
+    },
+    {
+     "item_id": 99,
+     "type": "action",
+     "text": "src\nordinal\ndst",
+     "x": 310,
+     "y": 30,
+     "w": 50,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 100,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 30,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 101,
+     "type": "action",
+     "text": "variable db\nvariable stage",
+     "x": 170,
+     "y": 130,
+     "w": 230,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 102,
+     "type": "action",
+     "text": "error \"Cannot add any links now.\"",
+     "x": 580,
+     "y": 270,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 103,
+     "type": "vertical",
+     "text": "",
+     "x": 580,
+     "y": 200,
+     "w": 0,
+     "h": 260,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 104,
+     "type": "action",
+     "text": "$db eval {\n\tinsert into links (src, ordinal, dst, backward)\n\tvalues (:src, :ordinal, :dst, 0)\n}",
+     "x": 170,
+     "y": 380,
+     "w": 230,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 105,
+     "type": "action",
+     "text": "ensure_node_exists $src\nensure_node_exists $dst",
+     "x": 170,
+     "y": 280,
+     "w": 230,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 106,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 460,
+     "w": 410,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "complete_construction",
+   "origin": "-89 -46",
+   "description": "",
+   "info": {},
+   "nodes": 13,
+   "features": [
+    "if",
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 107,
+     "type": "beginend",
+     "text": "complete_construction",
+     "x": 260,
+     "y": 40,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 108,
+     "type": "beginend",
+     "text": "End",
+     "x": 260,
+     "y": 600,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 109,
+     "type": "vertical",
+     "text": "",
+     "x": 260,
+     "y": 60,
+     "w": 0,
+     "h": 550,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 110,
+     "type": "if",
+     "text": "$stage == \"filling\"",
+     "x": 260,
+     "y": 180,
+     "w": 160,
+     "h": 20,
+     "a": 200,
+     "b": 1
+    },
+    {
+     "item_id": 111,
+     "type": "action",
+     "text": "variable db\nvariable stage",
+     "x": 260,
+     "y": 110,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 112,
+     "type": "action",
+     "text": "error \"Cannot complete construction now.\"",
+     "x": 620,
+     "y": 240,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 113,
+     "type": "vertical",
+     "text": "",
+     "x": 620,
+     "y": 180,
+     "w": 0,
+     "h": 380,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 114,
+     "type": "horizontal",
+     "text": "",
+     "x": 260,
+     "y": 560,
+     "w": 360,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 115,
+     "type": "action",
+     "text": "set stage constructed",
+     "x": 260,
+     "y": 240,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 116,
+     "type": "action",
+     "text": "set links [ $db eval {\n\tselect link_id from links } ]",
+     "x": 260,
+     "y": 310,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 117,
+     "type": "loopend",
+     "text": "",
+     "x": 260,
+     "y": 520,
+     "w": 160,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 118,
+     "type": "loopstart",
+     "text": "foreach link_id; $links",
+     "x": 260,
+     "y": 380,
+     "w": 160,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 119,
+     "type": "action",
+     "text": "set dst [ get_link_dst $link_id ]\nadd_incoming $dst",
+     "x": 260,
+     "y": 450,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "init",
+   "origin": "1 -13",
+   "description": "",
+   "info": {},
+   "nodes": 8,
+   "features": [],
+   "items": [
+    {
+     "item_id": 120,
+     "type": "beginend",
+     "text": "init",
+     "x": 170,
+     "y": 40,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 121,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 430,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 122,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 60,
+     "w": 0,
+     "h": 350,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 123,
+     "type": "action",
+     "text": "catch { $dbname close }\nsqlite3 $dbname :memory:\n$dbname eval $init_sql",
+     "x": 170,
+     "y": 250,
+     "w": 130,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 124,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 40,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 125,
+     "type": "action",
+     "text": "dbname\nstart_node_id",
+     "x": 330,
+     "y": 40,
+     "w": 70,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 126,
+     "type": "action",
+     "text": "variable stage\nvariable init_sql\nvariable db\nvariable start_node",
+     "x": 170,
+     "y": 140,
+     "w": 130,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 127,
+     "type": "action",
+     "text": "set stage filling\nset db $dbname\nset start_node $start_node_id",
+     "x": 170,
+     "y": 350,
+     "w": 130,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "sort",
+   "origin": "-138 84",
+   "description": null,
+   "info": {},
+   "nodes": 38,
+   "features": [
+    "address",
+    "arrow",
+    "if",
+    "loopend",
+    "loopstart",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 128,
+     "type": "beginend",
+     "text": "sort",
+     "x": 100,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 129,
+     "type": "beginend",
+     "text": "End",
+     "x": 1000,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 130,
+     "type": "vertical",
+     "x": 100,
+     "y": 80,
+     "w": 0,
+     "h": 900,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 244,
+     "type": "action",
+     "text": "variable stage\nvariable start_node",
+     "x": 100,
+     "y": 270,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 246,
+     "type": "if",
+     "text": "$stage == \"constructed\"",
+     "x": 100,
+     "y": 420,
+     "w": 130,
+     "h": 20,
+     "a": 130,
+     "b": 1
+    },
+    {
+     "item_id": 247,
+     "type": "action",
+     "text": "error \"Cannot sort now.\"",
+     "x": 360,
+     "y": 500,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 248,
+     "type": "vertical",
+     "text": "",
+     "x": 360,
+     "y": 420,
+     "w": 0,
+     "h": 560,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 277,
+     "type": "action",
+     "text": "set stack [ list $start_node ]\nadd_incoming $start_node",
+     "x": 100,
+     "y": 710,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 278,
+     "type": "if",
+     "text": "[ llength $stack ] == 0",
+     "x": 660,
+     "y": 860,
+     "w": 160,
+     "h": 20,
+     "a": 70,
+     "b": 0
+    },
+    {
+     "item_id": 279,
+     "type": "action",
+     "text": "set current [ pop stack ]",
+     "x": 660,
+     "y": 240,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 280,
+     "type": "action",
+     "text": "set links [ get_node_links $current ]",
+     "x": 660,
+     "y": 510,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 281,
+     "type": "action",
+     "text": "remove_incoming $current",
+     "x": 660,
+     "y": 310,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 282,
+     "type": "if",
+     "text": "[ get_incoming $current ] == 0",
+     "x": 660,
+     "y": 370,
+     "w": 160,
+     "h": 20,
+     "a": 40,
+     "b": 1
+    },
+    {
+     "item_id": 283,
+     "type": "horizontal",
+     "text": "",
+     "x": 660,
+     "y": 820,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 285,
+     "type": "vertical",
+     "text": "",
+     "x": 860,
+     "y": 370,
+     "w": 0,
+     "h": 450,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 287,
+     "type": "loopend",
+     "text": "",
+     "x": 660,
+     "y": 790,
+     "w": 160,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 288,
+     "type": "loopstart",
+     "text": "foreach link_id; $links",
+     "x": 660,
+     "y": 570,
+     "w": 160,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 296,
+     "type": "if",
+     "text": "[ is_link_backward $link_id ]",
+     "x": 660,
+     "y": 630,
+     "w": 160,
+     "h": 20,
+     "a": 20,
+     "b": 0
+    },
+    {
+     "item_id": 297,
+     "type": "action",
+     "text": "set next [ get_link_dst $link_id ]\npush stack $next",
+     "x": 660,
+     "y": 700,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 298,
+     "type": "vertical",
+     "text": "",
+     "x": 840,
+     "y": 630,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 299,
+     "type": "horizontal",
+     "text": "",
+     "x": 660,
+     "y": 750,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 300,
+     "type": "branch",
+     "text": "visit node",
+     "x": 660,
+     "y": 170,
+     "w": 160,
+     "h": 30,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 301,
+     "type": "address",
+     "text": "visit node",
+     "x": 660,
+     "y": 940,
+     "w": 160,
+     "h": 30,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 302,
+     "type": "vertical",
+     "text": "",
+     "x": 660,
+     "y": 130,
+     "w": 0,
+     "h": 850,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 303,
+     "type": "action",
+     "text": "lappend result $current",
+     "x": 660,
+     "y": 450,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 304,
+     "type": "branch",
+     "text": "exit",
+     "x": 1000,
+     "y": 170,
+     "w": 90,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 305,
+     "type": "vertical",
+     "text": "",
+     "x": 1000,
+     "y": 130,
+     "w": 0,
+     "h": 250,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 306,
+     "type": "action",
+     "text": "return $result",
+     "x": 1000,
+     "y": 330,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 307,
+     "type": "vertical",
+     "text": "",
+     "x": 890,
+     "y": 860,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 308,
+     "type": "address",
+     "text": "exit",
+     "x": 890,
+     "y": 940,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 314,
+     "type": "action",
+     "text": "clear_graph\nset stage finished",
+     "x": 1000,
+     "y": 260,
+     "w": 90,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 315,
+     "type": "branch",
+     "text": "init",
+     "x": 100,
+     "y": 170,
+     "w": 130,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 316,
+     "type": "action",
+     "text": "set result {}",
+     "x": 100,
+     "y": 350,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 317,
+     "type": "horizontal",
+     "text": "",
+     "x": 100,
+     "y": 130,
+     "w": 900,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 318,
+     "type": "address",
+     "text": "visit node",
+     "x": 100,
+     "y": 940,
+     "w": 130,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 319,
+     "type": "arrow",
+     "text": "",
+     "x": -40,
+     "y": 130,
+     "w": 140,
+     "h": 850,
+     "a": 930,
+     "b": 1
+    },
+    {
+     "item_id": 320,
+     "type": "address",
+     "text": "exit",
+     "x": 360,
+     "y": 940,
+     "w": 110,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 323,
+     "type": "action",
+     "text": "find_backward_links",
+     "x": 100,
+     "y": 620,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "set_node_left_outgoing",
+   "origin": "-39 -26",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 153,
+     "type": "beginend",
+     "text": "set_node_left_outgoing",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 154,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 155,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 156,
+     "type": "action",
+     "text": "node_id\nleft_outgoing",
+     "x": 370,
+     "y": 60,
+     "w": 70,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 157,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 70,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 158,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 170,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 159,
+     "type": "action",
+     "text": "$db eval {\nupdate nodes\nset left_outgoing = :left_outgoing\nwhere node_id = :node_id }",
+     "x": 170,
+     "y": 270,
+     "w": 150,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "clear_visited",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [],
+   "items": [
+    {
+     "item_id": 172,
+     "type": "beginend",
+     "text": "clear_visited",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 173,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 174,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 175,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 150,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 176,
+     "type": "action",
+     "text": "$db eval {\n\tupdate nodes\n\tset visited = 0\n}",
+     "x": 170,
+     "y": 250,
+     "w": 110,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "find_backward_links",
+   "origin": "-146 -16",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 177,
+     "type": "beginend",
+     "text": "find_backward_links",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 178,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 580,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 179,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 500,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 180,
+     "type": "action",
+     "text": "variable start_node",
+     "x": 170,
+     "y": 150,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 181,
+     "type": "action",
+     "text": "clear_visited\nset before {}",
+     "x": 170,
+     "y": 240,
+     "w": 70,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 182,
+     "type": "action",
+     "text": "find_backward_recursive $start_node $before",
+     "x": 170,
+     "y": 370,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 333,
+     "type": "action",
+     "text": "remember_incoming",
+     "x": 170,
+     "y": 310,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "find_backward_recursive",
+   "origin": "-139 439",
+   "description": null,
+   "info": {},
+   "nodes": 20,
+   "features": [
+    "if",
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 183,
+     "type": "beginend",
+     "text": "find_backward_recursive",
+     "x": 170,
+     "y": 90,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 184,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 840,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 185,
+     "type": "vertical",
+     "x": 170,
+     "y": 100,
+     "w": 0,
+     "h": 730,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 186,
+     "type": "horizontal",
+     "text": "",
+     "x": 260,
+     "y": 90,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 187,
+     "type": "action",
+     "text": "node_id\nbefore",
+     "x": 360,
+     "y": 90,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 203,
+     "type": "if",
+     "text": "[ is_visited $node_id ]",
+     "x": 170,
+     "y": 170,
+     "w": 130,
+     "h": 20,
+     "a": 300,
+     "b": 0
+    },
+    {
+     "item_id": 204,
+     "type": "vertical",
+     "text": "",
+     "x": 600,
+     "y": 170,
+     "w": 0,
+     "h": 630,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 205,
+     "type": "action",
+     "text": "mark_visited $node_id",
+     "x": 170,
+     "y": 240,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 206,
+     "type": "action",
+     "text": "set links [ get_node_links $node_id ]",
+     "x": 170,
+     "y": 300,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 233,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 760,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 234,
+     "type": "loopstart",
+     "text": "foreach link_id; $links",
+     "x": 170,
+     "y": 420,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 235,
+     "type": "action",
+     "text": "set dst [ get_link_dst $link_id ]",
+     "x": 170,
+     "y": 480,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 236,
+     "type": "if",
+     "text": "[ contains $new_before $dst ]",
+     "x": 170,
+     "y": 540,
+     "w": 150,
+     "h": 20,
+     "a": 150,
+     "b": 0
+    },
+    {
+     "item_id": 237,
+     "type": "action",
+     "text": "mark_link_backward $link_id",
+     "x": 470,
+     "y": 610,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 238,
+     "type": "action",
+     "text": "set new_before [ linsert $before end $node_id ]",
+     "x": 170,
+     "y": 360,
+     "w": 200,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 239,
+     "type": "action",
+     "text": "find_backward_recursive $dst $new_before",
+     "x": 170,
+     "y": 610,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 240,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 710,
+     "w": 300,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 241,
+     "type": "vertical",
+     "text": "",
+     "x": 470,
+     "y": 540,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 242,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 800,
+     "w": 430,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 243,
+     "type": "action",
+     "text": "remove_incoming $dst",
+     "x": 470,
+     "y": 670,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "is_visited",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [],
+   "items": [
+    {
+     "item_id": 188,
+     "type": "beginend",
+     "text": "is_visited",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 189,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 190,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 191,
+     "type": "action",
+     "text": "node_id",
+     "x": 300,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 192,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 193,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 140,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 194,
+     "type": "action",
+     "text": "set visited [ $db onecolumn {\n\tselect visited\n\tfrom nodes\n\twhere node_id = :node_id\n} ]",
+     "x": 170,
+     "y": 230,
+     "w": 140,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 202,
+     "type": "action",
+     "text": "return $visited",
+     "x": 170,
+     "y": 320,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "mark_visited",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 195,
+     "type": "beginend",
+     "text": "mark_visited",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 196,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 197,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 198,
+     "type": "action",
+     "text": "node_id",
+     "x": 300,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 199,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 200,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 140,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 201,
+     "type": "action",
+     "text": "$db eval {\n\tupdate nodes\n\tset visited = 1\n\twhere node_id = :node_id\n}",
+     "x": 170,
+     "y": 240,
+     "w": 140,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "get_node_links",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 207,
+     "type": "beginend",
+     "text": "get_node_links",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 208,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 209,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 210,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 100,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 211,
+     "type": "action",
+     "text": "node_id",
+     "x": 360,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 212,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 130,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 213,
+     "type": "action",
+     "text": "return [ $db eval {\n\tselect link_id\n\tfrom links\n\twhere src = :node_id\n\torder by ordinal\n} ]",
+     "x": 170,
+     "y": 230,
+     "w": 130,
+     "h": 70,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "mark_link_backward",
+   "origin": "-42 16",
+   "description": "",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 214,
+     "type": "beginend",
+     "text": "mark_link_backward",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 215,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 216,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 217,
+     "type": "action",
+     "text": "link_id",
+     "x": 320,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 218,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 219,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 140,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 220,
+     "type": "action",
+     "text": "$db eval {\n\tupdate links\n\tset backward = 1\n\twhere link_id = :link_id\n}",
+     "x": 170,
+     "y": 240,
+     "w": 140,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "remove_incoming",
+   "origin": "-101 7",
+   "description": "",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 221,
+     "type": "beginend",
+     "text": "remove_incoming",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 222,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 223,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 224,
+     "type": "action",
+     "text": "node_id",
+     "x": 320,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 225,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 226,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 120,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 227,
+     "type": "action",
+     "text": "$db eval {\n\tupdate nodes\n\tset incoming = incoming - 1\n\twhere node_id = :node_id\n}",
+     "x": 170,
+     "y": 220,
+     "w": 150,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "get_backward_links",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [],
+   "items": [
+    {
+     "item_id": 228,
+     "type": "beginend",
+     "text": "get_backward_links",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 229,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 230,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 231,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 120,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 232,
+     "type": "action",
+     "text": "return [ $db eval {\n\tselect link_id\n\tfrom links\n\twhere backward = 1\n } ]",
+     "x": 170,
+     "y": 220,
+     "w": 120,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "push",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 249,
+     "type": "beginend",
+     "text": "push",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 250,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 251,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 252,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 253,
+     "type": "action",
+     "text": "stack\nvalue",
+     "x": 300,
+     "y": 60,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 254,
+     "type": "action",
+     "text": "upvar 1 $stack collection",
+     "x": 170,
+     "y": 160,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 255,
+     "type": "action",
+     "text": "lappend collection $value",
+     "x": 170,
+     "y": 250,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "pop",
+   "origin": "-49 20",
+   "description": null,
+   "info": {},
+   "nodes": 14,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 256,
+     "type": "beginend",
+     "text": "pop",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 257,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 580,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 258,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 490,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 259,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 260,
+     "type": "action",
+     "text": "stack",
+     "x": 310,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 261,
+     "type": "if",
+     "text": "$length == 0",
+     "x": 170,
+     "y": 260,
+     "w": 80,
+     "h": 20,
+     "a": 160,
+     "b": 0
+    },
+    {
+     "item_id": 262,
+     "type": "action",
+     "text": "set length [ llength $collection ]",
+     "x": 170,
+     "y": 190,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 263,
+     "type": "action",
+     "text": "upvar 1 $stack collection",
+     "x": 170,
+     "y": 120,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 264,
+     "type": "vertical",
+     "text": "",
+     "x": 410,
+     "y": 260,
+     "w": 0,
+     "h": 190,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 265,
+     "type": "action",
+     "text": "set result \"\"",
+     "x": 410,
+     "y": 330,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 266,
+     "type": "action",
+     "text": "set collection [ lrange $collection 0 end-1 ]",
+     "x": 170,
+     "y": 400,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 267,
+     "type": "action",
+     "text": "set result [ lindex $collection end ]",
+     "x": 170,
+     "y": 330,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 268,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 450,
+     "w": 240,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 269,
+     "type": "action",
+     "text": "return $result",
+     "x": 170,
+     "y": 490,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "get_incoming",
+   "origin": "-43 0",
+   "description": "",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 270,
+     "type": "beginend",
+     "text": "get_incoming",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 271,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 272,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 273,
+     "type": "action",
+     "text": "node_id",
+     "x": 320,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 274,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 275,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 120,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 276,
+     "type": "action",
+     "text": "return [ $db onecolumn {\n\tselect incoming\n\tfrom nodes\n\twhere node_id = :node_id\n} ]",
+     "x": 170,
+     "y": 220,
+     "w": 140,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "is_link_backward",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 289,
+     "type": "beginend",
+     "text": "is_link_backward",
+     "x": 170,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 290,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 291,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 292,
+     "type": "action",
+     "text": "link_id",
+     "x": 320,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 293,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 294,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 140,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 295,
+     "type": "action",
+     "text": "return [ $db onecolumn {\n\tselect backward\n\tfrom links\n\twhere link_id = :link_id\n} ]",
+     "x": 170,
+     "y": 240,
+     "w": 140,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "clear_graph",
+   "origin": "-316 -20",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [],
+   "items": [
+    {
+     "item_id": 309,
+     "type": "beginend",
+     "text": "clear_graph",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 310,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 311,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 312,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 130,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 313,
+     "type": "action",
+     "text": "$db eval {\n\tdelete from links;\n\tdelete from nodes;\n}",
+     "x": 170,
+     "y": 230,
+     "w": 120,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "remember_incoming",
+   "origin": "-123 14",
+   "description": null,
+   "info": {},
+   "nodes": 9,
+   "features": [
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 324,
+     "type": "beginend",
+     "text": "remember_incoming",
+     "x": 170,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 325,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 620,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 326,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 530,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 327,
+     "type": "action",
+     "text": "variable db\nvariable incoming",
+     "x": 170,
+     "y": 140,
+     "w": 80,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 328,
+     "type": "action",
+     "text": "set nodes [ $db eval {\n\tselect node_id from nodes\n} ]",
+     "x": 170,
+     "y": 240,
+     "w": 150,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 329,
+     "type": "loopstart",
+     "text": "foreach node_id; $nodes",
+     "x": 170,
+     "y": 360,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 330,
+     "type": "action",
+     "text": "set incoming_links [ get_unique_incoming $node_id ]",
+     "x": 170,
+     "y": 430,
+     "w": 220,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 331,
+     "type": "action",
+     "text": "lappend incoming $node_id $incoming_links",
+     "x": 170,
+     "y": 490,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 332,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 560,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "get_incoming_for_nodes",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [],
+   "items": [
+    {
+     "item_id": 334,
+     "type": "beginend",
+     "text": "get_incoming_for_nodes",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 335,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 336,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 337,
+     "type": "action",
+     "text": "variable incoming\nreturn $incoming",
+     "x": 170,
+     "y": 140,
+     "w": 80,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "get_unique_incoming",
+   "origin": "-43 -50",
+   "description": "",
+   "info": {},
+   "nodes": 8,
+   "features": [],
+   "items": [
+    {
+     "item_id": 338,
+     "type": "beginend",
+     "text": "get_unique_incoming",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 339,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 470,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 340,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 380,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 341,
+     "type": "action",
+     "text": "node_id",
+     "x": 320,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 342,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 343,
+     "type": "action",
+     "text": "variable db",
+     "x": 170,
+     "y": 120,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 344,
+     "type": "action",
+     "text": "set sources [ $db eval {\n\tselect src\n\tfrom links\n\twhere dst = :node_id\n\tgroup by src\n} ]",
+     "x": 170,
+     "y": 220,
+     "w": 130,
+     "h": 70,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 345,
+     "type": "action",
+     "text": "return [ llength $sources ]",
+     "x": 170,
+     "y": 400,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

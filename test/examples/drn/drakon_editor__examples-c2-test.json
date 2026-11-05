@@ -1,0 +1,147 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/C2/test.drn",
+ "info": {
+  "type": "drakon",
+  "version": "30",
+  "start_version": "1",
+  "language": "C2"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "tet",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "tet",
+     "x": 180,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 180,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 180,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "x": 180,
+     "y": 60,
+     "w": 190,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "",
+     "x": 370,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "if",
+     "text": "1==1",
+     "x": 180,
+     "y": 190,
+     "w": 60,
+     "h": 20,
+     "a": 50,
+     "b": 1
+    },
+    {
+     "item_id": 7,
+     "type": "vertical",
+     "text": "",
+     "x": 290,
+     "y": 190,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "horizontal",
+     "text": "",
+     "x": 180,
+     "y": 290,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "action",
+     "text": "i=1;",
+     "x": 180,
+     "y": 250,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "action",
+     "text": "int i=0;",
+     "x": 180,
+     "y": 120,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

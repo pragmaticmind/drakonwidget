@@ -1,0 +1,1512 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/C++/cpp_demo.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1",
+  "language": "C++"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "main",
+   "origin": "-52 -42",
+   "description": "The standard entry point of a C program.",
+   "info": {},
+   "nodes": 9,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "main",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 410,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "action",
+     "text": "public\n\nint argc     // The number of arguments.\nchar** argv  // The array of argumens.\n\nreturns int  // Returns 0 on success.",
+     "x": 480,
+     "y": 60,
+     "w": 170,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 60,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "PrintHello();",
+     "x": 170,
+     "y": 220,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "action",
+     "text": "return result;",
+     "x": 170,
+     "y": 350,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 509,
+     "type": "action",
+     "text": "IterationDemo();\nQuickSortDemo();",
+     "x": 170,
+     "y": 280,
+     "w": 80,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 734,
+     "type": "shelf",
+     "text": "0",
+     "x": 170,
+     "y": 150,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "int result"
+    }
+   ]
+  },
+  {
+   "name": "IterationDemo",
+   "origin": "0 -50",
+   "description": "Shows off several collection iteration methods available for the C code generator.",
+   "info": {},
+   "nodes": 9,
+   "features": [],
+   "items": [
+    {
+     "item_id": 444,
+     "type": "beginend",
+     "text": "IterationDemo",
+     "x": 170,
+     "y": 0,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 445,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 560,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 446,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 10,
+     "w": 0,
+     "h": 550,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 447,
+     "type": "action",
+     "text": "cout << \"iteration demo\" << endl;",
+     "x": 170,
+     "y": 190,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 504,
+     "type": "action",
+     "text": "std::vector<int> sequence;",
+     "x": 170,
+     "y": 130,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 505,
+     "type": "action",
+     "text": "Fibonacci(n, &sequence);",
+     "x": 170,
+     "y": 260,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 506,
+     "type": "action",
+     "text": "cout << endl;",
+     "x": 170,
+     "y": 450,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 507,
+     "type": "action",
+     "text": "PrintIntsArrow(&sequence);\nPrintIntsBackward(&sequence, n);\nPrintIntsFor(&sequence);",
+     "x": 170,
+     "y": 350,
+     "w": 150,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 529,
+     "type": "action",
+     "text": "int n = 15;",
+     "x": 170,
+     "y": 60,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "PrintIntsArrow",
+   "origin": "-22 -58",
+   "description": "A loop constructed with an arrow.",
+   "info": {},
+   "nodes": 14,
+   "features": [
+    "arrow",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 473,
+     "type": "beginend",
+     "text": "PrintIntsArrow",
+     "x": 170,
+     "y": 10,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 474,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 560,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 475,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 20,
+     "w": 0,
+     "h": 540,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 476,
+     "type": "action",
+     "text": "const std::vector<int>* collection // The collection\n                                  // to print.",
+     "x": 490,
+     "y": 10,
+     "w": 220,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 477,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 10,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 478,
+     "type": "action",
+     "text": "cout << collection->at(i) << \" \";",
+     "x": 380,
+     "y": 370,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 479,
+     "type": "action",
+     "text": "length = (int)collection->size();\ni = 0;",
+     "x": 170,
+     "y": 200,
+     "w": 170,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 480,
+     "type": "if",
+     "text": "i < length",
+     "x": 170,
+     "y": 300,
+     "w": 170,
+     "h": 20,
+     "a": 40,
+     "b": 0
+    },
+    {
+     "item_id": 481,
+     "type": "vertical",
+     "text": "",
+     "x": 380,
+     "y": 300,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 482,
+     "type": "action",
+     "text": "i++;",
+     "x": 380,
+     "y": 420,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 483,
+     "type": "arrow",
+     "text": "",
+     "x": 540,
+     "y": 260,
+     "w": 370,
+     "h": 200,
+     "a": 160,
+     "b": 0
+    },
+    {
+     "item_id": 484,
+     "type": "action",
+     "text": "cout << \"using if and arrow:\" << endl;",
+     "x": 170,
+     "y": 130,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 485,
+     "type": "action",
+     "text": "cout << endl;",
+     "x": 170,
+     "y": 500,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 497,
+     "type": "action",
+     "text": "int i, length;",
+     "x": 170,
+     "y": 80,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "PrintIntsFor",
+   "origin": "-22 -8",
+   "description": "A loop constructed with loop icons, 'for'-style.",
+   "info": {},
+   "nodes": 12,
+   "features": [
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 486,
+     "type": "beginend",
+     "text": "PrintIntsFor",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 487,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 600,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 488,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 520,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 490,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 492,
+     "type": "loopstart",
+     "text": "i = 0; i < length; i++",
+     "x": 170,
+     "y": 350,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 493,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 450,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 498,
+     "type": "action",
+     "text": "length = (int)collection->size();",
+     "x": 170,
+     "y": 240,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 499,
+     "type": "action",
+     "text": "cout << \"using for:\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 500,
+     "type": "action",
+     "text": "int i, length;",
+     "x": 170,
+     "y": 130,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 501,
+     "type": "action",
+     "text": "cout << endl;",
+     "x": 170,
+     "y": 520,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 503,
+     "type": "action",
+     "text": "const std::vector<int>* collection // The collection\n                                  // to print.",
+     "x": 490,
+     "y": 60,
+     "w": 220,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 725,
+     "type": "action",
+     "text": "cout << collection->at(i) << \" \";",
+     "x": 170,
+     "y": 400,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "PrintIntsBackward",
+   "origin": "-21 -67",
+   "description": "Prints an array of ints in the reversed order.",
+   "info": {},
+   "nodes": 11,
+   "features": [
+    "arrow",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 510,
+     "type": "beginend",
+     "text": "PrintIntsBackward",
+     "x": 170,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 512,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 340,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 513,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 521,
+     "type": "action",
+     "text": "const std::vector<int>* collection // The collection\n                                  // to print.\nint n // The last element to start with.",
+     "x": 520,
+     "y": 60,
+     "w": 220,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 522,
+     "type": "if",
+     "text": "n >= 0",
+     "x": 170,
+     "y": 160,
+     "w": 80,
+     "h": 20,
+     "a": 90,
+     "b": 0
+    },
+    {
+     "item_id": 524,
+     "type": "action",
+     "text": "n--;",
+     "x": 340,
+     "y": 280,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 525,
+     "type": "vertical",
+     "text": "",
+     "x": 340,
+     "y": 160,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 526,
+     "type": "arrow",
+     "text": "",
+     "x": 510,
+     "y": 120,
+     "w": 340,
+     "h": 210,
+     "a": 170,
+     "b": 0
+    },
+    {
+     "item_id": 527,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 410,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 528,
+     "type": "action",
+     "text": "cout << endl;",
+     "x": 170,
+     "y": 340,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 724,
+     "type": "action",
+     "text": "cout << collection->at(n) << \" \";",
+     "x": 340,
+     "y": 220,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "QuickSortDemo",
+   "origin": "-63 148",
+   "description": "A demo that creates a few arrays of strings and sorts them.",
+   "info": {},
+   "nodes": 20,
+   "features": [
+    "address",
+    "arrow",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 537,
+     "type": "beginend",
+     "text": "QuickSortDemo",
+     "x": 140,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 538,
+     "type": "beginend",
+     "text": "End",
+     "x": 1080,
+     "y": 530,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 539,
+     "type": "vertical",
+     "x": 140,
+     "y": 80,
+     "w": 0,
+     "h": 760,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 540,
+     "type": "action",
+     "text": "const char* unsortedA[] = { \"the\", \"sooner\", \"we\", \"start\", \"this\", \"the\", \"better\", 0 };\nconst char* sortedA[] = { \"aa\", \"bb\", \"cc\", \"dd\", \"ee\", \"ff\", 0 };\nconst char* reverseA[] = { \"ff\", \"ee\", \"dd\", \"cc\", \"bb\", \"aa\", 0 };\nconst char* emptyA[] = { 0 };\nconst char* flatA[] = { \"flat\", \"flat\", \"flat\", \"flat\", \"flat\", 0};",
+     "x": 140,
+     "y": 390,
+     "w": 370,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 541,
+     "type": "action",
+     "text": "StringList unsorted;\nStringList sorted;\nStringList reverse;\nStringList empty;\nStringList flat;",
+     "x": 140,
+     "y": 250,
+     "w": 370,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 542,
+     "type": "branch",
+     "text": "exit",
+     "x": 1080,
+     "y": 140,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 543,
+     "type": "vertical",
+     "text": "",
+     "x": 1080,
+     "y": 100,
+     "w": 0,
+     "h": 430,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 545,
+     "type": "branch",
+     "text": "init",
+     "x": 140,
+     "y": 140,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 546,
+     "type": "address",
+     "text": "print",
+     "x": 140,
+     "y": 800,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 548,
+     "type": "branch",
+     "text": "print",
+     "x": 770,
+     "y": 140,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 549,
+     "type": "address",
+     "text": "exit",
+     "x": 770,
+     "y": 800,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 550,
+     "type": "vertical",
+     "text": "",
+     "x": 770,
+     "y": 100,
+     "w": 0,
+     "h": 740,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 563,
+     "type": "action",
+     "text": "Fill(&unsorted, unsortedA);\nFill(&sorted, sortedA);\nFill(&reverse, reverseA);\nFill(&empty, emptyA);\nFill(&flat, flatA);",
+     "x": 140,
+     "y": 660,
+     "w": 370,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 564,
+     "type": "horizontal",
+     "text": "",
+     "x": 140,
+     "y": 100,
+     "w": 940,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 565,
+     "type": "arrow",
+     "text": "",
+     "x": -250,
+     "y": 100,
+     "w": 390,
+     "h": 740,
+     "a": 1020,
+     "b": 1
+    },
+    {
+     "item_id": 576,
+     "type": "action",
+     "text": "Print(&unsorted);\nPrint(&sorted);\nPrint(&reverse);\nPrint(&empty);\nPrint(&flat);",
+     "x": 770,
+     "y": 520,
+     "w": 230,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 577,
+     "type": "action",
+     "text": "cout << \"quick sort demo\" << endl;",
+     "x": 140,
+     "y": 530,
+     "w": 370,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 669,
+     "type": "action",
+     "text": "QuickSort(&unsorted, 0, unsorted.Count(), &comparer);\nQuickSort(&sorted, 0, sorted.Count(), &comparer);\nQuickSort(&reverse, 0, reverse.Count(), &comparer);\nQuickSort(&empty, 0, empty.Count(), &comparer);\nQuickSort(&flat, 0, flat.Count(), &comparer);",
+     "x": 770,
+     "y": 370,
+     "w": 230,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 711,
+     "type": "action",
+     "text": "StringsAreSorted(&unsorted);\nStringsAreSorted(&sorted);\nStringsAreSorted(&reverse);\nStringsAreSorted(&empty);\nStringsAreSorted(&flat);",
+     "x": 770,
+     "y": 660,
+     "w": 230,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 733,
+     "type": "action",
+     "text": "SimpleComparer comparer;",
+     "x": 770,
+     "y": 220,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Fill",
+   "origin": "19 -22",
+   "description": "Copies C-strings to an ObjectArray.",
+   "info": {},
+   "nodes": 11,
+   "features": [
+    "arrow",
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 552,
+     "type": "beginend",
+     "text": "Fill",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 553,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 450,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 554,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 350,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 555,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 556,
+     "type": "action",
+     "text": "StringList* output // The array to put strings in.\nconst char* strings[] // An array of pointers to C-strings. The last element in the array is 0.",
+     "x": 690,
+     "y": 60,
+     "w": 390,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 557,
+     "type": "action",
+     "text": "const char** current = strings;",
+     "x": 170,
+     "y": 150,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 558,
+     "type": "action",
+     "text": "output->AddFromCString(*current);",
+     "x": 350,
+     "y": 300,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 559,
+     "type": "if",
+     "text": "*current == 0",
+     "x": 170,
+     "y": 230,
+     "w": 140,
+     "h": 20,
+     "a": 40,
+     "b": 1
+    },
+    {
+     "item_id": 560,
+     "type": "action",
+     "text": "current++;",
+     "x": 350,
+     "y": 350,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 561,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 230,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 562,
+     "type": "arrow",
+     "text": "",
+     "x": 520,
+     "y": 190,
+     "w": 350,
+     "h": 210,
+     "a": 170,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Print",
+   "origin": "-45 1",
+   "description": "Prints an array of strings to the console.",
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 566,
+     "type": "beginend",
+     "text": "Print",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 567,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 500,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 568,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 420,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 569,
+     "type": "action",
+     "text": "StringList* array // The array of strings to print.",
+     "x": 550,
+     "y": 60,
+     "w": 220,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 570,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 60,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 571,
+     "type": "action",
+     "text": "int i;\nint length = array->Count();",
+     "x": 170,
+     "y": 160,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 572,
+     "type": "loopstart",
+     "text": "i = 0; i < length; i++",
+     "x": 170,
+     "y": 240,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 573,
+     "type": "action",
+     "text": "cout << *array->Get(i) << \" \";",
+     "x": 170,
+     "y": 300,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 574,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 360,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 575,
+     "type": "action",
+     "text": "cout << endl;",
+     "x": 170,
+     "y": 430,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "StringsAreSorted",
+   "origin": "-43 -77",
+   "description": "Tests whether an array of strings is actually sorted.",
+   "info": {},
+   "nodes": 16,
+   "features": [
+    "if",
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 678,
+     "type": "beginend",
+     "text": "StringsAreSorted",
+     "x": 170,
+     "y": -50,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 679,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 650,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 680,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": -40,
+     "w": 0,
+     "h": 690,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 683,
+     "type": "loopstart",
+     "text": "i = 0; i < length; i += 1",
+     "x": 170,
+     "y": 140,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 684,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 560,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 685,
+     "type": "action",
+     "text": "current = array->Get(i);",
+     "x": 170,
+     "y": 190,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 686,
+     "type": "loopstart",
+     "text": "j = i + 1; j < length; j += 1",
+     "x": 170,
+     "y": 260,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 687,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 500,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 688,
+     "type": "action",
+     "text": "after = array->Get(j);",
+     "x": 170,
+     "y": 320,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 689,
+     "type": "action",
+     "text": "cout << \"Collection is not sorted.\" << endl;\nabort();",
+     "x": 520,
+     "y": 500,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 690,
+     "type": "vertical",
+     "text": "",
+     "x": 520,
+     "y": 410,
+     "w": 0,
+     "h": 190,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 691,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 600,
+     "w": 350,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 692,
+     "type": "action",
+     "text": "int i, j;\nstd::string* current;\nstd::string* after;\nint length = array->Count();",
+     "x": 170,
+     "y": 60,
+     "w": 130,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 703,
+     "type": "action",
+     "text": "StringList* array // The array of strings to check.",
+     "x": 580,
+     "y": -50,
+     "w": 220,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 704,
+     "type": "horizontal",
+     "text": "",
+     "x": 240,
+     "y": -50,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 726,
+     "type": "if",
+     "text": "*current > *after",
+     "x": 170,
+     "y": 410,
+     "w": 130,
+     "h": 20,
+     "a": 220,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "PrintHello",
+   "origin": "0 0",
+   "description": "Prints a banner.",
+   "info": {},
+   "nodes": 5,
+   "features": [
+    "commentin"
+   ],
+   "items": [
+    {
+     "item_id": 719,
+     "type": "beginend",
+     "text": "PrintHello",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 720,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 721,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 722,
+     "type": "action",
+     "text": "cout << \"DRAKON-C++ demo\" << endl;\ncout << \"===============\" << endl;",
+     "x": 170,
+     "y": 210,
+     "w": 150,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 723,
+     "type": "commentin",
+     "text": "Note that this diagram does not\nhave a parameters icon.\n\nBy default, it will be treated as a static function\ntaking no parameters and returning void.",
+     "x": 560,
+     "y": 210,
+     "w": 228,
+     "h": 50,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Compare",
+   "origin": "0 -50",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 727,
+     "type": "beginend",
+     "text": "Compare",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 728,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 729,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 730,
+     "type": "action",
+     "text": "public virtual const method\n\nconst std::string* left\nconst std::string* right\n\nreturns int",
+     "x": 420,
+     "y": 60,
+     "w": 120,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 731,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 60,
+     "w": 150,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 732,
+     "type": "action",
+     "text": "int result = left->compare(*right);\nreturn result;",
+     "x": 170,
+     "y": 250,
+     "w": 150,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}
