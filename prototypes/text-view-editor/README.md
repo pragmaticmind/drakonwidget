@@ -31,6 +31,7 @@ The syntax is ticket 05 plus its 2026-11-01 addendum.
 - `goto <branch>` switches branch.
 - `goto @name` jumps to the line marked `@name`. When the target is lower in the drawing it is a join; when it is higher it is an arrow loop.
 - `loop` is the only block loop.
+- A `goto @label` cannot enter a loop body from outside that loop, including from an outer or sibling loop. Enter through the `loop` line instead (a label immediately above that line is valid). Jumps within the same loop keep the existing join/arrow-loop rules. Jumps out are allowed, including multiple exits to different labels, exits into an enclosing loop, and jumps leaving several loops or switching branch.
 - Guard shorthand: a question that lists a single `yes` or `no` block ending in `goto` puts that block on the side, and the following lines continue downwards.
 - `input`, `output`, `shelf <who>: <what>`, `insert <text> -> <id>`, `note:`, the `[duration]` suffix and `"literal"` lines are supported.
 - The old keywords `join`, `repeat` and `again` are flagged as Problems.
@@ -42,3 +43,13 @@ The syntax is ticket 05 plus its 2026-11-01 addendum.
 - **drakonwidget expects the arrow loop at the top.** Its `arrow-loop` item sits at the top of the loop: both the line coming in from above and the loop-back point at it.
 - **No End is fine.** drakonwidget draws a Diagram with no End Icon (the `debounce` state machine) without trouble.
 - **drakonwidget fails on Models with gaps.** When the text has Problems, drakonwidget throws internal errors. The Canvas view therefore shows the first Problem, with its suggested fix, instead.
+- **Warnings are not drawing errors.** Unreachable branches stay visible. If drawing fails, the Canvas error panel uses an error diagnostic, never an unreachable-branch warning.
+- **Block-loop early exits expose a Canvas limitation.** They are valid in the Text view and Model, but drakonwidget currently throws an internal `tail` error on the multiple-exit walkthrough. This is a renderer limitation, not a reason to reject outward jumps. Loop-boundary tests check parser diagnostics and Model connections; browser checks verify error navigation and valid Model display without claiming that early-exit diagrams render.
+
+## Regression tests
+
+Run `node --test prototypes/text-view-editor/text-view.test.cjs` from the repository root. Uses Node's built-in test runner, with no dependencies.
+
+The suite exercises `DrakonText.parse` and `DrakonText.toDrakonwidget`: optional wrappers, inline question jumps and their diagnostics, compatibility with indented outcomes, default transitions, explicit jumps, empty branches, disconnected and reachable cycles, partial question/case outcomes, loop exits, and the guided walkthroughs.
+
+Run `node --test prototypes/text-view-editor/*.test.cjs` to include the headless browser regression. It requires `google-chrome` on PATH, or `CHROME_BIN` pointing to a Chrome/Chromium executable. It checks amber styling, click-to-line navigation, warning removal after editing, and continued Canvas rendering with all branches visible. Its temporary browser profile is removed afterwards.

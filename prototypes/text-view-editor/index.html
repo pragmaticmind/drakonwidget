@@ -261,10 +261,11 @@ var DrakonText = (function () {
       if (kind === "silhouette" && !b.name) diags.push(diag(b.line, "A branch needs a name."));
     });
 
-    // Pre-pass: ids for every Icon line, labels attached to the line below them.
-    function assign(nodes, bi) {
+    // Pre-pass: Icon IDs, label targets and enclosing loop bodies.
+    function assign(nodes, bi, loops) {
       nodes.forEach(function (n, i) {
         n.branch = bi;
+        n.loops = loops;
         if (n.kw === "@") {
           var target = null;
           for (var j = i + 1; j < nodes.length; j++) if (nodes[j].kw !== "@") { target = nodes[j]; break; }
@@ -275,10 +276,10 @@ var DrakonText = (function () {
         }
         if (ICON_LINES[n.kw] && !(n.kw === "goto" && labelOf(n))) n.id = newId(n.kw === "goto" ? "to-" + slug(n.text, "branch") : slug(n.text, n.kw));
         if (n.kw === "loop") n.endId = newId(n.id + "-end");
-        assign(n.children, bi);
+        assign(n.children, bi, n.kw === "loop" ? loops.concat([n]) : loops);
       });
     }
-    branchDefs.forEach(function (b, bi) { assign(b.nodes, bi); });
+    branchDefs.forEach(function (b, bi) { assign(b.nodes, bi, []); });
 
     function entryOf(node, guard) {
       guard = guard || 0;
@@ -355,6 +356,9 @@ var DrakonText = (function () {
               var bn = branchDefs[lbl.branch].name;
               diags.push(diag(n.line, "@" + label + " is in branch “" + bn + "”. goto @name stays within one branch; write goto " + bn + " to switch branch."));
             }
+            var entered = lbl.loops.filter(function (loop) { return n.loops.indexOf(loop) < 0; })[0];
+            if (entered) diags.push(diag(n.line,
+              "goto @" + label + " cannot enter the body of loop “" + entered.text + "” (line " + entered.line + "). A loop has one entry point: enter through its loop line, not a label inside its body. Jumping out of a loop is allowed."));
             ctx.jumps.push({ node: n, role: c.exitRole, target: entryOf(lbl) });
             return JUMP + (ctx.jumps.length - 1);
           }
@@ -856,6 +860,33 @@ var DrakonText = (function () {
           "    Call the customer",
           "    Wait one hour",
           "    goto @call"
+        ] },
+        { label: "6. Multiple loop exits", note: "A loop has one entry, but may have several exits. These questions jump to different steps outside the loop. The Model is valid; drakonwidget currently fails to draw this example (a separate Canvas limitation).", text: [
+          "primitive \"Leave a loop\"",
+          "  loop For each item",
+          "    question Stop early?",
+          "      yes goto @escaped",
+          "    question Skip follow-up?",
+          "      yes goto @finished",
+          "    Handle the item",
+          "  @escaped",
+          "  Follow up",
+          "  @finished",
+          "  Finish"
+        ] },
+        { label: "7. Nested loop exits", note: "An inner loop may jump out into the enclosing loop, or leave both loops at once. Neither jump creates another entry. This checks the Model; early-exit Canvas rendering has a known limitation.", text: [
+          "primitive \"Nested exits\"",
+          "  loop Outer",
+          "    loop Inner",
+          "      question Leave inner?",
+          "        yes goto @outer",
+          "      question Leave both?",
+          "        yes goto @done",
+          "      Handle the item",
+          "    @outer",
+          "    Continue outer",
+          "  @done",
+          "  Finish"
         ] }
       ]
     },
@@ -985,6 +1016,22 @@ var DrakonText = (function () {
           "    join done",
           "    @done",
           "    Done"
+        ] },
+        { label: "7. Jump into a loop", note: "Only the incoming goto on line 5 is an error: it bypasses the loop entry. The goto out on line 12 is allowed.", text: [
+          "drakon",
+          "  primitive Mistakes",
+          "    question can i jump in the loop",
+          "      no",
+          "      yes goto @jumping_in_the_loop_should_be_forbidden",
+          "    loop For each item",
+          "      handle the item",
+          "      @jumping_in_the_loop_should_be_forbidden",
+          "      question jump out?",
+          "        no",
+          "          do some work",
+          "        yes goto @jumping_out_of_loop_is_allowed",
+          "    @jumping_out_of_loop_is_allowed",
+          "    escaped"
         ] }
       ]
     }
