@@ -1,0 +1,130 @@
+{
+  "name": "How to learn to understand foregn speech",
+  "params": "Author: Irina Kolosova\nhttps://youtu.be/JOtwQbNdIGs",
+  "items": {
+    "1": {
+      "type": "end"
+    },
+    "2": {
+      "branchId": 1,
+      "one": "6",
+      "type": "branch",
+      "content": "Familiarize yourself"
+    },
+    "3": {
+      "branchId": 4,
+      "one": "22",
+      "type": "branch",
+      "content": "Repeat out loud"
+    },
+    "4": {
+      "branchId": 2,
+      "one": "16",
+      "type": "branch",
+      "content": "Write down"
+    },
+    "5": {
+      "branchId": 3,
+      "one": "17",
+      "type": "branch",
+      "content": "Verify against the subtitles"
+    },
+    "6": {
+      "type": "action",
+      "one": "7",
+      "content": "Select a video fragment with a phrase in the foreign language"
+    },
+    "7": {
+      "type": "action",
+      "content": "Listen to the whole phrase without subtitles",
+      "one": "4"
+    },
+    "8": {
+      "type": "action",
+      "one": "10",
+      "content": "Rewind to the start of the phrase"
+    },
+    "9": {
+      "type": "loopend",
+      "one": "15",
+      "content": "Next word"
+    },
+    "10": {
+      "type": "loopbegin",
+      "one": "11",
+      "content": "For each word in the phrase"
+    },
+    "11": {
+      "type": "action",
+      "one": "12",
+      "content": "Try to catch every sound"
+    },
+    "12": {
+      "flag1": 1,
+      "type": "question",
+      "two": "14",
+      "one": "13",
+      "content": "Did you understand the word?"
+    },
+    "13": {
+      "type": "action",
+      "content": "Write the word down",
+      "one": "9"
+    },
+    "14": {
+      "type": "action",
+      "content": "Write down the sounds that you recognized",
+      "one": "9"
+    },
+    "15": {
+      "flag1": 1,
+      "type": "question",
+      "content": "Have you reached the limit of understanding for the phrase?",
+      "one": "5",
+      "two": "16"
+    },
+    "16": {
+      "type": "arrow-loop",
+      "one": "8"
+    },
+    "17": {
+      "type": "action",
+      "one": "18",
+      "content": "Rewind to the start of the fragment"
+    },
+    "18": {
+      "type": "action",
+      "one": "19",
+      "content": "Listen to the phrase with subtitles"
+    },
+    "19": {
+      "type": "action",
+      "one": "20",
+      "content": "Verify your notes against the subtitles"
+    },
+    "20": {
+      "type": "action",
+      "content": "Add what you have not understood to your notes",
+      "one": "3"
+    },
+    "21": {
+      "type": "loopend",
+      "one": "1"
+    },
+    "22": {
+      "type": "loopbegin",
+      "one": "23",
+      "content": "Several times"
+    },
+    "23": {
+      "type": "action",
+      "one": "24",
+      "content": "Rewind to the start of the fragment"
+    },
+    "24": {
+      "type": "action",
+      "content": "Repeat out loud after the actor:\n- imitate the sounds\n- imitate the intonation",
+      "one": "21"
+    }
+  }
+}

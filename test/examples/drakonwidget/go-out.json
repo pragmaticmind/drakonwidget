@@ -1,0 +1,35 @@
+{
+  "name": "Go out",
+  "items": {
+    "1": {
+      "type": "end"
+    },
+    "2": {
+      "type": "branch",
+      "branchId": 0,
+      "one": "3"
+    },
+    "3": {
+      "type": "action",
+      "one": "4",
+      "content": "Put on clothes"
+    },
+    "4": {
+      "flag1": 0,
+      "type": "question",
+      "content": "Is it raining?",
+      "one": "7",
+      "two": "5"
+    },
+    "5": {
+      "type": "action",
+      "one": "7",
+      "content": "- Take umbrella\n- Take rubber boots"
+    },
+    "7": {
+      "type": "insertion",
+      "content": "Leave the house",
+      "one": "1"
+    }
+  }
+}

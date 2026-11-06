@@ -1,0 +1,1008 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/Processing.org/south_norway/Displacement.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1",
+  "language": "Processing.org"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "displaceRecursive",
+   "origin": "-56 -201",
+   "description": null,
+   "info": {},
+   "nodes": 38,
+   "features": [
+    "address",
+    "arrow",
+    "if",
+    "shelf",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "displaceRecursive",
+     "x": 120,
+     "y": -100,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 1870,
+     "y": 300,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "text": "",
+     "x": 120,
+     "y": -80,
+     "w": 0,
+     "h": 770,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "vertical",
+     "text": "",
+     "x": 720,
+     "y": -10,
+     "w": 0,
+     "h": 700,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "vertical",
+     "text": "",
+     "x": 1870,
+     "y": -10,
+     "w": 0,
+     "h": 300,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "horizontal",
+     "text": "",
+     "x": 120,
+     "y": -10,
+     "w": 1750,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "arrow",
+     "text": "",
+     "x": -30,
+     "y": -10,
+     "w": 150,
+     "h": 700,
+     "a": 1480,
+     "b": 1
+    },
+    {
+     "item_id": 8,
+     "type": "branch",
+     "text": "Calculate diffs",
+     "x": 120,
+     "y": 40,
+     "w": 130,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "address",
+     "text": "Calculate middle point",
+     "x": 120,
+     "y": 640,
+     "w": 130,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "branch",
+     "text": "Calculate middle point",
+     "x": 720,
+     "y": 40,
+     "w": 220,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "branch",
+     "text": "Exit",
+     "x": 1870,
+     "y": 40,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "address",
+     "text": "Recurse",
+     "x": 720,
+     "y": 640,
+     "w": 220,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "horizontal",
+     "x": 120,
+     "y": -100,
+     "w": 190,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "action",
+     "text": "PVector left   // The left point of segment\nPVector right  // The right point of segment\nint times      // times to do displacement, >= 1\nfloat xVar     // x variance [0, 1]\nfloat yVar     // y variance [0, 1]\n\nreturns ArrayList<PVector> // Does not include the right point",
+     "x": 500,
+     "y": -100,
+     "w": 260,
+     "h": 70,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "action",
+     "text": "float dx = right.x - left.x;",
+     "x": 120,
+     "y": 310,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "action",
+     "text": "float top;\nfloat bottom;",
+     "x": 120,
+     "y": 120,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "action",
+     "text": "float dy = bottom - top;",
+     "x": 120,
+     "y": 570,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 18,
+     "type": "if",
+     "text": "right.y > left.y",
+     "x": 120,
+     "y": 370,
+     "w": 130,
+     "h": 20,
+     "a": 100,
+     "b": 1
+    },
+    {
+     "item_id": 19,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 370,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 20,
+     "type": "horizontal",
+     "text": "",
+     "x": 120,
+     "y": 520,
+     "w": 230,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 21,
+     "type": "action",
+     "text": "top = left.y;\nbottom = right.y;",
+     "x": 120,
+     "y": 450,
+     "w": 130,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 22,
+     "type": "action",
+     "text": "top = right.y;\nbottom = left.y;",
+     "x": 350,
+     "y": 450,
+     "w": 80,
+     "h": 30,
+     "a": 0,
+     "b": 0,
+     "text2": ""
+    },
+    {
+     "item_id": 26,
+     "type": "vertical",
+     "text": "",
+     "x": 1450,
+     "y": -10,
+     "w": 0,
+     "h": 700,
+     "a": 0,
+     "b": 0,
+     "text2": ""
+    },
+    {
+     "item_id": 27,
+     "type": "branch",
+     "text": "Recurse",
+     "x": 1450,
+     "y": 40,
+     "w": 240,
+     "h": 30,
+     "a": 60,
+     "b": 0,
+     "color": "fg #000000 bg #fff3aa",
+     "text2": ""
+    },
+    {
+     "item_id": 28,
+     "type": "address",
+     "text": "Exit",
+     "x": 1450,
+     "y": 640,
+     "w": 240,
+     "h": 30,
+     "a": 60,
+     "b": 0,
+     "text2": ""
+    },
+    {
+     "item_id": 29,
+     "type": "action",
+     "text": "float leftBoundary = dx / 2 * (1 - xVar);\nfloat rightBoundary = dx / 2 * (1 + xVar);\nfloat xShift = random(leftBoundary, rightBoundary); \nfloat x = left.x + xShift;",
+     "x": 720,
+     "y": 150,
+     "w": 220,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 30,
+     "type": "action",
+     "text": "float topBoundary = dy / 2 - dx * yVar;\nfloat bottomBoundary = dy / 2 + dx * yVar;\nfloat yShift = random(topBoundary, bottomBoundary);\nfloat y = top + yShift;",
+     "x": 720,
+     "y": 270,
+     "w": 220,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 31,
+     "type": "action",
+     "text": "PVector middle = new PVector(x, y);",
+     "x": 720,
+     "y": 360,
+     "w": 220,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 32,
+     "type": "shelf",
+     "text": "new ArrayList<PVector>();",
+     "x": 120,
+     "y": 210,
+     "w": 130,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "ArrayList<PVector> output"
+    },
+    {
+     "item_id": 33,
+     "type": "action",
+     "text": "return output;",
+     "x": 1870,
+     "y": 160,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "if",
+     "text": "times == 1",
+     "x": 720,
+     "y": 430,
+     "w": 220,
+     "h": 20,
+     "a": 110,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "vertical",
+     "text": "",
+     "x": 1050,
+     "y": 430,
+     "w": 0,
+     "h": 260,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 36,
+     "type": "address",
+     "text": "Exit",
+     "x": 1050,
+     "y": 640,
+     "w": 90,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 37,
+     "type": "action",
+     "text": "int nextTimes = times - 1;",
+     "x": 1450,
+     "y": 110,
+     "w": 240,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 38,
+     "type": "action",
+     "text": "output.addAll(leftPart);\noutput.addAll(rightPart);",
+     "x": 1450,
+     "y": 380,
+     "w": 240,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "shelf",
+     "text": "displaceRecursive(left, middle, nextTimes, xVar, yVar);",
+     "x": 1450,
+     "y": 190,
+     "w": 240,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "fg #000000 bg #fff3aa",
+     "text2": "ArrayList<PVector> leftPart"
+    },
+    {
+     "item_id": 40,
+     "type": "shelf",
+     "text": "displaceRecursive(middle, right, nextTimes, xVar, yVar);",
+     "x": 1450,
+     "y": 290,
+     "w": 240,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "fg #000000 bg #fff3aa",
+     "text2": "ArrayList<PVector> rightPart"
+    },
+    {
+     "item_id": 41,
+     "type": "action",
+     "text": "output.add(left);\noutput.add(middle);",
+     "x": 1050,
+     "y": 500,
+     "w": 90,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "drawSkyline",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "if",
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 42,
+     "type": "beginend",
+     "text": "drawSkyline",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 43,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 510,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 44,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 410,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 45,
+     "type": "horizontal",
+     "x": 170,
+     "y": 60,
+     "w": 300,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 46,
+     "type": "action",
+     "text": "ArrayList<PVector> seed\nint timesToDisplace\nfloat xVar\nfloat yVar",
+     "x": 470,
+     "y": 60,
+     "w": 110,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 47,
+     "type": "if",
+     "text": "seed.size() >= 2",
+     "x": 170,
+     "y": 180,
+     "w": 120,
+     "h": 20,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 48,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 180,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 49,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 470,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 61,
+     "type": "action",
+     "text": "drawSkylineShape(vertices);",
+     "x": 170,
+     "y": 430,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 62,
+     "type": "shelf",
+     "text": "displace(\n\tseed,\n\ttimesToDisplace,\n\txVar,\n\tyVar\n);",
+     "x": 170,
+     "y": 310,
+     "w": 120,
+     "h": 80,
+     "a": 40,
+     "b": 0,
+     "text2": "ArrayList<PVector> vertices"
+    }
+   ]
+  },
+  {
+   "name": "drawSkylineShape",
+   "origin": "-591 177",
+   "description": null,
+   "info": {},
+   "nodes": 11,
+   "features": [
+    "loopend",
+    "loopstart"
+   ],
+   "items": [
+    {
+     "item_id": 50,
+     "type": "beginend",
+     "text": "drawSkylineShape",
+     "x": 170,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 51,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 580,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 52,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 480,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 53,
+     "type": "horizontal",
+     "x": 170,
+     "y": 60,
+     "w": 220,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 54,
+     "type": "action",
+     "text": "ArrayList<PVector> vertices",
+     "x": 390,
+     "y": 60,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 55,
+     "type": "action",
+     "text": "PVector leftVertex = vertices.get(0);\nPVector rightVertex = \n vertices.get(vertices.size() - 1);",
+     "x": 170,
+     "y": 140,
+     "w": 160,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 56,
+     "type": "action",
+     "text": "beginShape();\nvertex(leftVertex.x, displayHeight);",
+     "x": 170,
+     "y": 230,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 57,
+     "type": "action",
+     "text": "vertex(rightVertex.x, displayHeight);\nendShape(CLOSE);",
+     "x": 170,
+     "y": 510,
+     "w": 160,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 58,
+     "type": "loopstart",
+     "text": "foreach PVector v; vertices",
+     "x": 170,
+     "y": 310,
+     "w": 160,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 59,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 430,
+     "w": 160,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 60,
+     "type": "action",
+     "text": "vertex(v.x, v.y);",
+     "x": 170,
+     "y": 370,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "displace",
+   "origin": "-152 -179",
+   "description": null,
+   "info": {},
+   "nodes": 13,
+   "features": [
+    "loopend",
+    "loopstart",
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 63,
+     "type": "beginend",
+     "text": "displace",
+     "x": 180,
+     "y": -60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 64,
+     "type": "beginend",
+     "text": "End",
+     "x": 180,
+     "y": 650,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 65,
+     "type": "vertical",
+     "x": 180,
+     "y": -40,
+     "w": 0,
+     "h": 670,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 66,
+     "type": "horizontal",
+     "x": 180,
+     "y": -60,
+     "w": 190,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 67,
+     "type": "action",
+     "text": "ArrayList<PVector> seed\nint times\nfloat xVar\nfloat yVar\n\nreturns ArrayList<PVector>",
+     "x": 370,
+     "y": -60,
+     "w": 120,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 68,
+     "type": "shelf",
+     "text": "new ArrayList<PVector>();",
+     "x": 180,
+     "y": 60,
+     "w": 210,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "ArrayList<PVector> output"
+    },
+    {
+     "item_id": 69,
+     "type": "action",
+     "text": "return output;",
+     "x": 180,
+     "y": 590,
+     "w": 210,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 70,
+     "type": "loopstart",
+     "text": "int i = 0; i < seed.size() - 1; i++",
+     "x": 180,
+     "y": 150,
+     "w": 210,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 71,
+     "type": "loopend",
+     "text": "",
+     "x": 180,
+     "y": 450,
+     "w": 210,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 72,
+     "type": "action",
+     "text": "PVector left = seed.get(i);\nPVector right = seed.get(i + 1);",
+     "x": 180,
+     "y": 220,
+     "w": 210,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 73,
+     "type": "shelf",
+     "text": "displaceRecursive(left, right, times, xVar, yVar);",
+     "x": 180,
+     "y": 310,
+     "w": 210,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "ArrayList<PVector> segment"
+    },
+    {
+     "item_id": 74,
+     "type": "action",
+     "text": "output.addAll(segment);",
+     "x": 180,
+     "y": 390,
+     "w": 210,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 75,
+     "type": "action",
+     "text": "PVector last = seed.get(seed.size() - 1); \noutput.add(last);",
+     "x": 180,
+     "y": 520,
+     "w": 210,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "moveUp",
+   "origin": "-119 -172",
+   "description": null,
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "loopend",
+    "loopstart",
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 76,
+     "type": "beginend",
+     "text": "moveUp",
+     "x": 140,
+     "y": -20,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 77,
+     "type": "beginend",
+     "text": "End",
+     "x": 140,
+     "y": 430,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 78,
+     "type": "vertical",
+     "x": 140,
+     "y": 0,
+     "w": 0,
+     "h": 410,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 79,
+     "type": "horizontal",
+     "x": 140,
+     "y": -20,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 80,
+     "type": "action",
+     "text": "ArrayList<PVector> vertices\nfloat amount\n\nreturns ArrayList<PVector>",
+     "x": 340,
+     "y": -20,
+     "w": 120,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 81,
+     "type": "shelf",
+     "text": "new ArrayList<PVector>();",
+     "x": 140,
+     "y": 90,
+     "w": 190,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "ArrayList<PVector> output"
+    },
+    {
+     "item_id": 82,
+     "type": "action",
+     "text": "return output;",
+     "x": 140,
+     "y": 370,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "text2": ""
+    },
+    {
+     "item_id": 83,
+     "type": "loopstart",
+     "text": "foreach PVector v; vertices",
+     "x": 140,
+     "y": 170,
+     "w": 190,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "text2": ""
+    },
+    {
+     "item_id": 84,
+     "type": "loopend",
+     "text": "",
+     "x": 140,
+     "y": 310,
+     "w": 190,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "text2": ""
+    },
+    {
+     "item_id": 85,
+     "type": "action",
+     "text": "PVector v2 = new PVector(v.x, v.y - amount);\noutput.add(v2);",
+     "x": 140,
+     "y": 240,
+     "w": 190,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

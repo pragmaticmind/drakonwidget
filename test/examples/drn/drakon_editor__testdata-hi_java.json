@@ -1,0 +1,245 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/hi_java.drn",
+ "info": {
+  "type": "drakon",
+  "version": "9",
+  "start_version": "1",
+  "language": "Java"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "write",
+   "origin": "0 0",
+   "description": "Writes an object to the console followed by a whitespace.\nDoes not add a new line.",
+   "info": {},
+   "nodes": 9,
+   "features": [],
+   "items": [
+    {
+     "item_id": 144,
+     "type": "beginend",
+     "text": "write",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 145,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 146,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 147,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 100,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 149,
+     "type": "action",
+     "text": "private static\n\nObject item",
+     "x": 340,
+     "y": 60,
+     "w": 70,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 180,
+     "type": "action",
+     "text": "System.out.print(item);\nSystem.out.print(\" \");",
+     "x": 170,
+     "y": 220,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 244,
+     "type": "action",
+     "text": "String s = \"one, two\\\" 'three' \\\\ more?\";",
+     "x": 550,
+     "y": 260,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 245,
+     "type": "action",
+     "text": "final boolean m = false;",
+     "x": 540,
+     "y": 410,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 246,
+     "type": "action",
+     "text": "int i10 = this.FindValue(\"foo\", 10.2);",
+     "x": 390,
+     "y": 510,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "foreachDemo",
+   "origin": "-73 -39",
+   "description": "Shows off several collection iteration methods available for the Python code generator.",
+   "info": {},
+   "nodes": 9,
+   "features": [],
+   "items": [
+    {
+     "item_id": 150,
+     "type": "beginend",
+     "text": "foreachDemo",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 151,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 152,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 153,
+     "type": "action",
+     "text": "List<Integer> sequence = fibonacci(15);",
+     "x": 170,
+     "y": 170,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 154,
+     "type": "action",
+     "text": "printListArrow(sequence);\nprintListFor(sequence);\nprintListForeach(sequence);",
+     "x": 170,
+     "y": 250,
+     "w": 170,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 155,
+     "type": "action",
+     "text": "System.out.println(\"iteration demo\");",
+     "x": 170,
+     "y": 120,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 156,
+     "type": "action",
+     "text": "System.out.println();",
+     "x": 170,
+     "y": 330,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 178,
+     "type": "horizontal",
+     "text": "",
+     "x": 210,
+     "y": 60,
+     "w": 150,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 179,
+     "type": "action",
+     "text": "private static",
+     "x": 350,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

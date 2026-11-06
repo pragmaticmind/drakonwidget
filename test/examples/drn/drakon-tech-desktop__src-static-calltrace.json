@@ -1,0 +1,479 @@
+{
+ "format": "drn-items",
+ "origin": "drakon.tech.desktop/src/static/CallTrace.drn",
+ "info": {
+  "type": "drakon",
+  "version": "27",
+  "start_version": "1",
+  "language": "Javascript"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "add",
+   "origin": "-445.0 -46.0",
+   "description": null,
+   "info": {},
+   "nodes": 19,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "add",
+     "x": 200,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 200,
+     "y": 740,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 200,
+     "y": 80,
+     "w": 0,
+     "h": 640,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "x": 200,
+     "y": 60,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "name\nargs",
+     "x": 370,
+     "y": 60,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "gStack.push(trace)",
+     "x": 200,
+     "y": 560,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 33,
+     "type": "action",
+     "text": "var trace = [name]",
+     "x": 200,
+     "y": 140,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "if",
+     "text": "args",
+     "x": 200,
+     "y": 220,
+     "w": 120,
+     "h": 20,
+     "a": 30,
+     "b": 1
+    },
+    {
+     "item_id": 35,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 220,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 36,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 330,
+     "w": 150,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 37,
+     "type": "action",
+     "text": "trace.push(args)",
+     "x": 200,
+     "y": 290,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 49,
+     "type": "if",
+     "text": "Config.TRACE_TO_CONSOLE",
+     "x": 200,
+     "y": 370,
+     "w": 120,
+     "h": 20,
+     "a": 110,
+     "b": 0
+    },
+    {
+     "item_id": 50,
+     "type": "vertical",
+     "text": "",
+     "x": 430,
+     "y": 370,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 51,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 520,
+     "w": 230,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 52,
+     "type": "action",
+     "text": "console.log(\"CallTrace:add\", trace)",
+     "x": 430,
+     "y": 460,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 60,
+     "type": "if",
+     "text": "gStack.length > LIMIT",
+     "x": 200,
+     "y": 620,
+     "w": 120,
+     "h": 20,
+     "a": 180,
+     "b": 0
+    },
+    {
+     "item_id": 61,
+     "type": "vertical",
+     "text": "",
+     "x": 500,
+     "y": 620,
+     "w": 0,
+     "h": 80,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 62,
+     "type": "horizontal",
+     "text": "",
+     "x": 200,
+     "y": 700,
+     "w": 300,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 63,
+     "type": "action",
+     "text": "gStack.shift()",
+     "x": 500,
+     "y": 660,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "reset",
+   "origin": "-411 -223",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [],
+   "items": [
+    {
+     "item_id": 12,
+     "type": "beginend",
+     "text": "reset",
+     "x": 130,
+     "y": -170,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "beginend",
+     "text": "End",
+     "x": 130,
+     "y": 40,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "vertical",
+     "x": 130,
+     "y": -150,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 64,
+     "type": "action",
+     "text": "return gStack",
+     "x": 130,
+     "y": -20,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "peek",
+   "origin": "-18 -237",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [],
+   "items": [
+    {
+     "item_id": 19,
+     "type": "beginend",
+     "text": "peek",
+     "x": 240,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 20,
+     "type": "beginend",
+     "text": "End",
+     "x": 240,
+     "y": 340,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 21,
+     "type": "vertical",
+     "x": 240,
+     "y": 80,
+     "w": 0,
+     "h": 260,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 32,
+     "type": "action",
+     "text": "return gLast",
+     "x": 240,
+     "y": 210,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "getNames",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [],
+   "items": [
+    {
+     "item_id": 38,
+     "type": "beginend",
+     "text": "getNames",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 40,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 42,
+     "type": "action",
+     "text": "return gStack.map(function(trace) {\n\treturn trace[0]\n})",
+     "x": 170,
+     "y": 240,
+     "w": 150,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "error",
+   "origin": "-124 -5",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 43,
+     "type": "beginend",
+     "text": "error",
+     "x": 260,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 44,
+     "type": "beginend",
+     "text": "End",
+     "x": 260,
+     "y": 250,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 45,
+     "type": "vertical",
+     "x": 260,
+     "y": 80,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 46,
+     "type": "horizontal",
+     "x": 260,
+     "y": 60,
+     "w": 120,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 47,
+     "type": "action",
+     "text": "ex",
+     "x": 380,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "action",
+     "text": "add(\n\t\"Exception\",\n\t[ex.name, ex.message, ex.fileName, ex.stack]\n)",
+     "x": 260,
+     "y": 160,
+     "w": 220,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

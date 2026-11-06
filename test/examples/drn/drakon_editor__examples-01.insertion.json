@@ -1,0 +1,444 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/01.Insertion.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "Cook lunch",
+   "origin": "75 13",
+   "description": "This is the main diagram in the file. It calls three other procedures:\n- Make salad;\n- Cook potatoes;\n- Prepare meat.\n\nDouble click this text to start editing the description.",
+   "info": {
+    "colors": "1",
+    "encoding": "cp1252",
+    "margin": "11",
+    "orientation": "portrait",
+    "papersize": "a4",
+    "scale": "100"
+   },
+   "nodes": 9,
+   "features": [
+    "commentout",
+    "insertion"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "Cook lunch",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 360,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 270,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "insertion",
+     "text": "Make salad",
+     "x": 170,
+     "y": 140,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "insertion",
+     "text": "Cook potatoes",
+     "x": 170,
+     "y": 210,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "insertion",
+     "text": "Prepare meat",
+     "x": 170,
+     "y": 280,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 25,
+     "type": "commentout",
+     "text": "Each diagram must have one Begin icon \nwith the name of the diagram.",
+     "x": 500,
+     "y": 60,
+     "w": 170,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 26,
+     "type": "commentout",
+     "text": "This is an Insertion icon.\nIt means a procedure that is\ndescribed in some other diagram.",
+     "x": 470,
+     "y": 210,
+     "w": 140,
+     "h": 40,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 27,
+     "type": "commentout",
+     "text": "Each diagram must have one End icon.\nThe text inside that icon should be \"End\".",
+     "x": 510,
+     "y": 360,
+     "w": 180,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Make salad",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "commentin",
+    "commentout"
+   ],
+   "items": [
+    {
+     "item_id": 7,
+     "type": "beginend",
+     "text": "Make salad",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 360,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 260,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "action",
+     "text": "Wash vegetables",
+     "x": 170,
+     "y": 140,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "action",
+     "text": "Slice vegetables",
+     "x": 170,
+     "y": 210,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "action",
+     "text": "Blend vegetables",
+     "x": 170,
+     "y": 280,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 32,
+     "type": "commentout",
+     "text": "Double click on an icon\nto edit its text.",
+     "x": 440,
+     "y": 140,
+     "w": 110,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 33,
+     "type": "commentin",
+     "text": "Use the mouse wheel to scroll the diagram.\nTry spinning the mouse wheel with and without\nControl and Shift keys pressed.\n\nIf you drag the mouse with the wheel pressed,\nyou will pan the diagram.",
+     "x": 490,
+     "y": 310,
+     "w": 198,
+     "h": 60,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Cook potatoes",
+   "origin": "-36 16",
+   "description": "This procedure is called from the \"Cook lunch\" diagram.",
+   "info": {},
+   "nodes": 9,
+   "features": [
+    "commentin",
+    "commentout"
+   ],
+   "items": [
+    {
+     "item_id": 13,
+     "type": "beginend",
+     "text": "Cook potatoes",
+     "x": 120,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "beginend",
+     "text": "End",
+     "x": 120,
+     "y": 430,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "vertical",
+     "text": "",
+     "x": 120,
+     "y": 70,
+     "w": 0,
+     "h": 340,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "action",
+     "text": "Peel potatoes",
+     "x": 120,
+     "y": 130,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "action",
+     "text": "Boil potatoes",
+     "x": 120,
+     "y": 200,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 18,
+     "type": "action",
+     "text": "Add butter",
+     "x": 120,
+     "y": 360,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 28,
+     "type": "commentout",
+     "text": "This is an Action icon.\nIt represents something that\nneeds to be done.",
+     "x": 450,
+     "y": 130,
+     "w": 130,
+     "h": 40,
+     "a": 50,
+     "b": 0
+    },
+    {
+     "item_id": 29,
+     "type": "commentin",
+     "text": "The next icon is always below\nthe current icon.",
+     "x": 120,
+     "y": 280,
+     "w": 140,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 30,
+     "type": "commentout",
+     "text": "This is a Comment icon.\nIt does not do anything besides\nexplaining something to the reader.",
+     "x": 470,
+     "y": 280,
+     "w": 150,
+     "h": 40,
+     "a": 50,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Prepare meat",
+   "origin": "-53 27",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [
+    "commentout"
+   ],
+   "items": [
+    {
+     "item_id": 19,
+     "type": "beginend",
+     "text": "Prepare meat",
+     "x": 580,
+     "y": 70,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 20,
+     "type": "beginend",
+     "text": "End",
+     "x": 580,
+     "y": 400,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 21,
+     "type": "vertical",
+     "x": 580,
+     "y": 90,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 22,
+     "type": "action",
+     "text": "Cut in pieces",
+     "x": 580,
+     "y": 160,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 23,
+     "type": "action",
+     "text": "Stuff with garlic",
+     "x": 580,
+     "y": 230,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 24,
+     "type": "action",
+     "text": "Bake in oven",
+     "x": 580,
+     "y": 300,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 31,
+     "type": "commentout",
+     "text": "To change the direction of an Outside Comment\nicon, right click on it and select \"Flip horizontally\".",
+     "x": 200,
+     "y": 230,
+     "w": 230,
+     "h": 30,
+     "a": 60,
+     "b": 1
+    }
+   ]
+  }
+ ]
+}

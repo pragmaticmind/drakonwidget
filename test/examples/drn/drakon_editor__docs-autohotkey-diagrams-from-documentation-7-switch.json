@@ -1,0 +1,255 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/7 (Switch).drn",
+ "info": {
+  "type": "drakon",
+  "version": "22",
+  "start_version": "1",
+  "language": "AutoHotkey_L"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "TestSwitch",
+   "origin": "-30 -130",
+   "description": null,
+   "info": {},
+   "nodes": 19,
+   "features": [
+    "case",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "TestSwitch",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 430,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 330,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "x": 170,
+     "y": 60,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "a",
+     "x": 370,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 6,
+     "type": "select",
+     "text": "a",
+     "x": 170,
+     "y": 140,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 180,
+     "w": 470,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "case",
+     "text": "1",
+     "x": 170,
+     "y": 220,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "case",
+     "text": "2",
+     "x": 320,
+     "y": 220,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "case",
+     "text": "",
+     "x": 640,
+     "y": 220,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "vertical",
+     "text": "",
+     "x": 320,
+     "y": 180,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "vertical",
+     "text": "",
+     "x": 640,
+     "y": 180,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "case",
+     "text": "3",
+     "x": 460,
+     "y": 220,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "vertical",
+     "text": "",
+     "x": 460,
+     "y": 180,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 340,
+     "w": 470,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "action",
+     "text": "msgbox, 1",
+     "x": 170,
+     "y": 290,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "action",
+     "text": "msgbox, 2",
+     "x": 320,
+     "y": 290,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 18,
+     "type": "action",
+     "text": "msgbox, 3",
+     "x": 460,
+     "y": 290,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 19,
+     "type": "action",
+     "text": "msgbox, Not 1, 2, 3",
+     "x": 640,
+     "y": 290,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  }
+ ]
+}

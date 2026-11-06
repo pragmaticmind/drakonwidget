@@ -1,0 +1,255 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/docs/AutoHotkey/Diagrams from Documentation/8 (Switch).drn",
+ "info": {
+  "type": "drakon",
+  "version": "22",
+  "start_version": "1",
+  "language": "AutoHotkey_L"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "TestSwitch",
+   "origin": "-30 -130",
+   "description": null,
+   "info": {},
+   "nodes": 19,
+   "features": [
+    "case",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "TestSwitch",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 430,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 330,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "x": 170,
+     "y": 60,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "a\nb\nc\nd",
+     "x": 400,
+     "y": 60,
+     "w": 50,
+     "h": 40,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 6,
+     "type": "select",
+     "text": "Select",
+     "x": 170,
+     "y": 140,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 180,
+     "w": 730,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "case",
+     "text": "a < 10 && a != 0",
+     "x": 170,
+     "y": 220,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "case",
+     "text": "a > 10",
+     "x": 390,
+     "y": 220,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "case",
+     "text": "Else",
+     "x": 900,
+     "y": 220,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "vertical",
+     "text": "",
+     "x": 390,
+     "y": 180,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "vertical",
+     "text": "",
+     "x": 900,
+     "y": 180,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "case",
+     "text": "b >= 5 || c > 10 && d = 0",
+     "x": 650,
+     "y": 220,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "vertical",
+     "text": "",
+     "x": 650,
+     "y": 180,
+     "w": 0,
+     "h": 160,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 340,
+     "w": 730,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "action",
+     "text": "Msgbox, a < 10 && a != 0",
+     "x": 170,
+     "y": 290,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "action",
+     "text": "Msgbox, a > 10",
+     "x": 390,
+     "y": 290,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 18,
+     "type": "action",
+     "text": "Msgbox, b >= 5 || c > 10 && d = 0",
+     "x": 650,
+     "y": 290,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 19,
+     "type": "action",
+     "text": "Msgbox, Else",
+     "x": 900,
+     "y": 290,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  }
+ ]
+}

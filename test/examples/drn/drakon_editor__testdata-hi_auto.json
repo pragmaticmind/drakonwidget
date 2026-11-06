@@ -1,0 +1,126 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/hi_auto.drn",
+ "info": {
+  "type": "drakon",
+  "version": "22",
+  "start_version": "1",
+  "language": "AutoHotkey_L"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "Free_Start",
+   "origin": "-337 -37",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "insertion"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "Free_Start",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "insertion",
+     "text": "Fibonacci(SeqLength)",
+     "x": 170,
+     "y": 200,
+     "w": 440,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 72,
+     "type": "action",
+     "text": "ExitApp",
+     "x": 170,
+     "y": 280,
+     "w": 440,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 76,
+     "type": "action",
+     "text": "InputBox, SeqLength, Fibonacci sequence, How many numbers from Fibonacci sequence do you want to calculate?",
+     "x": 170,
+     "y": 130,
+     "w": 440,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 77,
+     "type": "action",
+     "text": "Hi, foo == \"Some 'text' \\ asf `n\" ; the rest is comment\nNormal\n; full line comment\nSetTimer",
+     "x": -50,
+     "y": 520,
+     "w": 230,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 78,
+     "type": "action",
+     "text": "; escaping \\\n\"hello `\nwe continue here",
+     "x": 400,
+     "y": 460,
+     "w": 80,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

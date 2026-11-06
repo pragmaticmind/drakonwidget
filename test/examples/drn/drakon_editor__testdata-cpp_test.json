@@ -1,0 +1,2305 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/cpp_test.drn",
+ "info": {
+  "type": "drakon",
+  "version": "5",
+  "start_version": "1",
+  "language": "C++"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "public_normal",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "public_normal",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "public",
+     "x": 340,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "cout << \"public function\" << endl;",
+     "x": 170,
+     "y": 230,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "static_normal",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 7,
+     "type": "beginend",
+     "text": "static_normal",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "action",
+     "text": "static",
+     "x": 340,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "action",
+     "text": "cout << \"static function\" << endl;",
+     "x": 170,
+     "y": 230,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "public_inline",
+   "origin": "-125 -45",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 13,
+     "type": "beginend",
+     "text": "public_inline",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 15,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 16,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 17,
+     "type": "action",
+     "text": "public inline",
+     "x": 340,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 18,
+     "type": "action",
+     "text": "cout << \"public inline function\" << endl;",
+     "x": 170,
+     "y": 230,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "public_method",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 25,
+     "type": "beginend",
+     "text": "public_method",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 26,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 27,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 28,
+     "type": "action",
+     "text": "public method\nconst char* name // name?",
+     "x": 370,
+     "y": 60,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 29,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 30,
+     "type": "action",
+     "text": "cout << \"public method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "protected_method",
+   "origin": "-105 -1",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 31,
+     "type": "beginend",
+     "text": "protected_method",
+     "x": 170,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 32,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 33,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "action",
+     "text": "protected method",
+     "x": 370,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 36,
+     "type": "action",
+     "text": "cout << \"protected method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "private_method",
+   "origin": "-114 -70",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 37,
+     "type": "beginend",
+     "text": "private_method",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 38,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 40,
+     "type": "action",
+     "text": "private method",
+     "x": 370,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 41,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 42,
+     "type": "action",
+     "text": "cout << \"private method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "public_virtual",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 43,
+     "type": "beginend",
+     "text": "public_virtual",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 44,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 45,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 46,
+     "type": "action",
+     "text": "public virtual method",
+     "x": 350,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 47,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "action",
+     "text": "cout << \"public virtual method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "protected_virtual",
+   "origin": "-105 -1",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 49,
+     "type": "beginend",
+     "text": "protected_virtual",
+     "x": 170,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 50,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 51,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 52,
+     "type": "action",
+     "text": "protected virtual method",
+     "x": 370,
+     "y": 60,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 53,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 54,
+     "type": "action",
+     "text": "cout << \"protected virtual method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 190,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "public_virtual_const",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 55,
+     "type": "beginend",
+     "text": "public_virtual_const",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 56,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 57,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 58,
+     "type": "action",
+     "text": "public virtual const method",
+     "x": 400,
+     "y": 60,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 59,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 60,
+     "type": "action",
+     "text": "cout << \"public virtual const method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 200,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "protected_virtual_const",
+   "origin": "-105 -1",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 61,
+     "type": "beginend",
+     "text": "protected_virtual_const",
+     "x": 170,
+     "y": 60,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 62,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 63,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 64,
+     "type": "action",
+     "text": "protected virtual const method",
+     "x": 490,
+     "y": 60,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 65,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 66,
+     "type": "action",
+     "text": "cout << \"protected virtual const method\" << endl;\nstatic_normal();",
+     "x": 170,
+     "y": 180,
+     "w": 210,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "public_virtual_abstract",
+   "origin": "-74 8",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 67,
+     "type": "beginend",
+     "text": "public_virtual_abstract",
+     "x": 170,
+     "y": 60,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 68,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 69,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 70,
+     "type": "action",
+     "text": "public virtual abstract method",
+     "x": 430,
+     "y": 60,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 71,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 72,
+     "type": "action",
+     "text": "cout << \"public virtual abstract method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 210,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "protected_virtual_abstract",
+   "origin": "-105 -1",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 73,
+     "type": "beginend",
+     "text": "protected_virtual_abstract",
+     "x": 170,
+     "y": 60,
+     "w": 120,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 74,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 75,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 76,
+     "type": "action",
+     "text": "protected virtual abstract method",
+     "x": 470,
+     "y": 60,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 77,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 160,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 78,
+     "type": "action",
+     "text": "cout << \"protected virtual abstract method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 220,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "public_virtual_abstract_const",
+   "origin": "-74 8",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 79,
+     "type": "beginend",
+     "text": "public_virtual_abstract_const",
+     "x": 170,
+     "y": 60,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 80,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 81,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 82,
+     "type": "action",
+     "text": "public virtual abstract const method",
+     "x": 480,
+     "y": 60,
+     "w": 160,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 83,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 84,
+     "type": "action",
+     "text": "cout << \"public virtual abstract method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 210,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "protected_virtual_abstract_const",
+   "origin": "-105 -1",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 85,
+     "type": "beginend",
+     "text": "protected_virtual_abstract_const",
+     "x": 170,
+     "y": 60,
+     "w": 140,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 86,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 87,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 88,
+     "type": "action",
+     "text": "protected virtual abstract const method",
+     "x": 500,
+     "y": 60,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 89,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 160,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 90,
+     "type": "action",
+     "text": "cout << \"protected virtual abstract method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 220,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "public_method_const",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 91,
+     "type": "beginend",
+     "text": "public_method_const",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 92,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 93,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 94,
+     "type": "action",
+     "text": "public const method",
+     "x": 370,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 95,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 96,
+     "type": "action",
+     "text": "cout << \"public const method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "protected_method_const",
+   "origin": "-105 -1",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 97,
+     "type": "beginend",
+     "text": "protected_method_const",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 98,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 99,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 100,
+     "type": "action",
+     "text": "protected const method",
+     "x": 390,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 101,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 102,
+     "type": "action",
+     "text": "cout << \"protected const method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "private_method_const",
+   "origin": "-114 -70",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 103,
+     "type": "beginend",
+     "text": "private_method_const",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 104,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 105,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 106,
+     "type": "action",
+     "text": "private const method",
+     "x": 370,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 107,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 108,
+     "type": "action",
+     "text": "cout << \"private const method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "public_method_inline",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 109,
+     "type": "beginend",
+     "text": "public_method_inline",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 110,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 111,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 112,
+     "type": "action",
+     "text": "public inline method",
+     "x": 380,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 113,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 114,
+     "type": "action",
+     "text": "cout << \"public inline method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "protected_method_inline",
+   "origin": "-105 -1",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 115,
+     "type": "beginend",
+     "text": "protected_method_inline",
+     "x": 170,
+     "y": 60,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 116,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 117,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 118,
+     "type": "action",
+     "text": "protected inline method",
+     "x": 410,
+     "y": 60,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 119,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 120,
+     "type": "action",
+     "text": "cout << \"protected inline method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "private_method_inline",
+   "origin": "-114 -70",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 121,
+     "type": "beginend",
+     "text": "private_method_inline",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 122,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 123,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 124,
+     "type": "action",
+     "text": "private inline method",
+     "x": 380,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 125,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 126,
+     "type": "action",
+     "text": "cout << \"private method inline\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "public_method_static",
+   "origin": "-41 -10",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 127,
+     "type": "beginend",
+     "text": "public_method_static",
+     "x": 170,
+     "y": 60,
+     "w": 90,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 128,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 129,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 130,
+     "type": "action",
+     "text": "public static method\nconst char* name // name?",
+     "x": 390,
+     "y": 60,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 131,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 132,
+     "type": "action",
+     "text": "cout << \"public static method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "private_method_static",
+   "origin": "-114 -70",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 139,
+     "type": "beginend",
+     "text": "private_method_static",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 140,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 141,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 142,
+     "type": "action",
+     "text": "private static method",
+     "x": 390,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 143,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 144,
+     "type": "action",
+     "text": "cout << \"private static method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 170,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "public_method_static_inline",
+   "origin": "-41 -10",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 145,
+     "type": "beginend",
+     "text": "public_method_static_inline",
+     "x": 170,
+     "y": 60,
+     "w": 120,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 146,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 147,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 148,
+     "type": "action",
+     "text": "public static inline method\nconst char* name // name?",
+     "x": 510,
+     "y": 60,
+     "w": 120,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 149,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 210,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 150,
+     "type": "action",
+     "text": "cout << \"public static inline method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 200,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "protected_method_static_inline",
+   "origin": "-105 -1",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 151,
+     "type": "beginend",
+     "text": "protected_method_static_inline",
+     "x": 170,
+     "y": 60,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 152,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 153,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 154,
+     "type": "action",
+     "text": "protected static inline method",
+     "x": 460,
+     "y": 60,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 155,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 220,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 156,
+     "type": "action",
+     "text": "cout << \"protected static inline method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 210,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "private_method_static_inline",
+   "origin": "-114 -70",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 157,
+     "type": "beginend",
+     "text": "private_method_static_inline",
+     "x": 170,
+     "y": 60,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 158,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 159,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 160,
+     "type": "action",
+     "text": "private static inline method",
+     "x": 460,
+     "y": 60,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 161,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 210,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 162,
+     "type": "action",
+     "text": "cout << \"private static inline method\" << endl;",
+     "x": 170,
+     "y": 180,
+     "w": 200,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "default constructor",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 163,
+     "type": "beginend",
+     "text": "default constructor",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 164,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 165,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 166,
+     "type": "action",
+     "text": "public inline ctr",
+     "x": 370,
+     "y": 60,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 167,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 80,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 168,
+     "type": "action",
+     "text": "i = 10;",
+     "x": 170,
+     "y": 220,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "constructor with param",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 169,
+     "type": "beginend",
+     "text": "constructor with param",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 170,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 171,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 172,
+     "type": "action",
+     "text": "protected ctr\nconst char* name\nint iValue",
+     "x": 370,
+     "y": 60,
+     "w": 80,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 173,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 80,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 174,
+     "type": "action",
+     "text": "i = iValue;",
+     "x": 170,
+     "y": 220,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "private constructor with param",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 175,
+     "type": "beginend",
+     "text": "private constructor with param",
+     "x": 170,
+     "y": 60,
+     "w": 130,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 176,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 177,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 178,
+     "type": "action",
+     "text": "private ctr\nconst char* name\nconst char* name2",
+     "x": 400,
+     "y": 60,
+     "w": 80,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 179,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 60,
+     "w": 80,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 180,
+     "type": "action",
+     "text": "i = 0;",
+     "x": 170,
+     "y": 220,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "destructor - 1",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 181,
+     "type": "beginend",
+     "text": "destructor - 1",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 182,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 183,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 184,
+     "type": "action",
+     "text": "#comment\npublic inline dtr",
+     "x": 360,
+     "y": 60,
+     "w": 80,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 185,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 60,
+     "w": 100,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 186,
+     "type": "action",
+     "text": "cout << \"dtr!\" << endl;",
+     "x": 170,
+     "y": 220,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "destructor - 2",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 187,
+     "type": "beginend",
+     "text": "destructor - 2",
+     "x": 170,
+     "y": 60,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 188,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 189,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 190,
+     "type": "action",
+     "text": "dtr",
+     "x": 370,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 191,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 60,
+     "w": 110,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 192,
+     "type": "action",
+     "text": "cout << \"dtr - 2!\" << endl;",
+     "x": 170,
+     "y": 220,
+     "w": 120,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

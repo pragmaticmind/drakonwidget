@@ -1,0 +1,143 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/se_dest_field_reuse.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "diagram",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 9,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "shelf",
+     "text": "",
+     "x": 140,
+     "y": 190,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Foo"
+    },
+    {
+     "item_id": 2,
+     "type": "shelf",
+     "text": "",
+     "x": 690,
+     "y": 190,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Bar"
+    },
+    {
+     "item_id": 3,
+     "type": "shelf",
+     "text": "",
+     "x": 140,
+     "y": 330,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Moo"
+    },
+    {
+     "item_id": 6,
+     "type": "vertical",
+     "text": "",
+     "x": 430,
+     "y": 190,
+     "w": 0,
+     "h": 140,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "beginend",
+     "text": "RedField",
+     "x": 300,
+     "y": 190,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 8,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 190,
+     "w": 450,
+     "h": 0,
+     "a": 20300,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 330,
+     "w": 240,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "beginend",
+     "text": "BlackField",
+     "x": 300,
+     "y": 330,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 11,
+     "type": "beginend",
+     "text": "BlueField",
+     "x": 530,
+     "y": 190,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

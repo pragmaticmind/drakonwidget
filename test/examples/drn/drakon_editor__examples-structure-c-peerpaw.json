@@ -1,0 +1,474 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/structure/C/peerpaw.drn",
+ "info": {
+  "type": "drakon",
+  "version": "21",
+  "start_version": "1",
+  "language": "C"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "Tables",
+   "origin": "0 -100",
+   "description": "",
+   "info": {},
+   "nodes": 5,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "shelf",
+     "text": "name : string8 own cget\ndepartment : link set\n\n\nindex department name",
+     "x": 710,
+     "y": 180,
+     "w": 110,
+     "h": 70,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class employee"
+    },
+    {
+     "item_id": 133,
+     "type": "shelf",
+     "text": "title : string8 own\n\nindex title",
+     "x": 180,
+     "y": 180,
+     "w": 90,
+     "h": 60,
+     "a": 40,
+     "b": 0,
+     "text2": "class department"
+    },
+    {
+     "item_id": 135,
+     "type": "beginend",
+     "text": "department",
+     "x": 510,
+     "y": 180,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 186,
+     "type": "horizontal",
+     "text": "",
+     "x": 270,
+     "y": 180,
+     "w": 330,
+     "h": 0,
+     "a": 20300,
+     "b": 0
+    },
+    {
+     "item_id": 187,
+     "type": "beginend",
+     "text": "employees",
+     "x": 350,
+     "y": 180,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "main",
+   "origin": "987 -423",
+   "description": null,
+   "info": {},
+   "nodes": 32,
+   "features": [
+    "address",
+    "arrow",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 8,
+     "type": "beginend",
+     "text": "main",
+     "x": 1140,
+     "y": -260,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "beginend",
+     "text": "End",
+     "x": 2910,
+     "y": 610,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "vertical",
+     "x": 1140,
+     "y": -240,
+     "w": 0,
+     "h": 920,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 55,
+     "type": "horizontal",
+     "text": "",
+     "x": 1140,
+     "y": -130,
+     "w": 1770,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 56,
+     "type": "branch",
+     "text": "Create in-memory database",
+     "x": 1140,
+     "y": -80,
+     "w": 140,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 57,
+     "type": "vertical",
+     "text": "",
+     "x": 2270,
+     "y": -130,
+     "w": 0,
+     "h": 810,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 58,
+     "type": "branch",
+     "text": "Re-link",
+     "x": 2270,
+     "y": -80,
+     "w": 250,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 59,
+     "type": "vertical",
+     "text": "",
+     "x": 2910,
+     "y": -130,
+     "w": 0,
+     "h": 760,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 60,
+     "type": "branch",
+     "text": "Delete",
+     "x": 2910,
+     "y": -80,
+     "w": 230,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 61,
+     "type": "address",
+     "text": "Delete",
+     "x": 2270,
+     "y": 630,
+     "w": 250,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 62,
+     "type": "address",
+     "text": "Initial configuration",
+     "x": 1140,
+     "y": 630,
+     "w": 140,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 63,
+     "type": "arrow",
+     "text": "",
+     "x": 970,
+     "y": -130,
+     "w": 170,
+     "h": 810,
+     "a": 1300,
+     "b": 1
+    },
+    {
+     "item_id": 72,
+     "type": "vertical",
+     "text": "",
+     "x": 1630,
+     "y": -130,
+     "w": 0,
+     "h": 810,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 73,
+     "type": "address",
+     "text": "Re-link",
+     "x": 1630,
+     "y": 630,
+     "w": 240,
+     "h": 30,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 74,
+     "type": "branch",
+     "text": "Initial configuration",
+     "x": 1630,
+     "y": -80,
+     "w": 240,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 161,
+     "type": "action",
+     "text": "yellow_m = peerpaw_insert_department(db,\n string8_from_cstr(\"Yellow marketing\", 10));\ngrey_m = peerpaw_insert_department(db, \n string8_from_cstr(\"Grey marketing\", 10));",
+     "x": 1630,
+     "y": 20,
+     "w": 240,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 162,
+     "type": "action",
+     "text": "mark = peerpaw_insert_employee(db,\n string8_from_cstr(\"Mark\", 10), grey_m);\njohn = peerpaw_insert_employee(db,\n string8_from_cstr(\"John\", 10), 0);",
+     "x": 1630,
+     "y": 150,
+     "w": 240,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 188,
+     "type": "action",
+     "text": "ENSURE(peerpaw_set_employee_department(db, john, grey_m))",
+     "x": 1630,
+     "y": 240,
+     "w": 240,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 189,
+     "type": "action",
+     "text": "ENSURE(2 == department_employees_count(grey_m))\nENSURE(0 == department_employees_count(yellow_m))\n\nENSURE(mark = department_employees(grey_m, 0))\nENSURE(john = department_employees(grey_m, 1))",
+     "x": 1630,
+     "y": 370,
+     "w": 240,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 191,
+     "type": "action",
+     "text": "ENSURE(peerpaw_set_employee_department(db, mark, yellow_m))",
+     "x": 2270,
+     "y": 30,
+     "w": 250,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 194,
+     "type": "action",
+     "text": "ENSURE(0 ==  peerpaw_delete_department(db, grey_m))\nENSURE(0 ==  peerpaw_delete_department(db, yellow_m))",
+     "x": 2910,
+     "y": 0,
+     "w": 230,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 195,
+     "type": "action",
+     "text": "ENSURE(peerpaw_set_employee_department(db, mark, 0))",
+     "x": 2910,
+     "y": 90,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 196,
+     "type": "action",
+     "text": "ENSURE(peerpaw_delete_department(db, yellow_m))",
+     "x": 2910,
+     "y": 180,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 197,
+     "type": "action",
+     "text": "ENSURE(peerpaw_delete_employee(db, john))",
+     "x": 2910,
+     "y": 250,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 198,
+     "type": "action",
+     "text": "ENSURE(peerpaw_delete_department(db, grey_m))",
+     "x": 2910,
+     "y": 350,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 253,
+     "type": "horizontal",
+     "text": "",
+     "x": 1180,
+     "y": -260,
+     "w": 120,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 255,
+     "type": "action",
+     "text": "peerpaw* db = peerpaw_create();",
+     "x": 1140,
+     "y": 210,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 258,
+     "type": "action",
+     "text": "public\n\nint argc\nchar** argv\n\nreturns int",
+     "x": 1340,
+     "y": -260,
+     "w": 60,
+     "h": 60,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 259,
+     "type": "action",
+     "text": "return 0;",
+     "x": 2910,
+     "y": 510,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 260,
+     "type": "action",
+     "text": "object_destroy(db);",
+     "x": 2910,
+     "y": 440,
+     "w": 230,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 261,
+     "type": "action",
+     "text": "ENSURE(1 == department_employees_count(grey_m))\nENSURE(1 == department_employees_count(yellow_m))\n\nENSURE(john == department_employees(grey_m, 0))\nENSURE(mark == department_employees(yellow_m, 0))",
+     "x": 2270,
+     "y": 260,
+     "w": 250,
+     "h": 50,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 262,
+     "type": "action",
+     "text": "department* yellow_m;\ndepartment* grey_m;\nemployee* mark;\nemployee* john;",
+     "x": 1140,
+     "y": 70,
+     "w": 140,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

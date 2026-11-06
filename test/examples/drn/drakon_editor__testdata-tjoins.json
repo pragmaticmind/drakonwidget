@@ -1,0 +1,2276 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/tjoins.drn",
+ "info": {
+  "type": "drakon",
+  "version": "18",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "up",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "horizontal",
+     "text": "",
+     "x": 120,
+     "y": 180,
+     "w": 360,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "vertical",
+     "text": "",
+     "x": 230,
+     "y": 120,
+     "w": 0,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "action",
+     "text": "up1",
+     "x": 230,
+     "y": 100,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "action",
+     "text": "left",
+     "x": 100,
+     "y": 180,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "right",
+     "x": 480,
+     "y": 180,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "vertical",
+     "text": "",
+     "x": 340,
+     "y": 120,
+     "w": 0,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 7,
+     "type": "action",
+     "text": "up2",
+     "x": 340,
+     "y": 100,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "down",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 8,
+     "type": "horizontal",
+     "text": "",
+     "x": 100,
+     "y": 130,
+     "w": 360,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 9,
+     "type": "vertical",
+     "text": "",
+     "x": 210,
+     "y": 130,
+     "w": 0,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 10,
+     "type": "action",
+     "text": "down1",
+     "x": 210,
+     "y": 200,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 11,
+     "type": "action",
+     "text": "left",
+     "x": 80,
+     "y": 130,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 12,
+     "type": "action",
+     "text": "right",
+     "x": 460,
+     "y": 130,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 13,
+     "type": "vertical",
+     "text": "",
+     "x": 320,
+     "y": 130,
+     "w": 0,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 14,
+     "type": "action",
+     "text": "down2",
+     "x": 320,
+     "y": 200,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "left",
+   "origin": "-81 2",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [
+    "case",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 17,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 18,
+     "type": "select",
+     "text": "up",
+     "x": 170,
+     "y": 70,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 19,
+     "type": "case",
+     "text": "down",
+     "x": 170,
+     "y": 380,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 20,
+     "type": "action",
+     "text": "left1",
+     "x": 60,
+     "y": 160,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 21,
+     "type": "horizontal",
+     "text": "",
+     "x": 110,
+     "y": 160,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 22,
+     "type": "action",
+     "text": "left2",
+     "x": 60,
+     "y": 270,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 23,
+     "type": "horizontal",
+     "text": "",
+     "x": 110,
+     "y": 270,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "right",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [
+    "case",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 24,
+     "type": "vertical",
+     "text": "",
+     "x": 190,
+     "y": 60,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 25,
+     "type": "select",
+     "text": "up",
+     "x": 190,
+     "y": 50,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 26,
+     "type": "case",
+     "text": "down",
+     "x": 190,
+     "y": 360,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 27,
+     "type": "action",
+     "text": "right1",
+     "x": 300,
+     "y": 140,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 28,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 140,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 29,
+     "type": "action",
+     "text": "right2",
+     "x": 300,
+     "y": 250,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 30,
+     "type": "horizontal",
+     "text": "",
+     "x": 190,
+     "y": 250,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "twins",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 10,
+   "features": [],
+   "items": [
+    {
+     "item_id": 33,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "vertical",
+     "text": "",
+     "x": 300,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 140,
+     "w": 130,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 36,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 310,
+     "w": 130,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 37,
+     "type": "action",
+     "text": "red",
+     "x": 170,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 38,
+     "type": "action",
+     "text": "green",
+     "x": 300,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "action",
+     "text": "blue",
+     "x": 170,
+     "y": 220,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 40,
+     "type": "action",
+     "text": "yellow",
+     "x": 300,
+     "y": 220,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 41,
+     "type": "action",
+     "text": "white",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 42,
+     "type": "action",
+     "text": "black",
+     "x": 300,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "cross",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 12,
+   "features": [],
+   "items": [
+    {
+     "item_id": 43,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 150,
+     "w": 120,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 44,
+     "type": "vertical",
+     "text": "",
+     "x": 220,
+     "y": 150,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 45,
+     "type": "vertical",
+     "text": "",
+     "x": 280,
+     "y": 80,
+     "w": 0,
+     "h": 70,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 46,
+     "type": "horizontal",
+     "text": "",
+     "x": 160,
+     "y": 210,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 47,
+     "type": "vertical",
+     "text": "",
+     "x": 340,
+     "y": 150,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "horizontal",
+     "text": "",
+     "x": 340,
+     "y": 210,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 49,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 270,
+     "w": 120,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 50,
+     "type": "vertical",
+     "text": "",
+     "x": 280,
+     "y": 270,
+     "w": 0,
+     "h": 70,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 51,
+     "type": "action",
+     "text": "up",
+     "x": 280,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 52,
+     "type": "action",
+     "text": "down",
+     "x": 280,
+     "y": 360,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 53,
+     "type": "action",
+     "text": "left",
+     "x": 110,
+     "y": 210,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 54,
+     "type": "action",
+     "text": "right",
+     "x": 450,
+     "y": 210,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "bad_arrow",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 7,
+   "features": [
+    "arrow"
+   ],
+   "items": [
+    {
+     "item_id": 55,
+     "type": "vertical",
+     "text": "",
+     "x": 200,
+     "y": 140,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 56,
+     "type": "action",
+     "text": "action",
+     "x": 200,
+     "y": 130,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 57,
+     "type": "action",
+     "text": "action",
+     "x": 200,
+     "y": 440,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 58,
+     "type": "arrow",
+     "text": "",
+     "x": 310,
+     "y": 200,
+     "w": 110,
+     "h": 100,
+     "a": 110,
+     "b": 0
+    },
+    {
+     "item_id": 59,
+     "type": "vertical",
+     "text": "",
+     "x": 260,
+     "y": 200,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 60,
+     "type": "horizontal",
+     "text": "",
+     "x": 260,
+     "y": 200,
+     "w": 30,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 61,
+     "type": "vertical",
+     "text": "",
+     "x": 290,
+     "y": 200,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "good",
+   "origin": "416 -82",
+   "description": null,
+   "info": {},
+   "nodes": 26,
+   "features": [
+    "address",
+    "arrow",
+    "commentin",
+    "if",
+    "pause",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 62,
+     "type": "beginend",
+     "text": "6. Have lunch - Branch loop",
+     "x": 140,
+     "y": 10,
+     "w": 120,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 63,
+     "type": "vertical",
+     "text": "",
+     "x": 140,
+     "y": 30,
+     "w": 0,
+     "h": 470,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 64,
+     "type": "branch",
+     "text": "Talk to collegues",
+     "x": 140,
+     "y": 100,
+     "w": 80,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 65,
+     "type": "branch",
+     "text": "Eat something",
+     "x": 400,
+     "y": 100,
+     "w": 140,
+     "h": 30,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 66,
+     "type": "branch",
+     "text": "Prepare for work",
+     "x": 740,
+     "y": 100,
+     "w": 80,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 67,
+     "type": "action",
+     "text": "Discuss weather",
+     "x": 140,
+     "y": 210,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 68,
+     "type": "action",
+     "text": "Discuss sports",
+     "x": 140,
+     "y": 270,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 69,
+     "type": "action",
+     "text": "Discuss movies",
+     "x": 140,
+     "y": 330,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 70,
+     "type": "address",
+     "text": "Eat something",
+     "x": 140,
+     "y": 450,
+     "w": 80,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 71,
+     "type": "action",
+     "text": "Eat a humburger",
+     "x": 400,
+     "y": 210,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 72,
+     "type": "if",
+     "text": "Still hungry?",
+     "x": 400,
+     "y": 270,
+     "w": 140,
+     "h": 20,
+     "a": 90,
+     "b": 0
+    },
+    {
+     "item_id": 73,
+     "type": "address",
+     "text": "Eat something",
+     "x": 400,
+     "y": 450,
+     "w": 140,
+     "h": 30,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 74,
+     "type": "address",
+     "text": "Prepare to work",
+     "x": 630,
+     "y": 450,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 75,
+     "type": "vertical",
+     "text": "",
+     "x": 400,
+     "y": 50,
+     "w": 0,
+     "h": 450,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 76,
+     "type": "vertical",
+     "text": "",
+     "x": 630,
+     "y": 270,
+     "w": 0,
+     "h": 230,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 77,
+     "type": "horizontal",
+     "text": "",
+     "x": 140,
+     "y": 50,
+     "w": 600,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 78,
+     "type": "arrow",
+     "text": "",
+     "x": 40,
+     "y": 50,
+     "w": 100,
+     "h": 450,
+     "a": 590,
+     "b": 1
+    },
+    {
+     "item_id": 79,
+     "type": "action",
+     "text": "Take a nap",
+     "x": 860,
+     "y": 250,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 80,
+     "type": "beginend",
+     "text": "End",
+     "x": 740,
+     "y": 340,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 81,
+     "type": "vertical",
+     "text": "",
+     "x": 740,
+     "y": 50,
+     "w": 0,
+     "h": 280,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 82,
+     "type": "commentin",
+     "text": "The Address icon below points\nat the same branch\nand forms a loop.",
+     "x": 400,
+     "y": 360,
+     "w": 140,
+     "h": 40,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 194,
+     "type": "if",
+     "text": "Ready to work?",
+     "x": 740,
+     "y": 190,
+     "w": 80,
+     "h": 20,
+     "a": 40,
+     "b": 1
+    },
+    {
+     "item_id": 195,
+     "type": "vertical",
+     "text": "",
+     "x": 860,
+     "y": 190,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 196,
+     "type": "arrow",
+     "text": "",
+     "x": 990,
+     "y": 150,
+     "w": 250,
+     "h": 150,
+     "a": 130,
+     "b": 0
+    },
+    {
+     "item_id": 197,
+     "type": "commentin",
+     "text": "The Address icon below points\nat the same branch\nand forms a loop.",
+     "x": 300,
+     "y": -70,
+     "w": 138,
+     "h": 40,
+     "a": 60,
+     "b": 0,
+     "text2": ""
+    },
+    {
+     "item_id": 198,
+     "type": "pause",
+     "text": "5 sec",
+     "x": 910,
+     "y": 150,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "dangling_right",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 2,
+   "features": [],
+   "items": [
+    {
+     "item_id": 83,
+     "type": "action",
+     "text": "action",
+     "x": 260,
+     "y": 240,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 84,
+     "type": "horizontal",
+     "text": "",
+     "x": 300,
+     "y": 240,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "dangling_left",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 2,
+   "features": [],
+   "items": [
+    {
+     "item_id": 85,
+     "type": "action",
+     "text": "action",
+     "x": 410,
+     "y": 190,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 86,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 190,
+     "w": 160,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "disjoint",
+   "origin": "-18 -21",
+   "description": null,
+   "info": {},
+   "nodes": 42,
+   "features": [
+    "address",
+    "arrow",
+    "commentin",
+    "if",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 87,
+     "type": "beginend",
+     "text": "6. Have lunch - Branch loop",
+     "x": 140,
+     "y": 50,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 88,
+     "type": "vertical",
+     "text": "",
+     "x": 140,
+     "y": 70,
+     "w": 0,
+     "h": 430,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 89,
+     "type": "branch",
+     "text": "Talk to collegues",
+     "x": 140,
+     "y": 140,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 90,
+     "type": "branch",
+     "text": "Eat something",
+     "x": 370,
+     "y": 140,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 91,
+     "type": "branch",
+     "text": "Prepare for work",
+     "x": 610,
+     "y": 140,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 92,
+     "type": "action",
+     "text": "Discuss weather",
+     "x": 140,
+     "y": 210,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 93,
+     "type": "action",
+     "text": "Discuss sports",
+     "x": 140,
+     "y": 270,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 94,
+     "type": "action",
+     "text": "Discuss movies",
+     "x": 140,
+     "y": 330,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 95,
+     "type": "address",
+     "text": "Eat something",
+     "x": 140,
+     "y": 450,
+     "w": 60,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 96,
+     "type": "action",
+     "text": "Eat a humburger",
+     "x": 370,
+     "y": 210,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 97,
+     "type": "if",
+     "text": "Still hungry?",
+     "x": 370,
+     "y": 270,
+     "w": 70,
+     "h": 20,
+     "a": 90,
+     "b": 0
+    },
+    {
+     "item_id": 98,
+     "type": "address",
+     "text": "Eat something",
+     "x": 370,
+     "y": 450,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 99,
+     "type": "address",
+     "text": "Prepare to work",
+     "x": 530,
+     "y": 450,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 100,
+     "type": "vertical",
+     "text": "",
+     "x": 370,
+     "y": 90,
+     "w": 0,
+     "h": 410,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 101,
+     "type": "vertical",
+     "text": "",
+     "x": 530,
+     "y": 270,
+     "w": 0,
+     "h": 230,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 102,
+     "type": "horizontal",
+     "text": "",
+     "x": 140,
+     "y": 90,
+     "w": 470,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 103,
+     "type": "arrow",
+     "text": "",
+     "x": 40,
+     "y": 90,
+     "w": 100,
+     "h": 410,
+     "a": 490,
+     "b": 1
+    },
+    {
+     "item_id": 104,
+     "type": "action",
+     "text": "Take a nap",
+     "x": 610,
+     "y": 210,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 105,
+     "type": "beginend",
+     "text": "End",
+     "x": 610,
+     "y": 290,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 106,
+     "type": "vertical",
+     "text": "",
+     "x": 610,
+     "y": 90,
+     "w": 0,
+     "h": 190,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 107,
+     "type": "commentin",
+     "text": "The Address icon below points\nat the same branch\nand forms a loop.",
+     "x": 370,
+     "y": 360,
+     "w": 130,
+     "h": 40,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 108,
+     "type": "beginend",
+     "text": "6. Have lunch - Branch loop",
+     "x": 830,
+     "y": 50,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 109,
+     "type": "vertical",
+     "text": "",
+     "x": 830,
+     "y": 70,
+     "w": 0,
+     "h": 430,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 110,
+     "type": "branch",
+     "text": "Talk to collegues",
+     "x": 830,
+     "y": 140,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 111,
+     "type": "branch",
+     "text": "Eat something",
+     "x": 1060,
+     "y": 140,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 112,
+     "type": "branch",
+     "text": "Prepare for work",
+     "x": 1300,
+     "y": 140,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 113,
+     "type": "action",
+     "text": "Discuss weather",
+     "x": 830,
+     "y": 210,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 114,
+     "type": "action",
+     "text": "Discuss sports",
+     "x": 830,
+     "y": 270,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 115,
+     "type": "action",
+     "text": "Discuss movies",
+     "x": 830,
+     "y": 330,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 116,
+     "type": "address",
+     "text": "Eat something",
+     "x": 830,
+     "y": 450,
+     "w": 60,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 117,
+     "type": "action",
+     "text": "Eat a humburger",
+     "x": 1060,
+     "y": 210,
+     "w": 70,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 118,
+     "type": "if",
+     "text": "Still hungry?",
+     "x": 1060,
+     "y": 270,
+     "w": 70,
+     "h": 20,
+     "a": 90,
+     "b": 0
+    },
+    {
+     "item_id": 119,
+     "type": "address",
+     "text": "Eat something",
+     "x": 1060,
+     "y": 450,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 1
+    },
+    {
+     "item_id": 120,
+     "type": "address",
+     "text": "Prepare to work",
+     "x": 1220,
+     "y": 450,
+     "w": 70,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 121,
+     "type": "vertical",
+     "text": "",
+     "x": 1060,
+     "y": 90,
+     "w": 0,
+     "h": 410,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 122,
+     "type": "vertical",
+     "text": "",
+     "x": 1220,
+     "y": 270,
+     "w": 0,
+     "h": 230,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 123,
+     "type": "horizontal",
+     "text": "",
+     "x": 830,
+     "y": 90,
+     "w": 470,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 124,
+     "type": "arrow",
+     "text": "",
+     "x": 730,
+     "y": 90,
+     "w": 100,
+     "h": 410,
+     "a": 490,
+     "b": 1
+    },
+    {
+     "item_id": 125,
+     "type": "action",
+     "text": "Take a nap",
+     "x": 1300,
+     "y": 210,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 126,
+     "type": "beginend",
+     "text": "End",
+     "x": 1300,
+     "y": 290,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 127,
+     "type": "vertical",
+     "text": "",
+     "x": 1300,
+     "y": 90,
+     "w": 0,
+     "h": 190,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 128,
+     "type": "commentin",
+     "text": "The Address icon below points\nat the same branch\nand forms a loop.",
+     "x": 1060,
+     "y": 360,
+     "w": 130,
+     "h": 40,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "dangling_up",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 2,
+   "features": [],
+   "items": [
+    {
+     "item_id": 129,
+     "type": "action",
+     "text": "action",
+     "x": 300,
+     "y": 210,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 130,
+     "type": "vertical",
+     "text": "",
+     "x": 300,
+     "y": 90,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "dangling_down",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 2,
+   "features": [],
+   "items": [
+    {
+     "item_id": 131,
+     "type": "action",
+     "text": "action",
+     "x": 300,
+     "y": 160,
+     "w": 60,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 132,
+     "type": "vertical",
+     "text": "",
+     "x": 300,
+     "y": 180,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "out_of_line",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [],
+   "items": [
+    {
+     "item_id": 133,
+     "type": "beginend",
+     "text": "out_of_line",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 134,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 135,
+     "type": "vertical",
+     "x": 170,
+     "y": 280,
+     "w": 0,
+     "h": 90,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 136,
+     "type": "vertical",
+     "text": "",
+     "x": 190,
+     "y": 80,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 137,
+     "type": "action",
+     "text": "action",
+     "x": 170,
+     "y": 210,
+     "w": 60,
+     "h": 80,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "out_of_line_hor",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [],
+   "items": [
+    {
+     "item_id": 138,
+     "type": "action",
+     "text": "action",
+     "x": 90,
+     "y": 80,
+     "w": 60,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 139,
+     "type": "action",
+     "text": "action",
+     "x": 410,
+     "y": 80,
+     "w": 60,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 140,
+     "type": "horizontal",
+     "text": "",
+     "x": 150,
+     "y": 60,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 141,
+     "type": "action",
+     "text": "action",
+     "x": 250,
+     "y": 70,
+     "w": 60,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 142,
+     "type": "horizontal",
+     "text": "",
+     "x": 300,
+     "y": 90,
+     "w": 60,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "X",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 143,
+     "type": "vertical",
+     "text": "",
+     "x": 300,
+     "y": 140,
+     "w": 0,
+     "h": 170,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 144,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": 210,
+     "w": 140,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 145,
+     "type": "action",
+     "text": "up",
+     "x": 300,
+     "y": 140,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 146,
+     "type": "action",
+     "text": "down",
+     "x": 300,
+     "y": 310,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 147,
+     "type": "action",
+     "text": "right",
+     "x": 420,
+     "y": 210,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 148,
+     "type": "action",
+     "text": "left",
+     "x": 180,
+     "y": 210,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "if",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 149,
+     "type": "beginend",
+     "text": "if",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 150,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 151,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 152,
+     "type": "if",
+     "text": "if_icon",
+     "x": 170,
+     "y": 200,
+     "w": 70,
+     "h": 20,
+     "a": 110,
+     "b": 0
+    },
+    {
+     "item_id": 153,
+     "type": "action",
+     "text": "action1",
+     "x": 170,
+     "y": 270,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 154,
+     "type": "action",
+     "text": "action2",
+     "x": 350,
+     "y": 270,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 156,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 200,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 157,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 320,
+     "w": 180,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "cross_in_select2",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 13,
+   "features": [
+    "case",
+    "if",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 158,
+     "type": "beginend",
+     "text": "cross_in_select2",
+     "x": 100,
+     "y": 50,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 159,
+     "type": "beginend",
+     "text": "End",
+     "x": 100,
+     "y": 400,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 160,
+     "type": "vertical",
+     "text": "",
+     "x": 260,
+     "y": 110,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 161,
+     "type": "vertical",
+     "text": "",
+     "x": 260,
+     "y": 210,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 162,
+     "type": "horizontal",
+     "text": "",
+     "x": 220,
+     "y": 210,
+     "w": 190,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 163,
+     "type": "select",
+     "text": "select",
+     "x": 260,
+     "y": 170,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 164,
+     "type": "case",
+     "text": "case1",
+     "x": 260,
+     "y": 260,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 165,
+     "type": "horizontal",
+     "text": "",
+     "x": 100,
+     "y": 330,
+     "w": 310,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 166,
+     "type": "case",
+     "text": "case2",
+     "x": 410,
+     "y": 260,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 167,
+     "type": "vertical",
+     "text": "",
+     "x": 410,
+     "y": 210,
+     "w": 0,
+     "h": 120,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 168,
+     "type": "if",
+     "text": "if",
+     "x": 100,
+     "y": 110,
+     "w": 70,
+     "h": 20,
+     "a": 90,
+     "b": 0
+    },
+    {
+     "item_id": 169,
+     "type": "vertical",
+     "text": "",
+     "x": 100,
+     "y": 70,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 170,
+     "type": "if",
+     "text": "if2",
+     "x": 100,
+     "y": 210,
+     "w": 70,
+     "h": 20,
+     "a": 50,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "crossing",
+   "origin": "-55 54",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [
+    "if"
+   ],
+   "items": [
+    {
+     "item_id": 173,
+     "type": "vertical",
+     "text": "",
+     "x": 150,
+     "y": 240,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 180,
+     "type": "vertical",
+     "text": "",
+     "x": 270,
+     "y": 240,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 182,
+     "type": "if",
+     "text": "if1",
+     "x": 150,
+     "y": 240,
+     "w": 70,
+     "h": 20,
+     "a": 50,
+     "b": 0
+    },
+    {
+     "item_id": 183,
+     "type": "if",
+     "text": "if2",
+     "x": 150,
+     "y": 320,
+     "w": 70,
+     "h": 20,
+     "a": 100,
+     "b": 0
+    },
+    {
+     "item_id": 184,
+     "type": "vertical",
+     "text": "",
+     "x": 320,
+     "y": 320,
+     "w": 0,
+     "h": 140,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 185,
+     "type": "horizontal",
+     "text": "",
+     "x": 150,
+     "y": 460,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "grid",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [],
+   "items": [
+    {
+     "item_id": 186,
+     "type": "vertical",
+     "text": "",
+     "x": 260,
+     "y": 140,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 187,
+     "type": "vertical",
+     "text": "",
+     "x": 310,
+     "y": 140,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 188,
+     "type": "vertical",
+     "text": "",
+     "x": 190,
+     "y": 140,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 189,
+     "type": "vertical",
+     "text": "",
+     "x": 140,
+     "y": 140,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 190,
+     "type": "horizontal",
+     "text": "",
+     "x": 140,
+     "y": 140,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 191,
+     "type": "horizontal",
+     "text": "",
+     "x": 140,
+     "y": 180,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 192,
+     "type": "horizontal",
+     "text": "",
+     "x": 140,
+     "y": 240,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 193,
+     "type": "horizontal",
+     "text": "",
+     "x": 140,
+     "y": 290,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

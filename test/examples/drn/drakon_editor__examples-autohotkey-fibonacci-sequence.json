@@ -1,0 +1,563 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/AutoHotkey/Fibonacci sequence.drn",
+ "info": {
+  "type": "drakon",
+  "version": "22",
+  "start_version": "1",
+  "language": "AutoHotkey_L"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "Free_Start",
+   "origin": "-280 30",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [
+    "insertion"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "Free_Start",
+     "x": 170,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "insertion",
+     "text": "Fibonacci(SeqLength)",
+     "x": 170,
+     "y": 200,
+     "w": 440,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 72,
+     "type": "action",
+     "text": "ExitApp",
+     "x": 170,
+     "y": 280,
+     "w": 440,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 76,
+     "type": "action",
+     "text": "InputBox, SeqLength, Fibonacci sequence, How many numbers from Fibonacci sequence do you want to calculate?",
+     "x": 170,
+     "y": 130,
+     "w": 440,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "Fibonacci",
+   "origin": "60 30",
+   "description": null,
+   "info": {},
+   "nodes": 39,
+   "features": [
+    "address",
+    "arrow",
+    "case",
+    "if",
+    "output",
+    "select",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 21,
+     "type": "beginend",
+     "text": "Fibonacci",
+     "x": 250,
+     "y": 60,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 22,
+     "type": "beginend",
+     "text": "End",
+     "x": 1990,
+     "y": 360,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 23,
+     "type": "vertical",
+     "text": "",
+     "x": 250,
+     "y": 80,
+     "w": 0,
+     "h": 700,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 24,
+     "type": "vertical",
+     "text": "",
+     "x": 1310,
+     "y": 110,
+     "w": 0,
+     "h": 670,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 25,
+     "type": "vertical",
+     "text": "",
+     "x": 1990,
+     "y": 110,
+     "w": 0,
+     "h": 240,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 26,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 110,
+     "w": 1740,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 27,
+     "type": "arrow",
+     "text": "",
+     "x": 70,
+     "y": 110,
+     "w": 180,
+     "h": 670,
+     "a": 1240,
+     "b": 1
+    },
+    {
+     "item_id": 28,
+     "type": "branch",
+     "text": "Calculate",
+     "x": 250,
+     "y": 160,
+     "w": 80,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 29,
+     "type": "address",
+     "text": "Output and Count",
+     "x": 250,
+     "y": 730,
+     "w": 80,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 30,
+     "type": "branch",
+     "text": "Output and Count",
+     "x": 1310,
+     "y": 160,
+     "w": 260,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 31,
+     "type": "branch",
+     "text": "Exit",
+     "x": 1990,
+     "y": 160,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 32,
+     "type": "address",
+     "text": "Calculate",
+     "x": 1310,
+     "y": 730,
+     "w": 260,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 33,
+     "type": "horizontal",
+     "x": 250,
+     "y": 60,
+     "w": 220,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 34,
+     "type": "action",
+     "text": "SeqLength ;How many  fibonacci numbers to output",
+     "x": 620,
+     "y": 60,
+     "w": 210,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 35,
+     "type": "if",
+     "text": "SeqLength = 0",
+     "x": 1310,
+     "y": 470,
+     "w": 260,
+     "h": 20,
+     "a": 170,
+     "b": 0
+    },
+    {
+     "item_id": 36,
+     "type": "vertical",
+     "text": "",
+     "x": 1740,
+     "y": 470,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 37,
+     "type": "horizontal",
+     "text": "",
+     "x": 1310,
+     "y": 780,
+     "w": 430,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 38,
+     "type": "address",
+     "text": "Exit",
+     "x": 1740,
+     "y": 730,
+     "w": 50,
+     "h": 30,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 39,
+     "type": "select",
+     "text": "FibNumber",
+     "x": 250,
+     "y": 250,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 40,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 310,
+     "w": 520,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 41,
+     "type": "case",
+     "text": "\"\"",
+     "x": 250,
+     "y": 350,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 42,
+     "type": "case",
+     "text": "0",
+     "x": 460,
+     "y": 350,
+     "w": 110,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 44,
+     "type": "vertical",
+     "text": "",
+     "x": 460,
+     "y": 310,
+     "w": 0,
+     "h": 370,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 46,
+     "type": "output",
+     "text": "MsgBox, Number %Count% in Fibonacci sequence is: %FibNumber%",
+     "x": 1310,
+     "y": 290,
+     "w": 260,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "Message Box"
+    },
+    {
+     "item_id": 47,
+     "type": "action",
+     "text": "FibNumber := 0",
+     "x": 250,
+     "y": 410,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "action",
+     "text": "FibNumber := 1",
+     "x": 460,
+     "y": 480,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 57,
+     "type": "horizontal",
+     "text": "",
+     "x": 250,
+     "y": 680,
+     "w": 520,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 60,
+     "type": "action",
+     "text": "SeqLength := SeqLength - 1",
+     "x": 1310,
+     "y": 400,
+     "w": 260,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 61,
+     "type": "horizontal",
+     "text": "",
+     "x": 680,
+     "y": 310,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 62,
+     "type": "vertical",
+     "text": "",
+     "x": 770,
+     "y": 310,
+     "w": 0,
+     "h": 370,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 63,
+     "type": "horizontal",
+     "text": "",
+     "x": 680,
+     "y": 680,
+     "w": 90,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 64,
+     "type": "case",
+     "text": "",
+     "x": 770,
+     "y": 350,
+     "w": 140,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 66,
+     "type": "action",
+     "text": "FibNumber := FibNumber + LastFib",
+     "x": 770,
+     "y": 550,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 69,
+     "type": "action",
+     "text": "LastFib := NextLastFib",
+     "x": 770,
+     "y": 410,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 70,
+     "type": "action",
+     "text": "NextLastFib := fibnumber",
+     "x": 770,
+     "y": 480,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 71,
+     "type": "action",
+     "text": "NextLastFib := FibNumber",
+     "x": 460,
+     "y": 410,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 73,
+     "type": "action",
+     "text": "Count := 1",
+     "x": 250,
+     "y": 620,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 74,
+     "type": "action",
+     "text": "Count := 2",
+     "x": 460,
+     "y": 620,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 75,
+     "type": "action",
+     "text": "Count := Count + 1",
+     "x": 770,
+     "y": 620,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  }
+ ]
+}

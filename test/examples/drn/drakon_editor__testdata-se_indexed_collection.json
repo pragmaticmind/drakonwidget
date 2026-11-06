@@ -1,0 +1,95 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/se_indexed_collection.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "diagram",
+   "origin": "106 -22",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "shelf",
+     "text": "index Bars",
+     "x": 230,
+     "y": 230,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Foo"
+    },
+    {
+     "item_id": 2,
+     "type": "shelf",
+     "text": "",
+     "x": 800,
+     "y": 230,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "class Bar"
+    },
+    {
+     "item_id": 3,
+     "type": "horizontal",
+     "text": "",
+     "x": 280,
+     "y": 230,
+     "w": 470,
+     "h": 0,
+     "a": 20300,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "beginend",
+     "text": "Bars",
+     "x": 440,
+     "y": 230,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "beginend",
+     "text": "Foo",
+     "x": 610,
+     "y": 230,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

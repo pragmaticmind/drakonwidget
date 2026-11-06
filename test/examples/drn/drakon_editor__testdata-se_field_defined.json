@@ -1,0 +1,50 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/se_field_defined.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "diagram",
+   "origin": "84 30",
+   "description": null,
+   "info": {},
+   "nodes": 1,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "shelf",
+     "text": "name\nname",
+     "x": 240,
+     "y": 250,
+     "w": 50,
+     "h": 50,
+     "a": 40,
+     "b": 0,
+     "text2": "class Bar"
+    }
+   ]
+  }
+ ]
+}

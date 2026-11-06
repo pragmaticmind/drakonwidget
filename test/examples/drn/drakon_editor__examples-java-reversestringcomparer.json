@@ -1,0 +1,102 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/examples/Java/ReverseStringComparer.drn",
+ "info": {
+  "type": "drakon",
+  "version": "9",
+  "start_version": "1",
+  "language": "Java"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "compare",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [],
+   "items": [
+    {
+     "item_id": 1,
+     "type": "beginend",
+     "text": "compare",
+     "x": 170,
+     "y": 60,
+     "w": 100,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 2,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 3,
+     "type": "vertical",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 4,
+     "type": "horizontal",
+     "text": "",
+     "x": 240,
+     "y": 60,
+     "w": 130,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 5,
+     "type": "action",
+     "text": "public\n\nObject leftObj\nObject rightObj\n\nreturns int",
+     "x": 360,
+     "y": 60,
+     "w": 70,
+     "h": 60,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 6,
+     "type": "action",
+     "text": "String left = (String)leftObj;\nString right = (String)rightObj;\nreturn right.compareTo(left);",
+     "x": 170,
+     "y": 210,
+     "w": 140,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

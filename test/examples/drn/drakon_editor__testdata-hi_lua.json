@@ -1,0 +1,901 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/hi_lua.drn",
+ "info": {
+  "type": "drakon",
+  "version": "9",
+  "start_version": "1",
+  "language": "Lua"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "Main",
+   "origin": "-305 -26",
+   "description": "",
+   "info": {},
+   "nodes": 14,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 47,
+     "type": "beginend",
+     "text": "Main",
+     "x": 180,
+     "y": 20,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 48,
+     "type": "beginend",
+     "text": "End",
+     "x": 180,
+     "y": 560,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 49,
+     "type": "vertical",
+     "text": "",
+     "x": 180,
+     "y": 30,
+     "w": 0,
+     "h": 510,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 50,
+     "type": "action",
+     "text": "quicksortDemo()",
+     "x": 180,
+     "y": 350,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 52,
+     "type": "action",
+     "text": "print(\"DRAKON-Lua demo\")\nprint(\"===============\")",
+     "x": 180,
+     "y": 120,
+     "w": 110,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 189,
+     "type": "action",
+     "text": "foreachDemo()",
+     "x": 180,
+     "y": 290,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 355,
+     "type": "action",
+     "text": "return result",
+     "x": 180,
+     "y": 500,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 356,
+     "type": "shelf",
+     "text": "\"success\"",
+     "x": 180,
+     "y": 420,
+     "w": 110,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "text2": "local result"
+    },
+    {
+     "item_id": 405,
+     "type": "action",
+     "text": "alt_select_test()",
+     "x": 180,
+     "y": 200,
+     "w": 110,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 407,
+     "type": "action",
+     "text": "foo(-100, -1, -b)",
+     "x": 440,
+     "y": 230,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 408,
+     "type": "action",
+     "text": "-- full line comment\n20 - \"value\"\n20 -\"value\"\ncode()-- comment\ncode() -- comment\nbreak\nlocal i = -10 -- ok?",
+     "x": 440,
+     "y": 370,
+     "w": 90,
+     "h": 70,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 409,
+     "type": "action",
+     "text": "local s1 = \"one \\\" \\t \\n \\\\ two 'three' four\" .. ending\nlocal s2 = 'one \\' \\t \\n \\\\ two \"three\" four' .. ending",
+     "x": 550,
+     "y": 620,
+     "w": 230,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 410,
+     "type": "action",
+     "text": "-- escaping \\ in string\n\"hello \\\nwe continue here",
+     "x": 80,
+     "y": 650,
+     "w": 110,
+     "h": 40,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 411,
+     "type": "action",
+     "text": "-- escaping \\ in atom\n'hello \\\nwe continue here",
+     "x": 80,
+     "y": 770,
+     "w": 100,
+     "h": 40,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "stringsAreSorted",
+   "origin": "-12 213",
+   "description": "Tests whether an array of strings is actually sorted.",
+   "info": {},
+   "nodes": 26,
+   "features": [
+    "case",
+    "commentin",
+    "loopend",
+    "loopstart",
+    "select"
+   ],
+   "items": [
+    {
+     "item_id": 66,
+     "type": "beginend",
+     "text": "stringsAreSorted",
+     "x": 170,
+     "y": -30,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 67,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 750,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 68,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": -10,
+     "w": 0,
+     "h": 750,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 69,
+     "type": "action",
+     "text": "array",
+     "x": 440,
+     "y": -30,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 70,
+     "type": "horizontal",
+     "text": "",
+     "x": 230,
+     "y": -30,
+     "w": 170,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 71,
+     "type": "loopstart",
+     "text": "i = 1; i <= length; i = i + 1",
+     "x": 170,
+     "y": 140,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 72,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 660,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 73,
+     "type": "action",
+     "text": "current = array[i]",
+     "x": 170,
+     "y": 190,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 74,
+     "type": "loopstart",
+     "text": "j = i + 1; j <= length; j = j + 1",
+     "x": 170,
+     "y": 260,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 75,
+     "type": "loopend",
+     "text": "",
+     "x": 170,
+     "y": 600,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 76,
+     "type": "action",
+     "text": "after = array[j]",
+     "x": 170,
+     "y": 320,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 77,
+     "type": "action",
+     "text": "error(\"Collection is not sorted.\")",
+     "x": 750,
+     "y": 690,
+     "w": 210,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 78,
+     "type": "vertical",
+     "text": "",
+     "x": 750,
+     "y": 410,
+     "w": 0,
+     "h": 310,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 79,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 720,
+     "w": 580,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 80,
+     "type": "action",
+     "text": "local current = nil\nlocal i = 0\nlocal j = 0\nlocal length = #array\nlocal after",
+     "x": 170,
+     "y": 60,
+     "w": 150,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 81,
+     "type": "select",
+     "text": "descComparer(current, after)",
+     "x": 170,
+     "y": 380,
+     "w": 150,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 82,
+     "type": "case",
+     "text": "-1",
+     "x": 750,
+     "y": 450,
+     "w": 210,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 83,
+     "type": "case",
+     "text": "0",
+     "x": 430,
+     "y": 450,
+     "w": 100,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 84,
+     "type": "case",
+     "text": "1",
+     "x": 170,
+     "y": 450,
+     "w": 150,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 85,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 410,
+     "w": 580,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 86,
+     "type": "vertical",
+     "text": "",
+     "x": 430,
+     "y": 410,
+     "w": 0,
+     "h": 150,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 87,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 560,
+     "w": 260,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 88,
+     "type": "commentin",
+     "text": "'current' is less\nthan 'after'",
+     "x": 750,
+     "y": 510,
+     "w": 210,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 89,
+     "type": "commentin",
+     "text": "'current' is equal\nto 'after'",
+     "x": 430,
+     "y": 510,
+     "w": 100,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 90,
+     "type": "commentin",
+     "text": "'current' is greater\nthan 'after'",
+     "x": 170,
+     "y": 510,
+     "w": 150,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 259,
+     "type": "action",
+     "text": "print(\"current = \" .. current)\nprint(\"after = \" .. after)\nprint(\"collection = \" .. arrayToString(array))\nprint(\"result = \" .. descComparer(current, after))\nprint(\"...not sorted.\")",
+     "x": 750,
+     "y": 610,
+     "w": 210,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "printListForeach",
+   "origin": "-615 -97",
+   "description": "A loop constructed with loop icons, 'foreach'-style.",
+   "info": {},
+   "nodes": 27,
+   "features": [
+    "address",
+    "arrow",
+    "commentin",
+    "loopend",
+    "loopstart",
+    "silhouette"
+   ],
+   "items": [
+    {
+     "item_id": 110,
+     "type": "beginend",
+     "text": "printListForeach",
+     "x": -370,
+     "y": 10,
+     "w": 80,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 111,
+     "type": "beginend",
+     "text": "End",
+     "x": 640,
+     "y": 320,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 114,
+     "type": "horizontal",
+     "text": "",
+     "x": -320,
+     "y": 10,
+     "w": 100,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 115,
+     "type": "loopstart",
+     "text": "foreach item; pairs(collection)",
+     "x": -30,
+     "y": 180,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 116,
+     "type": "action",
+     "text": "output(item)",
+     "x": -30,
+     "y": 240,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 117,
+     "type": "loopend",
+     "text": "",
+     "x": -30,
+     "y": 300,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 118,
+     "type": "action",
+     "text": "print(\"\")",
+     "x": -30,
+     "y": 370,
+     "w": 140,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 119,
+     "type": "action",
+     "text": "print(\"using foreach:\")",
+     "x": -370,
+     "y": 180,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 182,
+     "type": "action",
+     "text": "collection",
+     "x": -180,
+     "y": 10,
+     "w": 50,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 320,
+     "type": "branch",
+     "text": "exit",
+     "x": 640,
+     "y": 110,
+     "w": 50,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 321,
+     "type": "vertical",
+     "text": "",
+     "x": 640,
+     "y": 70,
+     "w": 0,
+     "h": 240,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 322,
+     "type": "branch",
+     "text": "two variables",
+     "x": 340,
+     "y": 110,
+     "w": 180,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 323,
+     "type": "vertical",
+     "text": "",
+     "x": 340,
+     "y": 70,
+     "w": 0,
+     "h": 420,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 324,
+     "type": "address",
+     "text": "exit",
+     "x": 340,
+     "y": 450,
+     "w": 180,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 325,
+     "type": "branch",
+     "text": "one variable",
+     "x": -30,
+     "y": 110,
+     "w": 140,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 326,
+     "type": "vertical",
+     "text": "",
+     "x": -30,
+     "y": 70,
+     "w": 0,
+     "h": 420,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 327,
+     "type": "address",
+     "text": "two variables",
+     "x": -30,
+     "y": 450,
+     "w": 140,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 328,
+     "type": "branch",
+     "text": "init",
+     "x": -370,
+     "y": 110,
+     "w": 180,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 329,
+     "type": "vertical",
+     "text": "",
+     "x": -370,
+     "y": 10,
+     "w": 0,
+     "h": 480,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 330,
+     "type": "address",
+     "text": "one variable",
+     "x": -370,
+     "y": 450,
+     "w": 180,
+     "h": 30,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 331,
+     "type": "horizontal",
+     "text": "",
+     "x": -370,
+     "y": 70,
+     "w": 1010,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 332,
+     "type": "arrow",
+     "text": "",
+     "x": -560,
+     "y": 70,
+     "w": 190,
+     "h": 420,
+     "a": 900,
+     "b": 1
+    },
+    {
+     "item_id": 333,
+     "type": "loopstart",
+     "text": "foreach key, value; pairs(collection)",
+     "x": 340,
+     "y": 180,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 334,
+     "type": "action",
+     "text": "output(\"(\" .. key .. \", \" .. value .. \")\")",
+     "x": 340,
+     "y": 240,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 335,
+     "type": "loopend",
+     "text": "",
+     "x": 340,
+     "y": 300,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 336,
+     "type": "action",
+     "text": "print(\"\")",
+     "x": 340,
+     "y": 370,
+     "w": 180,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 354,
+     "type": "commentin",
+     "text": "With 'for' and 'foreach' loops,\nthere is no need to explicitly\ndeclare the loop variables as 'local'.",
+     "x": -370,
+     "y": 290,
+     "w": 180,
+     "h": 40,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "foreachDemo",
+   "origin": "-240 -37",
+   "description": "Shows off several collection iteration methods available for the Python code generator.",
+   "info": {},
+   "nodes": 7,
+   "features": [],
+   "items": [
+    {
+     "item_id": 150,
+     "type": "beginend",
+     "text": "foreachDemo",
+     "x": 170,
+     "y": 60,
+     "w": 60,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 151,
+     "type": "beginend",
+     "text": "End",
+     "x": 170,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 152,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 0,
+     "h": 290,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 153,
+     "type": "action",
+     "text": "local sequence = fibonacci(15)",
+     "x": 170,
+     "y": 170,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 154,
+     "type": "action",
+     "text": "printListArrow(sequence)\nprintListBackward(sequence)\nprintListFor(sequence)\n\nprintListForeach(sequence)",
+     "x": 170,
+     "y": 250,
+     "w": 130,
+     "h": 50,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 155,
+     "type": "action",
+     "text": "print(\"iteration demo\")",
+     "x": 170,
+     "y": 120,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    },
+    {
+     "item_id": 156,
+     "type": "action",
+     "text": "print()",
+     "x": 170,
+     "y": 330,
+     "w": 130,
+     "h": 20,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2841 @@
+{
+ "format": "drn-items",
+ "origin": "drakon_editor/testdata/structure_test.drn",
+ "info": {
+  "type": "drakon",
+  "version": "20",
+  "start_version": "1"
+ },
+ "columns": [
+  "item_id",
+  "type",
+  "text",
+  "x",
+  "y",
+  "w",
+  "h",
+  "a",
+  "b",
+  "aux_value",
+  "color",
+  "format",
+  "text2"
+ ],
+ "diagrams": [
+  {
+   "name": "simple inheritance",
+   "origin": "500 450",
+   "description": null,
+   "info": {},
+   "nodes": 3,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 199,
+     "type": "shelf",
+     "text": "",
+     "x": 620,
+     "y": 500,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 200,
+     "type": "shelf",
+     "text": "",
+     "x": 620,
+     "y": 790,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 201,
+     "type": "vertical",
+     "text": "",
+     "x": 620,
+     "y": 540,
+     "w": 0,
+     "h": 210,
+     "a": 10200,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple vp 2",
+   "origin": "510 450",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 202,
+     "type": "shelf",
+     "text": "",
+     "x": 630,
+     "y": 500,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 203,
+     "type": "shelf",
+     "text": "",
+     "x": 630,
+     "y": 800,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 204,
+     "type": "vertical",
+     "text": "",
+     "x": 630,
+     "y": 480,
+     "w": 0,
+     "h": 280,
+     "a": 30300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 205,
+     "type": "beginend",
+     "text": "Policies",
+     "x": 630,
+     "y": 590,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 206,
+     "type": "beginend",
+     "text": "Method",
+     "x": 630,
+     "y": 700,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple vp 1",
+   "origin": "510 450",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 207,
+     "type": "shelf",
+     "text": "",
+     "x": 630,
+     "y": 500,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 208,
+     "type": "shelf",
+     "text": "",
+     "x": 630,
+     "y": 800,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 209,
+     "type": "vertical",
+     "text": "",
+     "x": 630,
+     "y": 480,
+     "w": 0,
+     "h": 280,
+     "a": 30300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 210,
+     "type": "beginend",
+     "text": "Policies",
+     "x": 630,
+     "y": 590,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple va 1",
+   "origin": "270 140",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 211,
+     "type": "shelf",
+     "text": "",
+     "x": 390,
+     "y": 190,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 212,
+     "type": "shelf",
+     "text": "",
+     "x": 390,
+     "y": 490,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 213,
+     "type": "beginend",
+     "text": "Method",
+     "x": 390,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 214,
+     "type": "vertical",
+     "text": "",
+     "x": 390,
+     "y": 230,
+     "w": 0,
+     "h": 220,
+     "a": 10100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple vd 1",
+   "origin": "150 140",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 215,
+     "type": "shelf",
+     "text": "",
+     "x": 270,
+     "y": 190,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 216,
+     "type": "shelf",
+     "text": "",
+     "x": 270,
+     "y": 490,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 217,
+     "type": "beginend",
+     "text": "Policy",
+     "x": 270,
+     "y": 280,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 218,
+     "type": "vertical",
+     "text": "",
+     "x": 270,
+     "y": 230,
+     "w": 0,
+     "h": 220,
+     "a": 30100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple vl 2",
+   "origin": "230 340",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 219,
+     "type": "shelf",
+     "text": "",
+     "x": 350,
+     "y": 390,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 220,
+     "type": "shelf",
+     "text": "",
+     "x": 350,
+     "y": 690,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 221,
+     "type": "beginend",
+     "text": "Method",
+     "x": 350,
+     "y": 600,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 222,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 430,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 223,
+     "type": "beginend",
+     "text": "Policy",
+     "x": 350,
+     "y": 480,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple har 1",
+   "origin": "290 150",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 224,
+     "type": "shelf",
+     "text": "",
+     "x": 900,
+     "y": 200,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 225,
+     "type": "shelf",
+     "text": "",
+     "x": 400,
+     "y": 200,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 226,
+     "type": "horizontal",
+     "text": "",
+     "x": 500,
+     "y": 200,
+     "w": 350,
+     "h": 0,
+     "a": 20100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 227,
+     "type": "beginend",
+     "text": "Role",
+     "x": 620,
+     "y": 200,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple hl 2",
+   "origin": "200 -20",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 228,
+     "type": "shelf",
+     "text": "",
+     "x": 800,
+     "y": 30,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 229,
+     "type": "shelf",
+     "text": "",
+     "x": 310,
+     "y": 30,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 230,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 650,
+     "y": 30,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 231,
+     "type": "beginend",
+     "text": "Role",
+     "x": 500,
+     "y": 30,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 232,
+     "type": "horizontal",
+     "text": "",
+     "x": 410,
+     "y": 30,
+     "w": 340,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple hal 1",
+   "origin": "90 40",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 233,
+     "type": "shelf",
+     "text": "",
+     "x": 700,
+     "y": 90,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 234,
+     "type": "shelf",
+     "text": "",
+     "x": 200,
+     "y": 90,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 235,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 540,
+     "y": 90,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 236,
+     "type": "horizontal",
+     "text": "",
+     "x": 300,
+     "y": 90,
+     "w": 350,
+     "h": 0,
+     "a": 40100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple hvr 2",
+   "origin": "504 457",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 237,
+     "type": "shelf",
+     "text": "",
+     "x": 1110,
+     "y": 510,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 238,
+     "type": "shelf",
+     "text": "",
+     "x": 610,
+     "y": 510,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 239,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 950,
+     "y": 510,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 240,
+     "type": "horizontal",
+     "text": "",
+     "x": 710,
+     "y": 510,
+     "w": 350,
+     "h": 0,
+     "a": 20300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 241,
+     "type": "beginend",
+     "text": "Roles",
+     "x": 800,
+     "y": 510,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple hvr 1",
+   "origin": "510 460",
+   "description": null,
+   "info": {},
+   "nodes": 4,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 242,
+     "type": "shelf",
+     "text": "",
+     "x": 1120,
+     "y": 510,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 243,
+     "type": "shelf",
+     "text": "",
+     "x": 620,
+     "y": 510,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 244,
+     "type": "horizontal",
+     "text": "",
+     "x": 720,
+     "y": 510,
+     "w": 350,
+     "h": 0,
+     "a": 20300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 245,
+     "type": "beginend",
+     "text": "Roles",
+     "x": 810,
+     "y": 510,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "simple hvl 2",
+   "origin": "200 0",
+   "description": null,
+   "info": {},
+   "nodes": 5,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 246,
+     "type": "shelf",
+     "text": "",
+     "x": 810,
+     "y": 50,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 247,
+     "type": "shelf",
+     "text": "",
+     "x": 310,
+     "y": 50,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 248,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 650,
+     "y": 50,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 250,
+     "type": "beginend",
+     "text": "Roles",
+     "x": 500,
+     "y": 50,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 251,
+     "type": "horizontal",
+     "text": "",
+     "x": 410,
+     "y": 50,
+     "w": 370,
+     "h": 0,
+     "a": 40300,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "simple hvl 1",
+   "origin": "200 0",
+   "description": "",
+   "info": {},
+   "nodes": 4,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 252,
+     "type": "shelf",
+     "text": "",
+     "x": 810,
+     "y": 50,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 253,
+     "type": "shelf",
+     "text": "",
+     "x": 340,
+     "y": 50,
+     "w": 70,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class LeftPaw"
+    },
+    {
+     "item_id": 254,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 650,
+     "y": 50,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 256,
+     "type": "horizontal",
+     "text": "",
+     "x": 410,
+     "y": 50,
+     "w": 370,
+     "h": 0,
+     "a": 40300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork vp 2",
+   "origin": "60 110",
+   "description": null,
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 265,
+     "type": "shelf",
+     "text": "",
+     "x": 180,
+     "y": 160,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 266,
+     "type": "shelf",
+     "text": "",
+     "x": 180,
+     "y": 460,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 267,
+     "type": "vertical",
+     "text": "",
+     "x": 180,
+     "y": 140,
+     "w": 0,
+     "h": 280,
+     "a": 30300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 268,
+     "type": "beginend",
+     "text": "Policies",
+     "x": 180,
+     "y": 260,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 269,
+     "type": "beginend",
+     "text": "Method",
+     "x": 180,
+     "y": 360,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 270,
+     "type": "shelf",
+     "text": "",
+     "x": 390,
+     "y": 460,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 271,
+     "type": "horizontal",
+     "text": "",
+     "x": 180,
+     "y": 220,
+     "w": 210,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 272,
+     "type": "vertical",
+     "text": "",
+     "x": 390,
+     "y": 220,
+     "w": 0,
+     "h": 200,
+     "a": 30300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 273,
+     "type": "beginend",
+     "text": "Method",
+     "x": 390,
+     "y": 360,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 274,
+     "type": "beginend",
+     "text": "Attributes",
+     "x": 390,
+     "y": 260,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork vp 1",
+   "origin": "170 120",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 257,
+     "type": "shelf",
+     "text": "",
+     "x": 290,
+     "y": 170,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 258,
+     "type": "shelf",
+     "text": "",
+     "x": 290,
+     "y": 470,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 259,
+     "type": "vertical",
+     "text": "",
+     "x": 290,
+     "y": 150,
+     "w": 0,
+     "h": 280,
+     "a": 30300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 260,
+     "type": "beginend",
+     "text": "Policies",
+     "x": 290,
+     "y": 270,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 261,
+     "type": "shelf",
+     "text": "",
+     "x": 500,
+     "y": 470,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 262,
+     "type": "horizontal",
+     "text": "",
+     "x": 290,
+     "y": 230,
+     "w": 210,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 263,
+     "type": "vertical",
+     "text": "",
+     "x": 500,
+     "y": 230,
+     "w": 0,
+     "h": 200,
+     "a": 30300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 264,
+     "type": "beginend",
+     "text": "Attributes",
+     "x": 500,
+     "y": 270,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork va 1",
+   "origin": "610 490",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 275,
+     "type": "shelf",
+     "text": "",
+     "x": 730,
+     "y": 540,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 276,
+     "type": "shelf",
+     "text": "",
+     "x": 730,
+     "y": 840,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 277,
+     "type": "beginend",
+     "text": "Method",
+     "x": 730,
+     "y": 740,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 278,
+     "type": "vertical",
+     "text": "",
+     "x": 730,
+     "y": 580,
+     "w": 0,
+     "h": 220,
+     "a": 10100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 279,
+     "type": "shelf",
+     "text": "",
+     "x": 940,
+     "y": 840,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 280,
+     "type": "horizontal",
+     "text": "",
+     "x": 730,
+     "y": 620,
+     "w": 210,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 281,
+     "type": "beginend",
+     "text": "Method",
+     "x": 940,
+     "y": 740,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 282,
+     "type": "vertical",
+     "text": "",
+     "x": 940,
+     "y": 620,
+     "w": 0,
+     "h": 200,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork vd 1",
+   "origin": "510 450",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 283,
+     "type": "shelf",
+     "text": "",
+     "x": 630,
+     "y": 500,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 284,
+     "type": "shelf",
+     "text": "",
+     "x": 630,
+     "y": 800,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 285,
+     "type": "beginend",
+     "text": "Policy",
+     "x": 630,
+     "y": 600,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 286,
+     "type": "vertical",
+     "text": "",
+     "x": 630,
+     "y": 540,
+     "w": 0,
+     "h": 220,
+     "a": 30100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 287,
+     "type": "shelf",
+     "text": "",
+     "x": 840,
+     "y": 800,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 288,
+     "type": "beginend",
+     "text": "Attribute",
+     "x": 840,
+     "y": 600,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 289,
+     "type": "horizontal",
+     "text": "",
+     "x": 630,
+     "y": 560,
+     "w": 210,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 290,
+     "type": "vertical",
+     "text": "",
+     "x": 840,
+     "y": 560,
+     "w": 0,
+     "h": 200,
+     "a": 30100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork vl 2",
+   "origin": "50 30",
+   "description": null,
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 291,
+     "type": "shelf",
+     "text": "",
+     "x": 170,
+     "y": 80,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 292,
+     "type": "shelf",
+     "text": "",
+     "x": 170,
+     "y": 380,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 293,
+     "type": "beginend",
+     "text": "Method",
+     "x": 170,
+     "y": 290,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 294,
+     "type": "vertical",
+     "text": "",
+     "x": 170,
+     "y": 120,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 295,
+     "type": "beginend",
+     "text": "Policy",
+     "x": 170,
+     "y": 180,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 296,
+     "type": "shelf",
+     "text": "",
+     "x": 380,
+     "y": 380,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 297,
+     "type": "beginend",
+     "text": "Attribute",
+     "x": 380,
+     "y": 180,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 298,
+     "type": "vertical",
+     "text": "",
+     "x": 380,
+     "y": 140,
+     "w": 0,
+     "h": 220,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 299,
+     "type": "horizontal",
+     "text": "",
+     "x": 170,
+     "y": 140,
+     "w": 210,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 300,
+     "type": "beginend",
+     "text": "Method",
+     "x": 380,
+     "y": 290,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork inheritance",
+   "origin": "550 450",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 301,
+     "type": "shelf",
+     "text": "",
+     "x": 620,
+     "y": 500,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Method"
+    },
+    {
+     "item_id": 302,
+     "type": "shelf",
+     "text": "",
+     "x": 620,
+     "y": 800,
+     "w": 60,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Policy"
+    },
+    {
+     "item_id": 303,
+     "type": "shelf",
+     "text": "",
+     "x": 830,
+     "y": 800,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 304,
+     "type": "horizontal",
+     "text": "",
+     "x": 620,
+     "y": 580,
+     "w": 210,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 305,
+     "type": "vertical",
+     "text": "",
+     "x": 830,
+     "y": 580,
+     "w": 0,
+     "h": 200,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 306,
+     "type": "vertical",
+     "text": "",
+     "x": 620,
+     "y": 540,
+     "w": 0,
+     "h": 220,
+     "a": 10200,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork har 1",
+   "origin": "430 240",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 307,
+     "type": "shelf",
+     "text": "",
+     "x": 1030,
+     "y": 290,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 308,
+     "type": "shelf",
+     "text": "",
+     "x": 540,
+     "y": 290,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 309,
+     "type": "horizontal",
+     "text": "",
+     "x": 640,
+     "y": 290,
+     "w": 340,
+     "h": 0,
+     "a": 20100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 310,
+     "type": "beginend",
+     "text": "Role",
+     "x": 730,
+     "y": 290,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 311,
+     "type": "shelf",
+     "text": "",
+     "x": 1060,
+     "y": 390,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 312,
+     "type": "horizontal",
+     "text": "",
+     "x": 660,
+     "y": 390,
+     "w": 320,
+     "h": 0,
+     "a": 20100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 313,
+     "type": "vertical",
+     "text": "",
+     "x": 660,
+     "y": 290,
+     "w": 0,
+     "h": 100,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 314,
+     "type": "beginend",
+     "text": "Attribute",
+     "x": 730,
+     "y": 390,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork hal 2",
+   "origin": "150 -70",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 315,
+     "type": "shelf",
+     "text": "",
+     "x": 750,
+     "y": 80,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 316,
+     "type": "shelf",
+     "text": "",
+     "x": 260,
+     "y": 80,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 317,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 600,
+     "y": 80,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 318,
+     "type": "horizontal",
+     "text": "",
+     "x": 360,
+     "y": 80,
+     "w": 340,
+     "h": 0,
+     "a": 40100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 319,
+     "type": "vertical",
+     "text": "",
+     "x": 400,
+     "y": 80,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 320,
+     "type": "horizontal",
+     "text": "",
+     "x": 400,
+     "y": 190,
+     "w": 300,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 321,
+     "type": "shelf",
+     "text": "",
+     "x": 780,
+     "y": 190,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 322,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 600,
+     "y": 190,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork hvr 2",
+   "origin": "570 460",
+   "description": null,
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 323,
+     "type": "shelf",
+     "text": "",
+     "x": 1170,
+     "y": 510,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 324,
+     "type": "shelf",
+     "text": "",
+     "x": 680,
+     "y": 510,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 325,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 1020,
+     "y": 510,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 326,
+     "type": "horizontal",
+     "text": "",
+     "x": 780,
+     "y": 510,
+     "w": 340,
+     "h": 0,
+     "a": 20300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 327,
+     "type": "beginend",
+     "text": "Roles",
+     "x": 870,
+     "y": 510,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 328,
+     "type": "vertical",
+     "text": "",
+     "x": 800,
+     "y": 510,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 329,
+     "type": "shelf",
+     "text": "",
+     "x": 1200,
+     "y": 620,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 330,
+     "type": "horizontal",
+     "text": "",
+     "x": 800,
+     "y": 620,
+     "w": 320,
+     "h": 0,
+     "a": 20300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 331,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 1020,
+     "y": 620,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 332,
+     "type": "beginend",
+     "text": "Attributes",
+     "x": 870,
+     "y": 620,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork hvr 1",
+   "origin": "280 130",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 333,
+     "type": "shelf",
+     "text": "",
+     "x": 880,
+     "y": 180,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 334,
+     "type": "shelf",
+     "text": "",
+     "x": 390,
+     "y": 180,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 335,
+     "type": "horizontal",
+     "text": "",
+     "x": 490,
+     "y": 180,
+     "w": 340,
+     "h": 0,
+     "a": 20300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 336,
+     "type": "beginend",
+     "text": "Roles",
+     "x": 580,
+     "y": 180,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 337,
+     "type": "vertical",
+     "text": "",
+     "x": 510,
+     "y": 180,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 338,
+     "type": "shelf",
+     "text": "",
+     "x": 910,
+     "y": 290,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 339,
+     "type": "horizontal",
+     "text": "",
+     "x": 510,
+     "y": 290,
+     "w": 320,
+     "h": 0,
+     "a": 20300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 340,
+     "type": "beginend",
+     "text": "Attributes",
+     "x": 580,
+     "y": 290,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "fork hl 2",
+   "origin": "120 50",
+   "description": null,
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 341,
+     "type": "shelf",
+     "text": "",
+     "x": 720,
+     "y": 100,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 342,
+     "type": "shelf",
+     "text": "",
+     "x": 230,
+     "y": 100,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 343,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 570,
+     "y": 100,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 344,
+     "type": "beginend",
+     "text": "Role",
+     "x": 420,
+     "y": 100,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 345,
+     "type": "vertical",
+     "text": "",
+     "x": 350,
+     "y": 100,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 346,
+     "type": "shelf",
+     "text": "",
+     "x": 750,
+     "y": 210,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 347,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 570,
+     "y": 210,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 348,
+     "type": "beginend",
+     "text": "Attribute",
+     "x": 420,
+     "y": 210,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 349,
+     "type": "horizontal",
+     "text": "",
+     "x": 330,
+     "y": 100,
+     "w": 340,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 350,
+     "type": "horizontal",
+     "text": "",
+     "x": 350,
+     "y": 210,
+     "w": 320,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "m2m 2",
+   "origin": "349 135",
+   "description": null,
+   "info": {},
+   "nodes": 6,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 351,
+     "type": "shelf",
+     "text": "",
+     "x": 890,
+     "y": 320,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 352,
+     "type": "shelf",
+     "text": "",
+     "x": 340,
+     "y": 320,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 354,
+     "type": "horizontal",
+     "text": "",
+     "x": 680,
+     "y": 320,
+     "w": 160,
+     "h": 0,
+     "a": 20300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 355,
+     "type": "beginend",
+     "text": "Roles",
+     "x": 530,
+     "y": 320,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 356,
+     "type": "beginend",
+     "text": "ApplicationTypes",
+     "x": 690,
+     "y": 320,
+     "w": 80,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 391,
+     "type": "horizontal",
+     "text": "",
+     "x": 440,
+     "y": 320,
+     "w": 350,
+     "h": 0,
+     "a": 40300,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "merge hpr 2",
+   "origin": "110 40",
+   "description": null,
+   "info": {},
+   "nodes": 10,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 357,
+     "type": "shelf",
+     "text": "",
+     "x": 740,
+     "y": 90,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 358,
+     "type": "shelf",
+     "text": "",
+     "x": 220,
+     "y": 90,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 359,
+     "type": "beginend",
+     "text": "ApplicationType",
+     "x": 560,
+     "y": 90,
+     "w": 70,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 360,
+     "type": "horizontal",
+     "text": "",
+     "x": 320,
+     "y": 90,
+     "w": 370,
+     "h": 0,
+     "a": 20300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 361,
+     "type": "beginend",
+     "text": "Roles",
+     "x": 410,
+     "y": 90,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 362,
+     "type": "vertical",
+     "text": "",
+     "x": 650,
+     "y": 90,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 363,
+     "type": "shelf",
+     "text": "",
+     "x": 240,
+     "y": 200,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 364,
+     "type": "beginend",
+     "text": "Attribute",
+     "x": 570,
+     "y": 200,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 365,
+     "type": "beginend",
+     "text": "Roles",
+     "x": 410,
+     "y": 200,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 366,
+     "type": "horizontal",
+     "text": "",
+     "x": 310,
+     "y": 200,
+     "w": 340,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "merge hpr 1",
+   "origin": "110 -20",
+   "description": null,
+   "info": {},
+   "nodes": 8,
+   "features": [
+    "shelf"
+   ],
+   "items": [
+    {
+     "item_id": 367,
+     "type": "shelf",
+     "text": "",
+     "x": 740,
+     "y": 80,
+     "w": 50,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Role"
+    },
+    {
+     "item_id": 368,
+     "type": "shelf",
+     "text": "",
+     "x": 220,
+     "y": 80,
+     "w": 100,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class ApplicationType"
+    },
+    {
+     "item_id": 369,
+     "type": "horizontal",
+     "text": "",
+     "x": 320,
+     "y": 80,
+     "w": 370,
+     "h": 0,
+     "a": 20300,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 370,
+     "type": "beginend",
+     "text": "Roles",
+     "x": 410,
+     "y": 80,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 371,
+     "type": "vertical",
+     "text": "",
+     "x": 650,
+     "y": 80,
+     "w": 0,
+     "h": 110,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 372,
+     "type": "shelf",
+     "text": "",
+     "x": 240,
+     "y": 190,
+     "w": 80,
+     "h": 40,
+     "a": 40,
+     "b": 0,
+     "color": "",
+     "text2": "class Attributes"
+    },
+    {
+     "item_id": 373,
+     "type": "horizontal",
+     "text": "",
+     "x": 320,
+     "y": 190,
+     "w": 330,
+     "h": 0,
+     "a": 0,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 374,
+     "type": "beginend",
+     "text": "Roles",
+     "x": 410,
+     "y": 190,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "left arrow",
+   "origin": "0 0",
+   "description": null,
+   "info": {},
+   "nodes": 3,
+   "features": [],
+   "items": [
+    {
+     "item_id": 375,
+     "type": "action",
+     "text": "A",
+     "x": 110,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0
+    },
+    {
+     "item_id": 376,
+     "type": "action",
+     "text": "B",
+     "x": 410,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 381,
+     "type": "horizontal",
+     "text": "",
+     "x": 160,
+     "y": 70,
+     "w": 200,
+     "h": 0,
+     "a": 40100,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "right arrow",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 3,
+   "features": [],
+   "items": [
+    {
+     "item_id": 378,
+     "type": "action",
+     "text": "A",
+     "x": 110,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 379,
+     "type": "action",
+     "text": "B",
+     "x": 410,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 380,
+     "type": "horizontal",
+     "text": "",
+     "x": 160,
+     "y": 70,
+     "w": 200,
+     "h": 0,
+     "a": 20100,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    }
+   ]
+  },
+  {
+   "name": "left paw",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 3,
+   "features": [],
+   "items": [
+    {
+     "item_id": 382,
+     "type": "action",
+     "text": "A",
+     "x": 110,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 383,
+     "type": "action",
+     "text": "B",
+     "x": 410,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 384,
+     "type": "horizontal",
+     "text": "",
+     "x": 160,
+     "y": 70,
+     "w": 200,
+     "h": 0,
+     "a": 40300,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "right paw",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 3,
+   "features": [],
+   "items": [
+    {
+     "item_id": 385,
+     "type": "action",
+     "text": "A",
+     "x": 110,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 386,
+     "type": "action",
+     "text": "B",
+     "x": 410,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 387,
+     "type": "horizontal",
+     "text": "",
+     "x": 160,
+     "y": 70,
+     "w": 200,
+     "h": 0,
+     "a": 20300,
+     "b": 0
+    }
+   ]
+  },
+  {
+   "name": "horizontal",
+   "origin": "0 0",
+   "description": "",
+   "info": {},
+   "nodes": 3,
+   "features": [],
+   "items": [
+    {
+     "item_id": 388,
+     "type": "action",
+     "text": "A",
+     "x": 110,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 389,
+     "type": "action",
+     "text": "B",
+     "x": 410,
+     "y": 70,
+     "w": 50,
+     "h": 20,
+     "a": 60,
+     "b": 0,
+     "color": "",
+     "text2": ""
+    },
+    {
+     "item_id": 390,
+     "type": "horizontal",
+     "text": "",
+     "x": 160,
+     "y": 70,
+     "w": 200,
+     "h": 0,
+     "a": 0,
+     "b": 0
+    }
+   ]
+  }
+ ]
+}
